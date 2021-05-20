@@ -1,0 +1,73 @@
+{
+  "Actor": {
+    "types": ["agent","enemy"],
+    "templates": {
+      "base": {
+        "hits": {
+          "value": 3,
+          "min": 0,
+          "max": 3
+        }
+      }
+    },
+    "agent": {
+      "templates": ["base"],
+      "occupation": "",
+      "description": "",
+      "home": "",
+      "tradecraft": "",
+      "expertise": {
+        "abilities": [],
+        "focus": "",
+        "fortune": 1
+      },
+      "resources": {
+        "int": {
+          "value": "1d6"
+        },
+        "phy": {
+          "value": "1d6"
+        },
+        "sup": {
+          "value": "1d6"
+        }
+      },
+      "injuries": {
+        "wounds": 0,
+        "afflictions": []
+      },
+      "association": {
+        "affiliation": "",
+        "contacts": []
+      },
+      "esoterica": {
+        "favours": [],
+        "unravelling": "1d12"
+      }
+    },
+    "enemy": {
+      "resistance": {
+        "potentcy": 0,
+        "armour": "",
+        "mark": ""
+      },
+      "hitresolution": {
+        "rolltable": {}
+      },
+      "abilities": []
+    }
+  },
+  "Item": {
+    "types": ["item"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0
+    }
+  }
+}

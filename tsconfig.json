@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"types": ["@league-of-foundry-developers/foundry-vtt-types"],
+		"moduleResolution": "node"
+	  },
+	"include": [
+		"src/module/",
+		"src/dee.js"
+	]
+}
