@@ -7,11 +7,24 @@ export class DeeSanctionItem extends Item {
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {
-    super.prepareData();
-
     // Get the Item's data
     const itemData = this.data;
-    const actorData = this.actor ? this.actor.data : {};
-    const data = itemData.data;
+    // const actorData = this.actor ? this.actor.data : {};
+    // const data = itemData.data;
+
+    if (!itemData.img) {
+      switch (itemData.type) {
+        case "ability":
+          itemData.img = CONFIG.DEE.icons["ability"];
+          break;
+        case "item":
+          itemData.img = CONFIG.DEE.icons["kit"];
+          break;
+        default:
+          itemData.img = CONST.DEFAULT_TOKEN;
+          break;
+      }
+    }
+    super.prepareData();
   }
 }

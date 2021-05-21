@@ -23,13 +23,13 @@
       },
       "resources": {
         "int": {
-          "value": "1d6"
+          "value": 6
         },
         "phy": {
-          "value": "1d6"
+          "value": 6
         },
         "sup": {
-          "value": "1d6"
+          "value": 6
         }
       },
       "injuries": {
@@ -42,7 +42,7 @@
       },
       "esoterica": {
         "favours": [],
-        "unravelling": "1d12"
+        "unravelling": 12
       }
     },
     "enemy": {
@@ -58,7 +58,7 @@
     }
   },
   "Item": {
-    "types": ["item"],
+    "types": ["item","ability", "affliction"],
     "templates": {
       "base": {
         "description": ""
@@ -68,6 +68,12 @@
       "templates": ["base"],
       "quantity": 1,
       "weight": 0
+    },
+    "ability": {
+      "templates": ["base"]
+    },
+    "affliction": {
+      "templates": ["base"]
     }
   }
 }

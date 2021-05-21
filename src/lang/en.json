@@ -9,5 +9,10 @@
     "DEE.Cancel": "Cancel",
     "DEE.Roll": "Roll",
     "DEE.Success": "Success",
-    "DEE.Falter": "Falter"
+    "DEE.Falter": "Falter",
+
+    "DEE.resource.phy.long": "Physicall",
+    "DEE.resource.int.long": "Intellectuall",
+    "DEE.resource.sup.long": "Supernaturall",
+    "DEE.roll.details.resource": "Roll {score} above 2 for success"
 }
