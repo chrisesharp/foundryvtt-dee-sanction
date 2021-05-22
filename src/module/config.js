@@ -12,6 +12,14 @@ export const DEE = {
         "access": "/systems/dee/assets/default/icons/access.png",
         "kit": "/systems/dee/assets/default/icons/kit.png",
         "vigilance": "/systems/dee/assets/default/icons/vigilance.png",
-        "conspiracy": "/systems/dee/assets/default/icons/consiracy.png"
+        "conspiracy": "/systems/dee/assets/default/icons/conspiracy.png"
+    },
+    "tradecraft": {
+        "A": "access",
+        "C": "conspiracy",
+        "K": "kit",
+        "M": "magic",
+        "S": "system",
+        "V": "vigilance"
     }
 }

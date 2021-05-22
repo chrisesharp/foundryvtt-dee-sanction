@@ -7,6 +7,10 @@
           "value": 3,
           "min": 0,
           "max": 3
+        },
+        "falters": {
+          "first": false,
+          "second": false
         }
       }
     },
@@ -17,32 +21,32 @@
       "home": "",
       "tradecraft": "",
       "expertise": {
-        "abilities": [],
         "focus": "",
         "fortune": 1
       },
       "resources": {
         "int": {
-          "value": 6
+          "value": 2
         },
         "phy": {
-          "value": 6
+          "value": 2
         },
         "sup": {
-          "value": 6
+          "value": 2
+        },
+        "armour":{
+          "value": 0
+        },
+        "unravel": {
+          "value": 5
         }
-      },
-      "injuries": {
-        "wounds": 0,
-        "afflictions": []
       },
       "association": {
         "affiliation": "",
         "contacts": []
       },
       "esoterica": {
-        "favours": [],
-        "unravelling": 12
+        "favours": []
       }
     },
     "enemy": {
@@ -53,8 +57,7 @@
       },
       "hitresolution": {
         "rolltable": {}
-      },
-      "abilities": []
+      }
     }
   },
   "Item": {

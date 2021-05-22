@@ -14,7 +14,16 @@ export const registerHandlebarHelpers = async function () {
         return str.toLowerCase();
     });
 
-    Handlebars.registerHelper('die', function(die) {
+    Handlebars.registerHelper('die', function(dieStep) {
+        const die = 2+ (2 * dieStep);
         return CONFIG.DEE.icons[`d${die}`];
+    });
+
+    Handlebars.registerHelper('checked', function(isChecked) {
+        return isChecked ? ' checked ' : '';
+    });
+
+    Handlebars.registerHelper('trade', function(trade) {
+        return CONFIG.DEE.icons[trade];
     });
 }

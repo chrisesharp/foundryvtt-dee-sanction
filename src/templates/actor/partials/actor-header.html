@@ -3,6 +3,17 @@
         <div class="sheet-logo">
             <i>the</i><h1>Dee</h1>
             <h2>Sanction</h2>
+            <div class="tradecraft show" style="background-image: url('{{ trade actor.data.tradecraft}}');">
+                <select class="hide" id="tradecraft-sel">
+                    <option selected value="0">-</option>
+                    <option value="A">Access</option>
+                    <option value="C">Conspiracy</option>
+                    <option value="K">Kit</option>
+                    <option value="M">Magic</option>
+                    <option value="S">System</option>
+                    <option value="V">Vigilance</option>
+                </select> 
+            </div>
         </div>
         <div class="actor-portrait">
             <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>

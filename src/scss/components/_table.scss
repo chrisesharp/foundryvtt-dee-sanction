@@ -18,7 +18,20 @@
   display: grid;
   width:100%;
   grid-template-columns: 100px 1fr;
+  align-items: flex-start;
   .injury-header {
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+  }
+}
+
+.sheet-expertise-table {
+  display: grid;
+  width:100%;
+  grid-template-columns: 100px 1fr;
+  align-items: flex-start;
+  .fortune-header {
     font-weight: bold;
     font-style: italic;
     font-size: large;

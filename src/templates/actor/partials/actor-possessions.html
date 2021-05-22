@@ -1,0 +1,36 @@
+{{!-- Owned Items Tab --}}
+<div class="sheet-expertise-table">
+    <div class="armour">
+        <div class="fortune-header" style="padding: 0.6em;">Armour</div>
+        <div class="resource">
+            <img class="resource-bg" src="/systems/dee/assets/default/armour.png">
+            <div class="armour-die flexrow flex-center">
+                <div class="flexcol" data-resource="armour">
+                    <a class="step-up"><i class="fas fa-caret-up"></i></a>
+                    <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                </div>
+                <img src="{{die data.resources.armour.value}}" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour">
+            </div>
+        </div>
+    </div>
+    <div class="afflictions item-controls">
+        <ol class="items-list">
+            <li class="item flexrow item-header">
+                <div class="fortune-header">Mundane Possessions</div>
+                <div class="item-controls">
+                <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
+                </div>
+            </li>
+        {{#each owned.items as |item id|}}
+            <li class="item flexrow" data-item-id="{{item._id}}">
+                <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+        {{/each}}
+        </ol>
+    </div>
+</div>
