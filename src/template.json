@@ -21,7 +21,7 @@
       "home": "",
       "tradecraft": "",
       "expertise": {
-        "focus": "",
+        "focus": [],
         "fortune": 1
       },
       "resources": {
@@ -61,7 +61,7 @@
     }
   },
   "Item": {
-    "types": ["item","ability", "affliction", "association", "favour"],
+    "types": ["item","ability", "affliction", "association", "favour", "focus"],
     "templates": {
       "base": {
         "description": ""
@@ -80,10 +80,14 @@
       "templates": ["base"]
     },
     "association": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "abilities": []
     },
     "favour": {
       "templates": ["base"]
+    },
+    "focus": {
+      "templates": ["association"]
     }
   }
 }
