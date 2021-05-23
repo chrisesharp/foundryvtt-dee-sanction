@@ -7,6 +7,8 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/dee/templates/actor/partials/actor-resources.html',
         'systems/dee/templates/actor/partials/actor-abilities.html',
         'systems/dee/templates/actor/partials/actor-possessions.html',
+        'systems/dee/templates/actor/partials/actor-affiliations.html',
+        'systems/dee/templates/actor/partials/actor-esoterica.html',
     ];
     return loadTemplates(templatePaths);
 };

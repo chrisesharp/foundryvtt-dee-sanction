@@ -3,15 +3,18 @@
 .actor-name { grid-area: name; }
 .actor-occupation { grid-area: occupation; }
 .actor-home { grid-area: home; }
+.actor-manner { grid-area: manner;}
+.actor-trade { grid-area: trade;}
 
 .sheet-header-table {
   display: grid;
   grid-template-areas:
     'logo pic name name'
     'logo pic occupation occupation'
-    'logo pic home home';
-  grid-gap: 5px;
-  padding: 5px;
+    'logo pic home home'
+    'trade manner manner manner';
+  grid-gap: 1px;
+  padding: 1px;
 }
 
 .sheet-injuries-table {
@@ -30,8 +33,7 @@
   display: grid;
   width:100%;
   grid-template-columns: 100px 1fr;
-  align-items: flex-start;
-  .fortune-header {
+  .possessions-header {
     font-weight: bold;
     font-style: italic;
     font-size: large;

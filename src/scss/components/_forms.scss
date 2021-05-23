@@ -3,7 +3,7 @@
 }
 
 .sheet-header {
-  flex: 0 0 110px;
+  flex: 0 0 90px;
   overflow: overflow-y;
   display: flex;
   flex-direction: row;
@@ -12,9 +12,9 @@
   margin-bottom: 10px;
 
   .profile-img {
-    flex: 0 0 100px;
+    flex: 0 0 90px;
     height: 100px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .header-fields {
@@ -73,7 +73,7 @@
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
-  height: 100%;
+  height: 250px;
 }
 
 .tox {

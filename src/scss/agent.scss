@@ -1,7 +1,7 @@
 @at-root .dee.sheet.actor.agent {
-    min-width: 450px;
+    min-width: 400px;
     max-width: 450px;
-    min-height: 550px;
+    min-height: 575px;
 
     img {
         border: 0px;
@@ -12,11 +12,12 @@
             border: 0px;
         }
 
-        .sheet-logo {
+        .trade {
             .tradecraft {
-                height: 40px;
+                height: 30px;
                 width: 40px;
                 background-size: contain;
+                background-repeat: no-repeat;
                 position: relative;
                 .hide{
                     position: absolute;
@@ -34,40 +35,70 @@
     }
 
     .sheet-body {
-        .fortune {
-            position: relative;
-            border: 0px;
-            height: 100px;
-            padding: 5px;
-            
-            .fortune-bg {
-                position: absolute;
-                height: 90px;
+        .abilities {
+            .item-header {
+                font-weight: bold;
+                font-style: italic;
+                font-size: large;
             }
-
-            .fortune-val {
-                position: absolute;
-                height: 80px;
-                top: 7px;
-                left: 20px;
+        }
+        .focus {
+            .focus-text {
                 input {
-                    width: 30px;
-                    height: 2em;
-                    font-size:2.5em;
+                    font-size: larger;
+                    height: 1.5em;
                     border: 0px;
-                    background-color:transparent;
                 }
             }
+        }
 
-            .resource-label {
-                position: absolute;
-                top: 20px;
-                left: 10px;
+        .sheet-expertise-table {
+            .unravelling-header {
                 font-weight: bold;
-                text-align: center;
                 font-style: italic;
+                font-size: large;
             }
-
+            .fortune-header {
+                padding: 0.6em;
+                font-weight: bold;
+                font-style: italic;
+                font-size: large;
+            }
+    
+            .fortune {
+                position: relative;
+                border: 0px;
+                height: 100px;
+                padding: 5px;
+                
+                .fortune-bg {
+                    position: absolute;
+                    height: 90px;
+                }
+    
+                .fortune-val {
+                    position: absolute;
+                    height: 80px;
+                    top: 7px;
+                    left: 20px;
+                    input {
+                        width: 30px;
+                        height: 2em;
+                        font-size:2.5em;
+                        border: 0px;
+                        background-color:transparent;
+                    }
+                }
+    
+                .resource-label {
+                    position: absolute;
+                    top: 20px;
+                    left: 10px;
+                    font-weight: bold;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
         }
 
         .hits {
@@ -120,6 +151,20 @@
             }
         }
 
+        .unravel {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 0px;
+            height: 100px;
+
+            .unravel-die {
+                position: absolute;
+                height: 80px;
+                top: 45px;
+            }
+        }
+
         .armour {
             display: flex;
             flex-direction: column;
@@ -131,11 +176,6 @@
                 position: absolute;
                 height: 80px;
                 top: 55px;
-                input {
-                    width: 50px;
-                    height: 50px;
-                    border: 0px;
-                }
             }
         }
 

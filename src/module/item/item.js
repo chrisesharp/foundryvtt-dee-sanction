@@ -17,8 +17,14 @@ export class DeeSanctionItem extends Item {
         case "ability":
           itemData.img = CONFIG.DEE.icons["ability"];
           break;
+        case "association":
+          itemData.img = CONFIG.DEE.icons["conspiracy"];
+          break;
+        case "favour":
+          itemData.img = CONFIG.DEE.icons["magic"];
+          break;
         case "item":
-          itemData.img = CONFIG.DEE.icons["kit"];
+          itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
           break;
         default:
           itemData.img = CONST.DEFAULT_TOKEN;

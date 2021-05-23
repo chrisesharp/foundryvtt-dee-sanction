@@ -61,7 +61,7 @@
     }
   },
   "Item": {
-    "types": ["item","ability", "affliction"],
+    "types": ["item","ability", "affliction", "association", "favour"],
     "templates": {
       "base": {
         "description": ""
@@ -70,12 +70,19 @@
     "item": {
       "templates": ["base"],
       "quantity": 1,
-      "weight": 0
+      "weight": 0,
+      "esoteric": false
     },
     "ability": {
       "templates": ["base"]
     },
     "affliction": {
+      "templates": ["base"]
+    },
+    "association": {
+      "templates": ["base"]
+    },
+    "favour": {
       "templates": ["base"]
     }
   }

@@ -3,6 +3,8 @@
         <div class="sheet-logo">
             <i>the</i><h1>Dee</h1>
             <h2>Sanction</h2>
+        </div>
+        <div class="trade">
             <div class="tradecraft show" style="background-image: url('{{ trade actor.data.tradecraft}}');">
                 <select class="hide" id="tradecraft-sel">
                     <option selected value="0">-</option>
@@ -26,6 +28,9 @@
         </div>
         <div class="actor-home">
             <h3 class="home"><input name="home" type="text" value="{{actor.home}}" placeholder="Home town"/></h3>
+        </div>
+        <div class="actor-manner">
+            <h3 class="manner"><input name="mannerism" type="text" value="{{actor.mannerism}}" placeholder="Mannerism"/></h3>
         </div>
     </div>
     {{!-- The grid classes are defined in scss/global/_grid.scss. To use,

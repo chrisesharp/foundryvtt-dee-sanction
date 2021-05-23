@@ -34,12 +34,13 @@
 
         {{!-- Affliations Tab --}}
         <div class="tab biography" data-group="primary" data-tab="affiliations">
-            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            {{> "systems/dee/templates/actor/partials/actor-affiliations.html"}}
+            {{!-- editor content=data.biography target="data.biography" button=true owner=owner editable=editable --}}
         </div>
 
         {{!-- Esoterica Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="esoterica">
-            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+        <div class="tab esoterica" data-group="primary" data-tab="esoterica">
+            {{> "systems/dee/templates/actor/partials/actor-esoterica.html"}}
         </div>
 
     </section>
