@@ -14,12 +14,14 @@
     "DEE.RollMode": "Roll Mode",
     "DEE.SitMod": "Step Modifier",
     "DEE.Formula": "Challenge Die",
-    "DEE.ChallengeRoll": "A challenge ",
+    "DEE.ChallengeRoll": "a challenge ",
+    "DEE.ResistanceRoll": "a chance of resistance ",
 
     "DEE.resource.phy.long": "Physicall",
     "DEE.resource.int.long": "Intellectuall",
     "DEE.resource.sup.long": "Supernaturall",
     "DEE.resource.armour.long": "Armour",
     "DEE.resource.unravel.long": "Unravelling",
-    "DEE.roll.details.resource": "Roll {type} above 2 for success"
+    "DEE.roll.details.resource": "Roll {type} above 2 for success",
+    "DEE.roll.details.resistance": "Roll 1 or 2 with {type} to resist the damage"
 }

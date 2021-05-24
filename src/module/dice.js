@@ -162,8 +162,7 @@ export class DeeSanctionDice {
           }
         } else if (data.roll.type == "table") {
           // Reaction
-          let table = data.roll.table;
-          // let output = "";
+          const table = data.roll.table;
           let output = Object.values(table)[0];
           for (let i = 0; i <= roll.total; i++) {
             if (table[i]) {

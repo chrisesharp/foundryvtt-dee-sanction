@@ -58,4 +58,35 @@ export class DeeSanctionActor extends Actor {
     });
   }
 
+  rollResistance(resource, step, options = {}) {
+    const die = "d" + (2 + (2 * step));
+    let label = game.i18n.localize("DEE.ChallengeRoll");
+    if (resource) {
+      label += game.i18n.localize(`DEE.resource.${resource}.long`);
+    }
+    const rollParts = [die];
+
+    const data = {
+      actor: this.data,
+      roll: {
+        type: "below",
+        step: step,
+        target: 2,
+      },
+
+      details: game.i18n.format("DEE.roll.details.resistance", {
+        type: label,
+      }),
+    };
+
+    // Roll and return
+    return DeeSanctionDice.Roll({
+      parts: rollParts,
+      data: data,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: `flavour ${label}`,
+      title: label
+    });
+  }
+
 }

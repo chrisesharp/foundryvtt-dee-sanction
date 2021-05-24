@@ -151,7 +151,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const resource = element.dataset.resource;
     const dataset = element.dataset;
     if (dataset.roll) {
-      this.actor.rollChallenge(resource, dataset.roll);
+      if (resource == "armour") {
+        this.actor.rollResistance(resource, dataset.roll);
+      } else {
+        this.actor.rollChallenge(resource, dataset.roll);
+      }
     }
   }
 
