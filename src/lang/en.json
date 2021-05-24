@@ -9,10 +9,17 @@
     "DEE.Cancel": "Cancel",
     "DEE.Roll": "Roll",
     "DEE.Success": "Success",
-    "DEE.Falter": "Falter",
+    "DEE.Failure": "Falter",
+
+    "DEE.RollMode": "Roll Mode",
+    "DEE.SitMod": "Step Modifier",
+    "DEE.Formula": "Challenge Die",
+    "DEE.ChallengeRoll": "A challenge ",
 
     "DEE.resource.phy.long": "Physicall",
     "DEE.resource.int.long": "Intellectuall",
     "DEE.resource.sup.long": "Supernaturall",
-    "DEE.roll.details.resource": "Roll {score} above 2 for success"
+    "DEE.resource.armour.long": "Armour",
+    "DEE.resource.unravel.long": "Unravelling",
+    "DEE.roll.details.resource": "Roll {type} above 2 for success"
 }

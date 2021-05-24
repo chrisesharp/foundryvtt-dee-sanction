@@ -1,3 +1,4 @@
+import {DeeSanctionDice} from "../dice.js";
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -23,42 +24,38 @@ export class DeeSanctionActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    const data = actorData.data;
-
-    // Make modifications to data here. For example:
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    // for (let [key, ability] of Object.entries(data.abilities)) {
-    //   // Calculate the modifier using d20 rules.
-    //   ability.mod = Math.floor((ability.value - 10) / 2);
-    // }
+    //const data = actorData.data;
   }
 
-  // rollChallenge(resource, options = {}) {
-  //   const label = game.i18n.localize(`DEE.resource.${resource}.long`);
-  //   const rollParts = [];
+  rollChallenge(resource, step, options = {}) {
+    const die = "d" + (2 + (2 * step));
+    let label = game.i18n.localize("DEE.ChallengeRoll");
+    if (resource) {
+      label += game.i18n.localize(`DEE.resource.${resource}.long`);
+    }
+    const rollParts = [die];
 
-  //   const data = {
-  //     actor: this.data,
-  //     roll: {
-  //       type: "challenge",
-  //       target: 3,
-  //     },
+    const data = {
+      actor: this.data,
+      roll: {
+        type: "above",
+        step: step,
+        target: 3,
+      },
 
-  //     details: game.i18n.format("DEE.roll.details.resource", {
-  //       score: label,
-  //     }),
-  //   };
+      details: game.i18n.format("DEE.roll.details.resource", {
+        type: label,
+      }),
+    };
 
-  //   // Roll and return
-  //   return DeeSanctionDice.Roll({
-  //     event: options.event,
-  //     parts: rollParts,
-  //     data: data,
-  //     skipDialog: skip,
-  //     speaker: ChatMessage.getSpeaker({ actor: this }),
-  //     flavor: game.i18n.format("OWB.roll.attribute", { attribute: label }),
-  //     title: game.i18n.format("OWB.roll.attribute", { attribute: label }),
-  //   });
-  // }
+    // Roll and return
+    return DeeSanctionDice.Roll({
+      parts: rollParts,
+      data: data,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: `flavour ${label}`,
+      title: label
+    });
+  }
 
 }

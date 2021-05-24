@@ -26,6 +26,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       .click((event) => this._onItemSummary(event));
     
     // Rollable abilities.
+    // html.find('.rollable').click(this._onRoll.bind(this));
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Everything below here is only needed if the sheet is editable
@@ -147,16 +148,10 @@ export class DeeSanctionActorSheet extends ActorSheet {
   _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
+    const resource = element.dataset.resource;
     const dataset = element.dataset;
-
     if (dataset.roll) {
-      let die = "d" + (2+ (2 * dataset.roll));
-      let roll = new Roll(die, this.actor.data.data);
-      let label = dataset.label ? `${dataset.label} challenge`: 'Rolling a challenge';
-      roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
-      });
+      this.actor.rollChallenge(resource, dataset.roll);
     }
   }
 
