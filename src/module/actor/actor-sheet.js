@@ -8,19 +8,25 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
   /** @override */
   getData() {
-    // console.log("In getData")
     const data = super.getData();
     data.config = CONFIG.DEE;
     data.dtypes = ["String", "Number", "Boolean"];
     // Prepare owned items
     this._prepareItems(data);
-    console.log(this.actor.data);
     return data;
   }
 
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
+
+    // Item summaries
+    html
+      .find('.item .item-name')
+      .click((event) => this._onItemSummary(event));
+    
+    // Rollable abilities.
+    html.find('.rollable').click(this._onRoll.bind(this));
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
@@ -30,20 +36,17 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
+      const li = $(ev.currentTarget).parents(".item-entry");
       const item = this.actor.getOwnedItem(li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
+      const li = $(ev.currentTarget).parents(".item-entry");
       this.actor.deleteOwnedItem(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });
-
-    // Rollable abilities.
-    html.find('.rollable').click(this._onRoll.bind(this));
 
     // Step up die.
     html.find('a.step-up').click(async (event) => {
@@ -69,6 +72,12 @@ export class DeeSanctionActorSheet extends ActorSheet {
     });
   }
 
+  /**
+   * Handle updating an actor's resource
+   * @param {String} resource   The name of the resource
+   * @param {Number} delta  The amount (positive or negative) to adjust the resource by
+   * @private
+   */
   _updateResource(resource, delta) {
     const resources = duplicate(this.actor.data.data.resources);
     const newData = {};
@@ -103,6 +112,31 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
     // Finally, create the item!
     return this.actor.createOwnedItem(itemData);
+  }
+
+  /**
+   * Handle adding a summary description for an Item
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _onItemSummary(event) {
+    event.preventDefault();
+    const li = $(event.currentTarget).parents(".item-entry");
+    const item = this.actor.getOwnedItem(li.data("item-id"));
+    const description = TextEditor.enrichHTML(item.data.data.description);
+    // Toggle summary
+    if (li.hasClass("expanded")) {
+      let summary = li.children(".item-summary");
+      summary.slideUp(200, () => summary.remove());
+    } else {
+      // Add item tags
+      let div = $(
+        `<div class="item-summary">${description}</div>`
+      );
+      li.append(div.hide());
+      div.slideDown(200);
+    }
+    li.toggleClass("expanded");
   }
 
   /**

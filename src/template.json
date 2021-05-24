@@ -87,7 +87,7 @@
       "templates": ["base"]
     },
     "focus": {
-      "templates": ["association"]
+      "templates": ["base", "association"]
     }
   }
 }

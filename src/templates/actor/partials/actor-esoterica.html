@@ -15,30 +15,34 @@
     </div>
     <div class="item-controls">
         <ol class="items-list">
-            <li class="item flexrow item-header">
+            <li class="flexrow item-header">
                 <div class="possessions-header">Favours & Esoterica</div>
                 <div class="item-controls">
                 <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
         {{#each esoterica.favours as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-                <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                <h4 class="item-name">{{item.name}}</h4>
-                <div class="item-controls">
-                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+                <div class="item flexrow">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <h4 class="item-name">{{item.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
                 </div>
             </li>
         {{/each}}
         {{#each owned.items as |item id|}}
             {{#if item.data.esoteric }}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-                <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                <h4 class="item-name">{{item.name}}</h4>
-                <div class="item-controls">
-                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+                <div class="item flexrow">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <h4 class="item-name">{{item.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
                 </div>
             </li>
             {{/if}}
