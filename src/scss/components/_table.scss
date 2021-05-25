@@ -27,6 +27,13 @@
   padding: 1px;
 }
 
+.enemy-resistance-table {
+  display: grid;
+  width:100%;
+  grid-template-columns: 100px 100px 1fr;
+  align-items: flex-start;
+}
+
 .tradecraft-table {
   display: grid;
   grid-template-areas: 

@@ -55,7 +55,7 @@
         "armour": { "value":0 }
       },
       "resistance": {
-        "potentcy": 0,
+        "potency": 0,
         "mark": {
           "S": false,
           "K": false,

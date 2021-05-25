@@ -1,5 +1,17 @@
 export const registerHandlebarHelpers = async function () {
 
+    Handlebars.registerHelper("gt", function (a, b) {
+        return a > b;
+    });
+
+    Handlebars.registerHelper("lt", function (a, b) {
+        return a < b;
+    });
+
+    Handlebars.registerHelper("abs", function (a) {
+        return Math.abs(a);
+    });
+
     Handlebars.registerHelper('concat', function() {
         var outStr = '';
         for (var arg in arguments) {
