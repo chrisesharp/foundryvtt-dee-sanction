@@ -18,6 +18,7 @@ export class DeeSanctionActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'agent') this._prepareCharacterData(actorData);
+    if (actorData.type === 'enemy') this._prepareCharacterData(actorData);
   }
 
   /**

@@ -17,6 +17,25 @@
   padding: 1px;
 }
 
+.sheet-header-enemy-table {
+  display: grid;
+  grid-template-areas:
+    'logo pic name name'
+    'logo pic trade trade'
+    'logo pic trade trade';
+  grid-gap: 1px;
+  padding: 1px;
+}
+
+.tradecraft-table {
+  display: grid;
+  grid-template-areas: 
+      'S K V'
+      'M A C';
+  grid-gap: 1px;
+  padding: 1px;
+}
+
 .sheet-injuries-table {
   display: grid;
   width:100%;

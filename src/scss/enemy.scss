@@ -1,0 +1,234 @@
+@at-root .dee.sheet.actor.enemy {
+    min-width: 440px;
+    max-width: 450px;
+    min-height: 575px;
+
+    img {
+        border: 0px;
+    }
+
+    .sheet-header-enemy-table {
+        input {
+            border: 0px;
+        }
+
+        .tradecraft-table {
+            input[type=checkbox] {
+                opacity: 0.2;
+            }
+            input[type=checkbox]:checked {
+                opacity: 1;
+            }
+            div.A {
+                background: url("/systems/dee/assets/default/icons/access.png") no-repeat;
+                background-size: contain;
+            }
+            div.C {
+                background: url("/systems/dee/assets/default/icons/conspiracy.png") no-repeat;
+                background-size: contain;
+            }
+            div.K {
+                background: url("/systems/dee/assets/default/icons/kit.png") no-repeat;
+                background-size: contain;
+            }
+            div.M {
+                background: url("/systems/dee/assets/default/icons/magic.png") no-repeat;
+                background-size: contain;
+            }
+            div.S {
+                background: url("/systems/dee/assets/default/icons/system.png") no-repeat;
+                background-size: contain;
+            }
+            div.V {
+                background: url("/systems/dee/assets/default/icons/vigilance.png") no-repeat;
+                background-size: contain;
+            }
+        }
+
+
+    }
+
+    .sheet-body {
+        .abilities {
+            .item-header {
+                font-weight: bold;
+                font-style: italic;
+                font-size: large;
+            }
+        }
+        .focus {
+            .focus-text {
+                input {
+                    font-size: larger;
+                    height: 1.5em;
+                    border: 0px;
+                }
+            }
+        }
+
+        .sheet-expertise-table {
+            .unravelling-header {
+                font-weight: bold;
+                font-style: italic;
+                font-size: large;
+            }
+            .fortune-header {
+                padding: 0.6em;
+                font-weight: bold;
+                font-style: italic;
+                font-size: large;
+            }
+    
+            .fortune {
+                position: relative;
+                border: 0px;
+                height: 100px;
+                padding: 5px;
+                
+                .fortune-bg {
+                    position: absolute;
+                    height: 90px;
+                }
+    
+                .fortune-val {
+                    position: absolute;
+                    height: 80px;
+                    top: 7px;
+                    left: 20px;
+                    input {
+                        width: 30px;
+                        height: 2em;
+                        font-size:2.5em;
+                        border: 0px;
+                        background-color:transparent;
+                    }
+                }
+    
+                .resource-label {
+                    position: absolute;
+                    top: 20px;
+                    left: 10px;
+                    font-weight: bold;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .hits {
+            position: relative;
+            border: 0px;
+            height: 100px;
+            padding: 5px;
+
+            .hits-bg {
+                position: absolute;
+                height: 90px;
+            }
+
+            .hits-val {
+                position: absolute;
+                height: 80px;
+                left: 20px;
+                input {
+                    width: 30px;
+                    height: 24px;
+                    font-size:1.7em;
+                    border: 0px;
+                    background-color:transparent;
+                }
+            }
+
+            .resource-label {
+                position: absolute;
+                top: 12px;
+                left: 20px;
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+            }
+
+            .hits-falters {
+                position: relative;
+
+                input.first {
+                    position: absolute;
+                    top: 68px;
+                    left: 0px;
+                }
+
+                input.second {
+                    position: absolute;
+                    top: 68px;
+                    left: 33px;
+                }
+            }
+        }
+
+        .unravel {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 0px;
+            height: 100px;
+
+            .unravel-die {
+                position: absolute;
+                height: 80px;
+                top: 45px;
+                left: -6px;
+            }
+        }
+
+        .armour {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 0px;
+            height: 100px;
+
+            .armour-die {
+                position: absolute;
+                height: 80px;
+                top: 55px;
+                left: -5px;
+            }
+        }
+
+        .resources{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .resource {
+                position: relative;
+                border: 0px;
+                height: 200px;
+            
+
+                .resource-bg {
+                    position: absolute;
+                    height: 190px;
+                }
+
+                .resource-die {
+                    position: absolute;
+                    height: 190px;
+                    top: 25px;
+                    left: 20px;
+
+                }
+
+                .resource-label {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 15%;
+                    font-weight: bold;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

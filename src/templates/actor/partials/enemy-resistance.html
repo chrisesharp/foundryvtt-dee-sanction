@@ -1,0 +1,53 @@
+{{!-- resources --}}
+{{!-- injuries and afflictions --}}
+<div class="flexcol">
+    {{!-- afflictions --}}
+<div class="afflictions">
+    <ol class="items-list">
+        <li class="flexrow item-header">
+            <div class="injury-header">Afflictions</div>
+            <div class="item-header item-controls">
+            <a class="item-control item-create" title="Create item" data-type="affliction"><i class="fas fa-plus"></i></a>
+            </div>
+        </li>
+        {{#each owned.afflictions as |item id|}}
+            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+                <div class="item flexrow">
+                    <h4 class="item-name">{{item.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ol>
+</div>
+<div class="sheet-injuries-table">
+    {{!-- Hits --}}
+    <div class="flexcol">
+        <div class="injury-header" style="padding: 0.6em;">Injuries</div>
+        <div class="hits">
+            <img class="hits-bg" src="/systems/dee/assets/default/hits.png">
+            <label for="data.hits.value" class="resource-label">&nbsp;Hits</label>
+            <div class="hits-val flexrow flex-center">
+                <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
+            </div>
+        </div>
+    </div>
+    {{!-- Resistance --}}
+    <div class="armour">
+        <div class="fortune-header" style="padding: 0.6em;">Resistance</div>
+        <div class="resource">
+            <img class="resource-bg" src="/systems/dee/assets/default/armour.png">
+            <div class="armour-die flexrow flex-center">
+                <div class="flexcol" data-resource="armour">
+                    <a class="step-up"><i class="fas fa-caret-up"></i></a>
+                    <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                </div>
+                <img src="{{die data.resources.armour.value}}" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
+            </div>
+        </div>
+    </div>
+</div>
+</div>

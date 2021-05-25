@@ -12,6 +12,7 @@
 /* Styles limited to dee sheets */
 .dee {
   @import 'scss/agent';
+  @import 'scss/enemy';
   @import 'scss/components/table';
   @import 'scss/components/forms';
   @import 'scss/components/resource';

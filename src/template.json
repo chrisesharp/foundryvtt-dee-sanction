@@ -50,10 +50,20 @@
       }
     },
     "enemy": {
+      "templates": ["base"],
+      "resources": {
+        "armour": { "value":0 }
+      },
       "resistance": {
         "potentcy": 0,
-        "armour": "",
-        "mark": ""
+        "mark": {
+          "S": false,
+          "K": false,
+          "V": false,
+          "M": false,
+          "A": false,
+          "C": false
+        }
       },
       "hitresolution": {
         "rolltable": {}
