@@ -4,8 +4,6 @@
  */
 export class DeeSanctionActorSheet extends ActorSheet {
 
-  /* -------------------------------------------- */
-
   /** @override */
   getData() {
     const data = super.getData();
@@ -150,11 +148,25 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const resource = element.dataset.resource;
     const dataset = element.dataset;
+    let target;
+    for (let t of game.user.targets.values()) {
+      const data = t.actor.data;
+      target = {
+        id: data._id,
+        armour: data.data.resources.armour.value,
+      }
+      if (data.type === "enemy") {
+        target.potency = data.data.resistance.potency;
+        target.hitresolution = data.data.hitresolution;
+      }
+      break;
+    }
+
     if (dataset.roll) {
       if (resource == "armour") {
         this.actor.rollResistance(resource, dataset.roll);
       } else {
-        this.actor.rollChallenge(resource, dataset.roll);
+        this.actor.rollChallenge(resource, dataset.roll, target);
       }
     }
   }

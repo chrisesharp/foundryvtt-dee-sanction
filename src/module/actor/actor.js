@@ -28,7 +28,10 @@ export class DeeSanctionActor extends Actor {
     //const data = actorData.data;
   }
 
-  rollChallenge(resource, step, options = {}) {
+  rollChallenge(resource, step, target = {}) {
+    if (target.id) {
+      console.log("We're attacking ",target)
+    }
     const die = "d" + (2 + (2 * step));
     let label = game.i18n.localize("DEE.ChallengeRoll");
     if (resource) {

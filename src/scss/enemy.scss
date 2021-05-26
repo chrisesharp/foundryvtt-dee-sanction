@@ -73,6 +73,26 @@
                 font-size: 1.5em;
             }
         }
+
+        .hitresolution {
+            display: grid;
+            width:100%;
+            grid-template-columns: 80px 30px 1fr;
+            align-items: flex-start;
+            vertical-align:baseline;
+
+            .hitres-header {
+                font-weight: bold;
+                font-style: italic;
+                font-size: larger;
+            }
+    
+            .hitres-button {
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1.5em;
+            }
+        }
         
         .abilities {
             .item-header {

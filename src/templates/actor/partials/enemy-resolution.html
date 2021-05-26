@@ -1,5 +1,18 @@
 {{!-- resources --}}
 <div class="resources flexrow">
-    {{!-- hit resolution --}}
-
+    {{!-- hit resolution --}}        
+            {{#if data.hitresolution.rolltable}}
+            <div class="hitresolution flexcol">
+                <div class="hitres-header" style="padding: 0.6em;">Hit Resolution</div>
+                    <div class="hitres-button flexrow">
+                    <a class="entity-link" data-entity="RollTable" data-id="{{data.hitresolution.rolltable.id}}">
+                        <i class="fas fa-th-list">{{data.hitresolution.rolltable.name}}</i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <h2>Drag a rolltable onto this sheet to define hit resolution.</h2>
+            {{/if}}
+    </div>
 </div>
