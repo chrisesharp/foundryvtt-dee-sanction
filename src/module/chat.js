@@ -19,9 +19,10 @@ export const addChatConsequenceButton = function(msg, html, data) {
   let cb = html.find('.consequence-roll');
   if (cb.data('id')) {
     const id = cb.data('id')
-    const label = game.i18n.localize('DEE.roll.consequences');
-    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${label} - attack</button></div>`))
-    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${label} - defend</button></div>`))
+    let label = game.i18n.format('DEE.roll.consequences',{action: "attacking"});
+    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${label}</button></div>`))
+    label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
+    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${label}</button></div>`))
     cb.find('button[data-action="consequence"]').click((ev) => {
       ev.preventDefault();
       const attacking = ev.currentTarget.dataset.attack;

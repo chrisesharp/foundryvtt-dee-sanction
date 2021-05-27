@@ -25,6 +25,6 @@
     "DEE.roll.details.resource": "Roll {type} above 2 for success.",
     "DEE.roll.details.potency": "Roll above 2 for success, against potency {potency}.",
     "DEE.roll.details.resistance": "Roll 1 or 2 with {type} to resist the damage",
-    "DEE.roll.consequences": "Roll for consequences ",
+    "DEE.roll.consequences": "Roll for consequences of {action}",
     "DEE.roll.initiative": "Take a chance for initiative"
 }

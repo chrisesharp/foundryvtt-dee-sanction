@@ -97,10 +97,9 @@ export class DeeSanctionActor extends Actor {
   }
 
   rollConsequence(rollTable, attacking=true) {
-    console.log("attacking?",(attacking === true))
     const rt = game.tables.get(rollTable);
-    const roll = (attacking === true) ? new Roll("1d8") : new Roll("1d6 + 2");
-    return rt.draw(roll);
+    let roll = (attacking === "true") ? new Roll("1d8").roll() : new Roll("1d6+2").roll();
+    return rt.draw({roll:roll});
   }
 
 }
