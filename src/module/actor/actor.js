@@ -29,8 +29,11 @@ export class DeeSanctionActor extends Actor {
   }
 
   rollChallenge(resource, step, target = {}) {
+    step=parseInt(step)
+    let potency = 0;
     if (target.id) {
-      console.log("We're attacking ",target)
+      potency = parseInt(target.potency);
+      step = (potency > 0) ? Math.min(step + potency, 5) : Math.max(step + potency, 0);
     }
     const die = "d" + (2 + (2 * step));
     let label = game.i18n.localize("DEE.ChallengeRoll");
@@ -39,6 +42,8 @@ export class DeeSanctionActor extends Actor {
     }
     const rollParts = [die];
 
+    const details = (potency == 0) ?  game.i18n.format("DEE.roll.details.resource", {type: label}) : 
+                                      game.i18n.format("DEE.roll.details.potency", {potency: potency});
     const data = {
       actor: this.data,
       roll: {
@@ -46,10 +51,8 @@ export class DeeSanctionActor extends Actor {
         step: step,
         target: 3,
       },
-
-      details: game.i18n.format("DEE.roll.details.resource", {
-        type: label,
-      }),
+      details: details,
+      target: target
     };
 
     // Roll and return
@@ -91,6 +94,13 @@ export class DeeSanctionActor extends Actor {
       flavor: `flavour ${label}`,
       title: label
     });
+  }
+
+  rollConsequence(rollTable, attacking=true) {
+    console.log("attacking?",(attacking === true))
+    const rt = game.tables.get(rollTable);
+    const roll = (attacking === true) ? new Roll("1d8") : new Roll("1d6 + 2");
+    return rt.draw(roll);
   }
 
 }

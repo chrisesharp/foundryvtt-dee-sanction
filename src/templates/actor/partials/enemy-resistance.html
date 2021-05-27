@@ -5,7 +5,7 @@
     <div class="potency-val flexrow">
         {{#if (gt data.resistance.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
         {{#if (lt data.resistance.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
-        <input type="text" name="data.resistance.potency" value="{{abs data.resistance.potency}}" data-dtype="Number"/>
+        <input type="text" name="data.resistance.potency" value="{{ data.resistance.potency}}" data-dtype="Number"/>
     </div>
     <div>&nbsp;</div>
 </div>

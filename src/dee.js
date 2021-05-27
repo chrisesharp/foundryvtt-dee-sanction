@@ -8,6 +8,8 @@ import { preloadHandlebarsTemplates } from "./module/preloadTemplates.js";
 import { registerHandlebarHelpers } from "./module/handlebarHelpers.js";
 import { DEE } from "./module/config.js";
 import { registerSettings } from "./module/settings.js";
+import { DeeCombat } from "./module/combat.js";
+import * as chat from "./module/chat.js";
 
 Hooks.once('init', async function() {
 
@@ -48,3 +50,11 @@ Hooks.once('init', async function() {
 
   await preloadHandlebarsTemplates();
 });
+
+Hooks.on("renderChatMessage", chat.addChatConsequenceButton);
+Hooks.on("renderCombatTracker", DeeCombat.format);
+Hooks.on("preCreateCombatant", (combat, data, options, id) => {
+    DeeCombat.addCombatant(combat, data, options, id);
+});
+Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
+Hooks.on("preUpdateCombatant", DeeCombat.updateCombatant);

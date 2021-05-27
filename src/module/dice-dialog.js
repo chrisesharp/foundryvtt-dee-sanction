@@ -30,7 +30,7 @@ export class DiceDialog extends Dialog {
     _updateDieElement(el, delta) {
         delta = parseInt(delta);
         let dieStep = parseInt(el.dataset.val);
-        dieStep = (delta > 0) ? Math.min(dieStep + delta, 5) : Math.max(dieStep + delta, 1);
+        dieStep = (delta > 0) ? Math.min(dieStep + delta, 5) : Math.max(dieStep + delta, 0);
         const die = 2+ (2 * dieStep);
         const formula = `d${die}`;
         const icon = CONFIG.DEE.icons[formula];

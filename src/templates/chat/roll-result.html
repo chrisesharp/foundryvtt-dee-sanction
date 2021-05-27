@@ -9,11 +9,16 @@
             {{/if}}
         </div>
         <div class="blindable" data-blind="{{data.roll.blindroll}}">
+            {{#if rollDee}}<div>{{{rollDee}}}</div>{{/if}}
             {{#if result.details}}<div class="chat-details">{{{result.details}}}</div>{{/if}}
             {{#if result.isFailure}}<div class='roll-result roll-fail'><b>{{localize 'DEE.Failure'}}</b>
-            </div>{{/if}}
+            </div>
+                {{#if data.target.hitresolution}}
+                <div class="consequence-roll" data-id="{{data.target.hitresolution.rolltable.id}}">
+                </div>
+                {{/if}}
+            {{/if}}
             {{#if result.isSuccess}}<div class='roll-result roll-success'><b>{{localize 'DEE.Success'}}</b></div>{{/if}}
-            {{#if rollOWB}}<div>{{{rollOWB}}}</div>{{/if}}
         </div>
     </div>
 </section>
