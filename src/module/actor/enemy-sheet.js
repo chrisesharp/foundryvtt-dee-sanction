@@ -4,11 +4,11 @@ import {DeeSanctionActorSheet} from "./actor-sheet.js";
  * @extends {DeeSanctionActorSheet}
  */
 export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
-    constructor(...args) {
-        super(...args);
-    }
+  constructor(...args) {
+      super(...args);
+  }
 
-    /** @override */
+  /** @override */
   async _onDrop(event) {
     // Try to extract the data
     let data;
@@ -57,14 +57,14 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
   }  
 
 
-    /** @override */
-    static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
-        classes: ["dee", "sheet", "actor", "enemy"],
-        template: "systems/dee/templates/actor/enemy-sheet.html",
-        width: 400,
-        height: 475,
-        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
-        });
-    }
+  /** @override */
+  static get defaultOptions() {
+      return mergeObject(super.defaultOptions, {
+      classes: ["dee", "sheet", "actor", "enemy"],
+      template: "systems/dee/templates/actor/enemy-sheet.html",
+      width: 400,
+      height: 475,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
+      });
+  }
 }

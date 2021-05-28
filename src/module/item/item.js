@@ -11,14 +11,13 @@ export class DeeSanctionItem extends Item {
     const itemData = this.data;
     // const actorData = this.actor ? this.actor.data : {};
     // const data = itemData.data;
-
     if (!itemData.img) {
       switch (itemData.type) {
         case "ability":
           itemData.img = CONFIG.DEE.icons["ability"];
           break;
         case "association":
-          itemData.img = CONFIG.DEE.icons["conspiracy"];
+          this._prepareAssociationData(itemData);
           break;
         case "favour":
           itemData.img = CONFIG.DEE.icons["magic"];
@@ -32,5 +31,10 @@ export class DeeSanctionItem extends Item {
       }
     }
     super.prepareData();
+  }
+
+  _prepareAssociationData(data) {
+    data.img = CONFIG.DEE.icons["conspiracy"];
+    console.log(data)
   }
 }

@@ -1,0 +1,5 @@
+name: "Reassurance"
+type: "ability"
+data:
+  description: "<p>Reassurance.</p>"
+img: "icons/svg/book.svg"

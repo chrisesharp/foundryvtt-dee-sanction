@@ -10,7 +10,15 @@
   "esmodules": ["dee.js"],
   "styles": ["dee.css"],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "abilities",
+      "label": "Abilities",
+      "package": "dee",
+      "path": "packs/abilities.db",
+      "entity": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
