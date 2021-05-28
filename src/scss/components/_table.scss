@@ -1,5 +1,7 @@
 .sheet-logo { grid-area: logo; }
-.actor-portrait { grid-area: pic; }
+.actor-portrait { 
+  grid-area: pic;
+}
 .actor-name { grid-area: name; }
 .actor-occupation { grid-area: occupation; }
 .actor-home { grid-area: home; }

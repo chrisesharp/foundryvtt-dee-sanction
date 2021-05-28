@@ -160,7 +160,7 @@
 
             .unravel-die {
                 position: absolute;
-                height: 80px;
+                height: 64px;
                 top: 45px;
                 left: -6px;
             }
@@ -175,8 +175,8 @@
 
             .armour-die {
                 position: absolute;
-                height: 80px;
-                top: 55px;
+                height: 64px;
+                top: 60px;
                 left: -5px;
             }
         }
@@ -200,8 +200,8 @@
 
                 .resource-die {
                     position: absolute;
-                    height: 190px;
-                    top: 25px;
+                    height: 64px;
+                    bottom: 45px;
                     left: 20px;
                 }
 
