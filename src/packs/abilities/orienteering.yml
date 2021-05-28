@@ -1,0 +1,5 @@
+name: "Orienteering"
+type: "ability"
+data:
+  description: "<p>Capability in finding one's way.</p>"
+img: "icons/svg/book.svg"

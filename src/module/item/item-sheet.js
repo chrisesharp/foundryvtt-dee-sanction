@@ -46,11 +46,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     if (!this.isEditable) return false;
     const ability = game.items.get(data.id);
     let abilities = this.item.data.data.abilities.filter(a=>a.id != data.id);
-    abilities.push({
-      name: ability.name,
-      id: ability.id,
-      img: ability.img
-    });
+    abilities.push(ability);
     const newAbilities = {
       abilities: abilities
     }
@@ -92,6 +88,66 @@ export class DeeSanctionItemSheet extends ItemSheet {
     if (!this.options.editable) return;
 
     // Roll handlers, click handlers, etc. would go here.
+    // Add ability
+    html.find('.item-create').click(this._onAbilityCreate.bind(this));
+
+    // Update ability Item
+    html.find('.item-edit').click(ev => {
+      const li = $(ev.currentTarget).parents(".item-entry");
+      //const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = game.items.get(li.data("itemId"));
+      item.sheet.render(true);
+    });
+
+    // Delete ability Item
+    html.find('.item-delete').click(ev => {
+      const li = $(ev.currentTarget).parents(".item-entry");
+      this._onAbilityDelete(li.data("itemId"));
+      li.slideUp(200, () => this.render(false));
+    });
+    console.log("ItemSheet listeners activated")
   }
 
+  /**
+   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _onAbilityCreate(event) {
+    event.preventDefault();
+    const header = event.currentTarget;
+    // Grab any data associated with this control.
+    const data = duplicate(header.dataset);
+    // Initialize a default name.
+    const name = `New Ability`;
+    // Prepare the item object.
+    const itemData = {
+      name: name,
+      type: "ability",
+      data: data
+    };
+    // Remove the type from the dataset since it's in the itemData.type prop.
+    delete itemData.data["type"];
+
+    // Finally, create the item!
+    // return this.item.createEmbeddedEntity(itemData);
+    // TODO use the 8.x createEmbeddedDocuments() api
+    console.log("TODO create embedded ability")
+  }
+
+  /**
+   * Handle deleting an ability Item
+   * @param {String} id   the id of the ability
+   * @private
+   */
+  _onAbilityDelete(id) {
+    const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
+    const newAbilities = {
+      abilities: abilities
+    }
+    return this.item.update({data: newAbilities});
+
+    // TODO use the 8.x deleteEmbeddedDocuments() api
+
+  }
 }
