@@ -1,6 +1,7 @@
 export const DEE = {
     "icons": {
         "ability": "icons/svg/book.svg",
+        "d2": "icons/svg/falling.svg",
         "d4": "/systems/dee/assets/default/icons/d4.svg",
         "d6": "/systems/dee/assets/default/icons/d6.svg",
         "d8": "/systems/dee/assets/default/icons/d8.svg",
@@ -12,7 +13,8 @@ export const DEE = {
         "access": "/systems/dee/assets/default/icons/access.png",
         "kit": "/systems/dee/assets/default/icons/kit.png",
         "vigilance": "/systems/dee/assets/default/icons/vigilance.png",
-        "conspiracy": "/systems/dee/assets/default/icons/conspiracy.png"
+        "conspiracy": "/systems/dee/assets/default/icons/conspiracy.png",
+        "falling": "icons/svg/falling.png"
     },
     "tradecraft": {
         "A": "access",

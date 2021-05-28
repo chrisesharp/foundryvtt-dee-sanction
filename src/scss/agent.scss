@@ -203,7 +203,6 @@
                     height: 190px;
                     top: 25px;
                     left: 20px;
-
                 }
 
                 .resource-label {
@@ -215,6 +214,22 @@
                     font-style: italic;
                 }
             }
+        }
+    }
+}
+
+.dee.roll-dialog {
+    .challenge {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 0px;
+        height: 68px;
+
+        .challenge-die {
+            position: absolute;
+            height: 64px;
+            right: 30px;
         }
     }
 }
