@@ -20,8 +20,10 @@
       "description": "",
       "home": "",
       "tradecraft": "",
+      "mannerism": "",
       "expertise": {
         "focus": [],
+        "occupations": [],
         "fortune": 1
       },
       "resources": {
@@ -75,10 +77,13 @@
     }
   },
   "Item": {
-    "types": ["item","ability", "affliction", "association", "favour", "focus"],
+    "types": ["item","ability", "affliction", "association", "favour", "focus","occupation"],
     "templates": {
       "base": {
         "description": ""
+      },
+      "container": {
+        "abilities": []
       }
     },
     "item": {
@@ -93,16 +98,17 @@
     "affliction": {
       "templates": ["base"]
     },
-    "association": {
-      "templates": ["base"],
-      "abilities": []
-    },
     "favour": {
       "templates": ["base"]
     },
+    "association": {
+      "templates": ["base","container"]
+    },
     "focus": {
-      "templates": ["base"],
-      "abilities": []
+      "templates": ["base","container"]
+    },
+    "occupation": {
+      "templates": ["base","container"]
     }
   }
 }

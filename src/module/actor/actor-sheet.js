@@ -6,12 +6,16 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
   /** @override */
   async _onDrop(event) {
-    // let data;
-    // try {
-    //   data = JSON.parse(event.dataTransfer.getData('text/plain'));
-    // } catch (err) {
-    //   return false;
-    // }
+    let item;
+    try {
+      const data = JSON.parse(event.dataTransfer.getData('text/plain'));
+      item = game.items.get(data.id);
+    } catch (err) {
+      return false;
+    }
+    if (item && item.type==="occupation") {
+      this.actor.update({data:{occupation:item.name}});
+    }
     return super._onDrop(event);
   }
 
@@ -136,7 +140,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const description = TextEditor.enrichHTML(item.data.data.description);
     const abilities = this.actor.getAbilities();
     let options="";
-    if (item.type==="association"||item.type==="focus") {
+    if (item.type==="association"||item.type==="focus"||item.type==="occupation") {
       item.data.data.abilities.forEach((i)=> {
         let ability = abilities.filter(e => e.name===i.name);
         const checked = (ability.length > 0) ? " checked " : "";
@@ -202,7 +206,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
    */
    _prepareItems(data) {
     // Partition items by category
-    let [items, abilities, afflictions, associations, favours, foci] = data.items.reduce(
+    let [items, abilities, afflictions, associations, favours, foci, occupations] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -211,9 +215,10 @@ export class DeeSanctionActorSheet extends ActorSheet {
         else if (item.type === "association") arr[3].push(item);
         else if (item.type === "favour") arr[4].push(item);
         else if (item.type === "focus") arr[5].push(item);
+        else if (item.type === "occupation") arr[6].push(item);
         return arr;
       },
-      [[], [], [], [], [], []]
+      [[], [], [], [], [], [], []]
     );
 
     // Assign and return
@@ -224,6 +229,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
     };
     data.association = {contacts:associations};
     data.esoterica = {favours: favours};
-    data.expertise = {focus: foci};
+    data.expertise = {focus: foci, occupations: occupations};
   }
 }
