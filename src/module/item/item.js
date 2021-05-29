@@ -39,14 +39,17 @@ export class DeeSanctionItem extends Item {
           itemData.img = CONFIG.DEE.icons["ability"];
           break;
         case "affliction":
-          this._prepareAfflictionData(itemData);
+          data.img = CONFIG.DEE.icons["affliction"];
           break;
         case "association":
-          this._prepareAssociationData(itemData);
+          data.img = CONFIG.DEE.icons["conspiracy"];
           break;
         case "favour":
-          itemData.img = CONFIG.DEE.icons["magic"];
+          itemData.img = CONFIG.DEE.icons["favour"];
           break;
+        case "focus":
+            itemData.img = CONFIG.DEE.icons["access"];
+            break;
         case "item":
           itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
           break;
@@ -56,13 +59,5 @@ export class DeeSanctionItem extends Item {
       }
     }
     super.prepareData();
-  }
-
-  _prepareAssociationData(data) {
-    data.img = CONFIG.DEE.icons["conspiracy"];
-  }
-
-  _prepareAfflictionData(data) {
-    data.img = CONFIG.DEE.icons["affliction"];
   }
 }
