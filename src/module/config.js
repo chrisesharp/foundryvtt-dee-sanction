@@ -14,7 +14,8 @@ export const DEE = {
         "kit": "/systems/dee/assets/default/icons/kit.png",
         "vigilance": "/systems/dee/assets/default/icons/vigilance.png",
         "conspiracy": "/systems/dee/assets/default/icons/conspiracy.png",
-        "falling": "icons/svg/falling.png"
+        "falling": "icons/svg/falling.png",
+        "affliction": "icons/svg/bones.svg"
     },
     "tradecraft": {
         "A": "access",

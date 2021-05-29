@@ -5,6 +5,17 @@
 export class DeeSanctionActorSheet extends ActorSheet {
 
   /** @override */
+  async _onDrop(event) {
+    // let data;
+    // try {
+    //   data = JSON.parse(event.dataTransfer.getData('text/plain'));
+    // } catch (err) {
+    //   return false;
+    // }
+    return super._onDrop(event);
+  }
+
+  /** @override */
   getData() {
     const data = super.getData();
     data.config = CONFIG.DEE;
@@ -123,6 +134,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const li = $(event.currentTarget).parents(".item-entry");
     const item = this.actor.getOwnedItem(li.data("item-id"));
     const description = TextEditor.enrichHTML(item.data.data.description);
+    const abilities = this.actor.getAbilities();
+    let options="";
+    if (item.type==="association"||item.type==="focus") {
+      item.data.data.abilities.forEach((i)=> {
+        let ability = abilities.filter(e => e.name===i.name);
+        const checked = (ability.length > 0) ? " checked " : "";
+        options += `<input type="checkbox" id="${i.id}" ${checked} onclick="return false;"><label for="${i.id}">${i.name}</label> `
+      });
+    }
     // Toggle summary
     if (li.hasClass("expanded")) {
       let summary = li.children(".item-summary");
@@ -130,7 +150,12 @@ export class DeeSanctionActorSheet extends ActorSheet {
     } else {
       // Add item tags
       let div = $(
-        `<div class="item-summary">${description}</div>`
+        `<div class="item-summary">
+        <div>
+        ${description}
+        </div>
+        ${options}
+        </div>`
       );
       li.append(div.hide());
       div.slideDown(200);

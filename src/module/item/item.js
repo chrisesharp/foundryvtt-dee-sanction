@@ -3,6 +3,28 @@
  * @extends {Item}
  */
 export class DeeSanctionItem extends Item {
+  // TODO work out how to use Document model in 8.x
+  // /** @override */
+  // constructor(...args) {
+  //   super(...args);
+  //   this.abilities = this.abilities || [];
+  // }
+
+  // /** @override */
+  // static get config() {
+  //   return {
+  //     baseEntity: Item,
+  //     collection: game.items,
+  //     embeddedEntities: {
+  //       "ActiveEffect": "effects",
+  //       "DeeSanctionItem": "abilities"
+  //     },
+  //     label: "ENTITY.Item",
+  //     permissions: {
+  //       create: "ITEM_CREATE"
+  //     }
+  //   };
+  // }
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -15,6 +37,9 @@ export class DeeSanctionItem extends Item {
       switch (itemData.type) {
         case "ability":
           itemData.img = CONFIG.DEE.icons["ability"];
+          break;
+        case "affliction":
+          this._prepareAfflictionData(itemData);
           break;
         case "association":
           this._prepareAssociationData(itemData);
@@ -35,6 +60,9 @@ export class DeeSanctionItem extends Item {
 
   _prepareAssociationData(data) {
     data.img = CONFIG.DEE.icons["conspiracy"];
-    console.log(data)
+  }
+
+  _prepareAfflictionData(data) {
+    data.img = CONFIG.DEE.icons["affliction"];
   }
 }

@@ -101,7 +101,8 @@
       "templates": ["base"]
     },
     "focus": {
-      "templates": ["base", "association"]
+      "templates": ["base"],
+      "abilities": []
     }
   }
 }

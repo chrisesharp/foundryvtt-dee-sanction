@@ -4,7 +4,6 @@ import {DeeSanctionDice} from "../dice.js";
  * @extends {Actor}
  */
 export class DeeSanctionActor extends Actor {
-
   /**
    * Augment the basic actor data with additional dynamic data.
    */
@@ -102,4 +101,7 @@ export class DeeSanctionActor extends Actor {
     return rt.draw({roll:roll});
   }
 
+  getAbilities() {
+    return this.data.items.filter(i=>i.type==="ability");
+  }
 }

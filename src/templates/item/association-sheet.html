@@ -22,7 +22,8 @@
 
         {{!-- Abilities Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">
-            <ol class="items-list">
+            {{> "systems/dee/templates/item/partials/item-abilities-list.html"}}
+            <!-- <ol class="items-list">
                 <li class="flexrow item-header">
                     <div class="fortune-header">Abilities that are associated with this affiliation.</div>
                     <div class="item-controls">
@@ -31,7 +32,7 @@
                 </li>
             {{#each data.abilities as |item id|}}
                 <li class="item-entry flexcol" data-item-id="{{item._id}}">
-                    <div class="item flexrow">
+                    <div class="entity item flexrow" data-entity-id="{{item._id}}">
                         <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
@@ -41,7 +42,7 @@
                     </div>
                 </li>
             {{/each}}
-            </ol>
+            </ol> -->
         </div>
     </section>
 </form>

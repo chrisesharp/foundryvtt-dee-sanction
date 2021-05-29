@@ -14,6 +14,8 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/dee/templates/actor/partials/enemy-header.html',
         'systems/dee/templates/actor/partials/enemy-resistance.html',
         'systems/dee/templates/actor/partials/enemy-resolution.html',
+        // Item Partials
+        'systems/dee/templates/item/partials/item-abilities-list.html',
     ];
     return loadTemplates(templatePaths);
 };

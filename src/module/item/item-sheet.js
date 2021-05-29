@@ -19,6 +19,24 @@ export class DeeSanctionItemSheet extends ItemSheet {
   }
 
   /** @override */
+  _onDragStart(event) {
+    const div = event.currentTarget;
+    // Create drag data
+    const dragData = { };
+    const itemId = div.dataset.entityId;
+    
+    // Owned Items
+    if ( itemId ) {
+      const item = game.items.get(itemId);
+      dragData.type = "Item";
+      dragData.data = item.data;
+    }
+
+    // Set data transfer
+    event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+  }
+
+  /** @override */
   async _onDrop(event) {
     // Try to extract the data
     let data;
@@ -31,7 +49,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     // Handle the drop with a Hooked function
     const allowed = Hooks.call("dropItemSheetData", actor, this, data);
     if ( allowed === false ) {
-      console.log("dropItemSheetData said no...")
       return;
     }
     // Handle different data types
@@ -89,12 +106,12 @@ export class DeeSanctionItemSheet extends ItemSheet {
 
     // Roll handlers, click handlers, etc. would go here.
     // Add ability
-    html.find('.item-create').click(this._onAbilityCreate.bind(this));
+    // TODO when on 8.x
+    //html.find('.item-create').click(this._onAbilityCreate.bind(this));
 
     // Update ability Item
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item-entry");
-      //const item = this.actor.getOwnedItem(li.data("itemId"));
       const item = game.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
@@ -105,7 +122,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
       this._onAbilityDelete(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });
-    console.log("ItemSheet listeners activated")
   }
 
   /**
@@ -128,11 +144,10 @@ export class DeeSanctionItemSheet extends ItemSheet {
     };
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
-
     // Finally, create the item!
-    // return this.item.createEmbeddedEntity(itemData);
     // TODO use the 8.x createEmbeddedDocuments() api
     console.log("TODO create embedded ability")
+    //return this.item.createEmbeddedEntity("DeeSanctionItem", itemData);
   }
 
   /**
