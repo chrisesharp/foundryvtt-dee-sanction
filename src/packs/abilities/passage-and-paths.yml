@@ -1,0 +1,5 @@
+name: "Passage and Path"
+type: "ability"
+data:
+  description: "<p>Passage and Path.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Blacksmithery"
+type: "ability"
+data:
+  description: "<p>Blacksmithery.</p>"
+img: "icons/svg/book.svg"

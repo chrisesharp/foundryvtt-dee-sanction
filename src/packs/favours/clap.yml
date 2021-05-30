@@ -1,0 +1,5 @@
+name: "Clap"
+type: "favour"
+data:
+  description: "<p>Roar, Rumble, Crash, Distract, Flinch.</p>"
+img: "icons/svg/angel.svg"

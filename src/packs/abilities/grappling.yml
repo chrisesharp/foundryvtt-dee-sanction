@@ -1,0 +1,5 @@
+name: "Grappling"
+type: "ability"
+data:
+  description: "<p>Grappling.</p>"
+img: "icons/svg/book.svg"

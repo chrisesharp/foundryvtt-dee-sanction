@@ -1,0 +1,5 @@
+name: "Organisation"
+type: "ability"
+data:
+  description: "<p>Organisation.</p>"
+img: "icons/svg/book.svg"

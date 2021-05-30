@@ -1,0 +1,5 @@
+name: "Climbing"
+type: "ability"
+data:
+  description: "<p>Climbing.</p>"
+img: "icons/svg/book.svg"

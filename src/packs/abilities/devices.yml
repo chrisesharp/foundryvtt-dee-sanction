@@ -1,0 +1,5 @@
+name: "Devices"
+type: "ability"
+data:
+  description: "<p>Devices.</p>"
+img: "icons/svg/book.svg"

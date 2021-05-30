@@ -1,0 +1,5 @@
+name: "Baffle"
+type: "favour"
+data:
+  description: "<p>Mystify, Annoy, Confuse, Distract.</p>"
+img: "icons/svg/angel.svg"

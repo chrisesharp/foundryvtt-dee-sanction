@@ -1,0 +1,5 @@
+name: "Gambling"
+type: "ability"
+data:
+  description: "<p>Gambling.</p>"
+img: "icons/svg/book.svg"

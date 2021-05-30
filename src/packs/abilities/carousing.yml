@@ -1,0 +1,5 @@
+name: "Carousing"
+type: "ability"
+data:
+  description: "<p>Carousing.</p>"
+img: "icons/svg/book.svg"

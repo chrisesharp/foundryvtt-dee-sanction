@@ -1,0 +1,5 @@
+name: "Bureaucracy"
+type: "ability"
+data:
+  description: "<p>Bureaucracy.</p>"
+img: "icons/svg/book.svg"

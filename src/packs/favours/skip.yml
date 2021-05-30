@@ -1,0 +1,5 @@
+name: "Skip"
+type: "favour"
+data:
+  description: "<p>Excited, Leaping.</p>"
+img: "icons/svg/angel.svg"

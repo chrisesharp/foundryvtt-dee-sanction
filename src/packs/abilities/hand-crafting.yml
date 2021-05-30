@@ -1,0 +1,5 @@
+name: "Hand Crafting"
+type: "ability"
+data:
+  description: "<p>Hand Crafting.</p>"
+img: "icons/svg/book.svg"

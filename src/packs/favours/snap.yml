@@ -1,0 +1,5 @@
+name: "Snap"
+type: "favour"
+data:
+  description: "<p>Weaken, Abrade, Cripple.</p>"
+img: "icons/svg/angel.svg"

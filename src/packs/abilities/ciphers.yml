@@ -1,0 +1,5 @@
+name: "Ciphers"
+type: "ability"
+data:
+  description: "<p>Ciphers.</p>"
+img: "icons/svg/book.svg"

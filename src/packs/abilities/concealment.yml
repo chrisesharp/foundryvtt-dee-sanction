@@ -1,0 +1,5 @@
+name: "Concealment"
+type: "ability"
+data:
+  description: "<p>Concealment.</p>"
+img: "icons/svg/book.svg"

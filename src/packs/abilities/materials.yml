@@ -1,0 +1,5 @@
+name: "Materials"
+type: "ability"
+data:
+  description: "<p>Craft-specific materials.</p>"
+img: "icons/svg/book.svg"

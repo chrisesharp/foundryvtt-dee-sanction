@@ -1,0 +1,5 @@
+name: "Natural History"
+type: "ability"
+data:
+  description: "<p>Natural History.</p>"
+img: "icons/svg/book.svg"

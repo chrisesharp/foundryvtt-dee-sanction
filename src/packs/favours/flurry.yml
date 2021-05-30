@@ -1,0 +1,5 @@
+name: "Flurry"
+type: "favour"
+data:
+  description: "<p>Cloak, Smother, Blind.</p>"
+img: "icons/svg/angel.svg"

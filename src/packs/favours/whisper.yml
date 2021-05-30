@@ -1,0 +1,5 @@
+name: "Whisper"
+type: "favour"
+data:
+  description: "<p>Confidential, Hissing, Misheard, Unheard.</p>"
+img: "icons/svg/angel.svg"

@@ -1,0 +1,5 @@
+name: "Tomfoolery"
+type: "ability"
+data:
+  description: "<p>Tomfoolery.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Apprehend"
+type: "ability"
+data:
+  description: "<p>Apprehend.</p>"
+img: "icons/svg/book.svg"

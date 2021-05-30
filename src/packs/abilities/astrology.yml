@@ -1,0 +1,5 @@
+name: "Astrology"
+type: "ability"
+data:
+  description: "<p>Astrology.</p>"
+img: "icons/svg/book.svg"

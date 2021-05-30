@@ -1,0 +1,5 @@
+name: "Herbalism"
+type: "ability"
+data:
+  description: "<p>Herbalism.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Anthropology"
+type: "ability"
+data:
+  description: "<p>Anthropology.</p>"
+img: "icons/svg/book.svg"

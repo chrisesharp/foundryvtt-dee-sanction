@@ -1,0 +1,5 @@
+name: "Mythology"
+type: "ability"
+data:
+  description: "<p>Mythology.</p>"
+img: "icons/svg/book.svg"

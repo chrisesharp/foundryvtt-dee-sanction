@@ -1,0 +1,5 @@
+name: "Moisten"
+type: "favour"
+data:
+  description: "<p>Stain, Spatter, Damp.</p>"
+img: "icons/svg/angel.svg"

@@ -1,0 +1,5 @@
+name: "Mediumship"
+type: "ability"
+data:
+  description: "<p>Mediumship.</p>"
+img: "icons/svg/book.svg"

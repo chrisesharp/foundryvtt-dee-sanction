@@ -1,0 +1,5 @@
+name: "Folklore"
+type: "ability"
+data:
+  description: "<p>Folklore.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Theology"
+type: "ability"
+data:
+  description: "<p>Theology.</p>"
+img: "icons/svg/book.svg"

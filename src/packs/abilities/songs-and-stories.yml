@@ -1,0 +1,5 @@
+name: "Songs and Stories"
+type: "ability"
+data:
+  description: "<p>Songs and Stories.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Dentistry"
+type: "ability"
+data:
+  description: "<p>Dentistry.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Meditation"
+type: "ability"
+data:
+  description: "<p>Meditation.</p>"
+img: "icons/svg/book.svg"

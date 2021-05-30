@@ -1,0 +1,5 @@
+name: "Scorch"
+type: "favour"
+data:
+  description: "<p>Burn, Sear, Char.</p>"
+img: "icons/svg/angel.svg"

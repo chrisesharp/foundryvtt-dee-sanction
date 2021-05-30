@@ -1,0 +1,5 @@
+name: "Bargaining"
+type: "ability"
+data:
+  description: "<p>Bargaining.</p>"
+img: "icons/svg/book.svg"

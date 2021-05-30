@@ -1,0 +1,5 @@
+name: "Signal"
+type: "favour"
+data:
+  description: "<p>Warn, Commune, Awaken, Flare.</p>"
+img: "icons/svg/angel.svg"

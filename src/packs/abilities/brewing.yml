@@ -1,0 +1,5 @@
+name: "Brewing"
+type: "ability"
+data:
+  description: "<p>Brewing.</p>"
+img: "icons/svg/book.svg"

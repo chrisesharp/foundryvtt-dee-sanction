@@ -1,0 +1,5 @@
+name: "Anatomy"
+type: "ability"
+data:
+  description: "<p>Anatomy.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Rot"
+type: "favour"
+data:
+  description: "<p>Spoil, Stink, Mould, Weaken.</p>"
+img: "icons/svg/angel.svg"

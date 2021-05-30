@@ -1,0 +1,5 @@
+name: "Debate"
+type: "ability"
+data:
+  description: "<p>Debate.</p>"
+img: "icons/svg/book.svg"

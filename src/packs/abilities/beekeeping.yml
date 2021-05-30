@@ -1,0 +1,5 @@
+name: "Beekeeping"
+type: "ability"
+data:
+  description: "<p>Beekeeping.</p>"
+img: "icons/svg/book.svg"

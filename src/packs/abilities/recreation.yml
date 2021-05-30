@@ -1,0 +1,5 @@
+name: "Recreation"
+type: "ability"
+data:
+  description: "<p>Recreation.</p>"
+img: "icons/svg/book.svg"

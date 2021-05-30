@@ -1,0 +1,5 @@
+name: "Clairsentience"
+type: "ability"
+data:
+  description: "<p>Clairsentience.</p>"
+img: "icons/svg/book.svg"

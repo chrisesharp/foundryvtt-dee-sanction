@@ -1,0 +1,5 @@
+name: "Connoisseur"
+type: "ability"
+data:
+  description: "<p>Connoisseur.</p>"
+img: "icons/svg/book.svg"

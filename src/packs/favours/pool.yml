@@ -1,0 +1,5 @@
+name: "Pool"
+type: "favour"
+data:
+  description: "<p>Gather, Coalesce, Slide, Splosh.</p>"
+img: "icons/svg/angel.svg"

@@ -1,0 +1,5 @@
+name: "Deception"
+type: "ability"
+data:
+  description: "<p>Deception.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Bleeding"
+type: "ability"
+data:
+  description: "<p>Bleeding.</p>"
+img: "icons/svg/book.svg"

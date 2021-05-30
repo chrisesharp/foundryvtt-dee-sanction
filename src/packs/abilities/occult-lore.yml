@@ -1,0 +1,5 @@
+name: "Occult Lore"
+type: "ability"
+data:
+  description: "<p>Occult Lore.</p>"
+img: "icons/svg/book.svg"

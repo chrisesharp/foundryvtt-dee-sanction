@@ -1,0 +1,5 @@
+name: "Infiltration"
+type: "ability"
+data:
+  description: "<p>Infiltration.</p>"
+img: "icons/svg/book.svg"

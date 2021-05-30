@@ -1,0 +1,5 @@
+name: "Nostalgia"
+type: "ability"
+data:
+  description: "<p>Nostalgia.</p>"
+img: "icons/svg/book.svg"

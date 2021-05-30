@@ -1,0 +1,5 @@
+name: "Rumour"
+type: "ability"
+data:
+  description: "<p>Rumour.</p>"
+img: "icons/svg/book.svg"

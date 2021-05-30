@@ -1,0 +1,5 @@
+name: "Comfort"
+type: "ability"
+data:
+  description: "<p>Comfort.</p>"
+img: "icons/svg/book.svg"

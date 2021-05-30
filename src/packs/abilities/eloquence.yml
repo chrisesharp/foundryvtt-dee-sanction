@@ -1,0 +1,5 @@
+name: "Eloquence"
+type: "ability"
+data:
+  description: "<p>Eloquence.</p>"
+img: "icons/svg/book.svg"

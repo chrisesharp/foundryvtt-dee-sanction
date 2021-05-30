@@ -1,0 +1,5 @@
+name: "Herbology"
+type: "ability"
+data:
+  description: "<p>Herbology.</p>"
+img: "icons/svg/book.svg"

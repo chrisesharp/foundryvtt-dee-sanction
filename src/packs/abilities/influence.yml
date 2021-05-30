@@ -1,0 +1,5 @@
+name: "Influence"
+type: "ability"
+data:
+  description: "<p>Influence.</p>"
+img: "icons/svg/book.svg"

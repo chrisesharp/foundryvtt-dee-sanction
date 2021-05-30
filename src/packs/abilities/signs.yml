@@ -1,0 +1,5 @@
+name: "Signs"
+type: "ability"
+data:
+  description: "<p>Signs.</p>"
+img: "icons/svg/book.svg"

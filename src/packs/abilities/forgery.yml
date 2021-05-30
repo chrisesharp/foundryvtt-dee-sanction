@@ -1,0 +1,5 @@
+name: "Forgery"
+type: "ability"
+data:
+  description: "<p>Forgery.</p>"
+img: "icons/svg/book.svg"

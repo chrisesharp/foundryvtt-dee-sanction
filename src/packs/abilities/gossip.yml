@@ -1,0 +1,5 @@
+name: "Gossip"
+type: "ability"
+data:
+  description: "<p>Gossip.</p>"
+img: "icons/svg/book.svg"

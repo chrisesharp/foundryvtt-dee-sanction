@@ -1,0 +1,5 @@
+name: "Sleight-of-hand"
+type: "ability"
+data:
+  description: "<p>Sleight-of-hand.</p>"
+img: "icons/svg/book.svg"

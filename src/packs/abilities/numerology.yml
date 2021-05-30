@@ -1,0 +1,5 @@
+name: "Numerology"
+type: "ability"
+data:
+  description: "<p>Numerology.</p>"
+img: "icons/svg/book.svg"

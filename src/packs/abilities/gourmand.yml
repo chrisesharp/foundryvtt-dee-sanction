@@ -1,0 +1,5 @@
+name: "Gourmand"
+type: "ability"
+data:
+  description: "<p>Gourmand.</p>"
+img: "icons/svg/book.svg"

@@ -1,0 +1,5 @@
+name: "Foraging"
+type: "ability"
+data:
+  description: "<p>Foraging.</p>"
+img: "icons/svg/book.svg"

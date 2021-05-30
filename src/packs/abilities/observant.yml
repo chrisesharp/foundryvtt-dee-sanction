@@ -1,0 +1,5 @@
+name: "Observant"
+type: "ability"
+data:
+  description: "<p>Observant.</p>"
+img: "icons/svg/book.svg"

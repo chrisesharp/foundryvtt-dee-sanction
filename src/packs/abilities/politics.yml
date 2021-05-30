@@ -1,0 +1,5 @@
+name: "Politics"
+type: "ability"
+data:
+  description: "<p>Politics.</p>"
+img: "icons/svg/book.svg"

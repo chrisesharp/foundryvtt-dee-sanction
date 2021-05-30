@@ -1,0 +1,5 @@
+name: "Burglary"
+type: "ability"
+data:
+  description: "<p>Burglary.</p>"
+img: "icons/svg/book.svg"

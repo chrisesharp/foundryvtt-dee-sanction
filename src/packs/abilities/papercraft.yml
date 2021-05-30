@@ -1,0 +1,5 @@
+name: "Papercraft"
+type: "ability"
+data:
+  description: "<p>Papercraft.</p>"
+img: "icons/svg/book.svg"
