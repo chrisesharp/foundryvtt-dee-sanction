@@ -1,0 +1,18 @@
+name: "Horse Trader"
+type: "occupation"
+data: 
+  description: "<p>Trader in all manner of livestock; accused,
+by reputation, to play the game and
+perhaps pull the wool over unguarded
+eyes for a profit</p>"
+  abilities: 
+    - 
+      name: "Intimidation"
+      type: "ability"
+    - 
+      name: "Probability"
+      type: "ability"
+    - 
+      name: "Animal Welfare"
+      type: "ability"
+

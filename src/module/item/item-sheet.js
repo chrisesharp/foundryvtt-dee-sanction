@@ -19,7 +19,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
   }
 
   /** @override */
-  _onDragStart(event) {
+  async _onDragStart(event) {
     const div = event.currentTarget;
     // Create drag data
     const dragData = { };
@@ -27,7 +27,12 @@ export class DeeSanctionItemSheet extends ItemSheet {
     
     // Owned Items
     if ( itemId ) {
-      const item = game.items.get(itemId);
+      let item = game.items.get(itemId);
+      if (!item) {
+        const pack = game.packs.get("dee.abilities");
+        const idx = pack.index.find(e => e._id === itemId );
+        item = await pack.getEntity(idx._id);
+      }
       dragData.type = "Item";
       dragData.data = item.data;
     }
@@ -59,15 +64,25 @@ export class DeeSanctionItemSheet extends ItemSheet {
     }
   }
 
-  _onDropItem(event, data) {
+  async _onDropItem(event, data) {
     if (!this.isEditable) return false;
-    const ability = game.items.get(data.id);
     let abilities = this.item.data.data.abilities.filter(a=>a.id != data.id);
-    abilities.push(ability);
-    const newAbilities = {
-      abilities: abilities
+    let ability = game.items.get(data.id);
+    if (!ability) {
+      const pack = game.packs.get("dee.abilities");
+      const idx = pack.index.find(e => e._id === data.id );
+      ability = await pack.getEntity(idx._id);
     }
-    return this.item.update({data: newAbilities});
+    if (ability) {
+      abilities.push(ability);
+      const newAbilities = {
+        abilities: abilities
+      }
+      return this.item.update({data: newAbilities});
+    } else {
+      console.log("Couldn't find ability ",data)
+      return false;
+    }
   }
 
   /** @override */

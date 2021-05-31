@@ -1,0 +1,18 @@
+name: "Friar"
+type: "occupation"
+data: 
+  description: "<p>One of the scattered mendicants of a
+broken order, seeking support and goodwill
+from the generous and those seeking
+beneficence</p>"
+  abilities: 
+    - 
+      name: "Begging"
+      type: "ability"
+    - 
+      name: "Quote and Verse"
+      type: "ability"
+    - 
+      name: "Gourmand"
+      type: "ability"
+

@@ -1,0 +1,17 @@
+name: "Society of Jesus"
+type: "association"
+data: 
+  description: "<p>Jesuit infiltrators intent on overthrowing
+the Queen and the Church
+of England</p>"
+  abilities: 
+    - 
+      name: "Infiltration"
+      type: "ability"
+    - 
+      name: "Anthropology"
+      type: "ability"
+    - 
+      name: "Dyeing"
+      type: "ability"
+

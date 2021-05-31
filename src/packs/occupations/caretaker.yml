@@ -1,0 +1,17 @@
+name: "Caretaker"
+type: "occupation"
+data: 
+  description: "<p>Trusted keeper of buildings and wider
+properties, notably in the absence of the
+master of the house</p>"
+  abilities: 
+    - 
+      name: "Cooking"
+      type: "ability"
+    - 
+      name: "Farming"
+      type: "ability"
+    - 
+      name: "Hunting"
+      type: "ability"
+

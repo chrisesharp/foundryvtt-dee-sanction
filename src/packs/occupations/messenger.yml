@@ -1,0 +1,17 @@
+name: "Messenger"
+type: "occupation"
+data: 
+  description: "<p>Second-fiddle diplomats burdened with
+the drudgery of carrying letters, papers,
+and commodious gratuities</p>"
+  abilities: 
+    - 
+      name: "Rumour"
+      type: "ability"
+    - 
+      name: "Orienteering"
+      type: "ability"
+    - 
+      name: "Traversing"
+      type: "ability"
+

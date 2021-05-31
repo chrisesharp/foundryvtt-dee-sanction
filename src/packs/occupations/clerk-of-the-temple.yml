@@ -1,0 +1,17 @@
+name: "Clerk of the Temple"
+type: "occupation"
+data: 
+  description: "<p>Close associate of those who practice the
+law, serving with a willing ear, a strong
+stomach and a tenacious head lock</p>"
+  abilities: 
+    - 
+      name: "By-Laws and Loopholes"
+      type: "ability"
+    - 
+      name: "Grappling"
+      type: "ability"
+    - 
+      name: "Carousing"
+      type: "ability"
+

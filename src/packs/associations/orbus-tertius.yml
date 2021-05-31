@@ -1,0 +1,17 @@
+name: "Orbus Tertius"
+type: "association"
+data: 
+  description: "<p>Committed to gathering evidence of
+a hidden realm of perception that
+will allow transcendence to Mastery</p>"
+  abilities: 
+    - 
+      name: "Influence"
+      type: "ability"
+    - 
+      name: "Petty Theft"
+      type: "ability"
+    - 
+      name: "Herbology"
+      type: "ability"
+

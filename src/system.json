@@ -17,6 +17,48 @@
       "package": "dee",
       "path": "packs/abilities.db",
       "entity": "Item"
+    },
+    {
+      "name": "afflictions",
+      "label": "Afflictions",
+      "package": "dee",
+      "path": "packs/afflictions.db",
+      "entity": "Item"
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "package": "dee",
+      "path": "packs/items.db",
+      "entity": "Item"
+    },
+    {
+      "name": "favours",
+      "label": "Favours",
+      "package": "dee",
+      "path": "packs/favours.db",
+      "entity": "Item"
+    },
+    {
+      "name": "associations",
+      "label": "Associations",
+      "package": "dee",
+      "path": "packs/associations.db",
+      "entity": "Item"
+    },
+    {
+      "name": "occupations",
+      "label": "Occupations",
+      "package": "dee",
+      "path": "packs/occupations.db",
+      "entity": "Item"
+    },
+    {
+      "name": "foci",
+      "label": "Foci",
+      "package": "dee",
+      "path": "packs/foci.db",
+      "entity": "Item"
     }
   ],
   "languages": [

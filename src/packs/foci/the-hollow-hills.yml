@@ -1,0 +1,15 @@
+name: "The Hollow Hills"
+type: "focus"
+data: 
+  description: "<p>Theories and legends upon an inner
+world of lost people and forgotten
+knowledge</p>"
+  abilities: 
+    - 
+      name: "Astronomy"
+      type: "ability"
+    - 
+      name: "Climbing"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

@@ -1,0 +1,17 @@
+name: "Star of Artemis"
+type: "association"
+data: 
+  description: "<p>Religion stems from layers of deceit;
+true faith has been mired in ancient
+propaganda</p>"
+  abilities: 
+    - 
+      name: "Mythology"
+      type: "ability"
+    - 
+      name: "Archaeology"
+      type: "ability"
+    - 
+      name: "Flattery"
+      type: "ability"
+

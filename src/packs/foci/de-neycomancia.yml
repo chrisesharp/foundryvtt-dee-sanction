@@ -1,0 +1,15 @@
+name: "De Neycomancia"
+type: "focus"
+data: 
+  description: "<p>Philosophy and practise upon the
+invocation of the dead and entities
+bound to the spirit realm.</p>"
+  abilities: 
+    - 
+      name: "Clairsentience"
+      type: "ability"
+    - 
+      name: "Mediumship"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

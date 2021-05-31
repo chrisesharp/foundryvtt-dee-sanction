@@ -1,0 +1,17 @@
+name: "Craftsperson"
+type: "occupation"
+data: 
+  description: "<p>Apprenticed specialist disciplined in the
+adept working of raw materials into
+products of saleable value</p>"
+  abilities: 
+    - 
+      name: "Barter"
+      type: "ability"
+    - 
+      name: "Materials"
+      type: "ability"
+    - 
+      name: "Reworking"
+      type: "ability"
+

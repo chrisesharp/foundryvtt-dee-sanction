@@ -1,0 +1,16 @@
+name: "Steganographia"
+type: "focus"
+data: 
+  description: "<p>Cryptographic guide hidden within a
+text on symbolic and ancient languages
+used for discourse with spirits
+and demons</p>"
+  abilities: 
+    - 
+      name: "Signs"
+      type: "ability"
+    - 
+      name: "Ciphers"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

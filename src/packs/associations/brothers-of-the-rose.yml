@@ -1,0 +1,17 @@
+name: "Brothers of the Rose"
+type: "association"
+data: 
+  description: "<p>Believers in esoteric truths of the
+past, seeking insight into nature, the
+universe and the spiritual realms</p>"
+  abilities: 
+    - 
+      name: "Politics"
+      type: "ability"
+    - 
+      name: "Concealment"
+      type: "ability"
+    - 
+      name: "Provocation"
+      type: "ability"
+

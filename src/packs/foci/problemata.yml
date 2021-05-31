@@ -1,0 +1,16 @@
+name: "Rites of Eleusis"
+type: "focus"
+data: 
+  description: "<p>Annotated and dissected record of the
+mechanisms and devices constructed
+(or even theorised) by the Ancient
+Greeks</p>"
+  abilities: 
+    - 
+      name: "Construction"
+      type: "ability"
+    - 
+      name: "Mechanics"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

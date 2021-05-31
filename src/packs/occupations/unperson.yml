@@ -1,0 +1,17 @@
+name: "Unperson"
+type: "occupation"
+data: 
+  description: "<p>Dweller of the streets, alleyways, lanes, and
+back roads, surviving hardship through a
+wealth of wit and wile</p>"
+  abilities: 
+    - 
+      name: "Burglary"
+      type: "ability"
+    - 
+      name: "Passage and Path"
+      type: "ability"
+    - 
+      name: "Street Smarts"
+      type: "ability"
+

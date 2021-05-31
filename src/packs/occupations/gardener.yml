@@ -1,0 +1,17 @@
+name: "Gardener"
+type: "occupation"
+data: 
+  description: "<p>Hard-working keepers of small plots, in
+town and country, for flowers, vegetables
+and simples</p>"
+  abilities: 
+    - 
+      name: "Foraging"
+      type: "ability"
+    - 
+      name: "Labouring"
+      type: "ability"
+    - 
+      name: "Beekeeping"
+      type: "ability"
+

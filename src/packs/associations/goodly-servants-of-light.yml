@@ -1,0 +1,18 @@
+name: "Goodly Servants of Light"
+type: "association"
+data: 
+  description: "<p>Belief in the prophetic focus served
+in the construction and scrutiny of
+monuments as a means to channel
+the wisdom of the Almighty</p>"
+  abilities: 
+    - 
+      name: "Architecture"
+      type: "ability"
+    - 
+      name: "Orienteering"
+      type: "ability"
+    - 
+      name: "Ministration"
+      type: "ability"
+

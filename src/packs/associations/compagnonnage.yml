@@ -1,0 +1,17 @@
+name: "Compagnonnage"
+type: "association"
+data: 
+  description: "<p>Frustrated upstart craftfolk intent
+on bringing about a new order to
+unseat the Guilds and wider society</p>"
+  abilities: 
+    - 
+      name: "Hand Crafting"
+      type: "ability"
+    - 
+      name: "Devices"
+      type: "ability"
+    - 
+      name: "Bargaining"
+      type: "ability"
+

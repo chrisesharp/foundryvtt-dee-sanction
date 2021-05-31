@@ -1,0 +1,17 @@
+name: "Chevaliers des Trois Imposteurs"
+type: "association"
+data: 
+  description: "<p>Fractious movement intent on
+bringing about Enlightenment in an
+Age of False Religions</p>"
+  abilities: 
+    - 
+      name: "Antiquity"
+      type: "ability"
+    - 
+      name: "Commerce"
+      type: "ability"
+    - 
+      name: "Eloquence"
+      type: "ability"
+

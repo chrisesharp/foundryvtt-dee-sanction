@@ -1,0 +1,17 @@
+name: "Official of the Watch"
+type: "occupation"
+data: 
+  description: "<p>Thankless volunteer keepers of order
+tasked with bringing the wretched and
+the immoral to justice</p>"
+  abilities: 
+    - 
+      name: "Forgery"
+      type: "ability"
+    - 
+      name: "Gambling"
+      type: "ability"
+    - 
+      name: "Apprehend"
+      type: "ability"
+

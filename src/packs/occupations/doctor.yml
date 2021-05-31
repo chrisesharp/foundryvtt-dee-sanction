@@ -1,0 +1,17 @@
+name: "Doctor"
+type: "occupation"
+data: 
+  description: "<p>Assistant to one of the few chartered physicians
+who claim recognition for their
+depth of medical knowledge</p>"
+  abilities: 
+    - 
+      name: "Reassurance"
+      type: "ability"
+    - 
+      name: "Anatomy"
+      type: "ability"
+    - 
+      name: "Diagnosis"
+      type: "ability"
+

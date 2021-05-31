@@ -1,0 +1,14 @@
+name: "The Sins of Longinus"
+type: "focus"
+data: 
+  description: "<p>Discourse on the medieval legend
+around the final days of the Christ</p>"
+  abilities: 
+    - 
+      name: "Blacksmithery"
+      type: "ability"
+    - 
+      name: "Theology"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

@@ -1,0 +1,17 @@
+name: "Minstrel"
+type: "occupation"
+data: 
+  description: "<p>Welcome provider of entertainment, in
+forms many and varied, in court and
+drinking holes alike</p>"
+  abilities: 
+    - 
+      name: "Song and Story"
+      type: "ability"
+    - 
+      name: "Acrobatics"
+      type: "ability"
+    - 
+      name: "Tomfoolery"
+      type: "ability"
+

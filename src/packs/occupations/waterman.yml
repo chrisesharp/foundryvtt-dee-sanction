@@ -1,0 +1,18 @@
+name: "Waterman"
+type: "occupation"
+data: 
+  description: "<p>Lewd-mouthed punters upon freshwater
+courses able to chart a safe course
+through accreted silt, discarded rubbish,
+and narrow channels</p>"
+  abilities: 
+    - 
+      name: "Gossip"
+      type: "ability"
+    - 
+      name: "Navigation"
+      type: "ability"
+    - 
+      name: "Boating"
+      type: "ability"
+

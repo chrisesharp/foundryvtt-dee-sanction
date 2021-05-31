@@ -1,0 +1,18 @@
+name: "Herbalist"
+type: "occupation"
+data: 
+  description: "<p>Practitioners in traditional treatments and
+curatives garnered and prepared from
+both cultivated gardens or the open
+commons and woodlands</p>"
+  abilities: 
+    - 
+      name: "Comfort"
+      type: "ability"
+    - 
+      name: "Herbalism"
+      type: "ability"
+    - 
+      name: "Brewing"
+      type: "ability"
+

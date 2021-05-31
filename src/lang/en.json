@@ -10,6 +10,8 @@
     "DEE.Roll": "Roll",
     "DEE.Success": "Success",
     "DEE.Failure": "Falter",
+    "DEE.Setting.initialized": "System Initialized",
+    "DEE.Setting.initializedHint": "untick to re-import compendia next start.",
 
     "DEE.RollMode": "Roll Mode",
     "DEE.SitMod": "Step Modifier",

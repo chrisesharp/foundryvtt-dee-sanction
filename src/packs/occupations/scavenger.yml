@@ -1,0 +1,17 @@
+name: "Scavenger"
+type: "occupation"
+data: 
+  description: "<p>An officer of the ward responsible for
+managing the handling and removal of
+domestic waste</p>"
+  abilities: 
+    - 
+      name: "Carriage-Handling"
+      type: "ability"
+    - 
+      name: "Scavenging"
+      type: "ability"
+    - 
+      name: "Night Working"
+      type: "ability"
+

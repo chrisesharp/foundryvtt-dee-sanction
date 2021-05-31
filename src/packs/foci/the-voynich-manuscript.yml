@@ -1,0 +1,16 @@
+name: "The Voynich Manuscript"
+type: "focus"
+data: 
+  description: "<p>Impenetrable occult catalogue, filled
+with an unknown alphabet; peppered
+with strange imagery, understanding
+demands time and focus</p>"
+  abilities: 
+    - 
+      name: "Astrology"
+      type: "ability"
+    - 
+      name: "Recreation"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

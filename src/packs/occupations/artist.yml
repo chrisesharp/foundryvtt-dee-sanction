@@ -1,0 +1,17 @@
+name: "Artist"
+type: "occupation"
+data: 
+  description: "<p>Creator of emotive miniatures and decorative
+illuminations for varied patrons,
+ideally with deep pockets</p>"
+  abilities: 
+    - 
+      name: "Drawing"
+      type: "ability"
+    - 
+      name: "Counterfeit"
+      type: "ability"
+    - 
+      name: "Nostalgia"
+      type: "ability"
+
