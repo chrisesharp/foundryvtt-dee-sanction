@@ -51,11 +51,13 @@ export class DeeSanctionItem extends Item {
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {
+    super.prepareData();
     // Get the Item's data
-    const itemData = this.data.data;
+    const itemData = this.data;
     // const actorData = this.actor ? this.actor.data : {};
     // const data = itemData.data;
-    if (!itemData.img) {
+    // console.log(this)
+    if (itemData.img==="icons/svg/item-bag.svg") {
       switch (itemData.type) {
         case "ability":
           itemData.img = CONFIG.DEE.icons["ability"];
@@ -80,6 +82,5 @@ export class DeeSanctionItem extends Item {
           break;
       }
     }
-    super.prepareData();
   }
 }
