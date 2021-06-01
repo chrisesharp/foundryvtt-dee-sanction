@@ -3,8 +3,8 @@
   "title": "The Dee Sanction",
   "description": "The Dee Sanction system for FoundryVTT!",
   "version": "1.0.0",
-  "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": "0.8.3",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "0.8.6",
   "templateVersion": 2,
   "author": "Chris Sharp",
   "esmodules": ["dee.js"],
@@ -19,10 +19,10 @@
       "entity": "Item"
     },
     {
-      "name": "afflictions",
-      "label": "Afflictions",
+      "name": "consequences",
+      "label": "Consequences",
       "package": "dee",
-      "path": "packs/afflictions.db",
+      "path": "packs/consequences.db",
       "entity": "Item"
     },
     {

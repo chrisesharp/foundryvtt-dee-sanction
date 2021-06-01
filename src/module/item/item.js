@@ -38,8 +38,8 @@ export class DeeSanctionItem extends Item {
         case "ability":
           itemData.img = CONFIG.DEE.icons["ability"];
           break;
-        case "affliction":
-          itemData.img = CONFIG.DEE.icons["affliction"];
+        case "consequence":
+          itemData.img = CONFIG.DEE.icons["consequence"];
           break;
         case "association":
           itemData.img = CONFIG.DEE.icons["conspiracy"];

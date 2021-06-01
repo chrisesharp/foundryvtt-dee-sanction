@@ -33,8 +33,8 @@ Hooks.once('init', async function() {
   CONFIG.DEE = DEE;
 
   // Define custom Entity classes
-  CONFIG.Actor.entityClass = DeeSanctionActor;
-  CONFIG.Item.entityClass = DeeSanctionItem;
+  CONFIG.Actor.documentClass = DeeSanctionActor;
+  CONFIG.Item.documentClass = DeeSanctionItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -52,7 +52,7 @@ Hooks.once('init', async function() {
   await preloadHandlebarsTemplates();
 
   // Load leaf node documents
-  // let loaded = await loadCompendia(["Abilities","Afflictions","Items","Favours"]);
+  // let loaded = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
 
   // Load containers
   // loaded.then(()=>{loadCompendia(["Associations","Foci","Occupations"]);});

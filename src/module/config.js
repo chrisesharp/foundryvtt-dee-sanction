@@ -15,7 +15,7 @@ export const DEE = {
         "vigilance": "/systems/dee/assets/default/icons/vigilance.png",
         "conspiracy": "/systems/dee/assets/default/icons/conspiracy.png",
         "falling": "icons/svg/falling.png",
-        "affliction": "icons/svg/bones.svg",
+        "consequence": "icons/svg/bones.svg",
         "favour": "icons/svg/angel.svg"
     },
     "tradecraft": {

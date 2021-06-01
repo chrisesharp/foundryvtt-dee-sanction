@@ -24,6 +24,7 @@ export class DeeSanctionActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
+    console.log(actorData)
     //const data = actorData.data;
   }
 

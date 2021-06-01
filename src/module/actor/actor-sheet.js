@@ -206,12 +206,12 @@ export class DeeSanctionActorSheet extends ActorSheet {
    */
    _prepareItems(data) {
     // Partition items by category
-    let [items, abilities, afflictions, associations, favours, foci, occupations] = data.items.reduce(
+    let [items, abilities, consequences, associations, favours, foci, occupations] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
         else if (item.type === "ability") arr[1].push(item);
-        else if (item.type === "affliction") arr[2].push(item);
+        else if (item.type === "consequence") arr[2].push(item);
         else if (item.type === "association") arr[3].push(item);
         else if (item.type === "favour") arr[4].push(item);
         else if (item.type === "focus") arr[5].push(item);
@@ -225,7 +225,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     data.owned = {
       items : items,
       abilities : abilities,
-      afflictions : afflictions
+      consequences : consequences
     };
     data.association = {contacts:associations};
     data.esoterica = {favours: favours};

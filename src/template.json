@@ -77,7 +77,7 @@
     }
   },
   "Item": {
-    "types": ["item","ability", "affliction", "association", "favour", "focus","occupation"],
+    "types": ["item","ability", "consequence", "association", "favour", "focus","occupation"],
     "templates": {
       "base": {
         "description": ""
@@ -95,7 +95,7 @@
     "ability": {
       "templates": ["base"]
     },
-    "affliction": {
+    "consequence": {
       "templates": ["base"]
     },
     "favour": {
