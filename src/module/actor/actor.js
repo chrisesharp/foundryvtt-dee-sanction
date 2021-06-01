@@ -24,8 +24,31 @@ export class DeeSanctionActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    console.log(actorData)
-    //const data = actorData.data;
+    // console.log("in prepChaData",actorData)
+    const data = actorData.data;
+    let [items, abilities, consequences, associations, favours, foci, occupations] = actorData.items.reduce(
+      (arr, item) => {
+        // Classify items into types
+        if (item.type === "item") arr[0].push(item);
+        else if (item.type === "ability") arr[1].push(item);
+        else if (item.type === "consequence") arr[2].push(item);
+        else if (item.type === "association") arr[3].push(item);
+        else if (item.type === "favour") arr[4].push(item);
+        else if (item.type === "focus") arr[5].push(item);
+        else if (item.type === "occupation") arr[6].push(item);
+        return arr;
+      },
+      [[], [], [], [], [], [], []]
+    );
+
+
+    data.possessions = { mundane: items.filter(i => !i.esoteric), esoteric: items.filter(i => i.esoteric)};
+    data.abilities = abilities;
+    data.consequences = consequences;
+    data.expertise = { foci: foci, occupations: occupations};
+    data.affiliations = associations;
+    data.favours = favours;
+    // console.log("End of prepChaData:",data)
   }
 
   rollChallenge(resource, step, target = {}) {

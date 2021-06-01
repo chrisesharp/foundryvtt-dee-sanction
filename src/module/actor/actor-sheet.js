@@ -20,13 +20,10 @@ export class DeeSanctionActorSheet extends ActorSheet {
   }
 
   /** @override */
-  getData() {
-    const data = super.getData();
-    data.config = CONFIG.DEE;
-    data.dtypes = ["String", "Number", "Boolean"];
-    // Prepare owned items
-    this._prepareItems(data);
-    return data;
+  getData(opts) {
+    const baseData = super.getData(opts);
+    // data.dtypes = ["String", "Number", "Boolean"];
+    return this._prepareItems(baseData);
   }
 
   /** @override */
@@ -39,7 +36,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
       .click((event) => this._onItemSummary(event));
     
     // Rollable abilities.
-    // html.find('.rollable').click(this._onRoll.bind(this));
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Everything below here is only needed if the sheet is editable
@@ -205,31 +201,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @private
    */
    _prepareItems(data) {
-    // Partition items by category
-    let [items, abilities, consequences, associations, favours, foci, occupations] = data.items.reduce(
-      (arr, item) => {
-        // Classify items into types
-        if (item.type === "item") arr[0].push(item);
-        else if (item.type === "ability") arr[1].push(item);
-        else if (item.type === "consequence") arr[2].push(item);
-        else if (item.type === "association") arr[3].push(item);
-        else if (item.type === "favour") arr[4].push(item);
-        else if (item.type === "focus") arr[5].push(item);
-        else if (item.type === "occupation") arr[6].push(item);
-        return arr;
-      },
-      [[], [], [], [], [], [], []]
-    );
-
-    // Assign and return
-    data.owned = {
-      items : items,
-      abilities : abilities,
-      consequences : consequences,
-      associations: associations,
-      favours: favours,
-      foci: foci,
-      occupations: occupations
-    };
+      const sheetData = {
+        actor: data.actor,
+        config: CONFIG.DEE,
+        data: data.actor.data.data,
+      };
+      return sheetData;
   }
 }

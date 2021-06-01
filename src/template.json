@@ -21,11 +21,7 @@
       "home": "Colchester",
       "tradecraft": "",
       "mannerism": "",
-      "expertise": {
-        "focus": [],
-        "occupations": [],
-        "fortune": 1
-      },
+      "fortune": 1,
       "resources": {
         "int": {
           "value": 2
@@ -43,13 +39,7 @@
           "value": 5
         }
       },
-      "association": {
-        "affiliation": "",
-        "contacts": []
-      },
-      "esoterica": {
-        "favours": []
-      }
+      "contacts": []
     },
     "enemy": {
       "templates": ["base"],

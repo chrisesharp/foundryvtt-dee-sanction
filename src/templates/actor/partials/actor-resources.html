@@ -49,8 +49,8 @@
                 <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
             </div>
             <div class="hits-falters">
-                <input class="first" type="checkbox" name="data.falters.first" {{checked actor.data.falters.first }} data-dtype="Boolean"/>
-                <input class="second" type="checkbox" name="data.falters.second" {{checked actor.data.falters.second }} data-dtype="Boolean"/>
+                <input class="first" type="checkbox" name="data.falters.first" {{checked data.falters.first }} data-dtype="Boolean"/>
+                <input class="second" type="checkbox" name="data.falters.second" {{checked data.falters.second }} data-dtype="Boolean"/>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
                 <a class="item-control item-create" title="Create item" data-type="consequence"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
-            {{#each owned.consequences as |item id|}}
+            {{#each data.consequences as |item id|}}
                 <li class="item-entry flexcol" data-item-id="{{item.id}}">
                     <div class="item flexrow">
                         <h4 class="item-name">{{item.name}}</h4>

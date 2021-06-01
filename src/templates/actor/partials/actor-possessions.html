@@ -21,8 +21,7 @@
                 <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
-        {{#each owned.items as |item id|}}
-            {{#if (eq item.data.esoteric false)}}
+        {{#each data.possessions.mundane as |item id|}}
             <li class="item-entry flexcol" data-item-id="{{item.id}}">
                 <div class="item flexrow">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
@@ -33,7 +32,6 @@
                     </div>
                 </div>
             </li>
-            {{/if}}
         {{/each}}
         </ol>
     </div>
