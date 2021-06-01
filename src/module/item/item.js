@@ -4,33 +4,55 @@
  */
 export class DeeSanctionItem extends Item {
   // TODO work out how to use Document model in 8.x
-  // /** @override */
-  // constructor(...args) {
-  //   super(...args);
-  //   this.abilities = this.abilities || [];
-  // }
+  /** @override */
+  constructor(...args) {
+    super(...args);
+    // this.abilities = this.abilities || [];
+  }
 
-  // /** @override */
-  // static get config() {
-  //   return {
-  //     baseEntity: Item,
-  //     collection: game.items,
-  //     embeddedEntities: {
-  //       "ActiveEffect": "effects",
-  //       "DeeSanctionItem": "abilities"
-  //     },
-  //     label: "ENTITY.Item",
-  //     permissions: {
-  //       create: "ITEM_CREATE"
-  //     }
-  //   };
-  // }
+  /** @override */
+  static get metadata() {
+    const metadata = duplicate(Item.metadata);
+    // const metadata = {
+    //   name: "DeeSanctionItem",
+    //   collection: "items",
+    //   embedded: {
+    //     "ActiveEffect": Item.metadata.embedded["ActiveEffect"],
+    //     "DeeSanctionItem": DeeSanctionItem
+    //   },
+    //   hasSystemData: true,
+    //   isPrimary: false,
+    //   label: "DOCUMENT.DeeSanctionItem",
+    //   permissions: Item.metadata.permissions,
+    //   types: Item.metadata.types
+    // }
+    // metadata.embedded.push({"Item": DeeSanctionItem});
+    // metadata.name = "DeeSanctionItem";
+    // metadata.collection = "items";
+    // metadata.label = "Document.DeeSanctionItem";
+    // metadata.embedded = { "DeeSanctionItem": DeeSanctionItem};
+    // console.log("!!!!!!",Item.metadata)
+    // console.log("XXXXXX",metadata)
+    return metadata;
+    // return {
+    //   baseEntity: Item,
+    //   collection: game.items,
+    //   embeddedEntities: {
+    //     "ActiveEffect": "effects",
+    //     "Item": "abilities"
+    //   },
+    //   label: "ENTITY.Item",
+    //   permissions: {
+    //     create: "ITEM_CREATE"
+    //   }
+    // };
+  }
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {
     // Get the Item's data
-    const itemData = this.data;
+    const itemData = this.data.data;
     // const actorData = this.actor ? this.actor.data : {};
     // const data = itemData.data;
     if (!itemData.img) {

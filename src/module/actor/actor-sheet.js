@@ -47,14 +47,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item-entry");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("item-id"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item-entry");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      let itemID = li.data("item-id");
+      this.actor.deleteEmbeddedDocuments("Item", [itemID]);
       li.slideUp(200, () => this.render(false));
     });
 
@@ -117,11 +118,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
       type: type,
       data: data
     };
-    // Remove the type from the dataset since it's in the itemData.type prop.
+    // // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
 
     // Finally, create the item!
-    return this.actor.createOwnedItem(itemData);
+    return this.actor.createEmbeddedDocuments("Item", [itemData]);
   }
 
   /**
@@ -132,7 +133,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
   _onItemSummary(event) {
     event.preventDefault();
     const li = $(event.currentTarget).parents(".item-entry");
-    const item = this.actor.getOwnedItem(li.data("item-id"));
+    const item = this.actor.items.get(li.data("item-id"));
     const description = TextEditor.enrichHTML(item.data.data.description);
     const abilities = this.actor.getAbilities();
     let options="";

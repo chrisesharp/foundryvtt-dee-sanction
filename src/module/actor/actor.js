@@ -42,7 +42,7 @@ export class DeeSanctionActor extends Actor {
     );
 
 
-    data.possessions = { mundane: items.filter(i => !i.esoteric), esoteric: items.filter(i => i.esoteric)};
+    data.possessions = { mundane: items.filter(i => !i.data.data.esoteric), esoteric: items.filter(i => i.data.data.esoteric)};
     data.abilities = abilities;
     data.consequences = consequences;
     data.expertise = { foci: foci, occupations: occupations};

@@ -96,7 +96,11 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /** @override */
   getData() {
     const data = super.getData();
-    return data;
+    let sheetData = duplicate(data);
+    sheetData.item = data.item;
+    sheetData.config = CONFIG.DEE;
+    sheetData.data = data.item.data.data;
+    return sheetData;
   }
 
   /* -------------------------------------------- */
@@ -122,7 +126,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     // Roll handlers, click handlers, etc. would go here.
     // Add ability
     // TODO when on 8.x
-    //html.find('.item-create').click(this._onAbilityCreate.bind(this));
+    html.find('.item-create').click(this._onAbilityCreate.bind(this));
 
     // Update ability Item
     html.find('.item-edit').click(ev => {
@@ -162,7 +166,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     // Finally, create the item!
     // TODO use the 8.x createEmbeddedDocuments() api
     console.log("TODO create embedded ability")
-    //return this.item.createEmbeddedEntity("DeeSanctionItem", itemData);
+    return this.item.createEmbeddedDocuments("DeeSanctionItem", [itemData]);
   }
 
   /**
