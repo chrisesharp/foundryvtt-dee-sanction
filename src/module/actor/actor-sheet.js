@@ -181,7 +181,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     for (let t of game.user.targets.values()) {
       const data = t.actor.data;
       target = {
-        id: data._id,
+        id: data.id,
         armour: data.data.resources.armour.value,
       }
       if (data.type === "enemy") {
@@ -225,10 +225,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
     data.owned = {
       items : items,
       abilities : abilities,
-      consequences : consequences
+      consequences : consequences,
+      associations: associations,
+      favours: favours,
+      foci: foci,
+      occupations: occupations
     };
-    data.association = {contacts:associations};
-    data.esoterica = {favours: favours};
-    data.expertise = {focus: foci, occupations: occupations};
   }
 }

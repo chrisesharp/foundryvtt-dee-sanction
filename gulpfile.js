@@ -208,7 +208,7 @@ async function compilePacks() {
         let json = {};
         if (path.extname(file.path) === ".json") {
           let orig_json = JSON.parse(file.contents.toString());
-          json = removeProp(orig_json, "_id");
+          json = removeProp(orig_json, "id");
           json = removeProp(json, "sort");
           json = removeProp(json, "flags");
         } else {

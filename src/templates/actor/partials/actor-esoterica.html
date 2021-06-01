@@ -21,8 +21,8 @@
                 <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
-        {{#each esoterica.favours as |item id|}}
-            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+        {{#each data.esoterica.favours as |item id|}}
+            <li class="item-entry flexcol" data-item-id="{{item.id}}">
                 <div class="item flexrow">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
@@ -35,7 +35,7 @@
         {{/each}}
         {{#each owned.items as |item id|}}
             {{#if item.data.esoteric }}
-            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+            <li class="item-entry flexcol" data-item-id="{{item.id}}">
                 <div class="item flexrow">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>

@@ -8,7 +8,7 @@
             </div>
         </li>
     {{#each owned.abilities as |item id|}}
-        <li class="item-entry flexcol" data-item-id="{{item._id}}">
+        <li class="item-entry flexcol" data-item-id="{{item.id}}">
             <div class="item flexrow">
                 <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
                 <h4 class="item-name">{{item.name}}</h4>
@@ -34,8 +34,8 @@
     <div class="focus">
         <div class="fortune-header">Focus</div>
         <ol class="items-list">
-            {{#each expertise.focus as |focus id|}}
-            <li class="item-entry flexcol" data-item-id="{{focus._id}}">
+            {{#each data.expertise.focus as |focus id|}}
+            <li class="item-entry flexcol" data-item-id="{{focus.id}}">
                 <div class="item flexrow">
                     <h3 class="item-name">{{focus.name}}</h3>
                     <div class="item-controls">
@@ -51,8 +51,8 @@
     <div class="occupations">
         <div class="fortune-header">Occupations</div>
         <ol class="items-list">
-            {{#each expertise.occupations as |occupation id|}}
-            <li class="item-entry flexcol" data-item-id="{{occupation._id}}">
+            {{#each data.expertise.occupations as |occupation id|}}
+            <li class="item-entry flexcol" data-item-id="{{occupation.id}}">
                 <div class="item flexrow">
                     <h3 class="item-name">{{occupation.name}}</h3>
                     <div class="item-controls">

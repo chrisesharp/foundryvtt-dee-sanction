@@ -74,7 +74,7 @@ export class DeeSanctionDice {
         const template = "systems/dee/templates/chat/roll-result.html";
     
         let chatData = {
-          user: game.user._id,
+          user: game.user.id,
           speaker: speaker,
         };
     
@@ -97,7 +97,7 @@ export class DeeSanctionDice {
     
         if (["gmroll", "blindroll"].includes(rollMode))
           chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-        if (rollMode === "selfroll") chatData["whisper"] = [game.user._id];
+        if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
         if (rollMode === "blindroll") {
           chatData["blind"] = true;
           data.roll.blindroll = true;

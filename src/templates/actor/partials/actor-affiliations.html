@@ -8,8 +8,8 @@
             </div>
         </li>
 
-    {{#each association.contacts as |item id|}}
-        <li class="item-entry flexcol" data-item-id="{{item._id}}">
+    {{#each data.association.contacts as |item id|}}
+        <li class="item-entry flexcol" data-item-id="{{item.id}}">
             <div class="item flexrow">
                 <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
                 <h4 class="item-name">{{item.name}}</h4>

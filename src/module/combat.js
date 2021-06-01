@@ -72,7 +72,7 @@ export class DeeCombat {
       combat.combatants.forEach((ct) => {
         if (
           ct.initiative &&
-          ct._id != data._id &&
+          ct.id != data.id &&
           ct.flags.dee.group == combatant.flags.dee.group
         ) {
           groupInit = ct.initiative;
@@ -95,7 +95,7 @@ export class DeeCombat {
       index = (index + 1) % colors.length;
       let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
       game.combat.updateCombatant({
-        _id: id,
+        id: id,
         flags: { dee: { group: colors[index] } },
       });
     });
@@ -133,7 +133,7 @@ export class DeeCombat {
   }
 
   static activateCombatant(li) {
-    const turn = game.combat.turns.findIndex(turn => turn._id === li.data('combatant-id'));
+    const turn = game.combat.turns.findIndex(turn => turn.id === li.data('combatant-id'));
     game.combat.update({turn: turn})
   }
 

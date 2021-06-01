@@ -3,9 +3,9 @@
 <div class="potency flexrow">
     <div class="potency-header" style="padding: 0.6em;">Potency</div>
     <div class="potency-val flexrow">
-        {{#if (gt data.resistance.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
-        {{#if (lt data.resistance.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
-        <input type="text" name="data.resistance.potency" value="{{ data.resistance.potency}}" data-dtype="Number"/>
+        {{#if (gt actor.data.resistance.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
+        {{#if (lt actor.data.resistance.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
+        <input type="text" name="data.resistance.potency" value="{{ actor.data.resistance.potency}}" data-dtype="Number"/>
     </div>
     <div>&nbsp;</div>
 </div>
@@ -16,7 +16,7 @@
         <div class="hits">
             <img class="hits-bg" src="/systems/dee/assets/default/hits.png">
             <div class="hits-val flexrow flex-center">
-                <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
+                <input type="text" name="data.hits.value" value="{{actor.data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                     <a class="step-up"><i class="fas fa-caret-up"></i></a>
                     <a class="step-down"><i class="fas fa-caret-down"></i></a>
                 </div>
-                <img src="{{die data.resources.armour.value}}" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
+                <img src="{{die actor.data.resources.armour.value}}" class="rollable" data-roll="{{actor.data.resources.armour.value}}" data-label="Armour" data-resource="armour">
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
                 </div>
             </li>
             {{#each owned.consequences as |item id|}}
-                <li class="item-entry flexcol" data-item-id="{{item._id}}">
+                <li class="item-entry flexcol" data-item-id="{{item.id}}">
                     <div class="item flexrow">
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">

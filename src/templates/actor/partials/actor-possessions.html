@@ -9,7 +9,7 @@
                     <a class="step-up"><i class="fas fa-caret-up"></i></a>
                     <a class="step-down"><i class="fas fa-caret-down"></i></a>
                 </div>
-                <img src="{{die actor.data.resources.armour.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
+                <img src="{{die data.resources.armour.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
             </li>
         {{#each owned.items as |item id|}}
             {{#if (eq item.data.esoteric false)}}
-            <li class="item-entry flexcol" data-item-id="{{item._id}}">
+            <li class="item-entry flexcol" data-item-id="{{item.id}}">
                 <div class="item flexrow">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>

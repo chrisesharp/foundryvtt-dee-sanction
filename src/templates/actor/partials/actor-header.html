@@ -5,7 +5,7 @@
             <h2>Sanction</h2>
         </div>
         <div class="trade">
-            <div class="tradecraft show" style="background-image: url('{{ trade actor.data.tradecraft}}');">
+            <div class="tradecraft show" style="background-image: url('{{ trade data.tradecraft}}');">
                 <select class="hide" id="tradecraft-sel">
                     <option selected value="0">-</option>
                     <option value="A">Access</option>
@@ -24,9 +24,10 @@
             <h3 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h3>
         </div>
         <div class="actor-occupation">
-            <h3 class="occupation">{{actor.data.occupation}}</h3>
+            <h3 class="occupation">{{data.occupation}}</h3>
         </div>
         <div class="actor-home">
+            {{log this}}
             <h3 class="home"><input name="data.home" type="text" value="{{data.home}}" placeholder="Home town"/></h3>
         </div>
         <div class="actor-manner">

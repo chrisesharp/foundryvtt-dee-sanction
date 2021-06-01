@@ -30,8 +30,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
       let item = game.items.get(itemId);
       if (!item) {
         const pack = game.packs.get("dee.abilities");
-        const idx = pack.index.find(e => e._id === itemId );
-        item = await pack.getEntity(idx._id);
+        const idx = pack.index.find(e => e.id === itemId );
+        item = await pack.getEntity(idx.id);
       }
       dragData.type = "Item";
       dragData.data = item.data;
@@ -70,8 +70,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
     let ability = game.items.get(data.id);
     if (!ability) {
       const pack = game.packs.get("dee.abilities");
-      const idx = pack.index.find(e => e._id === data.id );
-      ability = await pack.getEntity(idx._id);
+      const idx = pack.index.find(e => e.id === data.id );
+      ability = await pack.getEntity(idx.id);
     }
     if (ability) {
       abilities.push(ability);
@@ -171,7 +171,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @private
    */
   _onAbilityDelete(id) {
-    const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
+    const abilities = this.item.data.data.abilities.filter((i)=>i.id != id);
     const newAbilities = {
       abilities: abilities
     }
