@@ -1,5 +1,5 @@
-name: "Sleight-of-hand"
+name: "Sleight-of-Hand"
 type: "ability"
 data:
-  description: "<p>Sleight-of-hand.</p>"
+  description: "<p>Sleight-of-Hand.</p>"
 img: "icons/svg/book.svg"

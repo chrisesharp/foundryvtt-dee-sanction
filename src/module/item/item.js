@@ -47,6 +47,27 @@ export class DeeSanctionItem extends Item {
     //   }
     // };
   }
+
+  /** @override*/
+  async _preCreate(data, options, user) {
+    // console.log("item preCreate called");
+    await super._preCreate(data, options, user);
+
+    // const actorData = this.data;
+
+    // if (data.type === "character") {
+    //   let skillPack = game.packs.get("zweihander.skills");
+
+    //   let toAdd = await skillPack.getDocuments().then(result => {
+    //     return result.map(item => item.toObject());
+    //   });
+
+    //   let toAddDifference = UtilityHelpers.getSymmetricDifference(toAdd, actorData.skills);
+
+    //   if (toAddDifference.length)
+    //     actorData.update({ "items": toAddDifference });
+    // }
+  }
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -56,31 +77,53 @@ export class DeeSanctionItem extends Item {
     const itemData = this.data;
     // const actorData = this.actor ? this.actor.data : {};
     // const data = itemData.data;
-    // console.log(this)
-    if (itemData.img==="icons/svg/item-bag.svg") {
-      switch (itemData.type) {
-        case "ability":
-          itemData.img = CONFIG.DEE.icons["ability"];
+    switch (itemData.type) {
+      case "ability":
+        itemData.img = CONFIG.DEE.icons["ability"];
+        break;
+      case "consequence":
+        itemData.img = CONFIG.DEE.icons["consequence"];
+        break;
+      case "association":
+        itemData.img = CONFIG.DEE.icons["conspiracy"];
+        // this._prepContainer(itemData);
+        break;
+      case "occupation":
+        itemData.img = CONFIG.DEE.icons["access"];
+        // this._prepContainer(itemData);
+        break;
+      case "favour":
+        itemData.img = CONFIG.DEE.icons["favour"];
+        break;
+      case "focus":
+          itemData.img = CONFIG.DEE.icons["vigilance"];
+          // this._prepContainer(itemData);
           break;
-        case "consequence":
-          itemData.img = CONFIG.DEE.icons["consequence"];
-          break;
-        case "association":
-          itemData.img = CONFIG.DEE.icons["conspiracy"];
-          break;
-        case "favour":
-          itemData.img = CONFIG.DEE.icons["favour"];
-          break;
-        case "focus":
-            itemData.img = CONFIG.DEE.icons["access"];
-            break;
-        case "item":
-          itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
-          break;
-        default:
-          itemData.img = CONST.DEFAULT_TOKEN;
-          break;
-      }
+      case "item":
+        itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
+        break;
+      default:
+        itemData.img = CONST.DEFAULT_TOKEN;
+        break;
     }
+    if (itemData.data.abilities) {
+      this._prepContainer(itemData);
+    }
+  }
+
+  _prepContainer(itemData) {
+    let abilities = deepClone(itemData.data.abilities);
+    if (game.items) {
+      abilities.forEach(entry => {
+        if (!entry._id) {
+          let item = game.items.find(i => i.type==="ability" && i.name===entry.name);
+          if (item) {
+            entry._id = item.data._id;
+            entry.img = item.img;
+          }
+        }
+      });
+    }
+    itemData.data.abilities = abilities;
   }
 }

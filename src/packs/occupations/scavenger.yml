@@ -6,7 +6,7 @@ managing the handling and removal of
 domestic waste</p>"
   abilities: 
     - 
-      name: "Carriage-Handling"
+      name: "Carriage Handling"
       type: "ability"
     - 
       name: "Scavenging"

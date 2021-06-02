@@ -74,6 +74,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       ability = await pack.getEntity(idx.id);
     }
     if (ability) {
+      console.log("new added:",ability)
       abilities.push(ability);
       const newAbilities = {
         abilities: abilities
@@ -100,6 +101,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
+    // console.log(sheetData)
     return sheetData;
   }
 
@@ -165,8 +167,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
     delete itemData.data["type"];
     // Finally, create the item!
     // TODO use the 8.x createEmbeddedDocuments() api
-    console.log("TODO create embedded ability")
-    return this.item.createEmbeddedDocuments("DeeSanctionItem", [itemData]);
+    // return this.item.createEmbeddedDocuments("DeeSanctionItem", [itemData]);
+    console.log("TODO create embedded ability");    
   }
 
   /**

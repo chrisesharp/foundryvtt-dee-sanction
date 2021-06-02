@@ -1,0 +1,5 @@
+name: "Diagnosis"
+type: "ability"
+data:
+  description: "<p>Diagnosis.</p>"
+img: "icons/svg/book.svg"

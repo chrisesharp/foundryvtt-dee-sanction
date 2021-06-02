@@ -1,0 +1,37 @@
+{
+  "name": "doc",
+  "type": "occupation",
+  "img": "icons/svg/item-bag.svg",
+  "data": {
+    "description": "",
+    "abilities": [
+      {
+        "_id": "pV9a5b5AF1TgPxXZ",
+        "name": "Ability",
+        "type": "ability",
+        "img": "icons/svg/book.svg",
+        "data": {
+          "description": "<p>bah</p>"
+        },
+        "effects": [],
+        "folder": null,
+        "sort": 0,
+        "permission": {
+          "default": 0,
+          "bgD7cjjOk7lloSe0": 3
+        },
+        "flags": {}
+      }
+    ]
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "exportSource": {
+      "world": "dee",
+      "system": "dee",
+      "coreVersion": "0.8.6",
+      "systemVersion": "1.0.0"
+    }
+  }
+}

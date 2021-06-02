@@ -38,4 +38,9 @@ export const registerHandlebarHelpers = async function () {
     Handlebars.registerHelper('trade', function(trade) {
         return CONFIG.DEE.icons[trade];
     });
-}
+
+
+    Handlebars.registerHelper('ability', function(ability) {
+        let item = game.items.find(i => i.type==="ability" && i.name===ability);
+        return item;
+    });}

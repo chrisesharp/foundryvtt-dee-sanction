@@ -32,6 +32,9 @@ Hooks.once('init', async function() {
   // Include global config
   CONFIG.DEE = DEE;
 
+  // Enable hook debug
+  // CONFIG.debug.hooks = true;
+
   // Define custom Entity classes
   CONFIG.Actor.documentClass = DeeSanctionActor;
   CONFIG.Item.documentClass = DeeSanctionItem;
@@ -51,18 +54,19 @@ Hooks.once('init', async function() {
   
   await preloadHandlebarsTemplates();
 
-  // Load leaf node documents
-  // let loaded = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
-
-  // Load containers
-  // loaded.then(()=>{loadCompendia(["Associations","Foci","Occupations"]);});
-
 });
 
 /**
  * This function runs after game data has been requested and loaded from the servers, so entities exist
  */
-Hooks.once("setup", async function () {
+Hooks.once("ready", async function () {
+    // Load leaf node documents
+    let stage1 = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
+    console.log("Stage 1: Compendia imported:",stage1)
+    // Load containers
+    let stage2 = await loadCompendia(["Associations","Foci","Occupations"]);
+    console.log("Stage 2: Compendia imported:",stage2)
+
 //   //show welcome dialog and set initialized to true
 //   let d = new Dialog({
 //     title: "Test Dialog",

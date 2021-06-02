@@ -1,0 +1,7 @@
+name: "Dagger"
+type: "item"
+data:
+  description: "<p>A simple dagger.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"
