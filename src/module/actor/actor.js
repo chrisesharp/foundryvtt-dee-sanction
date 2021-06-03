@@ -55,7 +55,11 @@ export class DeeSanctionActor extends Actor {
       return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
     }, 0);
     if (target.id) {
+      let targetConsequences = target.consequences.reduce(function (acc, item) { 
+        return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
+      }, 0);
       potency += parseInt(target.potency);
+      potency -= targetConsequences;
     }
     step = (potency > 0) ? Math.min(step + potency, 5) : Math.max(step + potency, 0);
     const die = "d" + (2 + (2 * step));

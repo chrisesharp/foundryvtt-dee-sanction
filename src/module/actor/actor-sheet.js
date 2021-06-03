@@ -191,6 +191,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       if (data.type === "enemy") {
         target.potency = data.data.resistance.potency;
         target.hitresolution = data.data.hitresolution;
+        target.consequences = data.data.consequences;
       }
       break;
     }
