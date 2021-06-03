@@ -1,4 +1,5 @@
 // Import Modules
+import { DeeSanctionRollTable } from "./module/rolltable/rolltable.js";
 import { DeeSanctionActor } from "./module/actor/actor.js";
 import { DeeSanctionAgentSheet } from "./module/actor/agent-sheet.js";
 import { DeeSanctionEnemySheet } from "./module/actor/enemy-sheet.js";
@@ -38,6 +39,7 @@ Hooks.once('init', async function() {
   // Define custom Entity classes
   CONFIG.Actor.documentClass = DeeSanctionActor;
   CONFIG.Item.documentClass = DeeSanctionItem;
+  CONFIG.RollTable.documentClass = DeeSanctionRollTable;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -65,9 +67,11 @@ Hooks.once("ready", async function () {
       let stage1 = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
       console.log("Stage 1: Compendia imported:",stage1)
       // Load containers
-      let stage2 = await loadCompendia(["Associations","Foci","Occupations"]);
+      let stage2 = await loadCompendia(["Associations","Foci","Occupations","Humours"]);
       console.log("Stage 2: Compendia imported:",stage2)
-      // game.settings.set("dee","initialized",true);
+      // Load other tables
+      let stage3 = await loadCompendia(["Outcomes"]);
+      console.log("Stage 3: Compendia imported:",stage3)
     }
 
   //show welcome dialog and set initialized to true

@@ -26,6 +26,6 @@ async function loadCompendium (compendium) {
             return imp;
         }
     } else {
-        return Promise.resolve(`Couldn't find ${comppendium} pack to import`);
+        return Promise.resolve(`Couldn't find ${compendium} pack to import`);
     }
 }

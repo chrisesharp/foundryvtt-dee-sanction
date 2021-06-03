@@ -61,10 +61,17 @@
       "entity": "Item"
     },
     {
-      "name": "tables",
-      "label": "Tables",
+      "name": "outcomes",
+      "label": "Outcomes",
       "package": "dee",
-      "path": "packs/tables.db",
+      "path": "packs/outcomes.db",
+      "entity": "RollTable"
+    },
+    {
+      "name": "humours",
+      "label": "Humours",
+      "package": "dee",
+      "path": "packs/humours.db",
       "entity": "RollTable"
     }
   ],
