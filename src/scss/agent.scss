@@ -136,6 +136,12 @@
 
             .hits-falters {
                 position: relative;
+                input[type=checkbox] {
+                    opacity: 0.2;
+                }
+                input[type=checkbox]:checked {
+                    opacity: 1;
+                }
 
                 input.first {
                     position: absolute;
