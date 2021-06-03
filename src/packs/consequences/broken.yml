@@ -1,0 +1,8 @@
+---
+  name: "Broken bone"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "Broken bone. Requires a doctor to remove."
+    resource: "phy"
+    potency: -1

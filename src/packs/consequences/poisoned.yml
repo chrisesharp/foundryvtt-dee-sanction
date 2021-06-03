@@ -1,0 +1,9 @@
+---
+  name: "Poisoned"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "Poisoned. Requires an apothecary to remove."
+    resource: "phy"
+    potency: -1
+

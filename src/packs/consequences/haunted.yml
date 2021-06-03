@@ -1,0 +1,9 @@
+---
+  name: "Haunted"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "Haunted"
+    resource: "sup"
+    potency: -1
+

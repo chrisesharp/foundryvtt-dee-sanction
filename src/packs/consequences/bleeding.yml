@@ -1,0 +1,9 @@
+---
+  name: "Bleeding"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "Bloody."
+    resource: "phy"
+    potency: -1
+
