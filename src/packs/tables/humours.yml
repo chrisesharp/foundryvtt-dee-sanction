@@ -1,0 +1,97 @@
+---
+  name: "Humours"
+  img: "icons/svg/d20-grey.svg"
+  description: "Immediate effect when an agent falters on an unravelling die."
+  results: 
+    - 
+      type: 0
+      text: "Phlegm: Immediate response is dulled senses; acts of perception or problem-solving are ▼1 while in the presence
+of fear source."
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 1
+        - 2
+      drawn: false
+    - 
+      type: 1
+      collection: "RollTable"
+      text: "Phlegm"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 1
+        - 2
+      drawn: false
+    - 
+      type: 0
+      text: "Black Bile: Overwhelmed by extreme emotion. Eyes fill with tears, body wracked by sobbing. Take a Chance to complete
+any complex action in the presence of fear source."
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 3
+        - 4
+      drawn: false
+    - 
+      type: 1
+      collection: "RollTable"
+      text: "Black Bile"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 3
+        - 4
+      drawn: false
+    -
+      type: 0
+      text: "Yellow Bile: Character fills with bitter rage toward all allies while in the presence of fear source. Take a Chance, act
+in a selfish way on a falter. Attitude persists in the presence of fear source."
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 5
+        - 6
+      drawn: false
+    - 
+      type: 1
+      collection: "RollTable"
+      text: "Yellow Bile"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 5
+        - 6
+      drawn: false
+    -
+      type: 0
+      text: "Blood: Inadvisably optimistic despite the horrors or the difficult situation faced. Blindly positive. Acts of violence
+or aggression are ▼1 while in the presence of fear source."
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 7
+        - 8
+      drawn: false
+    -
+      type: 1
+      collection: "RollTable"
+      text: "Blood"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 7
+        - 8
+      drawn: false
+  formula: "1d8"
+  replacement: true
+  displayRoll: true
+

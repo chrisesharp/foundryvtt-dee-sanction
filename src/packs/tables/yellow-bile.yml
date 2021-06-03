@@ -1,0 +1,39 @@
+---
+  name: "Yellow Bile"
+  img: "icons/svg/d20-grey.svg"
+  description: "Ongoing effect when an agent falters on an unravelling die."
+  results: 
+    - 
+      type: 0
+      text: "Crabbed – prone to sharp changes in emotional state; short-tempered, sharp, and loud"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 1
+        - 2
+      drawn: false
+    - 
+      type: 0
+      text: "Choleric – eager for conflict, with a simmering hostility toward everyone and everything"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 3
+        - 4
+      drawn: false
+    - 
+      type: 0
+      text: "Despiteful – unforgiving and driven to seek redress for any slight or wrong"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 5
+        - 6
+      drawn: false
+  formula: "1d6"
+  replacement: true
+  displayRoll: true
+

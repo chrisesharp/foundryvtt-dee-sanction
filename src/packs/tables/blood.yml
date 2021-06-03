@@ -1,0 +1,39 @@
+---
+  name: "Blood"
+  img: "icons/svg/d20-grey.svg"
+  description: "Ongoing effect when an agent falters on an unravelling die."
+  results: 
+    - 
+      type: 0
+      text: "Foolish – recklessly courageous and bold, heedless of the potency or peril of a challenge"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 1
+        - 2
+      drawn: false
+    - 
+      type: 0
+      text: "Gullible – willing to believe or trust anyone without adequate evidence"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 3
+        - 4
+      drawn: false
+    - 
+      type: 0
+      text: "Capricious – given to sudden, unpredictable,and erratic change in focus"
+      img: "icons/svg/d20-black.svg"
+      resultId: ""
+      weight: 1
+      range: 
+        - 5
+        - 6
+      drawn: false
+  formula: "1d6"
+  replacement: true
+  displayRoll: true
+

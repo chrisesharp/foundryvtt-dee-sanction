@@ -73,16 +73,20 @@ Hooks.once("ready", async function () {
   //show welcome dialog and set initialized to true
     let d = new Dialog({
       title: "Welcome to the Dee Sanction",
-      content: "<p>The first time you create a world, you must import the compendia</p>",
+      content: "<p>The first time you create a world, you must import the compendia.</p><p>This will take a little time.</p>",
       buttons: {
         one: {
           icon: '<i class="fas fa-check"></i>',
           label: "Import Now",
           callback: () => loadAll()
-          }
         },
-      default: "one",
-      close: html => console.log("Thanks.")
+        two: {
+          icon: '<i class="fas fa-times"></i>',
+          label: "Don't show this again",
+          callback: () => game.settings.set("dee","initialized",true)
+        }
+      },
+      default: "one"
     });
 
     if (!game.settings.get("dee","initialized")) {
