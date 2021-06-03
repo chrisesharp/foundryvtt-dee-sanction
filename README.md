@@ -5,3 +5,5 @@ This is an unofficial, fan-made implementation of The Dee Sanction RPG, copyrigh
 ## Documentation
 
 will follow shortly..
+
+To install in Foundry VTT, provide this manifest URL: https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src/system.json
