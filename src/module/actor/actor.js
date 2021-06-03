@@ -51,11 +51,13 @@ export class DeeSanctionActor extends Actor {
 
   rollChallenge(resource, step, target = {}) {
     step=parseInt(step)
-    let potency = 0;
+    let potency = this.data.data.consequences.reduce(function (acc, item) { 
+      return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
+    }, 0);
     if (target.id) {
-      potency = parseInt(target.potency);
-      step = (potency > 0) ? Math.min(step + potency, 5) : Math.max(step + potency, 0);
+      potency += parseInt(target.potency);
     }
+    step = (potency > 0) ? Math.min(step + potency, 5) : Math.max(step + potency, 0);
     const die = "d" + (2 + (2 * step));
     let label = game.i18n.localize("DEE.ChallengeRoll");
     if (resource) {
