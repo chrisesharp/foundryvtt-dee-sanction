@@ -41,7 +41,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
    * @private
    */
   async _onDropRollTable(event, data) {
-    if ( !this.actor.owner ) return false;
+    if ( !this.actor.isOwner ) return false;
     const tableId = data.id;
     const rt = game.tables.get(tableId);
     const newTable = {
@@ -49,6 +49,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
         rolltable: {
             id: tableId,
             name: rt.data.name,
+            description: rt.data.description,
             img: rt.data.img
         }
       }

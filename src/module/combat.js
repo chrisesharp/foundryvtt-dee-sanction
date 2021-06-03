@@ -1,15 +1,15 @@
 export class DeeCombat {
-  static rollInitiative(combat, data) {
+  static async rollInitiative(combat) {
     // Check groups
-    data.combatants = [];
     let groups = {};
     combat.data.combatants.forEach((cbt) => {
-      groups[cbt.flags.dee.group] = { present: true };
-      data.combatants.push(cbt);
+      let group = cbt.getFlag("dee","group");
+      groups[group] = { present: true };
     });
 
     // Roll init
-    let roll = new Roll("1d2").roll();
+    let roll = new Roll("1d2");
+    await roll.roll();
     roll.toMessage({
       flavor: game.i18n.format('DEE.roll.initiative')
     });
@@ -23,23 +23,13 @@ export class DeeCombat {
     if (groups["grey"]) {
       groups["grey"].initiative = 1;
     }
-
-    // Set init
-    for (let i = 0; i < data.combatants.length; ++i) {
-      if (!data.combatants[i].actor) {
-        return;
-      }
-      data.combatants[i].initiative = groups[data.combatants[i].flags.dee.group].initiative;
-    }
-    combat.setupTurns();
-  }
-
-  static async resetInitiative(combat, data) {
-    combat.resetAll();
+    combat.data.combatants.forEach((cbt) => {
+      combat.setInitiative(cbt.id, groups[cbt.getFlag("dee","group")].initiative);
+    });
+    game.combat.setupTurns();
   }
 
   static format(object, html, user) {
-
     html.find('.combat-control[data-control="rollNPC"]').remove();
     html.find('.combat-control[data-control="rollAll"]').remove();
     let trash = html.find(
@@ -53,8 +43,8 @@ export class DeeCombat {
       // Can't roll individual inits
       $(ct).find(".roll").remove();
 
-      const cmbtant = object.combat.getCombatant(ct.dataset.combatantId);
-      const color = cmbtant.flags.dee.group;
+      const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
+      const color = cmbtant.getFlag("dee","group");
       // Append colored flag
       let controls = $(ct).find(".combatant-controls");
       controls.prepend(
@@ -62,25 +52,6 @@ export class DeeCombat {
       );
     });
     DeeCombat.addListeners(html);
-  }
-
-  static updateCombatant(combat, combatant, data) {
-    // Why do you reroll ?
-    if (data.initiative) {
-      let groupInit = data.initiative;
-      // Check if there are any members of the group with init
-      combat.combatants.forEach((ct) => {
-        if (
-          ct.initiative &&
-          ct.id != data.id &&
-          ct.flags.dee.group == combatant.flags.dee.group
-        ) {
-          groupInit = ct.initiative;
-          // Set init
-          data.initiative = parseInt(groupInit);
-        }
-      });
-    }
   }
 
   static addListeners(html) {
@@ -94,24 +65,21 @@ export class DeeCombat {
       let index = colors.indexOf(currentColor);
       index = (index + 1) % colors.length;
       let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      game.combat.updateCombatant({
+      let combatant = game.combat.data.combatants.get(id);
+      combatant.update({
         id: id,
         flags: { dee: { group: colors[index] } },
       });
     });
 
-    html.find('.combat-control[data-control="reroll"]').click((ev) => {
+    html.find('.combat-control[data-control="reroll"]').click(async (ev) => {
       if (game.combat) {
-        const data = {};
-        DeeCombat.rollInitiative(game.combat, data);
-        game.combat.update({ data: data }).then(() => {
-          game.combat.setupTurns();
-        });
+        await DeeCombat.rollInitiative(game.combat);
       }
     });
   }
 
-  static addCombatant(combat, data, options, id) {
+  static addCombatant(combatant, data, options, id) {
     let token = canvas.tokens.get(data.tokenId);
     let color = "black";
     switch (token.data.disposition) {
@@ -125,11 +93,12 @@ export class DeeCombat {
         color = "white";
         break;
     }
-    data.flags = {
-      dee: {
-        group: color,
-      },
+    let flags = {
+      "dee": {
+        "group": color
+      }
     };
+    combatant.data.update({flags: flags});
   }
 
   static activateCombatant(li) {
@@ -145,15 +114,5 @@ export class DeeCombat {
     });
     const idx = options.findIndex(e => e.name === "COMBAT.CombatantReroll");
     options.splice(idx, 1);
-  }
-
-  static async preUpdateCombat(combat, data, diff, id) {
-    if (data.round) {
-      if (data.round !== 1) {
-        DeeCombat.resetInitiative(combat, data, diff, id);
-        return;
-      }
-      DeeCombat.rollInitiative(combat, data, diff, id);
-    }
   }
 }

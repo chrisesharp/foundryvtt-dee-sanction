@@ -86,7 +86,9 @@
       "templates": ["base"]
     },
     "consequence": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "resource": "phy",
+      "potency": -1
     },
     "favour": {
       "templates": ["base"]

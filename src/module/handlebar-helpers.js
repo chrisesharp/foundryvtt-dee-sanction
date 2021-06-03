@@ -35,6 +35,10 @@ export const registerHandlebarHelpers = async function () {
         return isChecked ? ' checked ' : '';
     });
 
+    Handlebars.registerHelper('selected', function(isSelected,value) {
+        return (isSelected===value) ? ' selected ' : '';
+    });
+
     Handlebars.registerHelper('trade', function(trade) {
         return CONFIG.DEE.icons[trade];
     });

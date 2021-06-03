@@ -21,6 +21,16 @@
     object-position: 50% 0;
   }
 
+  .item-img {
+    flex: 0 0 64px;
+    height: 64px;
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
   .header-fields {
     flex: 1;
   }

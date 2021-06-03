@@ -8,8 +8,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["dee", "sheet", "item"],
-      width: 520,
-      height: 480,
+      width: 350,
+      height: 350,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{
         dragSelector: ".item",
@@ -74,14 +74,12 @@ export class DeeSanctionItemSheet extends ItemSheet {
       ability = await pack.getEntity(idx.id);
     }
     if (ability) {
-      console.log("new added:",ability)
       abilities.push(ability);
       const newAbilities = {
         abilities: abilities
       }
       return this.item.update({data: newAbilities});
     } else {
-      console.log("Couldn't find ability ",data)
       return false;
     }
   }
@@ -101,7 +99,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
-    // console.log(sheetData)
     return sheetData;
   }
 
@@ -142,6 +139,16 @@ export class DeeSanctionItemSheet extends ItemSheet {
       const li = $(ev.currentTarget).parents(".item-entry");
       this._onAbilityDelete(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
+    });
+
+    // Consequence resource select
+    html.find('#consequence-sel').change(async (event)=> {
+      event.preventDefault();
+      const resource = $('#consequence-sel').val();
+      const newData = {resource:resource};
+      console.log("conseq:",newData)
+      await this.item.data.update({data:newData});
+      console.log(this.item)
     });
   }
 

@@ -1,8 +1,26 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <div class="flexrow">
+                <div class="resource flexcol" style="align-items: flex-start;">
+                  <label class="resource-label">{{localize "DEE.consequence.resource"}}</label>
+                    <select class="" id="consequence-sel">
+                        <option {{selected data.resource "phy" }} value="phy">{{localize "DEE.resource.phy.long"}}</option>
+                        <option {{selected data.resource "int" }} value="int">{{localize "DEE.resource.int.long"}}</option>
+                        <option {{selected data.resource "sup" }} value="sup">{{localize "DEE.resource.sup.long"}}</option>
+                    </select> 
+                </div>
+                <div class="resource flexcol" style="align-items: flex-start;">
+                    <label class="resource-label">{{localize "DEE.Potency"}}</label>
+                    <div>
+                        {{#if (gt data.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
+                        {{#if (lt data.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
+                        <input type="text" style="width: 25%" name="data.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
+                    </div>
+                </div>
+              </div>
         </div>
     </header>
 

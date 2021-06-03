@@ -24,7 +24,6 @@ export class DeeSanctionActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    // console.log("in prepChaData",actorData)
     const data = actorData.data;
     let [items, abilities, consequences, associations, favours, foci, occupations] = actorData.items.reduce(
       (arr, item) => {
@@ -48,7 +47,6 @@ export class DeeSanctionActor extends Actor {
     data.expertise = { foci: foci, occupations: occupations};
     data.affiliations = associations;
     data.favours = favours;
-    // console.log("End of prepChaData:",data)
   }
 
   rollChallenge(resource, step, target = {}) {

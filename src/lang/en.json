@@ -10,6 +10,7 @@
     "DEE.Roll": "Roll",
     "DEE.Success": "Success",
     "DEE.Failure": "Falter",
+    "DEE.Potency": "Potency",
     "DEE.Setting.initialized": "System Initialized",
     "DEE.Setting.initializedHint": "untick to re-import compendia next start.",
 
@@ -28,5 +29,6 @@
     "DEE.roll.details.potency": "Roll above 2 for success, against potency {potency}.",
     "DEE.roll.details.resistance": "Roll 1 or 2 with {type} to resist the damage",
     "DEE.roll.consequences": "Roll for consequences of {action}",
-    "DEE.roll.initiative": "Take a chance for initiative"
+    "DEE.roll.initiative": "Take a chance for initiative",
+    "DEE.consequence.resource": "Affected resource"
 }

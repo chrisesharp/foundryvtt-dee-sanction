@@ -59,6 +59,13 @@
       "package": "dee",
       "path": "packs/foci.db",
       "entity": "Item"
+    },
+    {
+      "name": "tables",
+      "label": "Tables",
+      "package": "dee",
+      "path": "packs/tables.db",
+      "entity": "RollTable"
     }
   ],
   "languages": [

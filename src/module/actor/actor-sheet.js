@@ -137,6 +137,13 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const description = TextEditor.enrichHTML(item.data.data.description);
     const abilities = this.actor.getAbilities();
     let options="";
+    if (item.type==="consequence") {
+      const resource = game.i18n.localize(`DEE.resource.${item.data.data.resource}.long`);
+      options += `<label>${resource} </label>`;
+      options += `<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>${Math.abs(item.data.data.potency)}`;
+      
+      
+    }
     if (item.type==="association"||item.type==="focus"||item.type==="occupation") {
       item.data.data.abilities.forEach((i)=> {
         let ability = abilities.filter(e => e.name===i.name);
@@ -178,7 +185,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     for (let t of game.user.targets.values()) {
       const data = t.actor.data;
       target = {
-        id: data.id,
+        id: data._id,
         armour: data.data.resources.armour.value,
       }
       if (data.type === "enemy") {

@@ -61,39 +61,45 @@ Hooks.once('init', async function() {
  */
 Hooks.once("ready", async function () {
     // Load leaf node documents
-    let stage1 = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
-    console.log("Stage 1: Compendia imported:",stage1)
-    // Load containers
-    let stage2 = await loadCompendia(["Associations","Foci","Occupations"]);
-    console.log("Stage 2: Compendia imported:",stage2)
+    let loadAll = async () => {
+      let stage1 = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
+      console.log("Stage 1: Compendia imported:",stage1)
+      // Load containers
+      let stage2 = await loadCompendia(["Associations","Foci","Occupations"]);
+      console.log("Stage 2: Compendia imported:",stage2)
+      // game.settings.set("dee","initialized",true);
+    }
 
-//   //show welcome dialog and set initialized to true
-//   let d = new Dialog({
-//     title: "Test Dialog",
-//     content: "<p>You must choose either Option 1, or Option 2</p>",
-//     buttons: {
-//      one: {
-//       icon: '<i class="fas fa-check"></i>',
-//       label: "Option One",
-//       callback: () => console.log("Chose One")
-//      },
-//      two: {
-//       icon: '<i class="fas fa-times"></i>',
-//       label: "Option Two",
-//       callback: () => console.log("Chose Two")
-//      }
-//     },
-//     default: "two",
-//     render: html => console.log("Register interactivity in the rendered dialog"),
-//     close: html => console.log("This always is logged no matter which option is chosen")
-//    });
-//    d.render(true);
+  //show welcome dialog and set initialized to true
+    let d = new Dialog({
+      title: "Welcome to the Dee Sanction",
+      content: "<p>The first time you create a world, you must import the compendia</p>",
+      buttons: {
+        one: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Import Now",
+          callback: () => loadAll()
+          }
+        },
+      default: "one",
+      close: html => console.log("Thanks.")
+    });
+
+    if (!game.settings.get("dee","initialized")) {
+      d.render(true);
+    }
+
 });
 
 Hooks.on("renderChatMessage", chat.addChatConsequenceButton);
 Hooks.on("renderCombatTracker", DeeCombat.format);
-Hooks.on("preCreateCombatant", (combat, data, options, id) => {
-    DeeCombat.addCombatant(combat, data, options, id);
+Hooks.on("preCreateCombatant", (combatant, data, options, id) => {
+    DeeCombat.addCombatant(combatant, data, options, id);
+});
+Hooks.on("preUpdateCombat", (combat, data, options, id) => {
+  // if (data.round) {
+  //   combat.resetAll();
+  //   DeeCombat.rollInitiative(combat);
+  // }
 });
 Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
-Hooks.on("preUpdateCombatant", DeeCombat.updateCombatant);

@@ -1,7 +1,7 @@
 {{!-- resources --}}
-<div class="resources flexrow">
+<div class="resources flexcol">
     {{!-- hit resolution --}}        
-            {{#if actor.data.hitresolution.rolltable}}
+            {{#if data.hitresolution.rolltable}}
             <div class="hitresolution flexcol">
                 <div class="hitres-header" style="padding: 0.6em;">Hit Resolution</div>
                     <div class="hitres-button flexrow">
@@ -10,6 +10,7 @@
                     </a>
                     </div>
                 </div>
+                <div>{{data.hitresolution.rolltable.description}}</div>
             </div>
             {{else}}
             <h2>Drag a rolltable onto this sheet to define hit resolution.</h2>
