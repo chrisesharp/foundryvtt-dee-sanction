@@ -1,13 +1,12 @@
 {
   "name": "dee",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CSS compiler for the The Dee Sanction system",
   "scripts": {
     "package": "gulp package",
     "build": "gulp build && gulp link",
     "build:watch": "gulp watch",
-    "clean": "gulp clean && gulp link --clean",
-    "update": "npm install --save-dev gitlab:foundry-projects/foundry-pc/foundry-pc-types"
+    "clean": "gulp clean && gulp link --clean"
   },
   "browserslist": [
     "last 3 versions"
@@ -16,7 +15,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@league-of-foundry-developers/foundry-vtt-types": "^0.7.9-6",
     "archiver": "^3.1.1",
     "cb": "^0.1.0",
     "chalk": "^3.0.0",
