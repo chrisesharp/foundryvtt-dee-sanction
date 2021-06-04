@@ -146,9 +146,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       event.preventDefault();
       const resource = $('#consequence-sel').val();
       const newData = {resource:resource};
-      console.log("conseq:",newData)
       await this.item.data.update({data:newData});
-      console.log(this.item)
     });
   }
 
