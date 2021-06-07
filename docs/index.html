@@ -177,7 +177,7 @@
         <hr>
         <h4 class="docs-header" id="header">Header</h4>
         <div style="text-align: center;">
-          <img src="./images/header.png" />
+          <img src="./images/agent-header.png" />
         </div>
         <div>
           <p>The top of the character sheet header contains text fields 
@@ -190,7 +190,7 @@
           <h4 class="docs-header" id="resources">Resources</h4>
           <p>The default tab covers the basic resources of the character.</p>
           <p style="text-align: center;">
-            <img src="./images/attributes.png" />
+            <img src="./images/agent-resources.png" />
           </p>
           <p>The three resources are in three columns at the top.</p>
           <p>They each start with the default d6 die, and you can alter them using the up and down icons.</p>
@@ -205,14 +205,14 @@
             the consequences folder under Items, or from the chat dialog if one is presented as a result of a roll.
           </p>
           <p style="text-align: center;">
-            <img src="./images/attack-roll.png" />
+            <img src="./images/consequences.png" />
           </p>
         </div>
         <hr>
         <h4 class="docs-header" id="abilities">Abilities</h4>
         <div class="row">
           <p style="text-align: center;">
-            <img src="./images/abilities.png" />
+            <img src="./images/agent-abilities.png" />
           </p>
           <p>
             The first row contains any <em>Abilities</em> the agent has. These can be dragged from the Abilities folder.
@@ -230,11 +230,11 @@
               </p>
               <p>
               Each of these entries can be expanded to see the description and the associated
-              abilities. Any ability the agent already has will show as "ticked off".
+              abilities. Any ability the agent already has will show as ticked off.
               </p>
             </div>
             <div class="six columns">
-              <img src="./images/ability.png" />
+              <img src="./images/focus.png" />
             </div>
           </div>
         </div>
@@ -242,7 +242,7 @@
         <h4 class="docs-header" id="inventory">Possessions</h4>
         <div class="row">
           <p style="text-align: center;">
-            <img src="./images/inventory.png" />
+            <img src="./images/possessions.png" />
           </p>
           <p>
             On the left is a place to record if the agent has any armour or defence.
@@ -258,7 +258,7 @@
         <h4 class="docs-header" id="contacts">Affiliations</h4>
         <div class="row">
           <p style="text-align: center;">
-            <img src="./images/notes.png" />
+            <img src="./images/affiliations.png" />
           </p>
           <p>This tab is where the agent's associations with any organisation
             can be dragged onto the sheet. As with occupations and foci, affiliations
@@ -270,7 +270,7 @@
         <h4 class="docs-header" id="esoterica">Esoterica</h4>
         <div class="row">
           <p style="text-align: center;">
-            <img src="./images/notes.png" />
+            <img src="./images/esoterica.png" />
           </p>
           <p>This tab is where the agent's unravelling die is set. As with other resources,
             it can be decreased by clicking the down arrow, and clicked on to roll for unravelling.
@@ -284,13 +284,16 @@
       <div class="docs-section">
         <h2 id="enemies" class="docs-header">Enemies</h2>
         <p style="text-align: center;">
-          <img src="./images/enemies.png" />
+          <img src="./images/enemy-header.png" />
         </p>
         <h4 id="enemy-header" class="docs-header">Header</h4>
         <p>The first row below the name the various marks of tradecraft that
           are required to defeat this enemy. They can be clicked on to select them.
         </p>
         <h4 id="enemy-resistance" class="docs-header">Resistance</h4>
+        <p style="text-align: center;">
+          <img src="./images/enemy.png" />
+        </p>
         <p>
           Here you can record the potency of the enemy. A negative number indicates a step-down die.
         </p>
@@ -305,6 +308,9 @@
           Drag or create new abilities for the enemy here.
         </p>
         <h4 id="enemy-resolution" class="docs-header">Resolution</h4>
+        <p style="text-align: center;">
+          <img src="./images/resolution.png" />
+        </p>
         <p>
           This is the Resolution table to use when an agent is fighting the enemy. Create the resolution table
           as a separate RollTable in Foundry, and drag it onto this sheet here. It will automatically get used
@@ -328,8 +334,26 @@
         </p>
         <hr>
         <h4 class="docs-header">Targeting</h4>
+        <p style="text-align: center;">
+          <img src="./images/targeting.png" />
+        </p>
         <p>If an agent or enemy is fighting another actor, make sure you target them in Foundry to ensure that the
           relevant potencies, consequences and resolution tables are activated for each agent's challenge.
+        </p>
+        <hr>
+        <h4 class="docs-header">Faltering</h4>
+        <p style="text-align: center;">
+          <img src="./images/falter.png" />
+        </p>
+        <p>If an agent falters in a challenge, this will be indicated in the chat window for the dice results. Two buttons
+          will then be presented. The player should click the button to indicate whether this was a falter in an
+          attacking or a defending move.
+        </p>
+        <p style="text-align: center;">
+          <img src="./images/roll.png" />
+        </p>
+        <p>When clicking one of those buttons, a roll on the enemy's resolution table will then happen, and indicate 
+          any lingering consequences that might apply.
         </p>
       </div>
     </div>
