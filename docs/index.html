@@ -76,23 +76,26 @@
               </div>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#enemies">Enemies</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" data-popover="#weaponNavPop" href="#">Resistance</a>
-              <div id="weaponNavPop" class="popover">
+              <a class="navbar-link" data-popover="#enemyNavPop" href="#">Enemies</a>
+              <div id="enemyNavPop" class="popover">
                 <ul class="popover-list">
                   <li class="popover-item">
-                    <a class="popover-link" href="#weapons">Abilities</a>
+                    <a class="popover-link" href="#enemy-header">Header</a>
                   </li>
                   <li class="popover-item">
-                    <a class="popover-link" href="#tags">Resolution</a>
+                    <a class="popover-link" href="#enemy-resistance">Resistance</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#enemy-abilities">Abilities</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#enemy-resolution">Resolution</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#initiative">Combat</a>
+              <a class="navbar-link" href="#combat">Combat</a>
             </li>
           </ul>
         </div>
@@ -283,11 +286,11 @@
         <p style="text-align: center;">
           <img src="./images/enemies.png" />
         </p>
-        <h4 class="docs-header">Header</h4>
+        <h4 id="enemy-header" class="docs-header">Header</h4>
         <p>The first row below the name the various marks of tradecraft that
           are required to defeat this enemy. They can be clicked on to select them.
         </p>
-        <h4 class="docs-header">Resistance</h4>
+        <h4 id="enemy-resistance" class="docs-header">Resistance</h4>
         <p>
           Here you can record the potency of the enemy. A negative number indicates a step-down die.
         </p>
@@ -297,11 +300,11 @@
         <p>
           Finally, there is a list of any lingering consequences the enemy might be suffering.
         </p>
-        <h4 class="docs-header">Abilities</h4>
+        <h4 id="enemy-abilities" class="docs-header">Abilities</h4>
         <p>
           Drag or create new abilities for the enemy here.
         </p>
-        <h4 class="docs-header">Resolution</h4>
+        <h4 id="enemy-resolution" class="docs-header">Resolution</h4>
         <p>
           This is the Resolution table to use when an agent is fighting the enemy. Create the resolution table
           as a separate RollTable in Foundry, and drag it onto this sheet here. It will automatically get used
@@ -309,7 +312,7 @@
         </p>
       </div>
       <div class="docs-section">
-        <h2 id="enemies" class="docs-header">Combat</h2>
+        <h2 id="combat" class="docs-header">Combat</h2>
         <p style="text-align: center;">
           <img src="./images/enemies.png" />
         </p>
@@ -324,7 +327,7 @@
           or enemies act first. Neutral parties always go last.
         </p>
         <hr>
-        <h4 class="docs-header">Initiative</h4>
+        <h4 class="docs-header">Targeting</h4>
         <p>If an agent or enemy is fighting another actor, make sure you target them in Foundry to ensure that the
           relevant potencies, consequences and resolution tables are activated for each agent's challenge.
         </p>
