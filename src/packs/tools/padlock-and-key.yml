@@ -1,0 +1,7 @@
+name: "Padlock and Key"
+type: "item"
+data:
+  description: "<p>A padlock and key.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

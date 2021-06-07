@@ -1,7 +1,7 @@
-name: "Dagger"
+name: "Poem"
 type: "item"
 data:
-  description: "<p>A simple dagger.</p>"
+  description: "<p>A love ballad by a little known poet.</p>"
   esoteric: false
   quantity: 1
 img: "/systems/dee/assets/default/icons/kit.png"

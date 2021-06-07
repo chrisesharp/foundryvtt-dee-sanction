@@ -1,0 +1,7 @@
+name: "Lutheran Testimony"
+type: "item"
+data:
+  description: "<p>The 8th imprint of a Lutheran testimony.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

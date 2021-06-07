@@ -1,0 +1,7 @@
+name: "Cudgel"
+type: "item"
+data:
+  description: "<p>A sturdy wooden cudgel.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

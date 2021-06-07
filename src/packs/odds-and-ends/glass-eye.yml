@@ -1,0 +1,7 @@
+name: "Glass Eye"
+type: "item"
+data:
+  description: "<p>A glass eye.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

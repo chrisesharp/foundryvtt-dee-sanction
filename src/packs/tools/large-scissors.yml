@@ -1,0 +1,7 @@
+name: "Large Scissors"
+type: "item"
+data:
+  description: "<p>A pair of large scissors.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

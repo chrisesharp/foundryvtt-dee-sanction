@@ -1,0 +1,7 @@
+name: "Part-song"
+type: "item"
+data:
+  description: "<p>Verse from a gloomy part-song.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

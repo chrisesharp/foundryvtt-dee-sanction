@@ -1,0 +1,7 @@
+name: "Wool Coat"
+type: "item"
+data:
+  description: "<p>A woolen coat.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

@@ -1,0 +1,7 @@
+name: "Shovel"
+type: "item"
+data:
+  description: "<p>A sturdy shovel.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

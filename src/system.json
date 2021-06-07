@@ -26,10 +26,38 @@
       "entity": "Item"
     },
     {
-      "name": "items",
-      "label": "Items",
+      "name": "clothing",
+      "label": "Clothing",
       "package": "dee",
-      "path": "packs/items.db",
+      "path": "packs/clothing.db",
+      "entity": "Item"
+    },
+    {
+      "name": "odds-and-ends",
+      "label": "Odds and Ends",
+      "package": "dee",
+      "path": "packs/odds-and-ends.db",
+      "entity": "Item"
+    },
+    {
+      "name": "printed-matter",
+      "label": "Printed Matter",
+      "package": "dee",
+      "path": "packs/printed.db",
+      "entity": "Item"
+    },
+    {
+      "name": "tools",
+      "label": "Tools",
+      "package": "dee",
+      "path": "packs/tools.db",
+      "entity": "Item"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "package": "dee",
+      "path": "packs/weapons.db",
       "entity": "Item"
     },
     {

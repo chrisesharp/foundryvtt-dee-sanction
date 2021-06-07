@@ -1,0 +1,7 @@
+name: "Leather Belt"
+type: "item"
+data:
+  description: "<p>A leather belt.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

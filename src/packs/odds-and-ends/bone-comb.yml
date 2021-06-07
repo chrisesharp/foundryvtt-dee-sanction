@@ -1,0 +1,7 @@
+name: "Bone Comb"
+type: "item"
+data:
+  description: "<p>A bone comb.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

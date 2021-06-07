@@ -1,0 +1,7 @@
+name: "Gamepiece"
+type: "item"
+data:
+  description: "<p>A gamepiece.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

@@ -1,0 +1,7 @@
+name: "Sealed Letter"
+type: "item"
+data:
+  description: "<p>A sealed letter.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

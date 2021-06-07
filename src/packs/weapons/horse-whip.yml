@@ -1,0 +1,7 @@
+name: "Horse whip"
+type: "item"
+data:
+  description: "<p>Vicious in the right hands.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

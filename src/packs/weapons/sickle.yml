@@ -1,0 +1,7 @@
+name: "Sickle"
+type: "item"
+data:
+  description: "<p>A small but sharp sickle.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

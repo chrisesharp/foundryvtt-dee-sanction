@@ -1,0 +1,7 @@
+name: "Chain"
+type: "item"
+data:
+  description: "<p>A short length of chain.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

@@ -1,0 +1,7 @@
+name: "Mace"
+type: "item"
+data:
+  description: "<p>A small-headed mace.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

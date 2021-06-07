@@ -1,0 +1,7 @@
+name: "Shortsword"
+type: "item"
+data:
+  description: "<p>A highland dirk.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

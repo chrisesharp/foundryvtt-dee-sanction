@@ -1,0 +1,7 @@
+name: "Carved wooden figurine"
+type: "item"
+data:
+  description: "<p>A carved wooden figurine.</p>"
+  esoteric: false
+  quantity: 1
+img: "/systems/dee/assets/default/icons/kit.png"

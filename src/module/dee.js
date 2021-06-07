@@ -64,7 +64,7 @@ Hooks.once('init', async function() {
 Hooks.once("ready", async function () {
     // Load leaf node documents
     let loadAll = async () => {
-      let stage1 = await loadCompendia(["Abilities","Consequences","Items","Favours"]);
+      let stage1 = await loadCompendia(["Abilities","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"]);
       console.log("Stage 1: Compendia imported:",stage1)
       // Load containers
       let stage2 = await loadCompendia(["Associations","Foci","Occupations","Humours"]);
