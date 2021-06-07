@@ -111,3 +111,25 @@ Hooks.on("preUpdateCombat", (combat, data, options, id) => {
   // }
 });
 Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
+
+// License and KOFI infos
+Hooks.on("renderSidebarTab", async (object, html) => {
+  if (object instanceof ActorDirectory) {
+    party.addControl(object, html);
+  }
+  if (object instanceof Settings) {
+    let gamesystem = html.find("#game-details");
+    // License text
+    const template = "systems/dee/templates/chat/license.html";
+    const rendered = await renderTemplate(template);
+    gamesystem.find(".system").append(rendered);
+    
+    // User guide
+    let docs = html.find("button[data-action='docs']");
+    const styling = "border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px";
+    $(`<button data-action="userguide"><img src='/systems/dee/assets/default/ability.png' width='16' height='16' style='${styling}'/>WWII:OWB Guide</button>`).insertAfter(docs);
+    html.find('button[data-action="userguide"]').click(ev => {
+      new FrameViewer('https://chrisesharp.github.io/foundryvtt-dee-sanction', {resizable: true}).render(true);
+    });
+  }
+});
