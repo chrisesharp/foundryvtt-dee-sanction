@@ -6,12 +6,14 @@
  *    user zoom.
  */
 
+ 
  html {
-    font-family: serif; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
   }
-  
+
   /**
    * Remove default margin.
    */
