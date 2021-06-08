@@ -2,13 +2,14 @@
 
 .dee.chat-block {
     margin: 0;
+    font-family: $font-primary;
     .chat-header {
       height: 46px;
       margin: 4px 0;
     //   background: $darkBackground;
       border: 1px solid black;
       border-radius: 3px;
-      color: white;
+      color: rgb(36, 35, 35);
       padding: 2px;
       box-shadow: 0 0 2px #fff inset;
       .chat-title {
@@ -31,7 +32,7 @@
     }
     .chat-target {
       text-align: right;
-      font-style: italic;
+      font-style: normal;
       padding: 2px;
     }
     .chat-details {
@@ -99,34 +100,6 @@
   
     .card-content {
       margin: 5px 0;
-      .treasure-list {
-        padding: 0;
-        list-style: none;
-        .treasure {
-          img {
-            flex: 0 0 36px;
-            border: none;
-          }
-          div {
-            text-indent: 10px;
-            font-size: 14px;
-            font-weight: bold;
-          }
-          line-height: 36px;
-        }
-        .sub {
-          padding-left: 25px;
-          line-height: 28px;
-          img {
-            flex: 0 0 28px;
-            border: none;
-          }
-          div {
-            text-indent: 10px;
-            font-size: 14px;
-          }
-        }
-      }
       h3 {
         font-size: 12px;
         margin: 0;
@@ -186,6 +159,22 @@
       color: inherit;
       background: #ffdddd;
       border: 1px solid #6e0000;
+    }
+  }
+}
+
+&.dee.welcome {
+  display: flex;
+  overflow: hidden;
+  .welcome-content {
+    div {
+      font-size: large;
+      img.glyph {
+        padding: 15px;
+        flex: 0 60px;
+        width: 60px;
+        border: 0px;
+      }
     }
   }
 }

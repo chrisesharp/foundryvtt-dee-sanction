@@ -6,8 +6,8 @@ export class DeeSanctionRollTable extends RollTable {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
-  prepareData() {
-    super.prepareData();
+  prepareDerivedData() {
+    super.prepareDerivedData();
     // Get the Item's data
     const tableData = this.data;
     let results = tableData.results.contents.filter(t=>t.data.type==1);

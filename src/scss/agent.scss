@@ -18,17 +18,14 @@
                 width: 40px;
                 background-size: contain;
                 background-repeat: no-repeat;
-                position: relative;
                 .hide{
-                    position: absolute;
                     width: 40px;
                     border: 0px;
-                    top: 8px;
+                    // top: 8px;
                 }
                 .hide:hover + .show{
                     display: block;
-                    position: absolute;
-                    top: 10px;
+                    // top: 10px;
                 }
             }
         }

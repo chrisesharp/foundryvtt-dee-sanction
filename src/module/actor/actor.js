@@ -123,9 +123,10 @@ export class DeeSanctionActor extends Actor {
     });
   }
 
-  rollConsequence(rollTable, attacking=true) {
+  async rollConsequence(rollTable, attacking=true) {
     const rt = game.tables.get(rollTable);
-    let roll = (attacking === "true") ? new Roll("1d8").roll() : new Roll("1d6+2").roll();
+    let roll = (attacking === "true") ? new Roll("1d8") : new Roll("1d6+2");
+    await roll.roll();
     return rt.draw({roll:roll});
   }
 

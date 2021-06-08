@@ -13,8 +13,9 @@ export class DeeSanctionAgentSheet extends DeeSanctionActorSheet {
         return mergeObject(super.defaultOptions, {
         classes: ["dee", "sheet", "actor", "agent"],
         template: "systems/dee/templates/actor/agent-sheet.html",
-        width: 400,
+        width: 450,
         height: 575,
+        resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resources" }]
         });
     }

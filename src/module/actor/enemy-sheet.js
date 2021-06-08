@@ -65,6 +65,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
       template: "systems/dee/templates/actor/enemy-sheet.html",
       width: 400,
       height: 475,
+      resizable: false,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
       });
   }

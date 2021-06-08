@@ -11,9 +11,9 @@ async function loadCompendium (compendium) {
     const packname = "dee." + compendium.toLowerCase().replace(/ /g,"-");
     const pack = game.packs.get(packname);
     if (pack) {
-        if (folder) {
+        if (folder && folder instanceof Folder) {
             let loaded = await folder.getFlag("dee","loaded");
-            if (loaded===true) {
+            if (loaded === true) {
                 return Promise.resolve(`${compendium} pack already imported`);
             }
             let imp = await pack.importAll({folderId:folder.id});
@@ -22,7 +22,7 @@ async function loadCompendium (compendium) {
         } else {
             let imp = await pack.importAll({folderName:folderName});
             let newFolder = game.folders.find(f => f.name === folderName);
-            if (newFolder) {
+            if (newFolder && newFolder instanceof Folder) {
                 newFolder.setFlag("dee","loaded",true);
             } else {
                 console.log(`Couldn't find new folder ${folderName} for ${compendium}`);

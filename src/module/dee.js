@@ -65,19 +65,22 @@ Hooks.once("ready", async function () {
     // Load leaf node documents
     let loadAll = async () => {
       let stage1 = await loadCompendia(["Abilities","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"]);
-      console.log("Stage 1: Compendia imported:",stage1)
+      console.log("Stage 1: Compendia imported:",stage1);
       // Load containers
       let stage2 = await loadCompendia(["Associations","Foci","Occupations","Humours"]);
-      console.log("Stage 2: Compendia imported:",stage2)
+      console.log("Stage 2: Compendia imported:",stage2);
       // Load other tables
       let stage3 = await loadCompendia(["Outcomes"]);
-      console.log("Stage 3: Compendia imported:",stage3)
+      console.log("Stage 3: Compendia imported:",stage3);
+      console.log("Import complete");
     }
 
-  //show welcome dialog and set initialized to true
+    const template = "/systems/dee/templates/dialog/welcome.html";
+    const content = await renderTemplate(template);
+    //show welcome dialog and set initialized to true
     let d = new Dialog({
       title: "Welcome to the Dee Sanction",
-      content: "<This>The first time you create a world, you must import the compendia. This will take a little time.</p>",
+      content: content,
       buttons: {
         one: {
           icon: '<i class="fas fa-check"></i>',
@@ -114,9 +117,7 @@ Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
 
 // License and KOFI infos
 Hooks.on("renderSidebarTab", async (object, html) => {
-  if (object instanceof ActorDirectory) {
-    party.addControl(object, html);
-  }
+
   if (object instanceof Settings) {
     let gamesystem = html.find("#game-details");
     // License text
@@ -127,9 +128,13 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     // User guide
     let docs = html.find("button[data-action='docs']");
     const styling = "border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px";
-    $(`<button data-action="userguide"><img src='/systems/dee/assets/default/ability.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`).insertAfter(docs);
+    $(`<button data-action="userguide"><img src='/systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`).insertAfter(docs);
     html.find('button[data-action="userguide"]').click(ev => {
       new FrameViewer('https://chrisesharp.github.io/foundryvtt-dee-sanction', {resizable: true}).render(true);
     });
   }
+});
+
+Hooks.on("createDocument", async (document, options, userId) => {
+  console.log("createDoc:",document, options, userId);
 });
