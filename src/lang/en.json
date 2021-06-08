@@ -19,6 +19,7 @@
     "DEE.Formula": "Challenge Die",
     "DEE.ChallengeRoll": "a challenge ",
     "DEE.ResistanceRoll": "a chance of resistance ",
+    "DEE.UnravellingRoll": "a chance of unravelling ",
 
     "DEE.resource.phy.long": "Physicall",
     "DEE.resource.int.long": "Intellectuall",
@@ -28,7 +29,7 @@
     "DEE.roll.details.resource": "Roll {type} above 2 for success.",
     "DEE.roll.details.potency": "Roll above 2 for success, against potency {potency}.",
     "DEE.roll.details.resistance": "Roll 1 or 2 with {type} to resist the damage",
-    "DEE.roll.consequences": "Roll for consequences of {action}",
+    "DEE.roll.consequences": "Roll for consequences of...",
     "DEE.roll.initiative": "Take a chance for initiative",
     "DEE.consequence.resource": "Affected resource"
 }

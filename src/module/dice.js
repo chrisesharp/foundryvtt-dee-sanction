@@ -84,8 +84,7 @@ export class DeeSanctionDice {
           data: data,
         };
     
-        const roll = new Roll(formula, data)
-        await roll.roll();
+        const roll = await new Roll(formula, data).roll();
     
         // Convert the roll to a chat message and return the roll
         let rollMode = game.settings.get("core", "rollMode");
@@ -145,6 +144,7 @@ export class DeeSanctionDice {
           isFailure: false,
           target: data.roll.target,
           total: roll.total,
+          type: data.rollType
         };
     
         if (data.roll.type == "above") {

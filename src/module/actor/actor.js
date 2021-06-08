@@ -73,6 +73,7 @@ export class DeeSanctionActor extends Actor {
                                       game.i18n.format("DEE.roll.details.potency", {potency: potency});
     const data = {
       actor: this.data,
+      rollType: "challenge",
       roll: {
         type: "above",
         step: step,
@@ -102,6 +103,7 @@ export class DeeSanctionActor extends Actor {
 
     const data = {
       actor: this.data,
+      rollType: "resistance",
       roll: {
         type: "below",
         step: step,
@@ -125,9 +127,13 @@ export class DeeSanctionActor extends Actor {
 
   async rollConsequence(rollTable, attacking=true) {
     const rt = game.tables.get(rollTable);
-    let roll = (attacking === "true") ? new Roll("1d8") : new Roll("1d6+2");
-    await roll.roll();
+    let roll = (attacking === "true") ? await new Roll("1d8").roll() : await new Roll("1d6+2").roll();
     return rt.draw({roll:roll});
+  }
+
+  async rollUnravelling(step) {
+    const rt = game.tables.getName("Unravelling");
+    return rt.draw();
   }
 
   getAbilities() {

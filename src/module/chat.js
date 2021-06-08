@@ -19,21 +19,33 @@ export const addChatConsequenceButton = function(msg, html, data) {
   let cb = html.find('.consequence-roll');
   if (cb.data('id')) {
     const id = cb.data('id')
-    let label = game.i18n.format('DEE.roll.consequences',{action: "attacking"});
-    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${label}</button></div>`))
-    label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
-    cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${label}</button></div>`))
-    cb.find('button[data-action="consequence"]').click((ev) => {
-      ev.preventDefault();
-      const attacking = ev.currentTarget.dataset.attack;
-      applyChatConsequenceRoll(id, attacking);
-    });
+    if (id === "unravel") {
+      let label = game.i18n.format('DEE.roll.consequences');
+      cb.append($(`<h4>${label}</h4>`));
+      let action = "unravelling"
+      cb.append($(`<div class="consequence-button"><button type="button" data-action="unravel"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
+      cb.find('button[data-action="unravel"]').click((ev) => {
+        ev.preventDefault();
+        applyChatUnravelRoll();
+      });
+    } else {
+      let label = game.i18n.format('DEE.roll.consequences');
+      cb.append($(`<h4>${label}</h4>`));
+      let action = "attacking";
+      cb.append($(`<h4 class="consequence-button"><button type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${action}</button></h4>`));
+      label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
+      action = "defending";
+      cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
+      cb.find('button[data-action="consequence"]').click((ev) => {
+        ev.preventDefault();
+        const attacking = ev.currentTarget.dataset.attack;
+        applyChatConsequenceRoll(id, attacking);
+      });
+    }
   }
 }
 
 /**
- * Apply rolled dice damage to the token or tokens which are currently controlled.
- * This allows for damage to be scaled by a multiplier to account for healing, critical hits, or resistance
  *
  * @param {Number} rollTable    The id of the consequence rolltable
  * @return {Promise}
@@ -41,6 +53,17 @@ export const addChatConsequenceButton = function(msg, html, data) {
 function applyChatConsequenceRoll(rollTable, attacking=true) {
   return Promise.all(canvas.tokens.controlled.map(t => {
     return t.actor.rollConsequence(rollTable, attacking);
+  }));
+}
+
+/**
+ *
+ * @param {Number} rollTable    The id of the consequence rolltable
+ * @return {Promise}
+ */
+ function applyChatUnravelRoll(step) {
+  return Promise.all(canvas.tokens.controlled.map((t) => {
+    return t.actor.rollUnravelling(step);
   }));
 }
 

@@ -14,7 +14,12 @@
             {{#if result.isFailure}}<div class='roll-result roll-fail'><b>{{localize 'DEE.Failure'}}</b>
             </div>
                 {{#if data.target.hitresolution}}
-                <div class="consequence-roll" data-id="{{data.target.hitresolution.rolltable.id}}">
+                <div class="consequence-roll flexrow" data-id="{{data.target.hitresolution.rolltable.id}}">
+                </div>
+                {{/if}}
+                {{#if (eq data.rollType "unravelling")}}
+                <h2>unravelling</h2>
+                <div class="consequence-roll" data-id="unravel" data-step="{{data.roll.step}}">
                 </div>
                 {{/if}}
             {{/if}}

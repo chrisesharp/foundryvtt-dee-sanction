@@ -50,10 +50,9 @@
       }
     }
     .consequence-roll {
-      position: relative;
+      flex-direction: column;
       .consequence-button {
-        display: none;
-        position: absolute;
+        flex-direction: row;
         line-height: 24px;
         text-align: center;
         background: rgba(0, 0, 0, 0.1);
@@ -62,6 +61,8 @@
         bottom: 1px;
         right: 10px;
         button {
+          display: contents;
+          align-content:stretch;
           padding: 2px 5px;
           width: 22px;
           line-height: 14px;
