@@ -107,23 +107,28 @@ export class DeeSanctionItem extends Item {
         break;
     }
     if (itemData.data.abilities) {
-      this._prepContainer(itemData);
+      let abilities = this._prepContainer(itemData);
+      itemData.update({data:{abilities:abilities}});
     }
   }
 
   _prepContainer(itemData) {
     let abilities = deepClone(itemData.data.abilities);
+    // console.log("Looking at container:",itemData)
     if (game.items) {
       abilities.forEach(entry => {
+        // console.log("Looking at ability ",entry);
         if (!entry._id) {
+          // console.log("doesn't have an id")
           let item = game.items.find(i => i.type==="ability" && i.name===entry.name);
           if (item) {
             entry._id = item.data._id;
             entry.img = item.img;
+            // console.log("entry now ",entry)
           }
         }
       });
     }
-    itemData.data.abilities = abilities;
+    return abilities;
   }
 }
