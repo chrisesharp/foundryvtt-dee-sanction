@@ -10,64 +10,6 @@ export class DeeSanctionItem extends Item {
     // this.abilities = this.abilities || [];
   }
 
-  /** @override */
-  static get metadata() {
-    const metadata = duplicate(Item.metadata);
-    // const metadata = {
-    //   name: "DeeSanctionItem",
-    //   collection: "items",
-    //   embedded: {
-    //     "ActiveEffect": Item.metadata.embedded["ActiveEffect"],
-    //     "DeeSanctionItem": DeeSanctionItem
-    //   },
-    //   hasSystemData: true,
-    //   isPrimary: false,
-    //   label: "DOCUMENT.DeeSanctionItem",
-    //   permissions: Item.metadata.permissions,
-    //   types: Item.metadata.types
-    // }
-    // metadata.embedded.push({"Item": DeeSanctionItem});
-    // metadata.name = "DeeSanctionItem";
-    // metadata.collection = "items";
-    // metadata.label = "Document.DeeSanctionItem";
-    // metadata.embedded = { "DeeSanctionItem": DeeSanctionItem};
-    // console.log("!!!!!!",Item.metadata)
-    // console.log("XXXXXX",metadata)
-    return metadata;
-    // return {
-    //   baseEntity: Item,
-    //   collection: game.items,
-    //   embeddedEntities: {
-    //     "ActiveEffect": "effects",
-    //     "Item": "abilities"
-    //   },
-    //   label: "ENTITY.Item",
-    //   permissions: {
-    //     create: "ITEM_CREATE"
-    //   }
-    // };
-  }
-
-  /** @override*/
-  async _preCreate(data, options, user) {
-    // console.log("item preCreate called");
-    await super._preCreate(data, options, user);
-
-    // const actorData = this.data;
-
-    // if (data.type === "character") {
-    //   let skillPack = game.packs.get("zweihander.skills");
-
-    //   let toAdd = await skillPack.getDocuments().then(result => {
-    //     return result.map(item => item.toObject());
-    //   });
-
-    //   let toAddDifference = UtilityHelpers.getSymmetricDifference(toAdd, actorData.skills);
-
-    //   if (toAddDifference.length)
-    //     actorData.update({ "items": toAddDifference });
-    // }
-  }
   /**
    * Augment the basic Item data model with additional dynamic data.
    */

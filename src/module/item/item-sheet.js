@@ -10,6 +10,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       classes: ["dee", "sheet", "item"],
       width: 350,
       height: 350,
+      resizable: false,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{
         dragSelector: ".item",
