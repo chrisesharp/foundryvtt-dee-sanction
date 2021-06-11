@@ -61,9 +61,9 @@ function applyChatConsequenceRoll(rollTable, attacking=true) {
  * @param {Number} rollTable    The id of the consequence rolltable
  * @return {Promise}
  */
- function applyChatUnravelRoll(step) {
+ function applyChatUnravelRoll() {
   return Promise.all(canvas.tokens.controlled.map((t) => {
-    return t.actor.rollUnravelling(step);
+    return t.actor.rollUnravellingTable();
   }));
 }
 

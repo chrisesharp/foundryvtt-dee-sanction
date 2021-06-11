@@ -50,7 +50,7 @@ export class DeeSanctionActor extends Actor {
   }
 
   rollChallenge(resource, step, target = {}) {
-    step=parseInt(step)
+    step=parseInt(step);
     let potency = this.data.data.consequences.reduce(function (acc, item) { 
       return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
     }, 0);
@@ -132,6 +132,32 @@ export class DeeSanctionActor extends Actor {
   }
 
   async rollUnravelling(step) {
+    step=parseInt(step);
+    const die = "d" + (2 + (2 * step));
+    let label = game.i18n.localize("DEE.ChallengeRoll");
+    label += game.i18n.localize(`DEE.resource.unravel.long`);
+    const details = game.i18n.format("DEE.roll.details.resource", {type: label});
+    const rollParts = [die];
+    const data = {
+      actor: this.data,
+      rollType: "unravelling",
+      roll: {
+        type: "above",
+        step: step,
+        target: 3,
+      },
+      details: details
+    };
+    return await DeeSanctionDice.Roll({
+      parts: rollParts,
+      data: data,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: `flavour ${label}`,
+      title: label
+    });
+  }
+
+  async rollUnravellingTable() {
     const rt = game.tables.getName("Unravelling");
     return rt.draw();
   }
