@@ -1,5 +1,8 @@
 @import "./utils/colors.scss";
 
+@at-root .chat-message {
+  background: url("/systems/dee/assets/default/paper.png");
+}
 .dee.chat-block {
     margin: 0;
     font-family: $font-primary;

@@ -1,5 +1,11 @@
 .window-app {
   font-family: $font-primary;
+  .window-content {
+    background-image: url("/systems/dee/assets/default/paper.png");
+    img {
+      border:none;
+    }
+  }
 }
 
 .rollable {
