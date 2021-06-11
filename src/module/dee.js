@@ -135,7 +135,3 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     });
   }
 });
-
-Hooks.on("createDocument", async (document, options, userId) => {
-  console.log("createDoc:",document, options, userId);
-});
