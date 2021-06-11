@@ -1,0 +1,9 @@
+---
+  name: "Gullible"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "willing to believe or trust anyone without adequate evidence."
+    resource: "int"
+    potency: -1
+

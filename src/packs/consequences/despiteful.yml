@@ -1,0 +1,9 @@
+---
+  name: "Despiteful"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "unforgiving and driven to seek redress for any slight or wrong"
+    resource: "int"
+    potency: -1
+

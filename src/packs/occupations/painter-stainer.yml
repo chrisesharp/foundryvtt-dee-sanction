@@ -1,5 +1,6 @@
 name: "Painter-Stainer"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Specialists in the decoration, colouring and
 gilding of buildings, furnishings, and other

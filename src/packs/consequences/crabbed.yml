@@ -1,0 +1,9 @@
+---
+  name: "Crabbed"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "prone to sharp changes in emotional state; short-tempered, sharp, and loud"
+    resource: "int"
+    potency: -1
+

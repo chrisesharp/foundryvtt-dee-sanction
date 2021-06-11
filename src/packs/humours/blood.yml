@@ -1,12 +1,13 @@
 ---
-  name: "Blood"
+  name: "Humour:Blood"
   img: "icons/svg/d20-grey.svg"
   description: "Ongoing effect when an agent falters on an unravelling die."
   results: 
     - 
-      type: 0
-      text: "Foolish – recklessly courageous and bold, heedless of the potency or peril of a challenge"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Foolish"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
@@ -14,9 +15,10 @@
         - 2
       drawn: false
     - 
-      type: 0
-      text: "Gullible – willing to believe or trust anyone without adequate evidence"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Gullible"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
@@ -24,9 +26,10 @@
         - 4
       drawn: false
     - 
-      type: 0
-      text: "Capricious – given to sudden, unpredictable,and erratic change in focus"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Capricious"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 

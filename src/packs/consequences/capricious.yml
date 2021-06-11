@@ -1,0 +1,9 @@
+---
+  name: "Capricious"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "given to sudden, unpredictable, and erratic change in focus."
+    resource: "int"
+    potency: -1
+

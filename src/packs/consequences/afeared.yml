@@ -1,0 +1,9 @@
+---
+  name: "Afeared"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "prone to tip into panic and alarm at the smallest trigger."
+    resource: "sup"
+    potency: -1
+

@@ -1,5 +1,6 @@
 name: "Horse Trader"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Trader in all manner of livestock; accused,
 by reputation, to play the game and

@@ -1,0 +1,9 @@
+---
+  name: "Sullen"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "resentful silence, overcast with notes of despondency about any situation."
+    resource: "int"
+    potency: -1
+

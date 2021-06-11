@@ -17,7 +17,7 @@ of fear source."
     - 
       type: 1
       collection: "RollTable"
-      text: "Phlegm"
+      text: "Humour:Phlegm"
       img: "icons/svg/d20-black.svg"
       resultId: ""
       weight: 1
@@ -39,7 +39,7 @@ any complex action in the presence of fear source."
     - 
       type: 1
       collection: "RollTable"
-      text: "Black Bile"
+      text: "Humour:Black Bile"
       img: "icons/svg/d20-black.svg"
       resultId: ""
       weight: 1
@@ -61,7 +61,7 @@ in a selfish way on a falter. Attitude persists in the presence of fear source."
     - 
       type: 1
       collection: "RollTable"
-      text: "Yellow Bile"
+      text: "Humour:Yellow Bile"
       img: "icons/svg/d20-black.svg"
       resultId: ""
       weight: 1
@@ -83,7 +83,7 @@ or aggression are ▼1 while in the presence of fear source."
     -
       type: 1
       collection: "RollTable"
-      text: "Blood"
+      text: "Humour:Blood"
       img: "icons/svg/d20-black.svg"
       resultId: ""
       weight: 1

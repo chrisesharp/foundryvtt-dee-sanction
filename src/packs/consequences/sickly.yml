@@ -1,0 +1,9 @@
+---
+  name: "Sickly"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "trembling with an unshakeable chill; pale and drawn."
+    resource: "phy"
+    potency: -1
+

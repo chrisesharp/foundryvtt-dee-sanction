@@ -1,5 +1,6 @@
 name: "Star of Artemis"
 type: "association"
+img: "icons/svg/sun.svg"
 data: 
   description: "<p>Religion stems from layers of deceit;
 true faith has been mired in ancient

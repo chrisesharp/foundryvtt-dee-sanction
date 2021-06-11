@@ -1,0 +1,9 @@
+---
+  name: "Choleric"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "eager for conflict, with a simmering hostility toward everyone and everything"
+    resource: "int"
+    potency: -1
+

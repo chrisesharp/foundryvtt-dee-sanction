@@ -1,0 +1,9 @@
+---
+  name: "Unheedy"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "lacking in caution and careless of the consequences from any decisions made."
+    resource: "int"
+    potency: -1
+

@@ -1,0 +1,9 @@
+---
+  name: "Canker-sorrowed"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "afflicted with a sense of grief, struggling to see worth in self."
+    resource: "int"
+    potency: -1
+

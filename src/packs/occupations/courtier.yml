@@ -1,5 +1,6 @@
 name: "Courtier"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Watchful and ever mindful attendant on
 the periphery of the gatherings of Court</p>"

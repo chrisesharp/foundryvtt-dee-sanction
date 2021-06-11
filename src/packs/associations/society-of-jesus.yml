@@ -1,5 +1,6 @@
 name: "Society of Jesus"
 type: "association"
+img: "icons/svg/sun.svg"
 data: 
   description: "<p>Jesuit infiltrators intent on overthrowing
 the Queen and the Church

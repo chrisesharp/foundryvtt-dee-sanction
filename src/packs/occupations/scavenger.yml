@@ -1,5 +1,6 @@
 name: "Scavenger"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>An officer of the ward responsible for
 managing the handling and removal of

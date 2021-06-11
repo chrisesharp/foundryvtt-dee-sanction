@@ -1,5 +1,6 @@
 name: "Messenger"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Second-fiddle diplomats burdened with
 the drudgery of carrying letters, papers,

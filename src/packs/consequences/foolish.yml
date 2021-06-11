@@ -1,0 +1,9 @@
+---
+  name: "Foolish"
+  type: "consequence"
+  img: "icons/svg/bones.svg"
+  data: 
+    description: "recklessly courageous and bold, heedless of the potency or peril of a challenge."
+    resource: "int"
+    potency: -1
+

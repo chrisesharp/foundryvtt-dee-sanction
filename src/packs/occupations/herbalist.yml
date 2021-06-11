@@ -1,5 +1,6 @@
 name: "Herbalist"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Practitioners in traditional treatments and
 curatives garnered and prepared from

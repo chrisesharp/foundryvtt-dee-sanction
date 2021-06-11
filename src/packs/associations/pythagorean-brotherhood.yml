@@ -1,5 +1,6 @@
 name: "Pythagorean Brotherhood"
 type: "association"
+img: "icons/svg/sun.svg"
 data: 
   description: "<p>Believers that understanding lies in
 the intersection ‘tween number and

@@ -1,5 +1,6 @@
 name: "Compagnonnage"
 type: "association"
+img: "icons/svg/sun.svg"
 data: 
   description: "<p>Frustrated upstart craftfolk intent
 on bringing about a new order to

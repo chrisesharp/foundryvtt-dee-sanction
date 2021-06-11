@@ -1,5 +1,6 @@
 name: "Unperson"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Dweller of the streets, alleyways, lanes, and
 back roads, surviving hardship through a

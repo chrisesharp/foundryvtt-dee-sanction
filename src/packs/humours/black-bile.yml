@@ -1,12 +1,13 @@
 ---
-  name: "Black Bile"
+  name: "Humour:Black Bile"
   img: "icons/svg/d20-grey.svg"
   description: "Ongoing effect when an agent falters on an unravelling die."
   results: 
     - 
-      type: 0
-      text: "Sullen – resentful silence, overcast with notes of despondency about any situation"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Sullen"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
@@ -14,19 +15,21 @@
         - 2
       drawn: false
     - 
-      type: 0
-      text: "Afeared – prone to tip into panic and alarm at the smallest trigger"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Afeared"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
         - 3
         - 4
       drawn: false
-    - 
-      type: 0
-      text: "Sickly – trembling with an unshakeable chill; pale and drawn"
-      img: "icons/svg/d20-black.svg"
+    -
+      type: 1
+      collection: "Item"
+      text: "Sickly"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 

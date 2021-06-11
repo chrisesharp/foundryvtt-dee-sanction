@@ -1,5 +1,6 @@
 name: "Doctor"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Assistant to one of the few chartered physicians
 who claim recognition for their

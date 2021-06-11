@@ -1,5 +1,6 @@
 name: "Chevaliers des Trois Imposteurs"
 type: "association"
+img: "icons/svg/sun.svg"
 data: 
   description: "<p>Fractious movement intent on
 bringing about Enlightenment in an

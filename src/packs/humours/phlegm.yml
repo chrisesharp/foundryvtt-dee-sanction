@@ -1,12 +1,13 @@
 ---
-  name: "Phlegm"
+  name: "Humour:Phlegm"
   img: "icons/svg/d20-grey.svg"
   description: "Ongoing effect when an agent falters on an unravelling die."
   results: 
     - 
-      type: 0
-      text: "Fat-witted – acts carelessly, lacking in reason when making decisions"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Fat-witted"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
@@ -14,9 +15,10 @@
         - 2
       drawn: false
     - 
-      type: 0
-      text: "Canker-sorrowed – afflicted with a sense of grief, struggling to see worth in self"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Canker-sorrowed"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 
@@ -24,9 +26,10 @@
         - 4
       drawn: false
     - 
-      type: 0
-      text: "Unheedy – lacking in caution and careless of the consequences from any decisions made"
-      img: "icons/svg/d20-black.svg"
+      type: 1
+      collection: "Item"
+      text: "Unheedy"
+      img: "icons/svg/bones.svg"
       resultId: ""
       weight: 1
       range: 

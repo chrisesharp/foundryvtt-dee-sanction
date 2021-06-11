@@ -1,5 +1,6 @@
 name: "Caretaker"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Trusted keeper of buildings and wider
 properties, notably in the absence of the

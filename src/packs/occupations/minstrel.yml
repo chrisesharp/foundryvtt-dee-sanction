@@ -1,5 +1,6 @@
 name: "Minstrel"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Welcome provider of entertainment, in
 forms many and varied, in court and

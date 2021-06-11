@@ -1,5 +1,6 @@
 name: "Gardener"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Hard-working keepers of small plots, in
 town and country, for flowers, vegetables

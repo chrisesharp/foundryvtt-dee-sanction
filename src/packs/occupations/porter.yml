@@ -1,5 +1,6 @@
 name: "Porter"
 type: "occupation"
+img: "icons/svg/coins.svg"
 data: 
   description: "<p>Like Atlas with the weight of the world
 upon their shoulders, they pack and
