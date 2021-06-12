@@ -60,7 +60,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
 
   /** @override */
   static get defaultOptions() {
-      return mergeObject(super.defaultOptions, {
+      return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dee", "sheet", "actor", "enemy"],
       template: "systems/dee/templates/actor/enemy-sheet.html",
       width: 400,

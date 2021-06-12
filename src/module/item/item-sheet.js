@@ -6,7 +6,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dee", "sheet", "item"],
       width: 350,
       height: 350,
