@@ -26,6 +26,19 @@ export class DeeSanctionActorSheet extends ActorSheet {
     return this._prepareItems(baseData);
   }
 
+  /**
+   * Organize and classify Owned Items for Character sheets
+   * @private
+   */
+  _prepareItems(data) {
+    const sheetData = {
+      actor: data.actor,
+      config: CONFIG.DEE,
+      data: data.actor.data.data,
+    };
+    return sheetData;
+  }
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
@@ -205,18 +218,5 @@ export class DeeSanctionActorSheet extends ActorSheet {
         this.actor.rollChallenge(resource, dataset.roll, target);
       }
     }
-  }
-
-  /**
-   * Organize and classify Owned Items for Character sheets
-   * @private
-   */
-   _prepareItems(data) {
-      const sheetData = {
-        actor: data.actor,
-        config: CONFIG.DEE,
-        data: data.actor.data.data,
-      };
-      return sheetData;
   }
 }
