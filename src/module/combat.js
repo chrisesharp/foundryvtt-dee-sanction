@@ -9,7 +9,7 @@ export class DeeCombat {
 
     // Roll init
     let roll = new Roll("1d2");
-    await roll.roll();
+    await roll.evaluate({async:true});
     roll.toMessage({
       flavor: game.i18n.format('DEE.roll.initiative')
     });
