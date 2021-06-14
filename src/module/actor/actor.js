@@ -16,37 +16,45 @@ export class DeeSanctionActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    if (actorData.type === 'agent') this._prepareCharacterData(actorData);
-    if (actorData.type === 'enemy') this._prepareCharacterData(actorData);
+    if (actorData.type === 'agent') this._prepareAgentData(actorData);
+    if (actorData.type === 'enemy') this._prepareEnemyData(actorData);
+  }
+
+  _categoriseItems(items) {
+    const categories = items.reduce(
+      (acc, item) => {
+        let type = acc[item.type] || [];
+        type.push(item);
+        acc[item.type] = type;
+        return acc;
+      },
+      {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[]}
+    );
+    return categories;
+  }
+  /**
+   * Prepare Character type specific data
+   */
+  _prepareAgentData(actorData) {
+    const data = actorData.data;
+    const categories = this._categoriseItems(actorData.items);
+    data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
+    data.abilities = categories["ability"];
+    data.consequences = categories["consequence"];
+    data.expertise = { foci: categories["focus"], occupations: categories["occupation"]};
+    data.affiliations = categories["association"];
+    data.favours = categories["favour"];
   }
 
   /**
    * Prepare Character type specific data
    */
-  _prepareCharacterData(actorData) {
+  _prepareEnemyData(actorData) {
     const data = actorData.data;
-    let [items, abilities, consequences, associations, favours, foci, occupations] = actorData.items.reduce(
-      (arr, item) => {
-        // Classify items into types
-        if (item.type === "item") arr[0].push(item);
-        else if (item.type === "ability") arr[1].push(item);
-        else if (item.type === "consequence") arr[2].push(item);
-        else if (item.type === "association") arr[3].push(item);
-        else if (item.type === "favour") arr[4].push(item);
-        else if (item.type === "focus") arr[5].push(item);
-        else if (item.type === "occupation") arr[6].push(item);
-        return arr;
-      },
-      [[], [], [], [], [], [], []]
-    );
-
-
-    data.possessions = { mundane: items.filter(i => !i.data.data.esoteric), esoteric: items.filter(i => i.data.data.esoteric)};
-    data.abilities = abilities;
-    data.consequences = consequences;
-    data.expertise = { foci: foci, occupations: occupations};
-    data.affiliations = associations;
-    data.favours = favours;
+    const categories = this._categoriseItems(actorData.items);
+    data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
+    data.abilities = categories["ability"];
+    data.consequences = categories["consequence"];
   }
 
   rollChallenge(resource, step, target = {}) {
