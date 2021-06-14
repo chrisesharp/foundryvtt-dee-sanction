@@ -1,5 +1,0 @@
-name: "Caligraphy"
-type: "ability"
-data:
-  description: "<p>Caligraphy.</p>"
-img: "icons/svg/book.svg"

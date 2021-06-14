@@ -21,16 +21,15 @@ export class DeeSanctionActor extends Actor {
   }
 
   _categoriseItems(items) {
-    const categories = items.reduce(
+    return items.reduce(
       (acc, item) => {
-        let type = acc[item.type] || [];
-        type.push(item);
-        acc[item.type] = type;
+        let category = acc[item.type] || [];
+        category.push(item);
+        acc[item.type] = category;
         return acc;
       },
       {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[]}
     );
-    return categories;
   }
   /**
    * Prepare Character type specific data
@@ -57,13 +56,13 @@ export class DeeSanctionActor extends Actor {
     data.consequences = categories["consequence"];
   }
 
-  rollChallenge(resource, step, target = {}) {
+  async rollChallenge(resource, step, target = {}) {
     step=parseInt(step);
-    let potency = this.data.data.consequences.reduce(function (acc, item) { 
+    let potency = this.data.data.consequences.reduce((acc, item) => { 
       return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
     }, 0);
     if (target.id) {
-      let targetConsequences = target.consequences.reduce(function (acc, item) { 
+      let targetConsequences = target.consequences.reduce((acc, item) => { 
         return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
       }, 0);
       potency += parseInt(target.potency);
@@ -101,7 +100,7 @@ export class DeeSanctionActor extends Actor {
     });
   }
 
-  rollResistance(resource, step, options = {}) {
+  async rollResistance(resource, step, options = {}) {
     const die = "d" + (2 + (2 * step));
     let label = game.i18n.localize("DEE.ChallengeRoll");
     if (resource) {
