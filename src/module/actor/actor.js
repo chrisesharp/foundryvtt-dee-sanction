@@ -134,8 +134,6 @@ export class DeeSanctionActor extends Actor {
 
   async rollConsequence(rollTable, attacking=true) {
     const rt = game.tables.get(rollTable);
-    // let roll = (attacking === "true") ? await new Roll("1d8").roll() : await new Roll("1d6+2").roll();
-    // return rt.draw({roll:roll});
     let roll = (attacking === "true") ? new Roll("1d8"): new Roll("1d6+2");
 
     return rt.draw({roll:await roll.evaluate({async:"true"})});
