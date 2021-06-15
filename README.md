@@ -8,3 +8,7 @@ Full documentation is available [here](https://chrisesharp.github.io/foundryvtt-
 
 To install in Foundry VTT, provide this manifest URL:
 https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src/system.json
+
+## Acknowledgements
+
+Many thanks to Neil Benson for this playtesting and UI improvement suggestions.

@@ -3,6 +3,13 @@
     max-width: 450px;
     min-height: 575px;
     
+    .step-up {
+        font-size: x-large;
+    }
+
+    .step-down {
+        font-size: x-large;
+    }
 
     img {
         border: 0px;
@@ -20,7 +27,7 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 .hide{
-                    width: 40px;
+                    width: 50px;
                     border: 0px;
                     // top: 8px;
                 }
@@ -57,7 +64,7 @@
                 font-size: large;
             }
             .fortune-header {
-                padding: 0.6em;
+                // padding: 0.6em;
                 font-weight: bold;
                 font-style: italic;
                 font-size: large;
@@ -67,7 +74,7 @@
                 position: relative;
                 border: 0px;
                 height: 100px;
-                padding: 5px;
+                padding-left: 20px;
                 
                 .fortune-bg {
                     position: absolute;
@@ -77,8 +84,7 @@
                 .fortune-val {
                     position: absolute;
                     height: 80px;
-                    top: 7px;
-                    left: 20px;
+                    left: 34px;
                     input {
                         width: 30px;
                         height: 2em;
@@ -103,7 +109,7 @@
             position: relative;
             border: 0px;
             height: 100px;
-            padding: 5px;
+            padding-left: 20px;
 
             .hits-bg {
                 position: absolute;
@@ -113,7 +119,7 @@
             .hits-val {
                 position: absolute;
                 height: 80px;
-                left: 20px;
+                left: 34px;
                 input {
                     width: 30px;
                     height: 24px;
@@ -126,7 +132,7 @@
             .resource-label {
                 position: absolute;
                 top: 12px;
-                left: 20px;
+                left: 34px;
                 font-weight: bold;
                 text-align: center;
                 font-style: italic;
@@ -135,7 +141,7 @@
             .hits-falters {
                 position: relative;
                 input[type=checkbox] {
-                    opacity: 0.2;
+                    opacity: 0;
                 }
                 input[type=checkbox]:checked {
                     opacity: 1;
@@ -161,12 +167,16 @@
             position: relative;
             border: 0px;
             height: 100px;
+            padding-left: 9px;
+
+            .resource-bg {
+                padding-left: 11px;
+            }
 
             .unravel-die {
                 position: absolute;
                 height: 64px;
                 top: 45px;
-                left: -6px;
             }
         }
 
@@ -176,12 +186,13 @@
             position: relative;
             border: 0px;
             height: 100px;
+            padding-left:20px;
 
             .armour-die {
                 position: absolute;
                 height: 64px;
                 top: 60px;
-                left: -5px;
+                left: 9px;
             }
         }
 
@@ -205,24 +216,32 @@
                 .resource-die {
                     position: absolute;
                     height: 64px;
-                    bottom: 45px;
-                    left: 20px;
+                    bottom: 35px;
+                    left: 13px;
                 }
 
                 .resource-label {
                     position: absolute;
-                    bottom: 30px;
-                    left: 15%;
+                    top: -8px;
+                    left: 10%;
                     font-weight: bold;
                     text-align: center;
                     font-style: italic;
+                    font-size: larger;
                 }
             }
         }
     }
 }
 
-.dee.roll-dialog {
+@at-root .dee.roll-dialog {
+    .step-up {
+        font-size: x-large;
+    }
+
+    .step-down {
+        font-size: x-large;
+    }
     .challenge {
         display: flex;
         flex-direction: column;
