@@ -11,4 +11,6 @@ https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src
 
 ## Acknowledgements
 
-Many thanks to Neil Benson for this playtesting and UI improvement suggestions.
+A big thank you to Paul Baldowski for his support and permission to use artwork from the Dee Sanction RPG.
+
+Many thanks to Neil Benson for his playtesting and UI improvement suggestions.
