@@ -1,6 +1,6 @@
 name: "Clerk of the Temple"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Close associate of those who practice the
 law, serving with a willing ear, a strong

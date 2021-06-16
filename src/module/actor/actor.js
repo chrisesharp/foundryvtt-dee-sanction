@@ -1,4 +1,5 @@
 import {DeeSanctionDice} from "../dice.js";
+import { DeeSanctionRollTable } from "../rolltable/rolltable.js";
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -166,8 +167,7 @@ export class DeeSanctionActor extends Actor {
   }
 
   async rollUnravellingTable() {
-    const rt = game.tables.getName("Unravelling");
-    return rt.draw();
+    return DeeSanctionRollTable.drawUnravelling();
   }
 
   getAbilities() {

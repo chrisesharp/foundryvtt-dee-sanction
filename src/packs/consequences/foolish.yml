@@ -1,7 +1,7 @@
 ---
   name: "Foolish"
   type: "consequence"
-  img: "icons/svg/bones.svg"
+  img: "/systems/dee/assets/default/icons/bones.png"
   data: 
     description: "recklessly courageous and bold, heedless of the potency or peril of a challenge."
     resource: "int"

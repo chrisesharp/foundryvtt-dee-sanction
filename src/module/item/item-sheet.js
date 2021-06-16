@@ -174,7 +174,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     // Finally, create the item!
     // TODO use the 8.x createEmbeddedDocuments() api
     // return this.item.createEmbeddedDocuments("DeeSanctionItem", [itemData]);
-    console.log("TODO create embedded ability");    
   }
 
   /**

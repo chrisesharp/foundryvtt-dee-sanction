@@ -1,6 +1,6 @@
 name: "Doctor"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Assistant to one of the few chartered physicians
 who claim recognition for their

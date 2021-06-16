@@ -1,6 +1,6 @@
 name: "Caretaker"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Trusted keeper of buildings and wider
 properties, notably in the absence of the

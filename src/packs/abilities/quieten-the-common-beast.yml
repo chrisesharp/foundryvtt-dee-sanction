@@ -2,4 +2,4 @@ name: "Quieten the Common Beast"
 type: "ability"
 data:
   description: "<p>Quieten the Common Beast.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

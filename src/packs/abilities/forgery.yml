@@ -2,4 +2,4 @@ name: "Forgery"
 type: "ability"
 data:
   description: "<p>Forgery.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

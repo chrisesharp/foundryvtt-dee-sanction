@@ -1,7 +1,7 @@
 ---
   name: "Unheedy"
   type: "consequence"
-  img: "icons/svg/bones.svg"
+  img: "/systems/dee/assets/default/icons/bones.png"
   data: 
     description: "lacking in caution and careless of the consequences from any decisions made."
     resource: "int"

@@ -2,4 +2,4 @@ name: "Street Smarts"
 type: "ability"
 data:
   description: "<p>Street Smarts.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

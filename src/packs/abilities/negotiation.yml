@@ -2,4 +2,4 @@ name: "Negotiation"
 type: "ability"
 data:
   description: "<p>Negotiation.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

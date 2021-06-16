@@ -1,6 +1,6 @@
 name: "Porter"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Like Atlas with the weight of the world
 upon their shoulders, they pack and

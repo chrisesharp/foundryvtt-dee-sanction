@@ -2,4 +2,4 @@ name: "Foraging"
 type: "ability"
 data:
   description: "<p>Foraging.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

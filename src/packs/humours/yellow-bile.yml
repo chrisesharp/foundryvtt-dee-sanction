@@ -7,7 +7,7 @@
       type: 1
       collection: "Item"
       text: "Crabbed"
-      img: "icons/svg/bones.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -18,7 +18,7 @@
       type: 1
       collection: "Item"
       text: "Choleric"
-      img: "icons/svg/bones.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -29,7 +29,7 @@
       type: 1
       collection: "Item"
       text: "Despiteful"
-      img: "icons/svg/bones.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 

@@ -2,4 +2,4 @@ name: "Counterfeit"
 type: "ability"
 data:
   description: "<p>Counterfeit.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

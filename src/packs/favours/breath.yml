@@ -2,4 +2,4 @@ name: "Breath"
 type: "favour"
 data:
   description: "<p>Measured, Steady, Controlled, Held.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

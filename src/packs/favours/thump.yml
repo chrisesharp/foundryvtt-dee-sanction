@@ -2,4 +2,4 @@ name: "Thump"
 type: "favour"
 data:
   description: "<p>Shock, Bruise, Slap, Pulp.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

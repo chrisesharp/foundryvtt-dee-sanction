@@ -1,7 +1,7 @@
 ---
   name: "Gullible"
   type: "consequence"
-  img: "icons/svg/bones.svg"
+  img: "/systems/dee/assets/default/icons/bones.png"
   data: 
     description: "willing to believe or trust anyone without adequate evidence."
     resource: "int"

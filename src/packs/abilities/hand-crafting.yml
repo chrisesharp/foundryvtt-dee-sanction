@@ -2,4 +2,4 @@ name: "Hand Crafting"
 type: "ability"
 data:
   description: "<p>Hand Crafting.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

@@ -2,4 +2,4 @@ name: "Night Working"
 type: "ability"
 data:
   description: "<p>Night Working.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

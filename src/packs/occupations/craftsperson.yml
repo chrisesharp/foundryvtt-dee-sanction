@@ -1,6 +1,6 @@
 name: "Craftsperson"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Apprenticed specialist disciplined in the
 adept working of raw materials into

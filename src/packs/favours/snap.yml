@@ -2,4 +2,4 @@ name: "Snap"
 type: "favour"
 data:
   description: "<p>Weaken, Abrade, Cripple.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

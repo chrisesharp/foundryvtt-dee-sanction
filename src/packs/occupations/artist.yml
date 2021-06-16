@@ -1,6 +1,6 @@
 name: "Artist"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Creator of emotive miniatures and decorative
 illuminations for varied patrons,

@@ -1,6 +1,6 @@
 name: "Horse Trader"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Trader in all manner of livestock; accused,
 by reputation, to play the game and

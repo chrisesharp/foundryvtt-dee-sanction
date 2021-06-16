@@ -2,4 +2,4 @@ name: "Decorate"
 type: "ability"
 data:
   description: "<p>Decorate.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

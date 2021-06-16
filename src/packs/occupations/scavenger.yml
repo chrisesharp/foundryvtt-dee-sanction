@@ -1,6 +1,6 @@
 name: "Scavenger"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>An officer of the ward responsible for
 managing the handling and removal of

@@ -1,6 +1,6 @@
 name: "Friar"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>One of the scattered mendicants of a
 broken order, seeking support and goodwill

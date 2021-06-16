@@ -2,4 +2,4 @@ name: "Barter"
 type: "ability"
 data:
   description: "<p>Barter.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

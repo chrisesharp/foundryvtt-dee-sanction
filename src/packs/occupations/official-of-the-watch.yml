@@ -1,6 +1,6 @@
 name: "Official of the Watch"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Thankless volunteer keepers of order
 tasked with bringing the wretched and

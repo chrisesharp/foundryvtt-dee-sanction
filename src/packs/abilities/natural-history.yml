@@ -2,4 +2,4 @@ name: "Natural History"
 type: "ability"
 data:
   description: "<p>Natural History.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

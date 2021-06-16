@@ -1,6 +1,6 @@
 name: "Unperson"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Dweller of the streets, alleyways, lanes, and
 back roads, surviving hardship through a

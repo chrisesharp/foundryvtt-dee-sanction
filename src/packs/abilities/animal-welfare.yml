@@ -2,4 +2,4 @@ name: "Animal Welfare"
 type: "ability"
 data:
   description: "<p>Animal Welfare.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

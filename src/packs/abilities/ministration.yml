@@ -2,4 +2,4 @@ name: "Ministration"
 type: "ability"
 data:
   description: "<p>Performs ministry to the faithful.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

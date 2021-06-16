@@ -2,4 +2,4 @@ name: "Quote and Verse"
 type: "ability"
 data:
   description: "<p>Quote and Verse.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

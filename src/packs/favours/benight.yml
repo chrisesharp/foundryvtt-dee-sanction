@@ -2,4 +2,4 @@ name: "Benight"
 type: "favour"
 data:
   description: "<p>Darken, Engulf, Overcast.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

@@ -2,4 +2,4 @@ name: "Gasp"
 type: "favour"
 data:
   description: "<p>Desperate, Sudden, Sharp Exhalation.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

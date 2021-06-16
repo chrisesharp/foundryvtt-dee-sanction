@@ -2,4 +2,4 @@ name: "Shadow"
 type: "favour"
 data:
   description: "<p>Conceal, Lurk, Veil.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

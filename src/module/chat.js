@@ -18,15 +18,17 @@ export const addChatConsequenceButton = function(msg, html, data) {
   // Buttons
   let cb = html.find('.consequence-roll');
   if (cb.data('id')) {
-    const id = cb.data('id')
+    const id = cb.data('id');
+    const actorId = cb.data('actorid');
     if (id === "unravel") {
       let label = game.i18n.format('DEE.roll.consequences');
       cb.append($(`<h4>${label}</h4>`));
-      let action = "unravelling"
-      cb.append($(`<div class="consequence-button"><button type="button" data-action="unravel"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
+      let action = "unravelling";
+      cb.append($(`<div class="consequence-button"><button type="button" data-action="unravel" data-actor="${actorId}"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
       cb.find('button[data-action="unravel"]').click((ev) => {
         ev.preventDefault();
-        applyChatUnravelRoll();
+        const actor = ev.currentTarget.dataset.actor;
+        applyChatUnravelRoll(actor);
       });
     } else {
       let label = game.i18n.format('DEE.roll.consequences');
@@ -61,13 +63,20 @@ function applyChatConsequenceRoll(rollTable, attacking=true) {
  * @param {Number} rollTable    The id of the consequence rolltable
  * @return {Promise}
  */
- function applyChatUnravelRoll() {
+ function applyChatUnravelRoll(actorId) {
+  if (actorId) {
+    const actor = game.actors.get(actorId);
+    if (actor) {
+      return actor.rollUnravellingTable();
+    }
+  }
   if (canvas.tokens.controlled.length < 1) {
     return ui.notifications.warn("You must have a token selected first");
+  } else {
+    return Promise.all(canvas.tokens.controlled.map((t) => {
+      return t.actor.rollUnravellingTable();
+    }));
   }
-  return Promise.all(canvas.tokens.controlled.map((t) => {
-    return t.actor.rollUnravellingTable();
-  }));
 }
 
 /* -------------------------------------------- */

@@ -2,4 +2,4 @@ name: "Burglary"
 type: "ability"
 data:
   description: "<p>Burglary.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

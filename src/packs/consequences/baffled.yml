@@ -1,7 +1,7 @@
 ---
   name: "Baffled"
   type: "consequence"
-  img: "icons/svg/bones.svg"
+  img: "/systems/dee/assets/default/icons/bones.png"
   data: 
     description: "Dazed and confused."
     resource: "int"

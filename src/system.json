@@ -43,7 +43,7 @@
       "name": "printed-matter",
       "label": "Printed Matter",
       "package": "dee",
-      "path": "packs/printed.db",
+      "path": "packs/printed-matter.db",
       "entity": "Item"
     },
     {

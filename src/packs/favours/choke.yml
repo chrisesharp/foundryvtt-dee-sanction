@@ -2,4 +2,4 @@ name: "Choke"
 type: "favour"
 data:
   description: "<p>Gasp, Clog, Stifle, Gag.</p>"
-img: "icons/svg/angel.svg"
+img: "/systems/dee/assets/default/icons/magic.png"

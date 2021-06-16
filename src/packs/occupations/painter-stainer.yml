@@ -1,6 +1,6 @@
 name: "Painter-Stainer"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Specialists in the decoration, colouring and
 gilding of buildings, furnishings, and other

@@ -2,4 +2,4 @@ name: "Devices"
 type: "ability"
 data:
   description: "<p>Devices.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

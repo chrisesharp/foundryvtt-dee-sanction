@@ -2,4 +2,4 @@ name: "Orienteering"
 type: "ability"
 data:
   description: "<p>Capability in finding one's way.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

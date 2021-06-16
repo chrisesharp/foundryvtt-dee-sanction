@@ -2,4 +2,4 @@ name: "Petty Theft"
 type: "ability"
 data:
   description: "<p>Petty Theft.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

@@ -1,6 +1,6 @@
 name: "The Octagon Society"
 type: "association"
-img: "icons/svg/sun.svg"
+img: "/systems/dee/assets/default/icons/society.png"
 data: 
   description: "<p>Splinter of the Knights Templar with
 a focus on attaining a balance in both

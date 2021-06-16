@@ -2,4 +2,4 @@ name: "Politics"
 type: "ability"
 data:
   description: "<p>Politics.</p>"
-img: "icons/svg/book.svg"
+img: "/systems/dee/assets/default/icons/book.png"

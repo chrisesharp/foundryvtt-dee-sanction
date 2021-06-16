@@ -1,6 +1,6 @@
 name: "Herbalist"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Practitioners in traditional treatments and
 curatives garnered and prepared from

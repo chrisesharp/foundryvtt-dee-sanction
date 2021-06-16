@@ -1,6 +1,6 @@
 name: "Scrivener"
 type: "occupation"
-img: "icons/svg/coins.svg"
+img: "/systems/dee/assets/default/icons/shilling.png"
 data: 
   description: "<p>Clerk and note-taker, responsible for
 keeping record of the passage of events
