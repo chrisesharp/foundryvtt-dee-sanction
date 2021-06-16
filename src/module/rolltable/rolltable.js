@@ -3,25 +3,32 @@
  * @extends {RollTable}
  */
 export class DeeSanctionRollTable extends RollTable {
+
   static async drawUnravelling() {
       let black = game.tables.getName("Humour:Black Bile")
       let yellow = game.tables.getName("Humour:Yellow Bile")
       let blood = game.tables.getName("Humour:Blood")
       let phlegm = game.tables.getName("Humour:Phlegm")
       let unravel = game.tables.getName("Unravelling")
-      let result = Promise.all([black,yellow,blood,phlegm,unravel].map(t=>t.fixUpNestedTables()))
+      let result = Promise.all([black,yellow,blood,phlegm,unravel].map(t=>t._fixNestedTables()))
       return await result.then(unravel.draw());
   }
 
-  async fixUpNestedTables() {
+  async _fixNestedTables() {
     const tableData = this.data;
-    let results = await tableData.results.contents.filter(t=>t.data.type==1);
-    if (results && results.length > 0) {
-      return Promise.all(results.map(tr => {
-        return this._prepTableData(tr);
-      }));
-    }
-    
+    let updates = [];
+    tableData.results.contents.forEach(async (t, i) => {
+      if (t.data.type==1) {
+        let update = await this._prepTableData(t);
+        try {
+          updates.push({_id:t.id, data:update})
+        } catch (e) {
+          console.log("failed to add update:",t.id, update);
+        }
+      }
+    });
+    return Promise.resolve();
+    // return this.updateEmbeddedDocuments("TableResult",updates)
   }
 
   _prepTableData(tableResult) {
@@ -34,10 +41,15 @@ export class DeeSanctionRollTable extends RollTable {
         result = game.items.getName(tableResult.data.text);
       }
       if (result?.id) {
-        data.resultId = result.id
-        return tableResult.update({data:data});
+        try {
+          data.resultId = result.id
+          return tableResult.update({_id:tableResult.id, data:data});
+        } catch (e) {
+          console.log("failed to update:",result.id, data);
+        }
+        
       }
     }
-    return Promise.resolve();
+    return Promise.resolve(tableResult);
   }
 }
