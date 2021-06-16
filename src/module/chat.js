@@ -62,6 +62,9 @@ function applyChatConsequenceRoll(rollTable, attacking=true) {
  * @return {Promise}
  */
  function applyChatUnravelRoll() {
+  if (canvas.tokens.controlled.length < 1) {
+    return ui.notifications.warn("You must have a token selected first");
+  }
   return Promise.all(canvas.tokens.controlled.map((t) => {
     return t.actor.rollUnravellingTable();
   }));

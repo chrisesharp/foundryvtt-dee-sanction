@@ -95,6 +95,10 @@ Hooks.once("ready", async function () {
         }
       },
       default: "one"
+    }, {
+      width: 450,
+      height: 240,
+      resizable: false,
     });
 
     if (!game.settings.get("dee","initialized")) {
