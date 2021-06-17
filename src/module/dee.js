@@ -74,6 +74,7 @@ Hooks.once("ready", async function () {
       let stage3 = await loadCompendia(["Outcomes"]);
       console.log("Stage 3: Compendia imported:",stage3);
       console.log("Import complete");
+      game.settings.set("dee","initialized",true);
     }
 
     const template = "/systems/dee/templates/dialog/welcome.html";

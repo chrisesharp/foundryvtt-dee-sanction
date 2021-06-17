@@ -7,6 +7,6 @@ export const registerSettings = function () {
         scope: "world",
         type: Boolean,
         config: true,
-        onChange: _ => window.location.reload()
+        // onChange: _ => window.location.reload()
       });
 }
