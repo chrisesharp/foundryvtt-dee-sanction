@@ -4,10 +4,6 @@ import {DeeSanctionActorSheet} from "./actor-sheet.js";
  * @extends {DeeSanctionActorSheet}
  */
 export class DeeSanctionAgentSheet extends DeeSanctionActorSheet {
-    constructor(...args) {
-        super(...args);
-    }
-
     /** @override */
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {

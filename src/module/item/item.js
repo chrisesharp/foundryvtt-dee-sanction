@@ -3,13 +3,6 @@
  * @extends {Item}
  */
 export class DeeSanctionItem extends Item {
-  // TODO work out how to use Document model in 8.x
-  /** @override */
-  constructor(...args) {
-    super(...args);
-    // this.abilities = this.abilities || [];
-  }
-
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -17,8 +10,6 @@ export class DeeSanctionItem extends Item {
     super.prepareData();
     // Get the Item's data
     const itemData = this.data;
-    // const actorData = this.actor ? this.actor.data : {};
-    // const data = itemData.data;
     switch (itemData.type) {
       case "ability":
         itemData.img = CONFIG.DEE.icons["ability"];
@@ -28,18 +19,15 @@ export class DeeSanctionItem extends Item {
         break;
       case "association":
         itemData.img = CONFIG.DEE.icons["conspiracy"];
-        // this._prepContainer(itemData);
         break;
       case "occupation":
         itemData.img = CONFIG.DEE.icons["access"];
-        // this._prepContainer(itemData);
         break;
       case "favour":
         itemData.img = CONFIG.DEE.icons["favour"];
         break;
       case "focus":
           itemData.img = CONFIG.DEE.icons["vigilance"];
-          // this._prepContainer(itemData);
           break;
       case "item":
         itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];

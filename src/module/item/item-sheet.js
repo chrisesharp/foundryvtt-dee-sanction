@@ -187,8 +187,5 @@ export class DeeSanctionItemSheet extends ItemSheet {
       abilities: abilities
     }
     return this.item.update({data: newAbilities});
-
-    // TODO use the 8.x deleteEmbeddedDocuments() api
-
   }
 }

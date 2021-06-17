@@ -4,8 +4,16 @@ import {DeeSanctionActorSheet} from "./actor-sheet.js";
  * @extends {DeeSanctionActorSheet}
  */
 export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
-  constructor(...args) {
-      super(...args);
+  /** @override */
+  static get defaultOptions() {
+      return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ["dee", "sheet", "actor", "enemy"],
+      template: "systems/dee/templates/actor/enemy-sheet.html",
+      width: 400,
+      height: 475,
+      resizable: false,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
+      });
   }
 
   /** @override */
@@ -56,17 +64,4 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
     };
     return this.actor.update({data: newTable});
   }  
-
-
-  /** @override */
-  static get defaultOptions() {
-      return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dee", "sheet", "actor", "enemy"],
-      template: "systems/dee/templates/actor/enemy-sheet.html",
-      width: 400,
-      height: 475,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
-      });
-  }
 }

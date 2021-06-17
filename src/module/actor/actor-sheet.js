@@ -210,12 +210,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
     }
 
     if (dataset.roll) {
-      if (resource == "armour") {
-        this.actor.rollResistance(resource, dataset.roll);
-      } else if (resource == "unravel") {
-        this.actor.rollUnravelling(dataset.roll);
-      } else {
-        this.actor.rollChallenge(resource, dataset.roll, target);
+      switch (resource) {
+        case "armour":
+          this.actor.rollResistance(resource, dataset.roll);
+          break;
+        case "unravel":
+          this.actor.rollUnravelling(dataset.roll);
+          break;
+        default:
+          this.actor.rollChallenge(resource, dataset.roll, target);
       }
     }
   }
