@@ -113,12 +113,6 @@ Hooks.on("renderCombatTracker", DeeCombat.format);
 Hooks.on("preCreateCombatant", (combatant, data, options, id) => {
     DeeCombat.addCombatant(combatant, data, options, id);
 });
-Hooks.on("preUpdateCombat", (combat, data, options, id) => {
-  // if (data.round) {
-  //   combat.resetAll();
-  //   DeeCombat.rollInitiative(combat);
-  // }
-});
 Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
 
 // License and KOFI infos

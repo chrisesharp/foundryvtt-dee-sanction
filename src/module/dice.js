@@ -147,31 +147,18 @@ export class DeeSanctionDice {
           type: data.rollType
         };
     
-        if (data.roll.type == "above") {
-          // Challenges
-          if (roll.total >= result.target) {
-            result.isSuccess = true;
-          } else {
-            result.isFailure = true;
-          }
-        } else if (data.roll.type == "below") {
-          // Resistance
-          if (roll.total <= result.target) {
-            result.isSuccess = true;
-          } else {
-            result.isFailure = true;
-          }
-        } else if (data.roll.type == "table") {
-          // Reaction
-          const table = data.roll.table;
-          let output = Object.values(table)[0];
-          for (let i = 0; i <= roll.total; i++) {
-            if (table[i]) {
-              output = table[i];
-            }
-          }
-          result.details = output;
+        let test;
+        switch (data.roll.type) {
+          case "above":
+            test = (roll.total >= result.target);
+            break;
+          case "below":
+            test = (roll.total <= result.target);
+            break;
+          default:
+            test = (roll.total === result.target);
         }
+        result.isFailure = !(result.isSuccess = test);
         return result;
       }
 }

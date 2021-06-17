@@ -27,7 +27,7 @@ export const registerHandlebarHelpers = async function () {
     });
 
     Handlebars.registerHelper('die', function(dieStep) {
-        const die = 2+ (2 * dieStep);
+        const die = 2 + (2 * dieStep);
         return CONFIG.DEE.icons[`d${die}`];
     });
 
