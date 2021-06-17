@@ -35,7 +35,7 @@ export class DeeSanctionActor extends Actor {
   /**
    * Prepare Character type specific data
    */
-  _prepareAgentData(actorData) {
+  async _prepareAgentData(actorData) {
     const data = actorData.data;
     const categories = this._categoriseItems(actorData.items);
     data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
@@ -44,17 +44,19 @@ export class DeeSanctionActor extends Actor {
     data.expertise = { foci: categories["focus"], occupations: categories["occupation"]};
     data.affiliations = categories["association"];
     data.favours = categories["favour"];
+    await actorData.token.update({disposition:1});
   }
 
   /**
    * Prepare Character type specific data
    */
-  _prepareEnemyData(actorData) {
+  async _prepareEnemyData(actorData) {
     const data = actorData.data;
     const categories = this._categoriseItems(actorData.items);
     data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
     data.abilities = categories["ability"];
     data.consequences = categories["consequence"];
+    await actorData.token.update({disposition:-1});
   }
 
   async rollChallenge(resource, step, target = {}) {
