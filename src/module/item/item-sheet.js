@@ -1,3 +1,4 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -14,7 +15,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{
         dragSelector: ".item",
-        dropSelector: ".abilities"
+        dropSelector: null
       }]
     });
   }
@@ -22,10 +23,10 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /** @override */
   async _onDragStart(event) {
     const div = event.currentTarget;
+    console.log("onDragStart:",event)
     // Create drag data
     const dragData = { };
     const itemId = div.dataset.entityId;
-    
     // Owned Items
     if ( itemId ) {
       let item = game.items.get(itemId);
@@ -36,6 +37,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       }
       dragData.type = "Item";
       dragData.data = item.data;
+      dragData.data.transfer = true;
     }
 
     // Set data transfer
@@ -52,20 +54,22 @@ export class DeeSanctionItemSheet extends ItemSheet {
       return false;
     }
     const actor = this.actor;
+    
     // Handle the drop with a Hooked function
     const allowed = Hooks.call("dropItemSheetData", actor, this, data);
     if ( allowed === false ) {
       return;
     }
     // Handle different data types
-
     switch ( data.type ) {
       case "Item":
-        return this._onDropItem(event, data);
+        return this._onDropItem(data);
+      case "ActiveEffect": 
+        return this._onDropActiveEffect(data);
     }
   }
 
-  async _onDropItem(event, data) {
+  async _onDropItem(data) {
     if (!this.isEditable) return false;
     let abilities = this.item.data.data.abilities.filter(a=>a.id != data.id);
     let ability = game.items.get(data.id);
@@ -85,6 +89,20 @@ export class DeeSanctionItemSheet extends ItemSheet {
     }
   }
 
+  /**
+   * Handle the dropping of ActiveEffect data onto an Item Sheet
+   * @param {Object} data         The data transfer extracted from the event
+   * @return {Promise<Object>}    A data object which describes the result of the drop
+   * @private
+   */
+  async _onDropActiveEffect(data) {
+    if (!this.isEditable) return false;
+    const item = this.item;
+    if ( !data.data ) return;
+    data.data.transfer = true;
+    return ActiveEffect.create(data.data, {parent: item})
+  }
+
   /** @override */
   get template() {
     const path = "systems/dee/templates/item";
@@ -100,6 +118,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
+    sheetData.effects = prepareActiveEffectCategories(this.item.effects);
     return sheetData;
   }
 
@@ -182,7 +201,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @private
    */
   _onAbilityDelete(id) {
-    const abilities = this.item.data.data.abilities.filter((i)=>i.id != id);
+    console.log(id, this.item.data.data.abilities)
+    const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
     const newAbilities = {
       abilities: abilities
     }

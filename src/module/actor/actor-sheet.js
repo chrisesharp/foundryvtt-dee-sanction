@@ -1,3 +1,4 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -23,6 +24,8 @@ export class DeeSanctionActorSheet extends ActorSheet {
   getData(opts) {
     const baseData = super.getData(opts);
     // data.dtypes = ["String", "Number", "Boolean"];
+    // Prepare active effects
+    baseData.effects = prepareActiveEffectCategories(this.actor.effects);
     return this._prepareItems(baseData);
   }
 
@@ -35,6 +38,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       actor: data.actor,
       config: CONFIG.DEE,
       data: data.actor.data.data,
+      effects: data.effects,
     };
     return sheetData;
   }
@@ -94,6 +98,9 @@ export class DeeSanctionActorSheet extends ActorSheet {
       const newData = {tradecraft:trade};
       return this.actor.update({data:newData});
     });
+
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
   }
 
   /**

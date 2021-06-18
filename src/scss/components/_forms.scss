@@ -55,9 +55,12 @@
 &.sheet nav.sheet-tabs.side {
   position: absolute;
   transform: rotate(90deg);
-  width: 400px;
-  bottom: 200px;
-  right: -209px;
+  // width: 400px;
+  // bottom: 200px;
+  // right: -209px;
+  width: 500px;
+  bottom: 240px;
+  right: -258px;
   border-top: none;
   height: 18px;
   z-index: -1;
