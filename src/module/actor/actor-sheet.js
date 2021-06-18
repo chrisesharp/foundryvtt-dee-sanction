@@ -102,7 +102,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     html.find('a.step-down').click(async (event) => {
       event.preventDefault();
       const resource = event.currentTarget.parentElement.dataset.resource;
-      return this._updateResource(resource, -1);
+      await this._updateResource(resource, -1);
     });
 
     // Tradecraft select
@@ -111,7 +111,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       const opt = $('#tradecraft-sel').val();
       const trade = CONFIG.DEE.tradecraft[opt]; 
       const newData = {tradecraft:trade};
-      return this.actor.update({data:newData});
+      await this.actor.update({data:newData});
     });
 
     // Active Effect management
@@ -129,7 +129,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const newData = {};
     resources[resource].value = (delta > 0) ? Math.min(resources[resource].value + delta, 5) : Math.max(resources[resource].value + delta, 0)
     newData["resources"] = resources;
-    return this.actor.update({data:newData});
+    return this.actor.update({id:this.actor.id, data:newData});
   }
   /* -------------------------------------------- */
 

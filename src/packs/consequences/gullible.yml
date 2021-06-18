@@ -6,4 +6,17 @@
     description: "willing to believe or trust anyone without adequate evidence."
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Gullible"
+      transfer: true
 

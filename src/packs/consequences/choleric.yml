@@ -6,4 +6,17 @@
     description: "eager for conflict, with a simmering hostility toward everyone and everything"
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Choleric"
+      transfer: true
 

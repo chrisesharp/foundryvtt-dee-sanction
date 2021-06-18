@@ -14,7 +14,11 @@ export class DeeSanctionActor extends Actor {
     const actorData = this.data;
     const data = actorData.data;
     const flags = actorData.flags;
-
+    Object.keys(actorData.data.resources).forEach(key => {
+      const res = actorData.data.resources[key];
+      res.value = Math.max(res.value, res.min);
+      res.value = Math.min(res.value, res.max);
+    });
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'agent') this._prepareAgentData(actorData);

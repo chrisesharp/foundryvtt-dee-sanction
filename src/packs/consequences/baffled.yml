@@ -11,8 +11,8 @@
       changes: 
         - 
           key: "data.resources.int.value"
-          mode: 3
-          value: "1"
+          mode: 2
+          value: -1
       disabled: false
       duration: 
         startTime: 0

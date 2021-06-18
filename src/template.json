@@ -24,19 +24,29 @@
       "fortune": 1,
       "resources": {
         "int": {
-          "value": 2
+          "value": 2,
+          "min": 0,
+          "max": 5
         },
         "phy": {
-          "value": 2
+          "value": 2,
+          "min": 0,
+          "max": 5
         },
         "sup": {
-          "value": 2
+          "value": 2,
+          "min": 0,
+          "max": 5
         },
         "armour":{
-          "value": 0
+          "value": 0,
+          "min": 0,
+          "max": 5
         },
         "unravel": {
-          "value": 5
+          "value": 5,
+          "min": 0,
+          "max": 5
         }
       },
       "contacts": []
@@ -44,7 +54,11 @@
     "enemy": {
       "templates": ["base"],
       "resources": {
-        "armour": { "value":0 }
+        "armour": { 
+          "value":0,
+          "min": 0,
+          "max": 5 
+        }
       },
       "resistance": {
         "potency": 0,

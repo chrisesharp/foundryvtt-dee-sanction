@@ -6,4 +6,17 @@
     description: "recklessly courageous and bold, heedless of the potency or peril of a challenge."
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Foolish"
+      transfer: true
 

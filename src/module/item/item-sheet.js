@@ -231,8 +231,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
       let name = await e._getSourceName(); // Trigger a lookup for the source name
       if (name === this.item.name) {
         const change = duplicate(e.data.changes[0]);
-        change.value = Math.abs(potency);
-        change.mode = (potency<0) ? 3 : 4;
+        change.value = parseInt(potency);
+        change.mode =  2;
         e.update({changes: [change]});
         break;
       }
