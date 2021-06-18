@@ -31,10 +31,10 @@ export function onManageActiveEffect(event, owner) {
  * @param {ActiveEffect[]} effects    The array of Active Effect instances to prepare sheet data for
  * @return {object}                   Data for rendering
  */
-export function prepareActiveEffectCategories(effects, start=null) {
+export function prepareActiveEffectCategories(effects) {
 
     // Define effect header categories
-    const categories = (start) ? start : {
+    const categories = {
     temporary: {
         type: "temporary",
         label: "Temporary Effects",

@@ -61,14 +61,16 @@ export class DeeSanctionActor extends Actor {
 
   async rollChallenge(resource, step, target = {}) {
     step=parseInt(step);
-    let potency = this.data.data.consequences.reduce((acc, item) => { 
-      return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
-    }, 0);
+    // REPLACING WITH EFFECTS
+    // let potency = this.data.data.consequences.reduce((acc, item) => { 
+    //   return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
+    // }, 0);
+    let potency = 0;
     if (target.id) {
+      potency += parseInt(target.potency);
       let targetConsequences = target.consequences.reduce((acc, item) => { 
         return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
       }, 0);
-      potency += parseInt(target.potency);
       potency -= targetConsequences;
     }
     step = (potency > 0) ? Math.min(step + potency, 5) : Math.max(step + potency, 0);

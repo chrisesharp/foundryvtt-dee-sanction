@@ -17,6 +17,6 @@
       duration: 
         startTime: 0
       icon: "icons/svg/aura.svg"
-      label: "Baffled"
+      name: "Baffled"
       transfer: true
 

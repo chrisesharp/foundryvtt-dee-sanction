@@ -23,7 +23,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /** @override */
   async _onDragStart(event) {
     const div = event.currentTarget;
-    console.log("onDragStart:",event)
     // Create drag data
     const dragData = { };
     const itemId = div.dataset.entityId;
@@ -37,7 +36,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
       }
       dragData.type = "Item";
       dragData.data = item.data;
-      dragData.data.transfer = true;
     }
 
     // Set data transfer
@@ -99,7 +97,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     if (!this.isEditable) return false;
     const item = this.item;
     if ( !data.data ) return;
-    data.data.transfer = true;
     return ActiveEffect.create(data.data, {parent: item})
   }
 
@@ -166,8 +163,26 @@ export class DeeSanctionItemSheet extends ItemSheet {
       event.preventDefault();
       const resource = $('#consequence-sel').val();
       const newData = {resource:resource};
+      for ( let e of this.item.effects ) {
+        let name = await e._getSourceName(); // Trigger a lookup for the source name
+        if (name === this.item.name) {
+          const change = duplicate(e.data.changes[0]);
+          change.key = `data.resources.${resource}.value`;
+          e.update({changes: [change]});
+          break;
+        }
+      }
       await this.item.data.update({data:newData});
     });
+
+    // Consequence potency input
+    html
+      .find("#potency-sel")
+      .click((ev) => ev.target.select())
+      .change(this._onPotencyChange.bind(this));
+
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
   }
 
   /**
@@ -201,11 +216,25 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @private
    */
   _onAbilityDelete(id) {
-    console.log(id, this.item.data.data.abilities)
     const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
     const newAbilities = {
       abilities: abilities
     }
     return this.item.update({data: newAbilities});
+  }
+
+  async _onPotencyChange(event) {
+    event.preventDefault();
+    const potency = $('#potency-sel').val();
+    for ( let e of this.item.effects ) {
+      let name = await e._getSourceName(); // Trigger a lookup for the source name
+      if (name === this.item.name) {
+        const change = duplicate(e.data.changes[0]);
+        change.value = Math.abs(potency);
+        change.mode = (potency<0) ? 3 : 4;
+        e.update({changes: [change]});
+        break;
+      }
+    }
   }
 }

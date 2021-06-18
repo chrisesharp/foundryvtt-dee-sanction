@@ -17,15 +17,51 @@
                     <div>
                         {{#if (gt data.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
                         {{#if (lt data.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
-                        <input type="text" style="width: 25%" name="data.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
+                        <input id="potency-sel" type="text" style="width: 25%" name="data.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
                     </div>
                 </div>
               </div>
         </div>
     </header>
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="effects">Effects</a>
+        <a class="item" data-tab="editor">Notes</a>
+    </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            <ol class="items-list effects-list">
+                {{#each effects as |section sid|}}
+                {{#if (eq sid "passive")}}
+                  <ol class="item-list">
+                  {{#each section.effects as |effect|}}
+                    <li class="item effect flexrow" data-effect-id="{{effect.id}}">
+                      <div class="item-name effect-name flexrow">
+                        <img class="item-image" src="{{effect.data.icon}}" width="24" height="24"/>
+                        <h4>{{effect.data.label}}</h4>
+                      </div>
+                      <div class="effect-source">{{effect.sourceName}}</div>
+                      <div class="effect-duration">{{effect.duration.label}}</div>
+                      <div class="item-controls effect-controls flexrow">
+                        <a class="effect-control" data-action="toggle" title="{{localize 'DEE.EffectToggle'}}">
+                          <i class="fas {{#if effect.data.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+                        </a>
+                        <a class="effect-control" data-action="edit" title="{{localize 'DEE.EffectEdit'}}">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="effect-control" data-action="delete" title="{{localize 'DEE.EffectDelete'}}">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                      </div>
+                    </li>
+                  {{/each}}
+                  </ol>
+                {{/if}}
+                {{/each}}
+              </ol>
+        </div>
         {{!-- Description Tab --}}
         <div class="tab editor">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
