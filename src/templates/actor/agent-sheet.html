@@ -13,7 +13,9 @@
         <a class="item" data-tab="items">Possessions</a>
         <a class="item" data-tab="affiliations">Affiliations</a>
         <a class="item" data-tab="esoterica">Esoterica</a>
+        {{#if user.isGM}}
         <a class="item" data-tab="effects">Effects</a>
+        {{/if}}
     </nav>
 
     {{!-- Sheet Body --}}
@@ -43,7 +45,7 @@
         <div class="tab esoterica" data-group="primary" data-tab="esoterica">
             {{> "systems/dee/templates/actor/partials/actor-esoterica.html"}}
         </div>
-
+        {{#if user.isGM}}
         {{!-- Effects Tab --}}
         <div class="tab effects" data-group="primary" data-tab="effects">
             <ol class="items-list effects-list">
@@ -85,6 +87,7 @@
                 {{/each}}
               </ol>
         </div>
+        {{/if}}
     </section>
 </form>
 

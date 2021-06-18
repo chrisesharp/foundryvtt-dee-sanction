@@ -33,13 +33,29 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * Organize and classify Owned Items for Character sheets
    * @private
    */
-  _prepareItems(data) {
+  async _prepareItems(data) {
     const sheetData = {
       actor: data.actor,
       config: CONFIG.DEE,
       data: data.actor.data.data,
       effects: data.effects,
+      user: game.user
     };
+    if (data.actor.type==="enemy") {
+      if (sheetData.data.hitresolution.rolltable?.id === "") {
+        const rt = game.tables.getName("Default Resolution Table");
+        const hitresolution = {
+          rolltable: {
+              id: rt.id,
+              name: rt.data.name,
+              description: rt.data.description,
+              img: rt.data.img
+          }
+        };
+        sheetData.data.hitresolution = hitresolution;
+        await data.actor.update({data:{hitresolution: hitresolution}});
+      }
+    }
     return sheetData;
   }
 

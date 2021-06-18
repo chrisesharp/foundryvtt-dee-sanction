@@ -10,7 +10,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
       classes: ["dee", "sheet", "actor", "enemy"],
       template: "systems/dee/templates/actor/enemy-sheet.html",
       width: 400,
-      height: 475,
+      height: 500,
       resizable: false,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
       });

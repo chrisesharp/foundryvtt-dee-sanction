@@ -25,12 +25,15 @@
     </header>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="effects">Effects</a>
-        <a class="item" data-tab="editor">Notes</a>
+      <a class="item" data-tab="editor">Notes</a>
+      {{#if user.isGM }}
+      <a class="item" data-tab="effects">Effects</a>
+      {{/if}}
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+      {{#if user.isGM}}
         <div class="tab effects" data-group="primary" data-tab="effects">
             <ol class="items-list effects-list">
                 {{#each effects as |section sid|}}
@@ -62,9 +65,10 @@
                 {{/each}}
               </ol>
         </div>
-        {{!-- Description Tab --}}
-        <div class="tab editor">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
+      {{/if }}
+      {{!-- Description Tab --}}
+      <div class="tab editor">
+          {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+      </div>
     </section>
 </form>

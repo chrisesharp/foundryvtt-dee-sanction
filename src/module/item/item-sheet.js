@@ -115,6 +115,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
+    sheetData.user = game.user;
     sheetData.effects = prepareActiveEffectCategories(this.item.effects);
     return sheetData;
   }
