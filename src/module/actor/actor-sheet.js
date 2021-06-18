@@ -23,7 +23,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
   /** @override */
   getData(opts) {
     const baseData = super.getData(opts);
-    // data.dtypes = ["String", "Number", "Boolean"];
     // Prepare active effects
     baseData.effects = prepareActiveEffectCategories(this.actor.effects);
     return this._prepareItems(baseData);
