@@ -43,7 +43,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     };
     if (data.actor.type==="enemy") {
       if (sheetData.data.hitresolution.rolltable?.id === "") {
-        const rt = game.tables.getName("Default Resolution Table");
+        const rt = game.tables.getName(CONFIG.DEE.defaultResolution);
         const hitresolution = {
           rolltable: {
               id: rt.id,
