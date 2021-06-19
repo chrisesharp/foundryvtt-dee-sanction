@@ -55,6 +55,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
         await data.actor.update({data:{hitresolution: hitresolution}});
       }
     }
+
     return sheetData;
   }
 
