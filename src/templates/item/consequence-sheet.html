@@ -35,39 +35,11 @@
     <section class="sheet-body">
       {{#if config.showEffects}}
         <div class="tab effects" data-group="primary" data-tab="effects">
-            <ol class="items-list effects-list">
-                {{#each effects as |section sid|}}
-                {{#if (eq sid "passive")}}
-                  <ol class="item-list">
-                  {{#each section.effects as |effect|}}
-                    <li class="item effect flexrow" data-effect-id="{{effect.id}}">
-                      <div class="item-name effect-name flexrow">
-                        <img class="item-image" src="{{effect.data.icon}}" width="24" height="24"/>
-                        <h4>{{effect.data.label}}</h4>
-                      </div>
-                      <div class="effect-source">{{effect.sourceName}}</div>
-                      <div class="effect-duration">{{effect.duration.label}}</div>
-                      <div class="item-controls effect-controls flexrow">
-                        <a class="effect-control" data-action="toggle" title="{{localize 'DEE.EffectToggle'}}">
-                          <i class="fas {{#if effect.data.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
-                        </a>
-                        <a class="effect-control" data-action="edit" title="{{localize 'DEE.EffectEdit'}}">
-                          <i class="fas fa-edit"></i>
-                        </a>
-                        <a class="effect-control" data-action="delete" title="{{localize 'DEE.EffectDelete'}}">
-                          <i class="fas fa-trash"></i>
-                        </a>
-                      </div>
-                    </li>
-                  {{/each}}
-                  </ol>
-                {{/if}}
-                {{/each}}
-              </ol>
+          {{> "systems/dee/templates/item/partials/item-effects.html"}}
         </div>
       {{/if }}
       {{!-- Description Tab --}}
-      <div class="tab editor">
+      <div class="tab editor" data-group="primary" data-tab="editor">
           {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
       </div>
     </section>

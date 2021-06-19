@@ -37,17 +37,17 @@ export function prepareActiveEffectCategories(effects) {
     const categories = {
     temporary: {
         type: "temporary",
-        label: "Temporary Effects",
+        label: "Temporary",
         effects: []
     },
     passive: {
         type: "passive",
-        label: "Passive Effects",
+        label: "Passive",
         effects: []
     },
     inactive: {
         type: "inactive",
-        label: "Inactive Effects",
+        label: "Inactive",
         effects: []
     }
     };
