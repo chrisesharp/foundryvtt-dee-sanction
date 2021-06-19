@@ -4,7 +4,6 @@
     <header class="sheet-header">
       {{> "systems/dee/templates/actor/partials/actor-header.html"}}
     </header>
-    
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs side" data-group="primary">
@@ -13,7 +12,7 @@
         <a class="item" data-tab="items">Possessions</a>
         <a class="item" data-tab="affiliations">Affiliations</a>
         <a class="item" data-tab="esoterica">Esoterica</a>
-        {{#if user.isGM}}
+        {{#if config.showEffects}}
         <a class="item" data-tab="effects">Effects</a>
         {{/if}}
     </nav>
@@ -45,7 +44,7 @@
         <div class="tab esoterica" data-group="primary" data-tab="esoterica">
             {{> "systems/dee/templates/actor/partials/actor-esoterica.html"}}
         </div>
-        {{#if user.isGM}}
+        {{#if config.showEffects}}
         {{!-- Effects Tab --}}
         <div class="tab effects" data-group="primary" data-tab="effects">
             <ol class="items-list effects-list">

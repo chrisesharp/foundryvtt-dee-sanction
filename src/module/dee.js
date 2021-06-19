@@ -55,6 +55,7 @@ Hooks.once('init', async function() {
   registerSettings();
   
   await preloadHandlebarsTemplates();
+  CONFIG.DEE.showEffects = game.settings.get("dee","effects-tab");
 
 });
 

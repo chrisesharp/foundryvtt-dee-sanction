@@ -13,6 +13,8 @@
     "DEE.Potency": "Potency",
     "DEE.Setting.initialized": "System Initialized",
     "DEE.Setting.initializedHint": "untick to re-import compendia next start.",
+    "DEE.Setting.effectsTab": "Reveal effect editing",
+    "DEE.Setting.effectsTabHint": "For advanced users",
 
     "DEE.RollMode": "Roll Mode",
     "DEE.SitMod": "Step Modifier",
