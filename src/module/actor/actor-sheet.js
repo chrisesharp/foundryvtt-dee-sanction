@@ -95,7 +95,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     html.find('a.step-up').click(async (event) => {
       event.preventDefault();
       const resource = event.currentTarget.parentElement.dataset.resource;
-      return this._updateResource(resource, 1);
+      await this._updateResource(resource, 1);
     });
 
     // Step down die.
@@ -127,7 +127,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
   _updateResource(resource, delta) {
     const resources = duplicate(this.actor.data.data.resources);
     const newData = {};
-    resources[resource].value = (delta > 0) ? Math.min(resources[resource].value + delta, 5) : Math.max(resources[resource].value + delta, 0)
+    resources[resource].value += delta; 
     newData["resources"] = resources;
     return this.actor.update({id:this.actor.id, data:newData});
   }
