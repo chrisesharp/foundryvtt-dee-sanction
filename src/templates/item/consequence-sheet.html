@@ -17,18 +17,30 @@
                     <div>
                         {{#if (gt data.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
                         {{#if (lt data.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
-                        <input type="text" style="width: 25%" name="data.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
+                        <input id="potency-sel" type="text" style="width: 25%" name="data.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
                     </div>
                 </div>
               </div>
         </div>
     </header>
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+      <a class="item" data-tab="editor">Notes</a>
+      {{#if config.showEffects }}
+      <a class="item" data-tab="effects">Effects</a>
+      {{/if}}
+    </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        {{!-- Description Tab --}}
-        <div class="tab editor">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+      {{#if config.showEffects}}
+        <div class="tab effects" data-group="primary" data-tab="effects">
+          {{> "systems/dee/templates/item/partials/item-effects.html"}}
         </div>
+      {{/if }}
+      {{!-- Description Tab --}}
+      <div class="tab editor" data-group="primary" data-tab="editor">
+          {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+      </div>
     </section>
 </form>

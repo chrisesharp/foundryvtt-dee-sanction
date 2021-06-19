@@ -25,5 +25,6 @@ export const DEE = {
         "M": "magic",
         "S": "system",
         "V": "vigilance"
-    }
+    },
+    "defaultResolution": "Default Resolution Table"
 }

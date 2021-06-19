@@ -55,9 +55,13 @@
 &.sheet nav.sheet-tabs.side {
   position: absolute;
   transform: rotate(90deg);
-  width: 400px;
-  bottom: 200px;
-  right: -209px;
+  // width: 400px;
+  // bottom: 200px;
+  // right: -209px;
+  width: 450px;
+  top: 250px;
+  // bottom: 230px;
+  right: -234px;
   border-top: none;
   height: 18px;
   z-index: -1;
@@ -87,7 +91,7 @@
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
-  height: 200px;
+  height: 150px;
 }
 
 .tox {

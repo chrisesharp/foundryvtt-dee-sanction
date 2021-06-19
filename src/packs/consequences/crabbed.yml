@@ -6,4 +6,17 @@
     description: "prone to sharp changes in emotional state; short-tempered, sharp, and loud"
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Crabbed"
+      transfer: true
 

@@ -6,4 +6,17 @@
     description: "Poisoned. Requires an apothecary to remove."
     resource: "phy"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.phy.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Poisoned"
+      transfer: true
 

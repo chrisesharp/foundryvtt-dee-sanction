@@ -6,4 +6,17 @@
     description: "prone to tip into panic and alarm at the smallest trigger."
     resource: "sup"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.sup.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Afeared"
+      transfer: true
 

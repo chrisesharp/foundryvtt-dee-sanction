@@ -19,4 +19,15 @@
   @import 'components/resource';
   @import 'components/tabs';
   @import 'components/items';
+  
+  .effects .item .effect-source,
+  .effects .item .effect-duration,
+  .effects .item .effect-controls {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .effects .item .effect-controls {
+    border: none;
+  }
 }

@@ -6,4 +6,17 @@
     description: "given to sudden, unpredictable, and erratic change in focus."
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Capricious"
+      transfer: true
 

@@ -9,7 +9,9 @@
                     <a class="step-up"><i class="fas fa-caret-up"></i></a>
                     <a class="step-down"><i class="fas fa-caret-down"></i></a>
                 </div>
+                {{#if data.resources.armour.value}}
                 <img src="{{die data.resources.armour.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
+                {{/if}}
             </div>
         </div>
     </div>

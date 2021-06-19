@@ -1,3 +1,4 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -22,7 +23,8 @@ export class DeeSanctionActorSheet extends ActorSheet {
   /** @override */
   getData(opts) {
     const baseData = super.getData(opts);
-    // data.dtypes = ["String", "Number", "Boolean"];
+    // Prepare active effects
+    baseData.effects = prepareActiveEffectCategories(this.actor.effects);
     return this._prepareItems(baseData);
   }
 
@@ -30,12 +32,30 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * Organize and classify Owned Items for Character sheets
    * @private
    */
-  _prepareItems(data) {
+  async _prepareItems(data) {
     const sheetData = {
       actor: data.actor,
       config: CONFIG.DEE,
       data: data.actor.data.data,
+      effects: data.effects,
+      user: game.user
     };
+    if (data.actor.type==="enemy") {
+      if (sheetData.data.hitresolution.rolltable?.id === "") {
+        const rt = game.tables.getName(CONFIG.DEE.defaultResolution);
+        const hitresolution = {
+          rolltable: {
+              id: rt.id,
+              name: rt.data.name,
+              description: rt.data.description,
+              img: rt.data.img
+          }
+        };
+        sheetData.data.hitresolution = hitresolution;
+        await data.actor.update({data:{hitresolution: hitresolution}});
+      }
+    }
+
     return sheetData;
   }
 
@@ -76,14 +96,14 @@ export class DeeSanctionActorSheet extends ActorSheet {
     html.find('a.step-up').click(async (event) => {
       event.preventDefault();
       const resource = event.currentTarget.parentElement.dataset.resource;
-      return this._updateResource(resource, 1);
+      await this._updateResource(resource, 1);
     });
 
     // Step down die.
     html.find('a.step-down').click(async (event) => {
       event.preventDefault();
       const resource = event.currentTarget.parentElement.dataset.resource;
-      return this._updateResource(resource, -1);
+      await this._updateResource(resource, -1);
     });
 
     // Tradecraft select
@@ -92,8 +112,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
       const opt = $('#tradecraft-sel').val();
       const trade = CONFIG.DEE.tradecraft[opt]; 
       const newData = {tradecraft:trade};
-      return this.actor.update({data:newData});
+      await this.actor.update({data:newData});
     });
+
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
   }
 
   /**
@@ -105,9 +128,9 @@ export class DeeSanctionActorSheet extends ActorSheet {
   _updateResource(resource, delta) {
     const resources = duplicate(this.actor.data.data.resources);
     const newData = {};
-    resources[resource].value = (delta > 0) ? Math.min(resources[resource].value + delta, 5) : Math.max(resources[resource].value + delta, 0)
+    resources[resource].value += delta; 
     newData["resources"] = resources;
-    return this.actor.update({data:newData});
+    return this.actor.update({id:this.actor.id, data:newData});
   }
   /* -------------------------------------------- */
 

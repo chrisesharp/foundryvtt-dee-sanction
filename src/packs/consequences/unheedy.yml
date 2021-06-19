@@ -6,4 +6,17 @@
     description: "lacking in caution and careless of the consequences from any decisions made."
     resource: "int"
     potency: -1
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.int.value"
+          mode: 2
+          value: -1
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Unheedy"
+      transfer: true
 

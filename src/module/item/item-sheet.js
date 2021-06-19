@@ -1,3 +1,4 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -14,7 +15,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{
         dragSelector: ".item",
-        dropSelector: ".abilities"
+        dropSelector: null
       }]
     });
   }
@@ -25,7 +26,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     // Create drag data
     const dragData = { };
     const itemId = div.dataset.entityId;
-    
     // Owned Items
     if ( itemId ) {
       let item = game.items.get(itemId);
@@ -52,20 +52,22 @@ export class DeeSanctionItemSheet extends ItemSheet {
       return false;
     }
     const actor = this.actor;
+    
     // Handle the drop with a Hooked function
     const allowed = Hooks.call("dropItemSheetData", actor, this, data);
     if ( allowed === false ) {
       return;
     }
     // Handle different data types
-
     switch ( data.type ) {
       case "Item":
-        return this._onDropItem(event, data);
+        return this._onDropItem(data);
+      case "ActiveEffect": 
+        return this._onDropActiveEffect(data);
     }
   }
 
-  async _onDropItem(event, data) {
+  async _onDropItem(data) {
     if (!this.isEditable) return false;
     let abilities = this.item.data.data.abilities.filter(a=>a.id != data.id);
     let ability = game.items.get(data.id);
@@ -85,6 +87,19 @@ export class DeeSanctionItemSheet extends ItemSheet {
     }
   }
 
+  /**
+   * Handle the dropping of ActiveEffect data onto an Item Sheet
+   * @param {Object} data         The data transfer extracted from the event
+   * @return {Promise<Object>}    A data object which describes the result of the drop
+   * @private
+   */
+  async _onDropActiveEffect(data) {
+    if (!this.isEditable) return false;
+    const item = this.item;
+    if ( !data.data ) return;
+    return ActiveEffect.create(data.data, {parent: item})
+  }
+
   /** @override */
   get template() {
     const path = "systems/dee/templates/item";
@@ -100,19 +115,21 @@ export class DeeSanctionItemSheet extends ItemSheet {
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
+    sheetData.user = game.user;
+    sheetData.effects = prepareActiveEffectCategories(this.item.effects);
     return sheetData;
   }
 
   /* -------------------------------------------- */
 
   /** @override */
-  setPosition(options = {}) {
-    const position = super.setPosition(options);
-    const sheetBody = this.element.find(".sheet-body");
-    const bodyHeight = position.height - 192;
-    sheetBody.css("height", bodyHeight);
-    return position;
-  }
+  // setPosition(options = {}) {
+  //   const position = super.setPosition(options);
+  //   const sheetBody = this.element.find(".sheet-body");
+  //   const bodyHeight = position.height - 192;
+  //   sheetBody.css("height", bodyHeight);
+  //   return position;
+  // }
 
   /* -------------------------------------------- */
 
@@ -147,8 +164,26 @@ export class DeeSanctionItemSheet extends ItemSheet {
       event.preventDefault();
       const resource = $('#consequence-sel').val();
       const newData = {resource:resource};
+      for ( let e of this.item.effects ) {
+        let name = await e._getSourceName(); // Trigger a lookup for the source name
+        if (name === this.item.name) {
+          const change = duplicate(e.data.changes[0]);
+          change.key = `data.resources.${resource}.value`;
+          e.update({changes: [change]});
+          break;
+        }
+      }
       await this.item.data.update({data:newData});
     });
+
+    // Consequence potency input
+    html
+      .find("#potency-sel")
+      .click((ev) => ev.target.select())
+      .change(this._onPotencyChange.bind(this));
+
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
   }
 
   /**
@@ -182,10 +217,25 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @private
    */
   _onAbilityDelete(id) {
-    const abilities = this.item.data.data.abilities.filter((i)=>i.id != id);
+    const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
     const newAbilities = {
       abilities: abilities
     }
     return this.item.update({data: newAbilities});
+  }
+
+  async _onPotencyChange(event) {
+    event.preventDefault();
+    const potency = $('#potency-sel').val();
+    for ( let e of this.item.effects ) {
+      let name = await e._getSourceName(); // Trigger a lookup for the source name
+      if (name === this.item.name) {
+        const change = duplicate(e.data.changes[0]);
+        change.value = parseInt(potency);
+        change.mode =  2;
+        e.update({changes: [change]});
+        break;
+      }
+    }
   }
 }

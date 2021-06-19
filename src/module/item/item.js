@@ -6,8 +6,8 @@ export class DeeSanctionItem extends Item {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
-  prepareData() {
-    super.prepareData();
+  async prepareData() {
+    await super.prepareData();
     // Get the Item's data
     const itemData = this.data;
     switch (itemData.type) {
@@ -39,6 +39,13 @@ export class DeeSanctionItem extends Item {
     if (itemData.data.abilities) {
       let abilities = this._prepContainer(itemData);
       itemData.update({data:{abilities:abilities}});
+    }
+    if (itemData.effects) {
+      itemData.effects.forEach(async (e) => {
+        try {
+            e.data.origin = this.uuid;
+        } catch (e) {console.log(e)}
+      });
     }
   }
 

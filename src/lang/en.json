@@ -13,6 +13,8 @@
     "DEE.Potency": "Potency",
     "DEE.Setting.initialized": "System Initialized",
     "DEE.Setting.initializedHint": "untick to re-import compendia next start.",
+    "DEE.Setting.effectsTab": "Reveal effect editing",
+    "DEE.Setting.effectsTabHint": "For advanced users",
 
     "DEE.RollMode": "Roll Mode",
     "DEE.SitMod": "Step Modifier",
@@ -31,5 +33,11 @@
     "DEE.roll.details.resistance": "Roll 1 or 2 with {type} to resist the damage",
     "DEE.roll.consequences": "Roll for consequences of...",
     "DEE.roll.initiative": "Take a chance for initiative",
-    "DEE.consequence.resource": "Affected resource"
+    "DEE.consequence.resource": "Affected resource",
+
+    "DEE.EffectCreate": "Create Effect",
+    "DEE.EffectToggle": "Toggle Effect",
+    "DEE.EffectEdit": "Edit Effect",
+    "DEE.EffectDelete": "Delete Effect"
+
 }
