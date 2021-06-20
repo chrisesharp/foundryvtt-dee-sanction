@@ -14,7 +14,6 @@ import { DeeCombat } from "./combat.js";
 import * as chat from "./chat.js";
 
 Hooks.once('init', async function() {
-
   console.log("Invoking The Dee Sanction...");
   game.dee = {
     DeeSanctionActor,
@@ -122,7 +121,6 @@ Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
 
 // License and KOFI infos
 Hooks.on("renderSidebarTab", async (object, html) => {
-
   if (object instanceof Settings) {
     let gamesystem = html.find("#game-details");
     // License text
