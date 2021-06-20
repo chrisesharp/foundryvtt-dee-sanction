@@ -9,7 +9,7 @@ import { preloadHandlebarsTemplates } from "./preload-templates.js";
 import { registerHandlebarHelpers } from "./handlebar-helpers.js";
 import { DEE } from "./config.js";
 import { registerSettings } from "./settings.js";
-import { loadCompendia } from "./load-compendia.js"
+import { loadCompendia, unloadCompendia } from "./load-compendia.js"
 import { DeeCombat } from "./combat.js";
 import * as chat from "./chat.js";
 
@@ -65,16 +65,15 @@ Hooks.once('init', async function() {
 Hooks.once("ready", async function () {
     // Load leaf node documents
     if (!game.user.isGM) return;
-    let loadAll = async () => {
-      let stage1 = await loadCompendia(["Abilities","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"]);
-      console.log("Stage 1: Compendia imported:",stage1);
-      // Load containers
-      let stage2 = await loadCompendia(["Associations","Foci","Occupations","Humours"]);
-      console.log("Stage 2: Compendia imported:",stage2);
-      // Load other tables
-      let stage3 = await loadCompendia(["Outcomes"]);
-      console.log("Stage 3: Compendia imported:",stage3);
-      console.log("Import complete");
+    const stage1 = ["Abilities","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"];
+    const stage2 = ["Associations","Foci","Occupations","Humours"];
+    const stage3 = ["Outcomes"];
+    const stages = [stage1, stage2, stage3];
+    const doAll = async (f) => {
+      for (let i=0; i < stages.length; i++) {
+        await f(stages[i]);
+        console.log("Processed:",stages[i]);
+      }
       game.settings.set("dee","initialized",true);
     }
 
@@ -88,9 +87,14 @@ Hooks.once("ready", async function () {
         one: {
           icon: '<i class="fas fa-check"></i>',
           label: "Import Now",
-          callback: () => loadAll()
+          callback: () => doAll(loadCompendia)
         },
         two: {
+          icon: '<i class="fas fa-trash"></i>',
+          label: "Delete All",
+          callback: () => doAll(unloadCompendia)
+        },
+        three: {
           icon: '<i class="fas fa-times"></i>',
           label: "Don't show this again",
           callback: () => game.settings.set("dee","initialized",true)
@@ -98,8 +102,8 @@ Hooks.once("ready", async function () {
       },
       default: "one"
     }, {
-      width: 450,
-      height: 240,
+      width: 550,
+      height: 230,
       resizable: false,
     });
 

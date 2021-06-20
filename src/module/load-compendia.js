@@ -2,16 +2,24 @@ export const loadCompendia = async function (compendia) {
     return await Promise.all(compendia.map((c) => {return loadCompendium(c);}));
 }
 
-const possessions = ["Clothing","Tools","Weapons","Printed Matter","Odds and Ends"];
+export const unloadCompendia = async function (compendia) {
+    return await Promise.all(compendia.map((c) => {return deleteFolder(c);}));
+}
 
+//const possessions = ["Clothing","Tools","Weapons","Printed Matter","Odds and Ends"];
+
+async function deleteFolder(folderName) {
+    let folder = game.folders.getName(folderName)
+    if (folder) return Promise.all(folder.contents.map((e)=>{ e.delete()})).then(folder.delete());
+    return Promise.resolve(`Folder ${folderName} doesn't exist.`);
+}
 async function loadCompendium (compendium) {
-    // const folderName = (possessions.includes(compendium)) ? `Possession/${compendium}`: compendium;
     const folderName = compendium;
-    const folder = game.folders.find(f => f.name === folderName);
+    const folder = game.folders.getName(folderName);
     const packname = "dee." + compendium.toLowerCase().replace(/ /g,"-");
     const pack = game.packs.get(packname);
     if (pack) {
-        if (folder && folder instanceof Folder) {
+        if (folder) {
             let loaded = await folder.getFlag("dee","loaded");
             if (loaded === true) {
                 return Promise.resolve(`${compendium} pack already imported`);
@@ -21,7 +29,7 @@ async function loadCompendium (compendium) {
             return imp;
         } else {
             let imp = await pack.importAll({folderName:folderName});
-            let newFolder = game.folders.find(f => f.name === folderName);
+            const newFolder = game.folders.getName(folderName);
             if (newFolder && newFolder instanceof Folder) {
                 newFolder.setFlag("dee","loaded",true);
             } else {
