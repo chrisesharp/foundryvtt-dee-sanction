@@ -6,12 +6,13 @@
     </header>
 
     {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs side" data-group="primary">
+    <nav class="sheet-tabs tabs side agent" data-group="primary">
         <a class="item" data-tab="resources">Resources</a>
         <a class="item" data-tab="abilities">Abilities</a>
         <a class="item" data-tab="items">Possessions</a>
         <a class="item" data-tab="affiliations">Affiliations</a>
         <a class="item" data-tab="esoterica">Esoterica</a>
+        <a class="item" data-tab="editor">Notes</a>
         {{#if config.showEffects}}
         <a class="item" data-tab="effects">Effects</a>
         {{/if}}
@@ -43,6 +44,10 @@
         {{!-- Esoterica Tab --}}
         <div class="tab esoterica" data-group="primary" data-tab="esoterica">
             {{> "systems/dee/templates/actor/partials/actor-esoterica.html"}}
+        </div>
+        {{!-- Notes --}}
+        <div class="tab editor agent-editor" data-group="primary" data-tab="editor">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
         {{#if config.showEffects}}
         {{!-- Effects Tab --}}

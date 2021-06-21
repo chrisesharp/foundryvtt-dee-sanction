@@ -5,14 +5,14 @@
   data: 
     description: "A jacket with small iron plates sewn into the lining."
     resource: "armour"
-    potency: 1
+    potency: -2
   effects:
     - 
       changes: 
         - 
           key: "data.resources.armour.value"
           mode: 2
-          value: 1
+          value: -2
       disabled: false
       duration: 
         startTime: 0

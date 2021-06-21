@@ -55,13 +55,41 @@
 &.sheet nav.sheet-tabs.side {
   position: absolute;
   transform: rotate(90deg);
-  // width: 400px;
-  // bottom: 200px;
-  // right: -209px;
-  width: 450px;
-  top: 250px;
-  // bottom: 230px;
-  right: -234px;
+  width: 465px;
+  top: 255px;
+  right: -240px;
+  border-top: none;
+  height: 18px;
+  z-index: -1;
+  .item {
+    padding: 1px 10px 0;
+    margin-left: -5px;
+    text-indent: 4px;
+    line-height: 16px;
+    background: url("/systems/dee/assets/default/paper.png");
+    border-top-right-radius: 4px;
+    border-top-left-radius: 80px;
+    border-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 6px 1px $c-black;
+    font-size: 14px;
+    filter: brightness(0.9);
+    &.active {
+      filter: none;
+      z-index: 1;
+      font-weight: bold;
+      text-shadow: none;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+&.sheet nav.sheet-tabs.side.agent {
+  position: absolute;
+  transform: rotate(90deg);
+  width: 550px;
+  top: 296px;
+  right: -284px;
   border-top: none;
   height: 18px;
   z-index: -1;
@@ -91,7 +119,7 @@
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
-  height: 100px;
+  height: 150px;
 }
 
 .tox {

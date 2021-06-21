@@ -5,6 +5,14 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js
  */
 export class DeeSanctionActorSheet extends ActorSheet {
 
+  activateEditor(target, editorOptions, initialContent) {
+    // remove some controls to the editor as the space is lacking
+    if (target == "data.description") {
+      editorOptions.toolbar = "styleselect bullist hr table removeFormat save";
+    }
+    super.activateEditor(target, editorOptions, initialContent);
+  }
+  
   /** @override */
   async _onDrop(event) {
     let item;
@@ -34,8 +42,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
    */
   async _prepareItems(data) {
     const sheetData = {
+      title: data.title,
       actor: data.actor,
       config: CONFIG.DEE,
+      owner: data.owner,
+      editable: data.editable,
       data: data.actor.data.data,
       effects: data.effects,
       user: game.user
@@ -55,7 +66,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
         await data.actor.update({data:{hitresolution: hitresolution}});
       }
     }
-
     return sheetData;
   }
 

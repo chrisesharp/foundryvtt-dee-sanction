@@ -6,10 +6,8 @@
             <img class="resource-bg" src="/systems/dee/assets/default/armour.png">
             <div class="armour-die flexrow flex-center">
                 <div class="flexcol" data-resource="armour">
-                    <a class="step-up"><i class="fas fa-caret-up"></i></a>
-                    <a class="step-down"><i class="fas fa-caret-down"></i></a>
                 </div>
-                {{#if data.resources.armour.value}}
+                {{#if (hasArmour data.resources.armour.value)}}
                 <img src="{{die data.resources.armour.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
                 {{/if}}
             </div>
@@ -18,7 +16,7 @@
     <div class="possessions">
         <ol class="items-list">
             <li class="flexrow item-header">
-                <div class="possessions-header">Mundane Possessions</div>
+                <div class="possessions-header" style="padding-top: 4px;">Mundane Possessions</div>
                 <div class="item-controls">
                 <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
                 </div>

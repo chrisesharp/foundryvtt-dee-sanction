@@ -12,6 +12,10 @@ export const registerHandlebarHelpers = async function () {
         return Math.abs(a);
     });
 
+    Handlebars.registerHelper("hasArmour", function (a) {
+        return (0 < a && a < 6);
+    });
+
     Handlebars.registerHelper('concat', function() {
         var outStr = '';
         for (var arg in arguments) {

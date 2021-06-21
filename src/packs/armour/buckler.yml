@@ -5,14 +5,14 @@
   data: 
     description: "A small buckler shield."
     resource: "armour"
-    potency: 1
+    potency: -1
   effects:
     - 
       changes: 
         - 
           key: "data.resources.armour.value"
           mode: 2
-          value: 1
+          value: -1
       disabled: false
       duration: 
         startTime: 0

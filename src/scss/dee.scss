@@ -30,4 +30,11 @@
   .effects .item .effect-controls {
     border: none;
   }
+
+  .sheet-body .tab.editor.item-editor {
+    height: 175px;
+    div.editor {
+        height: 175px;
+    }
+  }
 }

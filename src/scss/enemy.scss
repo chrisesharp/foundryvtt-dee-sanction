@@ -49,6 +49,20 @@
     }
 
     .sheet-body {
+        .tab.editor.enemy-editor {
+            height: 200px;
+            div.editor {
+                height: 200px;
+            }
+        }
+
+        .notes-header {
+            font-size: larger;
+            font-weight: bold;
+            text-align: left;
+            font-style: italic;
+            padding-left: 10px;
+        }
 
         .potency {
             display: grid;

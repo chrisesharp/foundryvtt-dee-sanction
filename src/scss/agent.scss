@@ -40,6 +40,12 @@
     }
 
     .sheet-body {
+        .tab.editor.agent-editor {
+            height: 350px;
+            div.editor {
+                height: 350px;
+            }
+        }
         .abilities {
             .item-header {
                 font-weight: bold;
@@ -192,7 +198,7 @@
                 position: absolute;
                 height: 64px;
                 top: 60px;
-                left: 9px;
+                left: 24px;
             }
         }
 

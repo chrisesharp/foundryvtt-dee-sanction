@@ -16,7 +16,9 @@ export class DeeSanctionActor extends Actor {
     const flags = actorData.flags;
     Object.keys(actorData.data.resources).forEach(key => {
       const res = actorData.data.resources[key];
-      res.value = Math.min(Math.max(res.value, 0), 5);
+      let upper = (key === "armour") ? 6 : 5;
+      let lower = (key === "armour") ? 1 : 0;
+      res.value = Math.min(Math.max(res.value, lower), upper);
     });
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.

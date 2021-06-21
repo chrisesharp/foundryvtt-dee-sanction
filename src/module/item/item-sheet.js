@@ -10,7 +10,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dee", "sheet", "item"],
       width: 350,
-      height: 350,
+      height: 375,
       resizable: false,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{
@@ -18,6 +18,14 @@ export class DeeSanctionItemSheet extends ItemSheet {
         dropSelector: null
       }]
     });
+  }
+
+  activateEditor(target, editorOptions, initialContent) {
+    // remove some controls to the editor as the space is lacking
+    if (target == "data.description") {
+      editorOptions.toolbar = "styleselect bullist hr table removeFormat save";
+    }
+    super.activateEditor(target, editorOptions, initialContent);
   }
 
   /** @override */
