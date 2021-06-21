@@ -1,0 +1,22 @@
+---
+  name: "Chainmail"
+  type: "item"
+  img: "/systems/dee/assets/default/icons/kit.png"
+  data: 
+    description: "A coat of chainmail."
+    resource: "armour"
+    potency: -4
+  effects:
+    - 
+      changes: 
+        - 
+          key: "data.resources.armour.value"
+          mode: 2
+          value: -4
+      disabled: false
+      duration: 
+        startTime: 0
+      icon: "icons/svg/aura.svg"
+      name: "Chainmail"
+      transfer: true
+
