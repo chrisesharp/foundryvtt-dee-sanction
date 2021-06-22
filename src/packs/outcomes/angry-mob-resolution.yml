@@ -1,0 +1,54 @@
+---
+  name: "Angry Mob Resolution"
+  img: "icons/svg/d20-grey.svg"
+  description: "Angry Mob resolution table"
+  results: 
+    - 
+      type: 0
+      text: "Run Away: 0 Hits; roll 1d12 minus harm sustained; if Falter, break and run"
+      weight: 1
+      range: 
+        - 1
+        - 2
+      drawn: false
+      img: "/systems/dee/assets/default/icons/bones.png"
+      rangeL: 1
+      rangeH: 2
+    - 
+      type: 0
+      text: "Confuse: 0 Hits; Dizzy"
+      weight: 1
+      range: 
+        - 3
+        - 4
+      drawn: false
+      img: "/systems/dee/assets/default/icons/bones.png"
+      rangeL: 3
+      rangeH: 4
+    - 
+      type: 0
+      text: "Overrun: 1 Hit; Phy Ch., Falter: Fallen"
+      weight: 1
+      range: 
+        - 5
+        - 6
+      drawn: false
+      img: "/systems/dee/assets/default/icons/bones.png"
+      rangeL: 5
+      rangeH: 6
+    - 
+      type: 0
+      text: "Rally: 1 Hit; recover 1 Hit (4 people)"
+      weight: 1
+      range: 
+        - 7
+        - 8
+      drawn: false
+      flags: {}
+      img: "/systems/dee/assets/default/icons/bones.png"
+      rangeL: 7
+      rangeH: 8
+  formula: "1d8"
+  replacement: true
+  displayRoll: true
+

@@ -1,0 +1,29 @@
+---
+  name: "Angry Mob"
+  type: "enemy"
+  img: "systems/dee/assets/default/tokens/26.png"
+  data: 
+    hits: 
+      value: 8
+      min: 0
+      max: 3
+    description: "<p>The mob is a bustling, frantic gathering of enemies. Half the time it&rsquo;s milling around considering whether to run away or not. The rest of the time it&rsquo;s poking with pitchforks, jostling and shoving. Overwhelm means the Mob can cause damage even if the Agents don&rsquo;t miss a beat. An average Agent would struggle to handle a Mob without assistance or good fortune.</p>"
+    hitresolution: 
+      rolltable: 
+        name: "Angry Mob Resolution"
+        img: "icons/svg/d20-grey.svg"
+        description: "Angry Mob resolution table"
+  token: 
+    name: "Angry Mob"
+    img: "icons/svg/mystery-man.svg"
+    disposition: -1
+  items: 
+    - 
+      name: "Overwhelm"
+      type: "ability"
+      img: "/systems/dee/assets/default/icons/book.png"
+      data: 
+        description: "<p>The mob consists of 4 x Hits people; it inflicts half its Hits (rnd up) in automatic harm per Moment. Choose random Agents equal to the potential harm and inflict 1 Hit to each.</p>"
+      effects: []
+  effects: []
+
