@@ -66,7 +66,7 @@ Hooks.once("ready", async function () {
     if (!game.user.isGM) return;
     const stage1 = ["Abilities","Armour","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"];
     const stage2 = ["Associations","Foci","Occupations","Humours"];
-    const stage3 = ["Outcomes"];
+    const stage3 = ["Outcomes","NPCs"];
     const stages = [stage1, stage2, stage3];
     const doAll = async (f) => {
       for (let i=0; i < stages.length; i++) {

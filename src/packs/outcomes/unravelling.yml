@@ -7,7 +7,7 @@
       type: 0
       text: "Phlegm: Immediate response is dulled senses; acts of perception or problem-solving are ▼1 while in the presence
 of fear source."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -18,7 +18,7 @@ of fear source."
       type: 1
       collection: "RollTable"
       text: "Humour:Phlegm"
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -29,7 +29,7 @@ of fear source."
       type: 0
       text: "Black Bile: Overwhelmed by extreme emotion. Eyes fill with tears, body wracked by sobbing. Take a Chance to complete
 any complex action in the presence of fear source."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -40,7 +40,7 @@ any complex action in the presence of fear source."
       type: 1
       collection: "RollTable"
       text: "Humour:Black Bile"
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -51,7 +51,7 @@ any complex action in the presence of fear source."
       type: 0
       text: "Yellow Bile: Character fills with bitter rage toward all allies while in the presence of fear source. Take a Chance, act
 in a selfish way on a falter. Attitude persists in the presence of fear source."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -62,7 +62,7 @@ in a selfish way on a falter. Attitude persists in the presence of fear source."
       type: 1
       collection: "RollTable"
       text: "Humour:Yellow Bile"
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -73,7 +73,7 @@ in a selfish way on a falter. Attitude persists in the presence of fear source."
       type: 0
       text: "Blood: Inadvisably optimistic despite the horrors or the difficult situation faced. Blindly positive. Acts of violence
 or aggression are ▼1 while in the presence of fear source."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -84,7 +84,7 @@ or aggression are ▼1 while in the presence of fear source."
       type: 1
       collection: "RollTable"
       text: "Humour:Blood"
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 

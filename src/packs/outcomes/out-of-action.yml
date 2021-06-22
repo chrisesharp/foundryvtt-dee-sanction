@@ -6,7 +6,7 @@
     - 
       type: 0
       text: "Stunned: Numb, Raving."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -16,7 +16,7 @@
     - 
       type: 0
       text: "Senseless: Dazed, Fat-headed."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -26,7 +26,7 @@
     - 
       type: 0
       text: "Fragile: Shaking, Exhausted."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -36,7 +36,7 @@
     - 
       type: 0
       text: "Overcome: Mute, Humiliated."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -46,7 +46,7 @@
     - 
       type: 0
       text: "Wasted: Unguarded, Fearful."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -56,7 +56,7 @@
     - 
       type: 0
       text: "Blood-soaked: Gory, Oozing."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 

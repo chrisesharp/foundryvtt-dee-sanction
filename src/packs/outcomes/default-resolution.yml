@@ -6,7 +6,7 @@
     - 
       type: 0
       text: "Back Off: 0 Hits; Make distance."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -16,7 +16,7 @@
     - 
       type: 0
       text: "Jab: 0 Hits, Bruised."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -26,7 +26,7 @@
     - 
       type: 0
       text: "Graze: 0 Hit, Bloody."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
@@ -36,7 +36,7 @@
     - 
       type: 0
       text: "Solid Strike: 1 Hit."
-      img: "icons/svg/d20-black.svg"
+      img: "/systems/dee/assets/default/icons/bones.png"
       resultId: ""
       weight: 1
       range: 
