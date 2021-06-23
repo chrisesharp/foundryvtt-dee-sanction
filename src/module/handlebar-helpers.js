@@ -51,4 +51,17 @@ export const registerHandlebarHelpers = async function () {
     Handlebars.registerHelper('ability', function(ability) {
         let item = game.items.find(i => i.type==="ability" && i.name===ability);
         return item;
-    });}
+    });
+
+    Handlebars.registerHelper('balance', function(resources) {
+        const total = Math.sign(resources.phy.value + resources.int.value + resources.sup.value - 6);
+        switch (total) {
+            case -1:
+                return "fas fa-balance-scale-left";
+            case 0:
+                return "fas fa-balance-scale";
+            case 1:
+                return "fas fa-balance-scale-right";   
+        }
+    });
+}

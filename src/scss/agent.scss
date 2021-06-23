@@ -208,11 +208,13 @@
             flex-wrap: wrap;
             justify-content: space-around;
 
+            .resource-balance {
+                flex: 0;
+            }
             .resource {
                 position: relative;
                 border: 0px;
-                height: 200px;
-            
+                height: 200px;            
 
                 .resource-bg {
                     position: absolute;
