@@ -5,6 +5,7 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js
  */
 export class DeeSanctionActorSheet extends ActorSheet {
 
+  /** @override */
   activateEditor(target, editorOptions, initialContent) {
     // remove some controls to the editor as the space is lacking
     if (target == "data.description") {

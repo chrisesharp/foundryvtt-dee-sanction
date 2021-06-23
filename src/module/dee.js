@@ -68,12 +68,12 @@ Hooks.once("ready", async function () {
     const stage2 = ["Associations","Foci","Occupations","Humours"];
     const stage3 = ["Outcomes","NPCs"];
     const stages = [stage1, stage2, stage3];
-    const doAll = async (f) => {
+    const doAll = async (f, initialized) => {
       for (let i=0; i < stages.length; i++) {
         await f(stages[i]);
         console.log("Processed:",stages[i]);
       }
-      game.settings.set("dee","initialized",true);
+      game.settings.set("dee","initialized",initialized);
     }
 
     const template = "/systems/dee/templates/dialog/welcome.html";
@@ -86,12 +86,12 @@ Hooks.once("ready", async function () {
         one: {
           icon: '<i class="fas fa-check"></i>',
           label: "Import Now",
-          callback: () => doAll(loadCompendia)
+          callback: () => doAll(loadCompendia, true)
         },
         two: {
           icon: '<i class="fas fa-trash"></i>',
           label: "Delete All",
-          callback: () => doAll(unloadCompendia)
+          callback: () => doAll(unloadCompendia, false)
         },
         three: {
           icon: '<i class="fas fa-times"></i>',

@@ -22,8 +22,14 @@ export class DeeSanctionActor extends Actor {
     });
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    if (actorData.type === 'agent') this._prepareAgentData(actorData);
-    if (actorData.type === 'enemy') this._prepareEnemyData(actorData);
+    switch (actorData.type) {
+      case "agent":
+        this._prepareAgentData(actorData);
+        break;
+      case "enemy":
+        this._prepareEnemyData(actorData);
+        break;
+    }
   }
 
   _categoriseItems(items) {
@@ -141,7 +147,6 @@ export class DeeSanctionActor extends Actor {
   async rollConsequence(rollTable, attacking=true) {
     const rt = game.tables.get(rollTable);
     let roll = (attacking === "true") ? new Roll("1d8"): new Roll("1d6+2");
-
     return rt.draw({roll:await roll.evaluate({async:"true"})});
   }
 

@@ -60,12 +60,12 @@ export class DeeCombat {
       if (!game.user.isGM) {
         return;
       }
-      let currentColor = ev.currentTarget.style.color;
-      let colors = ["black","grey","white"];
+      const currentColor = ev.currentTarget.style.color;
+      const colors = ["black","grey","white"];
       let index = colors.indexOf(currentColor);
       index = (index + 1) % colors.length;
-      let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      let combatant = game.combat.data.combatants.get(id);
+      const id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
+      const combatant = game.combat.data.combatants.get(id);
       combatant.update({
         id: id,
         flags: { dee: { group: colors[index] } },
@@ -80,7 +80,7 @@ export class DeeCombat {
   }
 
   static addCombatant(combatant, data, options, id) {
-    let token = canvas.tokens.get(data.tokenId);
+    const token = canvas.tokens.get(data.tokenId);
     let color = "black";
     switch (token.data.disposition) {
       case -1:

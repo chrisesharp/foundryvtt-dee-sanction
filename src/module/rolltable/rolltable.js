@@ -28,7 +28,6 @@ export class DeeSanctionRollTable extends RollTable {
       }
     });
     return Promise.resolve();
-    // return this.updateEmbeddedDocuments("TableResult",updates)
   }
 
   _prepTableData(tableResult) {
@@ -47,7 +46,6 @@ export class DeeSanctionRollTable extends RollTable {
         } catch (e) {
           console.log("failed to update:",result.id, data);
         }
-        
       }
     }
     return Promise.resolve(tableResult);

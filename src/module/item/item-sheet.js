@@ -20,6 +20,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     });
   }
 
+  /** @override */
   activateEditor(target, editorOptions, initialContent) {
     // remove some controls to the editor as the space is lacking
     if (target == "data.description") {
@@ -128,19 +129,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
     return sheetData;
   }
 
-  /* -------------------------------------------- */
-
-  /** @override */
-  // setPosition(options = {}) {
-  //   const position = super.setPosition(options);
-  //   const sheetBody = this.element.find(".sheet-body");
-  //   const bodyHeight = position.height - 192;
-  //   sheetBody.css("height", bodyHeight);
-  //   return position;
-  // }
-
-  /* -------------------------------------------- */
-
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
@@ -150,7 +138,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
 
     // Roll handlers, click handlers, etc. would go here.
     // Add ability
-    // TODO when on 8.x
     html.find('.item-create').click(this._onAbilityCreate.bind(this));
 
     // Update ability Item
