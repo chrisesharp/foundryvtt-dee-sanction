@@ -8,7 +8,7 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img src="{{die data.resources.int.value}}" width="64" height="64"  class="rollable" data-roll="{{data.resources.int.value}}" data-label="{{ localize 'DEE.resource.int.long' }}" data-resource="int">
+            <img class="step" src="{{die data.resources.int.value}}" width="64" height="64"  class="rollable" data-roll="{{data.resources.int.value}}" data-label="{{ localize 'DEE.resource.int.long' }}" data-resource="int">
         </div>
         <label for="data.resources.int.value" class="resource-label">&nbsp;&nbsp;{{ localize 'DEE.resource.int.long' }}</label>
     </div>
@@ -20,7 +20,7 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img src="{{die data.resources.phy.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.phy.value}}" data-label="{{ localize 'DEE.resource.phy.long' }}" data-resource="phy">
+            <img class="step" src="{{die data.resources.phy.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.phy.value}}" data-label="{{ localize 'DEE.resource.phy.long' }}" data-resource="phy">
         </div>
         <label for="data.resources.phy.value" class="resource-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ localize 'DEE.resource.phy.long' }} </label>
     </div>
@@ -32,9 +32,12 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img src="{{die data.resources.sup.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.sup.value}}" data-label="{{ localize 'DEE.resource.sup.long' }}" data-resource="sup">
+            <img class="step" src="{{die data.resources.sup.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.sup.value}}" data-label="{{ localize 'DEE.resource.sup.long' }}" data-resource="sup">
         </div>
         <label for="data.resources.sup.value" class="resource-label">&nbsp;{{ localize 'DEE.resource.sup.long' }}</label>
+    </div>
+    <div class="resource-balance">
+        <i class="{{balance data.resources}}"></i>
     </div>
 </div>
 {{!-- injuries and consequences --}}
