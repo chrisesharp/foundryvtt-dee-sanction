@@ -196,11 +196,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
       
       
     }
-    if (item.type==="association"||item.type==="focus"||item.type==="occupation") {
+    if (["association","focus","occupation"].includes(item.type)) {
       item.data.data.abilities.forEach((i)=> {
         let ability = abilities.filter(e => e.name===i.name);
-        const checked = (ability.length > 0) ? " checked " : "";
-        options += `<input type="checkbox" id="${i.id}" ${checked} onclick="return false;"><label for="${i.id}">${i.name}</label> `
+        const checked = (ability.length > 0) ? "fa-check-square" : "fa-square";
+        options += `<i class="far ${checked}" id="${i.id}"></i>&nbsp;<label for="${i.id}">${i.name}</label>&nbsp;`;
       });
     }
     // Toggle summary
