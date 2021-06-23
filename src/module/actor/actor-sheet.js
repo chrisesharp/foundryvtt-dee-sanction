@@ -183,6 +183,13 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @private
    */
   _onItemSummary(event) {
+    const empty = `<span class="fa-stack" style="font-size: 0.5em;">
+                    <i class="far fa-square fa-stack-2x" style="vertical-align:middle;"></i>
+                   </span>`;
+    const check = `<span class="fa-stack" style="font-size: 0.5em;">
+                      <i class="fas fa-square fa-stack-2x" style="vertical-align:middle;"></i>
+                      <i class="fas fa-check fa-stack-1x fa-inverse" style="vertical-align:middle;"></i>
+                   </span>`;
     event.preventDefault();
     const li = $(event.currentTarget).parents(".item-entry");
     const item = this.actor.items.get(li.data("item-id"));
@@ -199,8 +206,8 @@ export class DeeSanctionActorSheet extends ActorSheet {
     if (["association","focus","occupation"].includes(item.type)) {
       item.data.data.abilities.forEach((i)=> {
         let ability = abilities.filter(e => e.name===i.name);
-        const checked = (ability.length > 0) ? "fa-check-square" : "fa-square";
-        options += `<i class="far ${checked}" id="${i.id}"></i>&nbsp;<label for="${i.id}">${i.name}</label>&nbsp;`;
+        const checked = (ability.length > 0) ? check : empty;
+        options += `${checked}&nbsp;<label style="font-size: 0.9em;" for="${i.id}" >${i.name}</label>&nbsp;`;
       });
     }
     // Toggle summary
