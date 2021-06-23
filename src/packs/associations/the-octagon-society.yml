@@ -2,10 +2,7 @@ name: "The Octagon Society"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
 data: 
-  description: "<p>Splinter of the Knights Templar with
-a focus on attaining a balance in both
-mind and spirit as a route to a higher
-purpose or form</p>"
+  description: "<p>Splinter of the Knights Templar with a focus on attaining a balance in both mind and spirit as a route to a higher purpose or form</p>"
   abilities: 
     - 
       name: "Phrenology"

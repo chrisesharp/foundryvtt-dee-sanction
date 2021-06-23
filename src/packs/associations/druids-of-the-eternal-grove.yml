@@ -2,9 +2,7 @@ name: "Druids of the Eternal Grove"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
 data: 
-  description: "<p>Ancient order seeking to revive the
-Druidic faith of Celtic legend and
-restore balance to the world</p>"
+  description: "<p>Ancient order seeking to revive the Druidic faith of Celtic legend and restore balance to the world</p>"
   abilities: 
     - 
       name: "Natural History"

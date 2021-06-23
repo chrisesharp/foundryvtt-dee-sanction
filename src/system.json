@@ -6,7 +6,7 @@
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "0.8.7",
   "templateVersion": 2,
-  "author": "Chris Sharp",
+  "author": "chrisesharp",
   "esmodules": ["module/dee.js"],
   "styles": ["css/dee.css"],
   "scripts": [],

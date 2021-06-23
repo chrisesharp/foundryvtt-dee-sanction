@@ -1,0 +1,13 @@
+name: "The Cheirokmeta"
+type: "focus"
+data: 
+  description: "<p>A volume in which Zosimos of Panopolis describes the means to work with and augment base matter.</p>"
+  abilities: 
+    - 
+      name: "Alchemy"
+      type: "ability"
+    - 
+      name: "Bluffing"
+      type: "ability"
+img: "/systems/dee/assets/default/icons/access.png"
+

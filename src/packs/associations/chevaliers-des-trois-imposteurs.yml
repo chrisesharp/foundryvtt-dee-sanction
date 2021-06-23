@@ -2,9 +2,7 @@ name: "Chevaliers des Trois Imposteurs"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
 data: 
-  description: "<p>Fractious movement intent on
-bringing about Enlightenment in an
-Age of False Religions</p>"
+  description: "<p>Fractious movement intent on bringing about Enlightenment in an Age of False Religions</p>"
   abilities: 
     - 
       name: "Antiquity"

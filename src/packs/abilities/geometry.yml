@@ -1,5 +1,5 @@
 name: "Geometry"
 type: "ability"
 data:
-  description: "<p>Geometry.</p>"
+  description: "<p>Geometry - angles & lines; the study of shapes and forms as precursor to greater knowledge.</p>"
 img: "/systems/dee/assets/default/icons/book.png"

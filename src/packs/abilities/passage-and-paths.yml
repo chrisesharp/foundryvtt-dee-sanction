@@ -1,5 +1,5 @@
 name: "Passage and Path"
 type: "ability"
 data:
-  description: "<p>Passage and Path.</p>"
+  description: "<p>Passage and Path - navigating the lesser known routes; knowing who else uses them; finding ways.</p>"
 img: "/systems/dee/assets/default/icons/book.png"

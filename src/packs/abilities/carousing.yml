@@ -1,5 +1,5 @@
 name: "Carousing"
 type: "ability"
 data:
-  description: "<p>Carousing.</p>"
+  description: "<p>Carousing - taverns are your natural territory; unguarded words flow in the presence of strong spirits</p>"
 img: "/systems/dee/assets/default/icons/book.png"

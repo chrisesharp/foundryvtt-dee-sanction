@@ -1,5 +1,5 @@
 name: "Mechanics"
 type: "ability"
 data:
-  description: "<p>Mechanics.</p>"
+  description: "<p>Mechanics - understand the basics of modern machinery; axles to clockwork, locks to firing mechanisms.</p>"
 img: "/systems/dee/assets/default/icons/book.png"

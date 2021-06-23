@@ -1,5 +1,5 @@
 name: "Infiltration"
 type: "ability"
 data:
-  description: "<p>Infiltration.</p>"
+  description: "<p>Infiltration - insignifance means you can go unnoticed in the midst of a gathering.</p>"
 img: "/systems/dee/assets/default/icons/book.png"

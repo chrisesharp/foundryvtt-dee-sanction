@@ -2,9 +2,7 @@ name: "Star of Artemis"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
 data: 
-  description: "<p>Religion stems from layers of deceit;
-true faith has been mired in ancient
-propaganda</p>"
+  description: "<p>Religion stems from layers of deceit; true faith has been mired in ancient propaganda</p>"
   abilities: 
     - 
       name: "Mythology"

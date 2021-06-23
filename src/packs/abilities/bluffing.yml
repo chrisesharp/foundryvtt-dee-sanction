@@ -1,0 +1,5 @@
+name: "Bluffing"
+type: "ability"
+data:
+  description: "<p>Bluffing - the capacity to mislead or divert the judgement of others.</p>"
+img: "/systems/dee/assets/default/icons/book.png"

@@ -1,5 +1,5 @@
 name: "Sleight-of-Hand"
 type: "ability"
 data:
-  description: "<p>Sleight-of-Hand.</p>"
+  description: "<p>Sleight-of-Hand -  the art of distraction; non-magical trickery.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
