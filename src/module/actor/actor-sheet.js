@@ -238,6 +238,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
    */
   _onRoll(event) {
     event.preventDefault();
+    console.log("here")
     const element = event.currentTarget;
     const resource = element.dataset.resource;
     const dataset = element.dataset;
