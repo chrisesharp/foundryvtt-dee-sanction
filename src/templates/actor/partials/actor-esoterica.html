@@ -1,10 +1,10 @@
 {{!-- Owned Items Tab --}}
 <div class="sheet-expertise-table">
     <div class="unravel">
-        <div class="unravelling-header" style="padding-top: 0.4em;">Unravelling</div>
+        <div class="unravelling-header" style="padding-top: 0.4em;">{{ localize 'DEE.resource.unravel.long'}}</div>
         <div class="resource">
             <img class="resource-bg" src="/systems/dee/assets/default/fortune.png">
-            <div class="unravel-die flexrow flex-center">
+            <div class="unravel-die flexrow flex-center" title="{{ localize 'DEE.resource.roll.unravel'}}">
                 <div class="flexcol" data-resource="unravel">
                     <a class="step-up"><i class="fas fa-caret-up"></i></a>
                     <a class="step-down"><i class="fas fa-caret-down"></i></a>
@@ -13,12 +13,12 @@
             </div>
         </div>
     </div>
-    <div class="esoterica">
+    <div class="esoterica" title="{{ localize 'DEE.FavoursDetail'}}">
         <ol class="items-list">
             <li class="flexrow item-header">
-                <div class="possessions-header">Favours & Esoterica</div>
+                <div class="possessions-header">{{ localize 'DEE.Favours'}}</div>
                 <div class="item-controls">
-                <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i></a>
+                <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.Favour'}}" data-type="item"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
         {{#each data.favours as |item id|}}
@@ -27,8 +27,8 @@
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
                     <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.Favour'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.Favour'}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>
@@ -39,8 +39,8 @@
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
                     <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.esoterica'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.esoterica'}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>

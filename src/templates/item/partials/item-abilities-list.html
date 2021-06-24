@@ -2,7 +2,7 @@
     <li class="flexrow item-header">
         <div class="fortune-header">Abilities that are associated with this.</div>
         <div class="item-controls">
-        <a class="item-control item-create" title="Create item" data-type="ability"><i class="fas fa-plus"></i></a>
+        <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.Items'}}" data-type="ability"><i class="fas fa-plus"></i></a>
         </div>
     </li>
 {{#each data.abilities as |ability id|}}
@@ -11,8 +11,8 @@
             <div class="item-image"><img src="{{ability.img}}" width="24" height="24"/></div>
             <h4 class="item-name">{{ability.name}}</h4>
             <div class="item-controls">
-                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.Items'}}"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.Items'}}"><i class="fas fa-trash"></i></a>
             </div>
         </div>
     </li>

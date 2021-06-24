@@ -64,4 +64,16 @@ export const registerHandlebarHelpers = async function () {
                 return "fas fa-balance-scale-right";   
         }
     });
+
+    Handlebars.registerHelper('balanceTip', function(resources) {
+        const total = Math.sign(resources.phy.value + resources.int.value + resources.sup.value - 6);
+        switch (total) {
+            case -1:
+                return "are too low";
+            case 0:
+                return "balanced";
+            case 1:
+                return "are too high";   
+        }
+    });
 }

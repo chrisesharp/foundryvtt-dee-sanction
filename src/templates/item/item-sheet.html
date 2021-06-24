@@ -3,7 +3,7 @@
       <div class="flexcol" style="justify-content: center;align-items: center;">
         <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="flexrow">
-          <label class="resource-label" style="padding-top: 5px;">Esoteric?</label>
+          <label class="resource-label" style="padding-top: 5px;">{{ localize 'DEE.item.esoteric'}}</label>
           <input type="checkbox" name="data.esoteric" value="{{data.esoteric}}" {{checked data.esoteric }} data-dtype="Boolean"/>
         </div>
       </div>
@@ -11,11 +11,11 @@
           <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
           <div class="grid grid-2col">
             <div class="resource">
-              <label class="resource-label">Quantity</label>
+              <label class="resource-label">{{ localize 'DEE.item.quantity'}}</label>
                 <input type="text" name="data.quantity" value="{{data.quantity}}" data-dtype="Number"/>
             </div>
             <div class="resource">
-              <label class="resource-label">Weight</label>
+              <label class="resource-label">{{ localize 'DEE.item.weight'}}</label>
                 <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
             </div>
           </div>
@@ -23,9 +23,9 @@
     </header>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item" data-tab="editor">Notes</a>
+      <a class="item" data-tab="editor">{{ localize 'DEE.tabs.notes'}}</a>
       {{#if config.showEffects }}
-      <a class="item" data-tab="effects">Effects</a>
+      <a class="item" data-tab="effects">{{ localize 'DEE.tabs.effects'}}</a>
       {{/if}}
     </nav>
     {{!-- Sheet Body --}}

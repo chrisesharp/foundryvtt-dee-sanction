@@ -8,7 +8,7 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img class="step rollable" src="{{die data.resources.int.value}}" width="64" height="64" data-roll="{{data.resources.int.value}}" data-label="{{ localize 'DEE.resource.int.long' }}" data-resource="int">
+            <img class="step rollable" src="{{die data.resources.int.value}}" width="64" height="64" data-roll="{{data.resources.int.value}}" data-label="{{ localize 'DEE.resource.int.long' }}" data-resource="int" title="{{ localize 'DEE.resource.roll.int'}}" >
         </div>
         <label for="data.resources.int.value" class="resource-label">&nbsp;&nbsp;{{ localize 'DEE.resource.int.long' }}</label>
     </div>
@@ -20,7 +20,7 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img class="step rollable" src="{{die data.resources.phy.value}}" width="64" height="64"data-roll="{{data.resources.phy.value}}" data-label="{{ localize 'DEE.resource.phy.long' }}" data-resource="phy">
+            <img class="step rollable" src="{{die data.resources.phy.value}}" width="64" height="64"data-roll="{{data.resources.phy.value}}" data-label="{{ localize 'DEE.resource.phy.long' }}" data-resource="phy" title="{{ localize 'DEE.resource.roll.phy'}}" >
         </div>
         <label for="data.resources.phy.value" class="resource-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ localize 'DEE.resource.phy.long' }} </label>
     </div>
@@ -32,38 +32,38 @@
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
             </div>
-            <img class="step rollable" src="{{die data.resources.sup.value}}" width="64" height="64" data-roll="{{data.resources.sup.value}}" data-label="{{ localize 'DEE.resource.sup.long' }}" data-resource="sup">
+            <img class="step rollable" src="{{die data.resources.sup.value}}" width="64" height="64" data-roll="{{data.resources.sup.value}}" data-label="{{ localize 'DEE.resource.sup.long' }}" data-resource="sup" title="{{ localize 'DEE.resource.roll.sup'}}" >
         </div>
         <label for="data.resources.sup.value" class="resource-label">&nbsp;{{ localize 'DEE.resource.sup.long' }}</label>
     </div>
     <div class="resource-balance">
-        <i class="{{balance data.resources}}"></i>
+        <i class="{{balance data.resources}}" title="Resources {{balanceTip data.resources}}"></i>
     </div>
 </div>
 {{!-- injuries and consequences --}}
 <div class="sheet-injuries-table">
     {{!-- injuries --}}
     <div class="flexcol">
-        <div class="injury-header" style="padding-top: 0.4em;padding-left: 1.3em;">Injuries</div>
-        <div class="hits">
+        <div class="injury-header" style="padding-top: 0.4em;padding-left: 1.3em;">{{ localize 'DEE.Injuries'}}</div>
+        <div class="hits" title="{{ localize 'DEE.HitsDetail'}}">
             <img class="hits-bg" src="/systems/dee/assets/default/hits.png">
-            <label for="data.hits.value" class="resource-label">&nbsp;Hits</label>
+            <label for="data.hits.value" class="resource-label">&nbsp;{{ localize 'DEE.Hits'}}</label>
             <div class="hits-val flexrow flex-center">
                 <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
             </div>
-            <div class="hits-falters">
+            <div class="hits-falters" title="{{ localize 'DEE.FalterDetail'}}">
                 <input class="first" type="checkbox" name="data.falters.first" {{checked data.falters.first }} data-dtype="Boolean"/>
                 <input class="second" type="checkbox" name="data.falters.second" {{checked data.falters.second }} data-dtype="Boolean"/>
             </div>
         </div>
     </div>
     {{!-- consequences --}}
-    <div class="consequences">
+    <div class="consequences" title="{{ localize 'DEE.DragConsequences'}}">
         <ol class="items-list">
             <li class="flexrow item-header">
-                <div class="injury-header">Consequences</div>
+                <div class="injury-header">{{ localize 'DEE.Consequences'}}</div>
                 <div class="item-header item-controls">
-                <a class="item-control item-create" title="Create item" data-type="consequence"><i class="fas fa-plus"></i></a>
+                <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.Consequences'}}" data-type="consequence"><i class="fas fa-plus"></i></a>
                 </div>
             </li>
             {{#each data.consequences as |item id|}}
@@ -71,8 +71,8 @@
                     <div class="item flexrow">
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                            <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.Consequences'}}"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.Consequences'}}"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
                 </li>
