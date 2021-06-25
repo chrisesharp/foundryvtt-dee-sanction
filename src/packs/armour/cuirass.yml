@@ -5,14 +5,14 @@
   data: 
     description: "A sturdy breastplate."
     resource: "armour"
-    potency: -3
+    potency: -4
   effects:
     - 
       changes: 
         - 
           key: "data.resources.armour.value"
           mode: 2
-          value: -3
+          value: -4
       disabled: false
       duration: 
         startTime: 0

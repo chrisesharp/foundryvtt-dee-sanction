@@ -8,6 +8,7 @@ export class DeeSanctionActor extends Actor {
   /**
    * Augment the basic actor data with additional dynamic data.
    */
+  /** @override */
   prepareData() {
     super.prepareData();
 
@@ -30,6 +31,30 @@ export class DeeSanctionActor extends Actor {
         this._prepareEnemyData(actorData);
         break;
     }
+  }
+
+  // Armour is not cumulative in effect, so disable the weaker ones
+  /** @override */
+  applyActiveEffects() {
+    const armourEffects = {};
+    let mostEffective = 0;
+    let mostEffectiveId;
+    this.effects.forEach (e=> {
+      let armourChanges = e.data.changes.filter(x=>x.key ==="data.resources.armour.value");
+      if (armourChanges.length) {
+        armourEffects[e.id] = e;
+        let value = parseInt(e.data.changes[0].value)
+        if (value < mostEffective) {
+          mostEffective = value;
+          mostEffectiveId = e.id;
+        }
+      }
+    });
+
+    Object.keys(armourEffects).forEach((id) => {
+      armourEffects[id].data.disabled = (mostEffectiveId != id);
+    });
+    super.applyActiveEffects();
   }
 
   _categoriseItems(items) {

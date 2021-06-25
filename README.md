@@ -2,6 +2,8 @@
 
 This is an unofficial, fan-made implementation of The Dee Sanction RPG, copyright 2021 Paul Baldowski.
 
+![Downloads](https://img.shields.io/github/downloads/chrisesharp/foundryvtt-dee-sanction/latest/dee-v1.0.0.zip)
+
 ## Documentation
 
 Full documentation is available [here](https://chrisesharp.github.io/foundryvtt-dee-sanction/)

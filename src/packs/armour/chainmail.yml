@@ -5,14 +5,14 @@
   data: 
     description: "A coat of chainmail."
     resource: "armour"
-    potency: -4
+    potency: -5
   effects:
     - 
       changes: 
         - 
           key: "data.resources.armour.value"
           mode: 2
-          value: -4
+          value: -5
       disabled: false
       duration: 
         startTime: 0
