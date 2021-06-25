@@ -1,6 +1,6 @@
 {
   "name": "dee",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "CSS compiler for the The Dee Sanction system",
   "scripts": {
     "package": "gulp package",
