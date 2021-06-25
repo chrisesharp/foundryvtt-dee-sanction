@@ -28,19 +28,25 @@ export const addChatConsequenceButton = function(msg, html, data) {
       cb.find('button[data-action="unravel"]').click((ev) => {
         ev.preventDefault();
         const actor = ev.currentTarget.dataset.actor;
+        $(ev.currentTarget).prop('disabled',true);
         applyChatUnravelRoll(actor);
       });
     } else {
       let label = game.i18n.format('DEE.roll.consequences');
       cb.append($(`<h4>${label}</h4>`));
       let action = "attacking";
-      cb.append($(`<h4 class="consequence-button"><button type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${action}</button></h4>`));
+      cb.append($(`<div class="consequence-button"><button id="attack" type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
       label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
       action = "defending";
-      cb.append($(`<div class="consequence-button"><button type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
+      cb.append($(`<div class="consequence-button"><button id="defend" type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
       cb.find('button[data-action="consequence"]').click((ev) => {
         ev.preventDefault();
-        const attacking = ev.currentTarget.dataset.attack;
+        const chosen = ev.currentTarget;
+        const attacking = chosen.dataset.attack;
+        const otherId = (attacking==="true") ? "defend" : "attack";
+        const otherButton = $(chosen).closest('.consequence-roll').find(`#${otherId}`);
+        otherButton.remove();
+        $(chosen).prop('disabled',true);
         applyChatConsequenceRoll(id, attacking);
       });
     }
