@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 26/6/21
+
+### Added
+
+### Changed
+
+- Added default effect to new consequences
+
+### Removed
+
 ## [1.0.1] - 25/6/21
 
 ### Added
