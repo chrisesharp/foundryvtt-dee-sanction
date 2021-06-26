@@ -102,7 +102,7 @@
     },
     "consequence": {
       "templates": ["base"],
-      "resource": "phy",
+      "resource": "",
       "potency": -1
     },
     "favour": {

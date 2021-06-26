@@ -1,4 +1,4 @@
-import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
+import {onManageActiveEffect, prepareActiveEffectCategories, createConsequenceEffect} from "../effects.js";
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -118,9 +118,14 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     const data = super.getData();
-    let sheetData = duplicate(data);
+    if (data.data.type === "consequence") {
+      if (!data.data.effects.length) {
+        await createConsequenceEffect("phy",-1,this.item);
+      }
+    }
+    let sheetData = duplicate(super.getData());
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.data.data;
@@ -172,10 +177,9 @@ export class DeeSanctionItemSheet extends ItemSheet {
     });
 
     // Consequence potency input
-    html
-      .find("#potency-sel")
-      .click((ev) => ev.target.select())
-      .change(this._onPotencyChange.bind(this));
+    html.find("#potency-sel")
+        .click((ev) => ev.target.select())
+        .change(this._onPotencyChange.bind(this));
 
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
@@ -222,6 +226,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
   async _onPotencyChange(event) {
     event.preventDefault();
     const potency = $('#potency-sel').val();
+    const newData = {potency:potency};
     for ( let e of this.item.effects ) {
       let name = await e._getSourceName(); // Trigger a lookup for the source name
       if (name === this.item.name) {
@@ -232,5 +237,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
         break;
       }
     }
+    await this.item.data.update({data:newData});
   }
 }

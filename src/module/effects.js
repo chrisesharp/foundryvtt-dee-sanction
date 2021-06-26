@@ -1,3 +1,25 @@
+export function createConsequenceEffect(resource, value, owner) {
+    const change = {key:`data.resource.${resource}.value`,mode:2,value:value};
+    const effectData =  {
+        icon: "icons/svg/aura.svg",
+        origin: owner.uuid,
+        duration: {
+          combat: undefined,
+          rounds: undefined,
+          seconds: undefined,
+          startRound: 1,
+          startTime: 0,
+          startTurn: 0,
+          turns: undefined
+        },
+        flags: {},
+        disabled: false,
+        transfer: true,
+        changes: [change]
+    };
+    return ActiveEffect.create(effectData, {parent: owner})
+}
+
 /**
  * Manage Active Effect instances through the Actor Sheet via effect control buttons.
  * @param {MouseEvent} event      The left-click event on the effect control
@@ -10,13 +32,14 @@ export function onManageActiveEffect(event, owner) {
     const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
     switch ( a.dataset.action ) {
         case "create":
-            return owner.createEmbeddedDocuments("ActiveEffect", [{
+            return ActiveEffect.create({
                 label: "New Effect",
                 icon: "icons/svg/aura.svg",
                 origin: owner.uuid,
                 "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
                 disabled: li.dataset.effectType === "inactive"
-            }]);
+            },
+            {parent:owner});
         case "edit":
         return effect.sheet.render(true);
         case "delete":
