@@ -101,10 +101,17 @@
               <a class="navbar-link" href="#items">Items & Abilities</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="#tables">Tables</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="#macros">Macros</a>
+              <a class="navbar-link" data-popover="#miscNavPop" href="#">Misc</a>
+              <div id="miscNavPop" class="popover">
+                <ul class="popover-list">
+                  <li class="popover-item">
+                    <a class="popover-link" href="#tables">Tables</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#macros">Macros</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -497,6 +504,9 @@
         <h2 id="macros" class="docs-header">Macros</h2>
         <p>The <em>Take a Chance</em> macro is provided for all occasions where one needs
           to take a chance, whether player or GM.
+        </p>
+        <p style="text-align: center;">
+          <img src="./images/take-a-chance.png" />
         </p>
         <p>If rolled by a player whose agent is on <em>zero hits</em>, a falter
         result will remind the player they should mark off a falter on their sheet.
