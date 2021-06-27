@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 27/6/21
+
+### Added
+
+- new Take-a-Chance macro for all occasions.
+
+### Changed
+
+- New actors should have their prototype token linked to actor data
+
+### Removed
+
 ## [1.0.2] - 26/6/21
 
 ### Added
