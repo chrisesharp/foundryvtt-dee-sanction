@@ -1,0 +1,16 @@
+name: "Take a Chance"
+type: script
+img: icons/svg/coins.svg
+command: |-
+    game.dee.DeeSanctionDice.sendRoll({
+      title: "Take a Chance",
+      formula: "1d6",
+      data: {
+        rollType:"take-a-chance",
+        actor: actor,
+        roll: {
+          type: "above",
+          target:4
+        }
+      }
+    });

@@ -21,6 +21,10 @@
                 <div class="consequence-roll" data-id="unravel" data-step="{{data.roll.step}}" data-actorid="{{data.actor._id}}">
                 </div>
                 {{/if}}
+                {{#if (eq data.rollType "take-a-chance")}}
+                <div class="consequence-roll flex-center" data-id="chance" data-actorid="{{data.actor._id}}">
+                </div>
+                {{/if}}
             {{/if}}
             {{#if result.isSuccess}}<div class='roll-result roll-success'><b>{{localize 'DEE.Success'}}</b></div>{{/if}}
         </div>

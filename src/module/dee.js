@@ -12,12 +12,14 @@ import { registerSettings } from "./settings.js";
 import { loadCompendia, unloadCompendia } from "./load-compendia.js"
 import { DeeCombat } from "./combat.js";
 import * as chat from "./chat.js";
+import { DeeSanctionDice } from "./dice.js";
 
 Hooks.once('init', async function() {
   console.log("Invoking The Dee Sanction...");
   game.dee = {
     DeeSanctionActor,
-    DeeSanctionItem
+    DeeSanctionItem,
+    DeeSanctionDice
   };
 
   /**
@@ -66,7 +68,7 @@ Hooks.once("ready", async function () {
     if (!game.user.isGM) return;
     const stage1 = ["Abilities","Armour","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"];
     const stage2 = ["Associations","Foci","Occupations","Humours"];
-    const stage3 = ["Outcomes","NPCs"];
+    const stage3 = ["Outcomes","NPCs","Macros"];
     const stages = [stage1, stage2, stage3];
     const doAll = async (f, initialized) => {
       for (let i=0; i < stages.length; i++) {

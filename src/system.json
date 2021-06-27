@@ -115,6 +115,13 @@
       "package": "dee",
       "path": "packs/humours.db",
       "entity": "RollTable"
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "package": "dee",
+      "path": "packs/macros.db",
+      "entity": "Macro"
     }
   ],
   "languages": [
