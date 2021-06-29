@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 29/6/21
+
+### Added
+
+### Changed
+
+- Make default permissions on imported compendia items to be Observer
+
+### Removed
+
 ## [1.0.4] - 27/6/21
 
 ### Added
