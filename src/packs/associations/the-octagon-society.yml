@@ -13,4 +13,7 @@ data:
     - 
       name: "Sleight-of-Hand"
       type: "ability"
+permission:
+    default: 2
+folder: "Associations"
 

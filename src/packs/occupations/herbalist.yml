@@ -16,4 +16,6 @@ commons and woodlands</p>"
     - 
       name: "Brewing"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

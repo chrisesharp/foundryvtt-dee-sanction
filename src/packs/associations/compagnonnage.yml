@@ -13,4 +13,6 @@ data:
     - 
       name: "Bargaining"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Associations"

@@ -16,4 +16,6 @@ and violent dispute</p>"
     - 
       name: "Goading"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

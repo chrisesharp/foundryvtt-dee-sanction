@@ -1,22 +1,23 @@
----
-  name: "Despiteful"
-  type: "consequence"
-  img: "/systems/dee/assets/default/icons/bones.png"
-  data: 
-    description: "unforgiving and driven to seek redress for any slight or wrong"
-    resource: "int"
-    potency: -1
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.int.value"
-          mode: 2
-          value: -1
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Despiteful"
-      transfer: true
-
+name: "Despiteful"
+type: "consequence"
+img: "/systems/dee/assets/default/icons/bones.png"
+data: 
+  description: "unforgiving and driven to seek redress for any slight or wrong"
+  resource: "int"
+  potency: -1
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.int.value"
+        mode: 2
+        value: -1
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Despiteful"
+    transfer: true
+permission:
+    default: 2
+folder: "Consequences"

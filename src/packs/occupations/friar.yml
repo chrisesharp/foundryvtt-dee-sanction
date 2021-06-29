@@ -16,4 +16,6 @@ beneficence</p>"
     - 
       name: "Gourmand"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

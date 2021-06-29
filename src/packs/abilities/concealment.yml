@@ -3,3 +3,6 @@ type: "ability"
 data:
   description: "<p>Concealment - expertise in the business of hiding/finding things.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
+permission:
+    default: 2
+folder: "Abilities"

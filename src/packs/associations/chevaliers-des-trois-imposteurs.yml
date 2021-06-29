@@ -13,4 +13,6 @@ data:
     - 
       name: "Eloquence"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Associations"

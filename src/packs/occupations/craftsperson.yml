@@ -15,4 +15,6 @@ products of saleable value</p>"
     - 
       name: "Reworking"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

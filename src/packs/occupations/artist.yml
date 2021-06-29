@@ -15,4 +15,7 @@ ideally with deep pockets</p>"
     - 
       name: "Nostalgia"
       type: "ability"
+permission:
+    default: 2
+folder: "Occupations"
 

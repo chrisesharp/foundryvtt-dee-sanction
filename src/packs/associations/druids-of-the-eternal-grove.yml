@@ -13,4 +13,7 @@ data:
     - 
       name: "Quieten the Common Beast"
       type: "ability"
+permission:
+    default: 2
+folder: "Associations"
 

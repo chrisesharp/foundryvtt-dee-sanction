@@ -1,22 +1,23 @@
----
-  name: "Morion"
-  type: "item"
-  img: "/systems/dee/assets/default/icons/kit.png"
-  data: 
-    description: "An open helm, as favoured by the Spaniard."
-    resource: "armour"
-    potency: -1
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.armour.value"
-          mode: 2
-          value: -1
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Morion"
-      transfer: true
-
+name: "Morion"
+type: "item"
+img: "/systems/dee/assets/default/icons/kit.png"
+data: 
+  description: "An open helm, as favoured by the Spaniard."
+  resource: "armour"
+  potency: -1
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.armour.value"
+        mode: 2
+        value: -1
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Morion"
+    transfer: true
+permission:
+    default: 2
+folder: "Armour"

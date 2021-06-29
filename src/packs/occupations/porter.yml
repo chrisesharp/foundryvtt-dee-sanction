@@ -15,4 +15,6 @@ prepare luggage for travellers of all standings</p>"
     - 
       name: "Negotiation"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

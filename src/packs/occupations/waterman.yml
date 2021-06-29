@@ -16,4 +16,6 @@ and narrow channels</p>"
     - 
       name: "Boating"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

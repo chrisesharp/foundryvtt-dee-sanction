@@ -15,4 +15,6 @@ drinking holes alike</p>"
     - 
       name: "Tomfoolery"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

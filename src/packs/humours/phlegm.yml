@@ -1,42 +1,43 @@
----
-  name: "Humour:Phlegm"
-  img: "icons/svg/d20-grey.svg"
-  description: "Ongoing effect when an agent falters on an unravelling die."
-  results: 
-    - 
-      type: 1
-      collection: "Item"
-      text: "Fat-witted"
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 1
-        - 2
-      drawn: false
-    - 
-      type: 1
-      collection: "Item"
-      text: "Canker-sorrowed"
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 3
-        - 4
-      drawn: false
-    - 
-      type: 1
-      collection: "Item"
-      text: "Unheedy"
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 5
-        - 6
-      drawn: false
-  formula: "1d6"
-  replacement: true
-  displayRoll: true
-
+name: "Humour:Phlegm"
+img: "icons/svg/d20-grey.svg"
+description: "Ongoing effect when an agent falters on an unravelling die."
+results: 
+  - 
+    type: 1
+    collection: "Item"
+    text: "Fat-witted"
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 1
+      - 2
+    drawn: false
+  - 
+    type: 1
+    collection: "Item"
+    text: "Canker-sorrowed"
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 3
+      - 4
+    drawn: false
+  - 
+    type: 1
+    collection: "Item"
+    text: "Unheedy"
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 5
+      - 6
+    drawn: false
+formula: "1d6"
+replacement: true
+displayRoll: true
+permission:
+    default: 2
+folder: "Humours"

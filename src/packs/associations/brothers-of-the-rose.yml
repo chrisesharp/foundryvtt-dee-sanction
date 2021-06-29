@@ -13,4 +13,7 @@ data:
     - 
       name: "Provocation"
       type: "ability"
+permission:
+    default: 2
+folder: "Associations"
 

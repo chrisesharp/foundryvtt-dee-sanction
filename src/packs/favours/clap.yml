@@ -3,3 +3,6 @@ type: "favour"
 data:
   description: "<p>Roar, Rumble, Crash, Distract, Flinch.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
+permission:
+    default: 2
+folder: "Favours"

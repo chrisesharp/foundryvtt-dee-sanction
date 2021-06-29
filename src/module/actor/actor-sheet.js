@@ -54,21 +54,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     };
     if (data.actor.type==="enemy") {
       if (sheetData.data.hitresolution.rolltable?.id === "") {
-        let rt;
-        if (sheetData.data.hitresolution.rolltable.name) {
-          rt = game.tables.getName(sheetData.data.hitresolution.rolltable.name) 
-        }
-        if (!rt) {
-          rt = game.tables.getName(CONFIG.DEE.defaultResolution);
-        }
-        const hitresolution = {
-          rolltable: {
-              id: rt.id,
-              name: rt.data.name,
-              description: rt.data.description,
-              img: rt.data.img
-          }
-        };
+        const hitresolution = this._findHitResolutionTable(sheetData.data.hitresolution);
         sheetData.data.hitresolution = hitresolution;
         await data.actor.update({data:{hitresolution: hitresolution}});
       }
@@ -76,14 +62,28 @@ export class DeeSanctionActorSheet extends ActorSheet {
     return sheetData;
   }
 
+  _findHitResolutionTable(hitresolution) {
+    let rt = (hitresolution.rolltable.name) ? game.tables.getName(hitresolution.rolltable.name) : null;
+    if (!rt) {
+      rt = game.tables.getName(CONFIG.DEE.defaultResolution);
+    }
+    return  {
+      rolltable: {
+          id: rt.id,
+          name: rt.data.name,
+          description: rt.data.description,
+          img: rt.data.img
+      }
+    };
+  }
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
 
     // Item summaries
-    html
-      .find('.item .item-name')
-      .click((event) => this._onItemSummary(event));
+    html.find('.item .item-name')
+        .click((event) => this._onItemSummary(event));
     
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
@@ -196,17 +196,17 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const item = this.actor.items.get(li.data("item-id"));
     const description = TextEditor.enrichHTML(item.data.data.description);
     const abilities = this.actor.getAbilities();
-    let options="";
-    if (item.type==="consequence") {
+    let options = "";
+    
+    if (item.type === "consequence") {
       const resource = game.i18n.localize(`DEE.resource.${item.data.data.resource}.long`);
       options += `<label>${resource} </label>`;
       options += `<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>${Math.abs(item.data.data.potency)}`;
-      
-      
     }
+
     if (["association","focus","occupation"].includes(item.type)) {
       item.data.data.abilities.forEach((i)=> {
-        let ability = abilities.filter(e => e.name===i.name);
+        const ability = abilities.filter(e => e.name===i.name);
         const checked = (ability.length > 0) ? check : empty;
         options += `${checked}&nbsp;<label style="font-size: 0.9em;" for="${i.id}" >${i.name}</label>&nbsp;`;
       });
@@ -219,10 +219,10 @@ export class DeeSanctionActorSheet extends ActorSheet {
       // Add item tags
       let div = $(
         `<div class="item-summary">
-        <div>
-        ${description}
-        </div>
-        ${options}
+          <div>
+            ${description}
+          </div>
+          ${options}
         </div>`
       );
       li.append(div.hide());
@@ -249,7 +249,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
           id: data._id,
           armour: data.data.resources.armour.value,
         }
-      
         target.potency = data.data.resistance.potency;
         target.hitresolution = data.data.hitresolution;
         target.consequences = data.data.consequences;

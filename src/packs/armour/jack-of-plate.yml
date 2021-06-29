@@ -1,22 +1,23 @@
----
-  name: "Jack of Plate"
-  type: "item"
-  img: "/systems/dee/assets/default/icons/kit.png"
-  data: 
-    description: "A jacket with small iron plates sewn into the lining."
-    resource: "armour"
-    potency: -3
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.armour.value"
-          mode: 2
-          value: -3
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Jack of Plate"
-      transfer: true
-
+name: "Jack of Plate"
+type: "item"
+img: "/systems/dee/assets/default/icons/kit.png"
+data: 
+  description: "A jacket with small iron plates sewn into the lining."
+  resource: "armour"
+  potency: -3
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.armour.value"
+        mode: 2
+        value: -3
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Jack of Plate"
+    transfer: true
+permission:
+    default: 2
+folder: "Armour"

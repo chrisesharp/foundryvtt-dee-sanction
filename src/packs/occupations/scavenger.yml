@@ -15,4 +15,6 @@ domestic waste</p>"
     - 
       name: "Night Working"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

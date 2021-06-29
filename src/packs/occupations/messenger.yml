@@ -15,4 +15,6 @@ and commodious gratuities</p>"
     - 
       name: "Traversing"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

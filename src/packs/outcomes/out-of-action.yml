@@ -1,69 +1,70 @@
----
-  name: "Out of Action Table"
-  img: "icons/svg/d20-grey.svg"
-  description: "Rolled when an agent has zero hits but has been stabilised."
-  results: 
-    - 
-      type: 0
-      text: "Stunned: Numb, Raving."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 1
-        - 1
-      drawn: false
-    - 
-      type: 0
-      text: "Senseless: Dazed, Fat-headed."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 2
-        - 2
-      drawn: false
-    - 
-      type: 0
-      text: "Fragile: Shaking, Exhausted."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 3
-        - 3
-      drawn: false
-    - 
-      type: 0
-      text: "Overcome: Mute, Humiliated."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 4
-        - 4
-      drawn: false
-    - 
-      type: 0
-      text: "Wasted: Unguarded, Fearful."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 5
-        - 5
-      drawn: false
-    - 
-      type: 0
-      text: "Blood-soaked: Gory, Oozing."
-      img: "/systems/dee/assets/default/icons/bones.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 6
-        - 6
-      drawn: false
-  formula: "1d6"
-  replacement: true
-  displayRoll: true
-
+name: "Out of Action Table"
+img: "icons/svg/d20-grey.svg"
+description: "Rolled when an agent has zero hits but has been stabilised."
+results: 
+  - 
+    type: 0
+    text: "Stunned: Numb, Raving."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 1
+      - 1
+    drawn: false
+  - 
+    type: 0
+    text: "Senseless: Dazed, Fat-headed."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 2
+      - 2
+    drawn: false
+  - 
+    type: 0
+    text: "Fragile: Shaking, Exhausted."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 3
+      - 3
+    drawn: false
+  - 
+    type: 0
+    text: "Overcome: Mute, Humiliated."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 4
+      - 4
+    drawn: false
+  - 
+    type: 0
+    text: "Wasted: Unguarded, Fearful."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 5
+      - 5
+    drawn: false
+  - 
+    type: 0
+    text: "Blood-soaked: Gory, Oozing."
+    img: "/systems/dee/assets/default/icons/bones.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 6
+      - 6
+    drawn: false
+formula: "1d6"
+replacement: true
+displayRoll: true
+permission:
+    default: 2
+folder: "Outcomes"

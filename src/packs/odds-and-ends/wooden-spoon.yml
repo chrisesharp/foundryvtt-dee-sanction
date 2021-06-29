@@ -5,3 +5,6 @@ data:
   esoteric: false
   quantity: 1
 img: "/systems/dee/assets/default/icons/kit.png"
+permission:
+    default: 2
+folder: "Odds and Ends"

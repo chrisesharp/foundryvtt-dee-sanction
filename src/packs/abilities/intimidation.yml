@@ -3,3 +3,6 @@ type: "ability"
 data:
   description: "<p>Intimidation - imposing presence and threat of harm to extract cooperation.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
+permission:
+    default: 2
+folder: "Abilities"

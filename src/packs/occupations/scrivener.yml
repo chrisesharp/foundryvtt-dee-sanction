@@ -16,4 +16,6 @@ the privilege of paperwork</p>"
     - 
       name: "Bureaucracy"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

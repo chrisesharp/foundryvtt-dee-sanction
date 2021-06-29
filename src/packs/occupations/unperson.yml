@@ -15,4 +15,6 @@ wealth of wit and wile</p>"
     - 
       name: "Street Smarts"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

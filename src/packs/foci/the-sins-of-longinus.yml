@@ -11,4 +11,6 @@ around the final days of the Christ</p>"
       name: "Theology"
       type: "ability"
 img: "/systems/dee/assets/default/icons/access.png"
-
+permission:
+    default: 2
+folder: "Foci"

@@ -34,13 +34,14 @@ export class DeeSanctionActor extends Actor {
   }
 
   // Armour is not cumulative in effect, so disable the weaker ones
+  // Effectiveness is measured as larger negative number
   /** @override */
   applyActiveEffects() {
     const armourEffects = {};
     let mostEffective = 0;
     let mostEffectiveId;
     this.effects.forEach (e=> {
-      let armourChanges = e.data.changes.filter(x=>x.key ==="data.resources.armour.value");
+      let armourChanges = e.data.changes.filter(x=>(x.key === "data.resources.armour.value"));
       if (armourChanges.length) {
         armourEffects[e.id] = e;
         let value = parseInt(e.data.changes[0].value)

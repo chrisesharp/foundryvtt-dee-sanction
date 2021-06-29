@@ -16,4 +16,6 @@ eyes for a profit</p>"
     - 
       name: "Animal Welfare"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

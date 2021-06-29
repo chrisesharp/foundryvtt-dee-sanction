@@ -15,4 +15,7 @@ master of the house</p>"
     - 
       name: "Hunting"
       type: "ability"
+permission:
+    default: 2
+folder: "Occupations"
 

@@ -1,22 +1,23 @@
----
-  name: "Sickly"
-  type: "consequence"
-  img: "/systems/dee/assets/default/icons/bones.png"
-  data: 
-    description: "trembling with an unshakeable chill; pale and drawn."
-    resource: "phy"
-    potency: -1
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.phy.value"
-          mode: 2
-          value: -1
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Sickly"
-      transfer: true
-
+name: "Sickly"
+type: "consequence"
+img: "/systems/dee/assets/default/icons/bones.png"
+data: 
+  description: "trembling with an unshakeable chill; pale and drawn."
+  resource: "phy"
+  potency: -1
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.phy.value"
+        mode: 2
+        value: -1
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Sickly"
+    transfer: true
+permission:
+    default: 2
+folder: "Consequences"

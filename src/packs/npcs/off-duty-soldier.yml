@@ -1,39 +1,38 @@
----
-  name: "Off-Duty Soldier"
-  type: "enemy"
-  img: "systems/dee/assets/default/tokens/21.png"
-  data: 
-    hits: 
-      value: 2
+name: "Off-Duty Soldier"
+type: "enemy"
+img: "systems/dee/assets/default/tokens/21.png"
+data: 
+  hits: 
+    value: 2
+    min: 0
+    max: 3
+  falters: 
+    first: false
+    second: false
+  description: ""
+  resources: 
+    armour: 
+      value: 6
       min: 0
-      max: 3
-    falters: 
-      first: false
-      second: false
-    description: ""
-    resources: 
-      armour: 
-        value: 6
-        min: 0
-        max: 6
-    resistance: 
-      potency: 0
-      mark: 
-        S: false
-        K: false
-        V: false
-        M: false
-        A: false
-        C: false
-    hitresolution: 
-      rolltable: 
-        name: "Default Resolution Table"
-        img: "icons/svg/d20-grey.svg"
-        description: "Rolled when an agent falters in a challenge to attack or defend."
-  token: 
-    name: "Off-Duty Soldier"
-    img: "systems/dee/assets/default/tokens/21.png"
-    disposition: -1
-  items: []
-  effects: []
+      max: 6
+  resistance: 
+    potency: 0
+    mark: 
+      S: false
+      K: false
+      V: false
+      M: false
+      A: false
+      C: false
+  hitresolution: 
+    rolltable: 
+      name: "Default Resolution Table"
+      img: "icons/svg/d20-grey.svg"
+      description: "Rolled when an agent falters in a challenge to attack or defend."
+token: 
+  name: "Off-Duty Soldier"
+  img: "systems/dee/assets/default/tokens/21.png"
+  disposition: -1
+items: []
+effects: []
 

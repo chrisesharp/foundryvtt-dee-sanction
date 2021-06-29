@@ -1,21 +1,23 @@
----
-  name: "Broken bone"
-  type: "consequence"
-  img: "/systems/dee/assets/default/icons/bones.png"
-  data: 
-    description: "Broken bone. Requires a doctor to remove."
-    resource: "phy"
-    potency: -1
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.phy.value"
-          mode: 2
-          value: -1
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Broken bone"
-      transfer: true
+name: "Broken bone"
+type: "consequence"
+img: "/systems/dee/assets/default/icons/bones.png"
+data: 
+  description: "Broken bone. Requires a doctor to remove."
+  resource: "phy"
+  potency: -1
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.phy.value"
+        mode: 2
+        value: -1
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Broken bone"
+    transfer: true
+permission:
+    default: 2
+folder: "Consequences"

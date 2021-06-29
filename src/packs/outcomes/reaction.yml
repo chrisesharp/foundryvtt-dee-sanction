@@ -1,99 +1,100 @@
----
-  name: "NPC Reaction Table"
-  img: "icons/svg/d20-grey.svg"
-  description: "Rolled when an agent has zero hits but has been stabilised."
-  results: 
-    - 
-      type: 0
-      text: "Flee: shy, scared, circumspect."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 1
-        - 1
-      drawn: false
-    - 
-      type: 0
-      text: "Avoid: guilty, demoralised."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 2
-        - 2
-      drawn: false
-    - 
-      type: 0
-      text: "Testing: wary, questioning."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 3
-        - 3
-      drawn: false
-    - 
-      type: 0
-      text: "Quid Pro Quo: trade, gossip."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 4
-        - 4
-      drawn: false
-    - 
-      type: 0
-      text: "Neutral: indifferent, undecided."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 5
-        - 6
-      drawn: false
-    - 
-      type: 0
-      text: "Convert: subvert, persuade."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 7
-        - 7
-      drawn: false
-    - 
-      type: 0
-      text: "Mischief: mislead, ill will."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 8
-        - 8
-      drawn: false
-    - 
-      type: 0
-      text: "Rob: deprive, subdue, hinder."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 9
-        - 9
-      drawn: false
-    - 
-      type: 0
-      text: "Hate: kill, destroy, sacrifice."
-      img: "/systems/dee/assets/default/icons/access.png"
-      resultId: ""
-      weight: 1
-      range: 
-        - 10
-        - 10
-      drawn: false
-  formula: "1d10"
-  replacement: true
-  displayRoll: true
-
+name: "NPC Reaction Table"
+img: "icons/svg/d20-grey.svg"
+description: "Rolled when an agent has zero hits but has been stabilised."
+results: 
+  - 
+    type: 0
+    text: "Flee: shy, scared, circumspect."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 1
+      - 1
+    drawn: false
+  - 
+    type: 0
+    text: "Avoid: guilty, demoralised."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 2
+      - 2
+    drawn: false
+  - 
+    type: 0
+    text: "Testing: wary, questioning."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 3
+      - 3
+    drawn: false
+  - 
+    type: 0
+    text: "Quid Pro Quo: trade, gossip."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 4
+      - 4
+    drawn: false
+  - 
+    type: 0
+    text: "Neutral: indifferent, undecided."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 5
+      - 6
+    drawn: false
+  - 
+    type: 0
+    text: "Convert: subvert, persuade."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 7
+      - 7
+    drawn: false
+  - 
+    type: 0
+    text: "Mischief: mislead, ill will."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 8
+      - 8
+    drawn: false
+  - 
+    type: 0
+    text: "Rob: deprive, subdue, hinder."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 9
+      - 9
+    drawn: false
+  - 
+    type: 0
+    text: "Hate: kill, destroy, sacrifice."
+    img: "/systems/dee/assets/default/icons/access.png"
+    resultId: ""
+    weight: 1
+    range: 
+      - 10
+      - 10
+    drawn: false
+formula: "1d10"
+replacement: true
+displayRoll: true
+permission:
+    default: 2
+folder: "Outcomes"

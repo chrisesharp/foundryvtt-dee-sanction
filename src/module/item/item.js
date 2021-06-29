@@ -36,10 +36,12 @@ export class DeeSanctionItem extends Item {
         itemData.img = CONST.DEFAULT_TOKEN;
         break;
     }
+
     if (itemData.data.abilities) {
       let abilities = this._prepContainer(itemData);
       itemData.update({data:{abilities:abilities}});
     }
+
     if (itemData.effects) {
       itemData.effects.forEach(async (e) => {
         try {
@@ -52,14 +54,14 @@ export class DeeSanctionItem extends Item {
   _prepContainer(itemData) {
     let abilities = deepClone(itemData.data.abilities);
     if (game.items) {
-      abilities.forEach(entry => {
-        if (!entry._id) {
-          let item = game.items.find(i => i.type==="ability" && i.name===entry.name);
+      abilities.filter(e=>!e._id).forEach(entry => {
+        // if (!entry._id) {
+          const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
           if (item) {
             entry._id = item.data._id;
             entry.img = item.img;
           }
-        }
+        // }
       });
     }
     return abilities;

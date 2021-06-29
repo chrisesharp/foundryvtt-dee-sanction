@@ -13,4 +13,6 @@ fae.</p>"
       name: "Deception"
       type: "ability"
 img: "/systems/dee/assets/default/icons/access.png"
-
+permission:
+    default: 2
+folder: "Foci"

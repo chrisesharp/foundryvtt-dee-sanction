@@ -12,4 +12,6 @@ Truth at the heart of the Universe</p>"
       name: "Navigation"
       type: "ability"
 img: "/systems/dee/assets/default/icons/access.png"
-
+permission:
+    default: 2
+folder: "Foci"

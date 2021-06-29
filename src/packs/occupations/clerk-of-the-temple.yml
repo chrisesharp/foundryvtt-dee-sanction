@@ -15,4 +15,7 @@ stomach and a tenacious head lock</p>"
     - 
       name: "Carousing"
       type: "ability"
+permission:
+    default: 2
+folder: "Occupations"
 

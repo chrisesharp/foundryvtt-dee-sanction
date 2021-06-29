@@ -15,4 +15,6 @@ depth of medical knowledge</p>"
     - 
       name: "Diagnosis"
       type: "ability"
-
+permission:
+    default: 2
+folder: "Occupations"

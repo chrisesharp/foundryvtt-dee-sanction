@@ -1,22 +1,23 @@
----
-  name: "Buckler"
-  type: "item"
-  img: "/systems/dee/assets/default/icons/kit.png"
-  data: 
-    description: "A small buckler shield."
-    resource: "armour"
-    potency: -2
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.armour.value"
-          mode: 2
-          value: -2
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Buckler"
-      transfer: true
-
+name: "Buckler"
+type: "item"
+img: "/systems/dee/assets/default/icons/kit.png"
+data: 
+  description: "A small buckler shield."
+  resource: "armour"
+  potency: -2
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.armour.value"
+        mode: 2
+        value: -2
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Buckler"
+    transfer: true
+permission:
+    default: 2
+folder: "Armour"

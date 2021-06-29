@@ -15,4 +15,7 @@ a simple cut and shave</p>"
     - 
       name: "Astrology"
       type: "ability"
+permission:
+    default: 2
+folder: "Occupations"
 

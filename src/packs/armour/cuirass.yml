@@ -1,22 +1,23 @@
----
-  name: "Cuirass"
-  type: "item"
-  img: "/systems/dee/assets/default/icons/kit.png"
-  data: 
-    description: "A sturdy breastplate."
-    resource: "armour"
-    potency: -4
-  effects:
-    - 
-      changes: 
-        - 
-          key: "data.resources.armour.value"
-          mode: 2
-          value: -4
-      disabled: false
-      duration: 
-        startTime: 0
-      icon: "icons/svg/aura.svg"
-      name: "Cuirass"
-      transfer: true
-
+name: "Cuirass"
+type: "item"
+img: "/systems/dee/assets/default/icons/kit.png"
+data: 
+  description: "A sturdy breastplate."
+  resource: "armour"
+  potency: -4
+effects:
+  - 
+    changes: 
+      - 
+        key: "data.resources.armour.value"
+        mode: 2
+        value: -4
+    disabled: false
+    duration: 
+      startTime: 0
+    icon: "icons/svg/aura.svg"
+    name: "Cuirass"
+    transfer: true
+permission:
+    default: 2
+folder: "Armour"
