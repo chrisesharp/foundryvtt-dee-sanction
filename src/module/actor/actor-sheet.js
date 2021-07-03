@@ -1,4 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
+import { generator } from "../generator.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -90,6 +91,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
+
+    // Random Mannerism
+    html.find('#manner-roll').click(this._onGenerate.bind(this));
+
+    // Random Home
+    html.find('#home-roll').click(this._onGenerate.bind(this));
+
+    // Random Name
+    html.find('#name-roll').click(this._onGenerate.bind(this));
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -230,6 +240,19 @@ export class DeeSanctionActorSheet extends ActorSheet {
     }
     li.toggleClass("expanded");
   }
+
+  /**
+   * Handle random mannerism.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+   async _onGenerate(event) {
+    const element = $(event.currentTarget);
+    const id = element.attr('id');
+    const newData = generator(id);
+    await this.actor.update(newData);
+    // $(`#${id}`).fadeOut("medium");
+   }
 
   /**
    * Handle clickable rolls.

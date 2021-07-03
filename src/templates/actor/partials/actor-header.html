@@ -20,17 +20,24 @@
         <div class="actor-portrait">
             <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         </div>
-        <div class="actor-name">
-            <h3 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h3>
+        <div class="actor-name" style="display: inline-flex;">
+            <h3 class="charname" style="display: contents;"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h3>
+            <i id="name-roll" class="fas fa-dice generate" style="padding-top: 4px;"></i>
         </div>
         <div class="actor-occupation">
             <h3 class="occupation">{{data.occupation}}</h3>
         </div>
-        <div class="actor-home">
-            <h3 class="home"><input name="data.home" type="text" value="{{data.home}}" placeholder="Home town" data-dtype="String"/></h3>
+        <div class="actor-home" style="display: inline-flex;">
+            <h3 class="home" style="display: contents;"><input name="data.home" type="text" value="{{data.home}}" placeholder="Home town" data-dtype="String"/></h3>
+            {{#if (eq data.home "") }}
+            <i id="home-roll" class="fas fa-dice generate" style="padding-top: 4px;"></i>
+            {{/if}}
         </div>
-        <div class="actor-manner">
-            <h3 class="manner"><input name="data.mannerism" type="text" value="{{data.mannerism}}" data-dtype="String" placeholder="Mannerism"/></h3>
+        <div class="actor-manner" style="display: inline-flex;">
+           <h3 class="manner" style="display: contents;"><input name="data.mannerism.detail" type="text" value="{{data.mannerism.detail}}" data-dtype="String" placeholder="Mannerism"/></h3>
+           {{#if (eq data.mannerism.detail "") }}
+           <i id="manner-roll" class="fas fa-dice generate" style="padding-top: 4px;"></i>
+           {{/if}}
         </div>
     </div>
 </div>

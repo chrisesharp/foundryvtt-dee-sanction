@@ -18,9 +18,12 @@
       "templates": ["base"],
       "occupation": "",
       "description": "",
-      "home": "Colchester",
+      "home": "",
       "tradecraft": "",
-      "mannerism": "",
+      "mannerism": {
+        "humour": "",
+        "detail": ""
+      },
       "fortune": 1,
       "resources": {
         "int": {
