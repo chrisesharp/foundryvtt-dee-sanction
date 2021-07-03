@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 3/7/21
+
+### Added
+
+- Random home, mannerism and name generators
+
+### Changed
+
+### Removed
+
 ## [1.0.5] - 29/6/21
 
 ### Added
