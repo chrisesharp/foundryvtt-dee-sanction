@@ -289,7 +289,7 @@ const surnames = [
     "Yaxley",
 ]
 
-export async function generator(type) {
+export function generator(type) {
     switch (type) {
         case "manner-roll":
             const humours = Object.keys(mannerisms);
