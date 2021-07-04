@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 3/7/21
+
+### Added
+
+- Added locking of sheet
+- Random possessions, focus, favours, occupations and associations
+
+### Changed
+
+### Removed
+
 ## [1.0.6] - 3/7/21
 
 ### Added
