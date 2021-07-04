@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
-import { generator, randomPossessions } from "../generator.js";
+import { generator, randomPossessions, randomThing } from "../generator.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -174,26 +174,44 @@ export class DeeSanctionActorSheet extends ActorSheet {
    */
    async _onRandomPossession(event) {
     event.preventDefault();
-    const template = "/systems/dee/templates/dialog/possessions-dialog.html";
-    const content = await renderTemplate(template);
-    //show welcome dialog and set initialized to true
-    let d = new Dialog({
-      title: "Randomly choose possessions",
-      content: content,
-      buttons: {
-        one: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Randomly Roll for Possessions",
-          callback: (html) => randomPossessions(this.actor, html)
-        },
-      },
-      default: "one"
-    }, {
-      width: 550,
-      height: 180,
-      resizable: false,
-    });
-    d.render(true);
+    const target = event.currentTarget;
+    const targetType = $(target).data('type');
+    switch (targetType) {
+      case "item":
+        const template = "/systems/dee/templates/dialog/possessions-dialog.html";
+        const content = await renderTemplate(template);
+    
+        //show welcome dialog and set initialized to true
+        let d = new Dialog({
+          title: "Randomly choose possessions",
+          content: content,
+          buttons: {
+            one: {
+              icon: '<i class="fas fa-check"></i>',
+              label: "Randomly Roll for Possessions",
+              callback: (html) => { 
+                randomPossessions(this.actor, html); 
+              }
+            },
+          },
+          default: "one"
+        }, {
+          width: 550,
+          height: 180,
+          resizable: false,
+        });
+        d.render(true);
+        return;
+      case "association":
+        return randomThing(this.actor, "Associations");
+      case "favour":
+        return randomThing(this.actor, "Favours");
+      case "occupation":
+        return randomThing(this.actor, "Occupations");
+      case "focus":
+        return randomThing(this.actor, "Foci");
+    }
+    
   }
 
   /**
@@ -297,7 +315,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const id = element.attr('id');
     const newData = generator(id);
     await this.actor.update(newData);
-    // $(`#${id}`).fadeOut("medium");
    }
 
   /**

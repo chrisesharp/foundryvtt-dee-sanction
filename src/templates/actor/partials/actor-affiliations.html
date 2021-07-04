@@ -3,9 +3,11 @@
     <ol class="items-list">
         <li class="flexrow item-header">
             <div class="fortune-header" title="{{ localize 'DEE.AffiliationsDetail'}}">{{ localize 'DEE.Affiliations'}}</div>
+            {{#if (unlocked actor) }}
             <div class="item-controls">
-            <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.tab.affiliations'}}" data-type="association"><i class="fas fa-plus"></i></a>
+            <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.affiliations'}}" data-type="association"><i class="fas fa-dice"></i></a>
             </div>
+            {{/if}}
         </li>
 
     {{#each data.affiliations as |item id|}}
@@ -14,8 +16,8 @@
                 <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
                 <h4 class="item-name">{{item.name}}</h4>
                 <div class="item-controls">
-                    <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tab.affiliations'}}"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tab.affiliations'}}"><i class="fas fa-trash"></i></a>
+                    <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.affiliations'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.affiliations'}}"><i class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>

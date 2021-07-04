@@ -309,6 +309,10 @@ export async function generator(type) {
 
 export async function randomPossessions(actor, html) {
     const checks = $(html).find('input[name="possessions"]:checked');
+    if (checks.length > 3) {
+        ui.notifications.warn("You must choose three or less!");
+        return false;
+    }
     const types = [];
     checks.map(function() {
         types.push($(this).val());
@@ -329,5 +333,18 @@ export async function randomPossessions(actor, html) {
     }));
     if (items.length) {
         return await actor.createEmbeddedDocuments("Item",items);
+    }
+}
+
+export async function randomThing(actor, type) {
+    const folder = game.folders.getName(type);
+    if (folder) {
+        const rt = await RollTable.fromFolder(folder,{temporary:true,renderSheet:false});
+        const roll = await rt.roll({async:true});
+        const res = roll.results[0].data;
+        const item = game.items.getName(res.text);
+        if (item) {
+            return await actor.createEmbeddedDocuments("Item",[item.toObject()]);
+        }
     }
 }

@@ -4,7 +4,7 @@
         <li class="flexrow item-header">
             <div class="fortune-header" title="{{ localize 'DEE.DragAbilities'}}">{{ localize 'DEE.Expertise'}}</div>
             <div class="item-controls">
-            <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.tab.abilities'}}" data-type="ability"><i class="fas fa-plus"></i></a>
+            <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.abilities'}}" data-type="ability"><i class="fas fa-plus"></i></a>
             </div>
         </li>
     {{#each data.abilities as |item id|}}
@@ -13,8 +13,8 @@
                 <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
                 <h4 class="item-name">{{item.name}}</h4>
                 <div class="item-controls">
-                    <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tab.abilities'}}"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tab.abilities'}}"><i class="fas fa-trash"></i></a>
+                    <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.abilities'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.abilities'}}"><i class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>
@@ -31,9 +31,16 @@
             </div>
         </div>
     </div>
-    <div class="focus">
-        <div class="fortune-header" title="{{ localize 'DEE.FocusDetail'}}">{{ localize 'DEE.Focus'}}</div>
+    <div class="focus"> 
         <ol class="items-list">
+            <li class="flexrow item-header">
+                <div class="fortune-header" title="{{ localize 'DEE.FocusDetail'}}">{{ localize 'DEE.Focus'}}</div>
+                {{#if (unlocked actor) }}
+                <div class="item-controls">
+                    <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="focus"><i class="fas fa-dice"></i></a>
+                </div>
+                {{/if}}
+            </li>
             {{#each data.expertise.foci as |focus id|}}
             <li class="item-entry flexcol" data-item-id="{{focus.id}}">
                 <div class="item flexrow">
@@ -49,8 +56,15 @@
     </div>
     <div></div>
     <div class="occupations">
-        <div class="fortune-header" title="{{ localize 'DEE.OccupationsDetail'}}">{{ localize 'DEE.Occupations'}}</div>
         <ol class="items-list">
+            <li class="flexrow item-header">
+                <div class="fortune-header" title="{{ localize 'DEE.OccupationsDetail'}}">{{ localize 'DEE.Occupations'}}</div>
+                {{#if (unlocked actor) }}
+                <div class="item-controls">
+                    <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="occupation"><i class="fas fa-dice"></i></a>
+                </div>
+                {{/if}}
+            </li>
             {{#each data.expertise.occupations as |occupation id|}}
             <li class="item-entry flexcol" data-item-id="{{occupation.id}}">
                 <div class="item flexrow">
