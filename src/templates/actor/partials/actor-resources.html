@@ -5,8 +5,14 @@
         <img class="resource-bg" src="/systems/dee/assets/default/resource.png">
         <div class="resource-content resource-die flexrow flex-center">
             <div class="flexcol" data-resource="int">
+                {{#if (unlocked actor) }}
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                {{else}}
+                <span style="font-size: 2.8em; color: white;">
+                    <i class="fas fa-caret-right"></i>
+                </span>
+                {{/if}}
             </div>
             <img class="step rollable" src="{{die data.resources.int.value}}" width="64" height="64" data-roll="{{data.resources.int.value}}" data-label="{{ localize 'DEE.resource.int.long' }}" data-resource="int" title="{{ localize 'DEE.resource.roll.int'}}" >
         </div>
@@ -17,8 +23,14 @@
         <img class="resource-bg" src="/systems/dee/assets/default/resource.png">
         <div class="resource-content resource-die flexrow flex-center">
             <div class="flexcol" data-resource="phy">
+                {{#if (unlocked actor) }}
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                {{else}}
+                <span style="font-size: 2.8em; color: white;">
+                    <i class="fas fa-caret-right"></i>
+                </span>
+                {{/if}}
             </div>
             <img class="step rollable" src="{{die data.resources.phy.value}}" width="64" height="64"data-roll="{{data.resources.phy.value}}" data-label="{{ localize 'DEE.resource.phy.long' }}" data-resource="phy" title="{{ localize 'DEE.resource.roll.phy'}}" >
         </div>
@@ -29,16 +41,24 @@
         <img class="resource-bg" src="/systems/dee/assets/default/resource.png">
         <div class="resource-content resource-die flexrow flex-center flex-between">
             <div class="flexcol" data-resource="sup">
+                {{#if (unlocked actor) }}
                 <a class="step-up"><i class="fas fa-caret-up"></i></a>
                 <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                {{else}}
+                <span style="font-size: 2.8em; color: white;">
+                    <i class="fas fa-caret-right"></i>
+                </span>
+                {{/if}}
             </div>
             <img class="step rollable" src="{{die data.resources.sup.value}}" width="64" height="64" data-roll="{{data.resources.sup.value}}" data-label="{{ localize 'DEE.resource.sup.long' }}" data-resource="sup" title="{{ localize 'DEE.resource.roll.sup'}}" >
         </div>
         <label for="data.resources.sup.value" class="resource-label">&nbsp;{{ localize 'DEE.resource.sup.long' }}</label>
     </div>
+    {{#if (unlocked actor) }}
     <div class="resource-balance">
         <i class="{{balance data.resources}}" title="Resources {{balanceTip data.resources}}"></i>
     </div>
+    {{/if}}
 </div>
 {{!-- injuries and consequences --}}
 <div class="sheet-injuries-table">

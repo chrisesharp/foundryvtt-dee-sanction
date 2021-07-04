@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
-import { generator } from "../generator.js";
+import { generator, randomPossessions } from "../generator.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -92,6 +92,9 @@ export class DeeSanctionActorSheet extends ActorSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
+    // lock sheet
+    html.find('#padlock').click(this._onToggleLock.bind(this));
+
     // Random Mannerism
     html.find('#manner-roll').click(this._onGenerate.bind(this));
 
@@ -103,6 +106,9 @@ export class DeeSanctionActorSheet extends ActorSheet {
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
+
+    // Add Inventory Item
+    html.find('.item-rnd').click(this._onRandomPossession.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -160,6 +166,35 @@ export class DeeSanctionActorSheet extends ActorSheet {
     return this.actor.update({id:this.actor.id, data:newData});
   }
   /* -------------------------------------------- */
+
+  /**
+   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
+   * @param {Event} event   The originating click event
+   * @private
+   */
+   async _onRandomPossession(event) {
+    event.preventDefault();
+    const template = "/systems/dee/templates/dialog/possessions-dialog.html";
+    const content = await renderTemplate(template);
+    //show welcome dialog and set initialized to true
+    let d = new Dialog({
+      title: "Randomly choose possessions",
+      content: content,
+      buttons: {
+        one: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Randomly Roll for Possessions",
+          callback: (html) => randomPossessions(this.actor, html)
+        },
+      },
+      default: "one"
+    }, {
+      width: 550,
+      height: 180,
+      resizable: false,
+    });
+    d.render(true);
+  }
 
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
@@ -240,6 +275,17 @@ export class DeeSanctionActorSheet extends ActorSheet {
     }
     li.toggleClass("expanded");
   }
+
+  /**
+   * Handle sheet locking.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+   async _onToggleLock(event) {
+    const flag = this.actor.getFlag("dee","sheetlock");
+    this.actor.setFlag("dee","sheetlock",!flag);
+    // $(`#${id}`).fadeOut("medium");
+   }
 
   /**
    * Handle random mannerism.

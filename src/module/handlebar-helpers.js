@@ -16,6 +16,10 @@ export const registerHandlebarHelpers = async function () {
         return (0 < a && a < 6);
     });
 
+    Handlebars.registerHelper("unlocked", function (actor) {
+        return actor.getFlag("dee","sheetlock");
+    });
+
     Handlebars.registerHelper('concat', function() {
         var outStr = '';
         for (var arg in arguments) {
