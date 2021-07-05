@@ -207,7 +207,8 @@ export class DeeSanctionActorSheet extends ActorSheet {
       case "favour":
         return randomThing(this.actor, "Favours");
       case "occupation":
-        return randomThing(this.actor, "Occupations");
+        const occupation = await randomThing(this.actor, "Occupations");
+        return this.actor.update({data:{occupation:occupation[0].name}});
       case "focus":
         return randomThing(this.actor, "Foci");
     }

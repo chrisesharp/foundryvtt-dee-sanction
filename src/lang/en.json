@@ -93,5 +93,9 @@
 
     "DEE.chance.first": "{actor} should mark off their first falter!",
     "DEE.chance.second": "{actor} should mark off their second falter!",
-    "DEE.chance.dead": "{actor} has shuffled off this mortal coil!"
+    "DEE.chance.dead": "{actor} has shuffled off this mortal coil!",
+
+    "DEE.dialog.partysheet": "Agents of Dee",
+    "DEE.dialog.selectagents": "Select your Agents",
+    "DEE.dialog.selecttradecraft": "Select Tradecraft for the Adventure"
 }
