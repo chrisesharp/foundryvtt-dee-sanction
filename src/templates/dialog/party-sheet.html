@@ -47,12 +47,16 @@
           </div>
           <div class="field-row" title="{{localize 'DEE.Hits'}}">
             {{#if (eq e.data.type 'agent')}}
+               <i class="fas fa-star" title="{{localize 'DEE.Fortune'}}"></i>
+              {{ e.data.data.fortune}}
               <i class="fas fa-brain" title="{{localize 'DEE.resource.int.long'}}"></i>
               {{ e.data.data.resources.int.value}}
               <i class="fas fa-fist-raised" title="{{localize 'DEE.resource.phy.long'}}"></i>
               {{ e.data.data.resources.phy.value }}
               <i class="fas fa-ghost" title="{{localize 'DEE.resource.sup.long'}}"></i>
               {{ e.data.data.resources.sup.value}}
+              <i class="fas fa-dice-d6" title="{{localize 'DEE.resource.unravel.long'}}"></i>
+              {{e.data.data.resources.unravel.value}}
             {{/if}}
             <i class="fas fa-heart"></i>
             {{e.data.data.hits.value}}
@@ -66,23 +70,30 @@
         </div>
         <div class="field-row flexrow">
           <div class="field-longer">
-            <em>Af:</em>
             {{#each e.data.data.affiliations as |s i|}}
-            <span title="{{localize 'DEE.tabs.affiliations'}}"> {{s.name}}</span>
+            <span title="{{localize 'DEE.tabs.affiliations'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
             {{/each}}
           </div>
           <div class="field-longer">
-            <em>Fc:</em> 
             {{#each e.data.data.expertise.foci as |s i|}}
-            <span title="{{localize 'DEE.Focus'}}"> {{s.name}}</span>
+            <span title="{{localize 'DEE.Focus'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
             {{/each}}
           </div>
           <div class="field-longer">
-            <em>Fv:</em> 
             {{#each e.data.data.favours as |s i|}}
-            <span title="{{localize 'DEE.Favour'}}"> {{s.name}}</span>
+            <span title="{{localize 'DEE.Favour'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
             {{/each}}
           </div>
+        </div>
+        <div class="field-row flexrow">
+          {{#each e.data.data.abilities as |s i|}}
+          <span><img src="{{s.img}}" width="10px">{{s.name}} </span>
+          {{/each}}
+        </div>
+        <div class="field-row flexrow">
+          {{#each e.data.data.consequences as |s i|}}
+          <span><img src="{{s.img}}" width="10px">{{s.name}} </span>
+          {{/each}}
         </div>
       </div>
     </li>

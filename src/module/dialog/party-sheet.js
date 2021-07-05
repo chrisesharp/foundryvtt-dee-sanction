@@ -94,6 +94,12 @@ export class DeeSanctionPartySheet extends FormApplication {
       const opt = $('#tradecraft-sel').val();
       const trade = CONFIG.DEE.tradecraft[opt]; 
       await game.user.setFlag("dee","tradecraft",trade);
+      $('li.actor').each(async function() {
+        const actorId = $(this).data('actor-id');
+        if (actorId) {
+          await game.actors.get(actorId).update({data:{tradecraft:trade}});
+        }
+      } );
       this.render(true);
     });
   }
