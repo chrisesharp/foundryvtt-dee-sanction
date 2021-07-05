@@ -12,6 +12,11 @@ export const registerHandlebarHelpers = async function () {
         return Math.abs(a);
     });
 
+    Handlebars.registerHelper("player", function (id) {
+        const player = game.users.players.find(p=>p.character.id===id);
+        return (player) ? player.name: "";
+    });
+
     Handlebars.registerHelper("hasArmour", function (a) {
         return (0 < a && a < 6);
     });

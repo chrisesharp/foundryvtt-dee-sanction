@@ -11,7 +11,8 @@ import { DEE } from "./config.js";
 import { registerSettings } from "./settings.js";
 import { loadCompendia, unloadCompendia } from "./load-compendia.js"
 import { DeeCombat } from "./combat.js";
-import * as chat from "./chat.js";
+import { addChatConsequenceButton } from "./chat.js";
+import * as party from "./party.js";
 import { DeeSanctionDice } from "./dice.js";
 
 Hooks.once('init', async function() {
@@ -114,7 +115,7 @@ Hooks.once("ready", async function () {
 
 });
 
-Hooks.on("renderChatMessage", chat.addChatConsequenceButton);
+Hooks.on("renderChatMessage", addChatConsequenceButton);
 Hooks.on("renderCombatTracker", DeeCombat.format);
 Hooks.on("preCreateCombatant", (combatant, data, options, id) => {
     DeeCombat.addCombatant(combatant, data, options, id);
@@ -123,6 +124,10 @@ Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
 
 // License and KOFI infos
 Hooks.on("renderSidebarTab", async (object, html) => {
+  if (object instanceof ActorDirectory) {
+    party.addControl(object, html);
+  }
+
   if (object instanceof Settings) {
     let gamesystem = html.find("#game-details");
     // License text

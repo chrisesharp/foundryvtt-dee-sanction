@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.8] - 5/7/21
+
+### Added
+
+- Initial party sheet capability
+- Can set all agents tradecraft from party sheet
+
+### Changed
+
+### Removed
+
 ## [1.0.7] - 3/7/21
 
 ### Added
