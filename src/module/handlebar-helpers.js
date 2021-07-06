@@ -13,7 +13,7 @@ export const registerHandlebarHelpers = async function () {
     });
 
     Handlebars.registerHelper("player", function (id) {
-        const player = game.users.players.find(p=>p.character.id===id);
+        const player = game.users.players.find(p=>p.character?.id===id);
         return (player) ? player.name: "";
     });
 
