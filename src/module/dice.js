@@ -1,4 +1,4 @@
-import { DiceDialog } from "./dice-dialog.js";
+import { DiceDialog } from "./dialog/dice-dialog.js";
 
 export class DeeSanctionDice {
     static async Roll({
