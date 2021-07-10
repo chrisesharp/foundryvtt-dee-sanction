@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.9] - 10/7/21
+
+### Added
+
+- Additional tabs on partysheet for abilities and possessions matrices
+
+### Changed
+
+- Can only set agent tradecraft if the agent is not in a party and the sheet is unlocked
+
+### Removed
+
 ## [1.0.8] - 5/7/21
 
 ### Added
