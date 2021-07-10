@@ -56,6 +56,17 @@ export const registerHandlebarHelpers = async function () {
         return CONFIG.DEE.icons[trade];
     });
 
+    Handlebars.registerHelper('inParty', function(actor) {
+        return actor.getFlag('dee','party');
+    });
+
+    Handlebars.registerHelper('possIcon', function(i) {
+        if (i.endsWith('*')) {
+            const text = i.substr(0, i.length - 1);
+            return new Handlebars.SafeString(`<span title="${game.i18n.localize('DEE.tabs.esoterica')}">${text}<img src="/systems/dee/assets/default/icons/magic.png" width="10px"></span>`);
+        }
+        return i;
+    });
 
     Handlebars.registerHelper('ability', function(ability) {
         let item = game.items.find(i => i.type==="ability" && i.name===ability);
@@ -84,5 +95,9 @@ export const registerHandlebarHelpers = async function () {
             case 1:
                 return "are too high";   
         }
+    });
+
+    Handlebars.registerHelper('contains', function(e, arr) {
+        return arr.includes(e);
     });
 }

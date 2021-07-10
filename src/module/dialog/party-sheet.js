@@ -4,12 +4,12 @@ export class DeeSanctionPartySheet extends FormApplication {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dee", "dialog", "party-sheet"],
       template: "systems/dee/templates/dialog/party-sheet.html",
-      width: 400,
+      width: 630,
       height: 350,
       resizable: true,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "summary" }]
     });
   }
-
   /* -------------------------------------------- */
 
   /**
@@ -31,8 +31,33 @@ export class DeeSanctionPartySheet extends FormApplication {
     if (!partyTradecraft) {
       game.user.setFlag("dee","tradecraft","");
     }
+    const party = this.object.documents.filter(a=>a.getFlag("dee","party"));
+    const abilities = {};
+    party.forEach(e => {
+      e.data.data.abilities.forEach(a => {
+        let abs = abilities[a.name] || [];
+        abs.push(e);
+        abilities[a.name] = abs;
+      });
+    });
+    const possessions = {};
+    party.forEach(e => {
+      e.data.data.possessions.mundane.forEach(a => {
+        let abs = possessions[a.name] || [];
+        abs.push(e);
+        possessions[a.name] = abs;
+      });
+      e.data.data.possessions.esoteric.forEach(a => {
+        let abs = possessions[`${a.name}*`] || [];
+        abs.push(e);
+        possessions[`${a.name}*`] = abs;
+      });
+    });
     const data = {
       data: this.object,
+      party: party,
+      abilities: abilities,
+      possessions: possessions,
       config: CONFIG.DEE,
       user: game.user,
       settings: settings,

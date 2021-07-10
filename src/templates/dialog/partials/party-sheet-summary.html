@@ -1,0 +1,106 @@
+<ol class="actor-list">
+    {{#each party as |e|}}
+    <li class="actor flexrow" data-actor-id="{{e.id}}">
+        <div class="field-img">
+        <img src="{{e.img}}" class="profile actor-profile"/>
+        <div class="img-btns flexrow">
+            <button type="button" data-action="open-sheet"><i class="fas fa-user"></i></button>
+        </div>
+        </div>
+        <div class="fields">
+        <div class="flexrow field-row">
+            <div title="{{e.name}}" class="field-name flex2">
+            {{e.name}}
+            {{#if e.hasPlayerOwner}}
+            &nbsp;<span style="font-style: italic;">({{player e.id}})</span>
+            {{/if}}
+            {{#unless (eq e.data.data.occupation "")}}
+            &nbsp;- {{e.data.data.occupation}}
+            {{/unless}}
+            </div>
+            <div class="field-row" title="{{localize 'DEE.Hits'}}">
+            {{#if (eq e.data.type 'agent')}}
+                <span title="{{localize 'DEE.Fortune'}}">
+                    <i class="fas fa-star" ></i>
+                    {{ e.data.data.fortune}}
+                </span>
+                <span title="{{localize 'DEE.resource.int.long'}}">
+                    <i class="fas fa-brain" ></i>
+                    {{ e.data.data.resources.int.value}}
+                </span>
+                <span title="{{localize 'DEE.resource.phy.long'}}">
+                    <i class="fas fa-fist-raised" ></i>
+                    {{ e.data.data.resources.phy.value }}
+                </span>
+                <span title="{{localize 'DEE.resource.sup.long'}}">
+                    <i class="fas fa-ghost" ></i>
+                    {{ e.data.data.resources.sup.value}}
+                </span>
+                <span title="{{localize 'DEE.resource.unravel.long'}}">
+                    <i class="fas fa-dice-d6" ></i>
+                    {{e.data.data.resources.unravel.value}}
+                </span>
+                <span title="{{localize 'DEE.Resistance'}}">
+                    {{#if (lt e.data.data.resources.armour.value 6)}}
+                    <i class="fas fa-shield-alt"></i>
+                    {{ e.data.data.resources.armour.value}}
+                    {{/if}}
+                </span>
+            {{/if}}
+            {{#if (eq e.data.type 'enemy')}}
+                <span title="{{localize 'DEE.Potency'}}">
+                    <i class="fas fa-fist-raised"></i>
+                    {{ e.data.data.resistance.potency}}
+                </span>
+                <span title="{{localize 'DEE.Resistance'}}">
+                    {{#if (lt e.data.data.resources.armour.value 6)}}
+                    <i class="fas fa-shield-alt"></i>
+                    {{ e.data.data.resources.armour.value}}
+                    {{/if}}
+                </span>
+            {{/if}}
+            <span title="{{localize 'DEE.Hits'}}">
+                <i class="fas fa-heart"></i>
+                {{e.data.data.hits.value}}
+            </span>
+            {{#if e.data.data.falters.first}}
+                <i class="fas fa-times" title="{{localize 'DEE.Failure'}}"></i>
+            {{/if}}
+            {{#if e.data.data.falters.second}}
+                <i class="fas fa-times" title="{{localize 'DEE.Failure'}}"></i>
+            {{/if}}
+            </div>
+        </div>
+        {{#if (eq e.data.type 'agent')}}
+        <div class="field-row flexrow">
+            <div class="field-longer">
+            {{#each e.data.data.affiliations as |s i|}}
+            <span title="{{localize 'DEE.tabs.affiliations'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
+            {{/each}}
+            </div>
+            <div class="field-longer">
+            {{#each e.data.data.expertise.foci as |s i|}}
+            <span title="{{localize 'DEE.Focus'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
+            {{/each}}
+            </div>
+            <div class="field-longer">
+            {{#each e.data.data.favours as |s i|}}
+            <span title="{{localize 'DEE.Favour'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
+            {{/each}}
+            </div>
+        </div>
+        {{/if}}
+        <div class="field-row flexrow">
+            {{#each e.data.data.abilities as |s i|}}
+            <span><img src="{{s.img}}" width="10px">{{s.name}} </span>
+            {{/each}}
+        </div>
+        <div class="field-row flexrow">
+            {{#each e.data.data.consequences as |s i|}}
+            <span><img src="{{s.img}}" width="10px">{{s.name}} </span>
+            {{/each}}
+        </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>

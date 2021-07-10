@@ -11,6 +11,8 @@
         </div>
         <div class="trade">
             <div class="tradecraft show" style="background-image: url('{{ trade data.tradecraft}}');" title="{{ localize 'DEE.TradecraftSelect'}}">
+                {{#if (unlocked actor)}}
+                {{#unless (inParty actor)}}
                 <select class="hide" id="tradecraft-sel">
                     <option selected value="0">-</option>
                     <option value="A">Access</option>
@@ -19,7 +21,9 @@
                     <option value="M">Magic</option>
                     <option value="S">System</option>
                     <option value="V">Vigilance</option>
-                </select> 
+                </select>
+                {{/unless}}
+                {{/if}}
             </div>
         </div>
         <div class="actor-portrait">
