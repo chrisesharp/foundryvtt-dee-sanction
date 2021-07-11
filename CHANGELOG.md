@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 11/7/21
+
+### Added
+
+### Changed
+
+- Fixed mismatched ability and occupation of song & story to minstrel
+
+### Removed
+
 ## [1.0.9] - 10/7/21
 
 ### Added
