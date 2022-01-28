@@ -16,112 +16,112 @@
       "label": "Abilities",
       "package": "dee",
       "path": "packs/abilities.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "consequences",
       "label": "Consequences",
       "package": "dee",
       "path": "packs/consequences.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "clothing",
       "label": "Clothing",
       "package": "dee",
       "path": "packs/clothing.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "armour",
       "label": "Armour",
       "package": "dee",
       "path": "packs/armour.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "odds-and-ends",
       "label": "Odds and Ends",
       "package": "dee",
       "path": "packs/odds-and-ends.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "printed-matter",
       "label": "Printed Matter",
       "package": "dee",
       "path": "packs/printed-matter.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "tools",
       "label": "Tools",
       "package": "dee",
       "path": "packs/tools.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "weapons",
       "label": "Weapons",
       "package": "dee",
       "path": "packs/weapons.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "favours",
       "label": "Favours",
       "package": "dee",
       "path": "packs/favours.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "associations",
       "label": "Associations",
       "package": "dee",
       "path": "packs/associations.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "occupations",
       "label": "Occupations",
       "package": "dee",
       "path": "packs/occupations.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "foci",
       "label": "Foci",
       "package": "dee",
       "path": "packs/foci.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "npcs",
       "label": "NPCs",
       "package": "dee",
       "path": "packs/npcs.db",
-      "entity": "Actor"
+      "type": "Actor"
     },
     {
       "name": "outcomes",
       "label": "Outcomes",
       "package": "dee",
       "path": "packs/outcomes.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "humours",
       "label": "Humours",
       "package": "dee",
       "path": "packs/humours.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "macros",
       "label": "Macros",
       "package": "dee",
       "path": "packs/macros.db",
-      "entity": "Macro"
+      "type": "Macro"
     }
   ],
   "languages": [
