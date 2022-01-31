@@ -56,7 +56,6 @@ export class DeeSanctionActorSheet extends ActorSheet {
     };
     if (data.actor.type==="enemy") {
       if (sheetData.data.hitresolution.rolltable?.id === "") {
-        console.log("Missing id");
         const hitresolution = findHitResolutionTable(sheetData.data.hitresolution);
         sheetData.data.hitresolution = hitresolution;
         await data.actor.update({data:{hitresolution: hitresolution}});

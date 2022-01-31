@@ -1,3 +1,5 @@
+import { Logger } from "./logger.js";
+
 export const loadCompendia = async function (compendia) {
     return await Promise.all(compendia.map((c) => {return loadCompendium(c);}));
 }
@@ -33,7 +35,7 @@ async function loadCompendium (compendium) {
             if (newFolder && newFolder instanceof Folder) {
                 newFolder.setFlag("dee","loaded",true);
             } else {
-                console.log(`Couldn't find new folder ${folderName} for ${compendium}`);
+                log.error(`Couldn't find new folder ${folderName} for ${compendium}`);
             }
             return imp;
         }

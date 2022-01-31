@@ -1,5 +1,16 @@
+import { Logger } from "./logger.js";
+
+const log = new Logger();
+
 export const registerSettings = function () {
-    console.log("Registering Dee System Settings");
+    log.info("Registering Dee System Settings");
+    game.settings.register("dee", "debug", {
+      default: false,
+      scope: "world",
+      type: Boolean,
+      config: false,
+    });
+
     game.settings.register("dee", "initialized", {
         name: game.i18n.localize("DEE.Setting.initialized"),
         hint: game.i18n.localize("DEE.Setting.initializedHint"),
@@ -7,7 +18,6 @@ export const registerSettings = function () {
         scope: "world",
         type: Boolean,
         config: true,
-        // onChange: _ => window.location.reload()
       });
     game.settings.register("dee", "effects-tab", {
         name: game.i18n.localize("DEE.Setting.effectsTab"),

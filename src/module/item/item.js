@@ -1,3 +1,6 @@
+import { Logger } from "../logger.js";
+
+const log = new Logger();
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -46,7 +49,7 @@ export class DeeSanctionItem extends Item {
       itemData.effects.forEach(async (e) => {
         try {
             e.data.origin = this.uuid;
-        } catch (e) {console.log(e)}
+        } catch (e) { log.error(e); }
       });
     }
   }

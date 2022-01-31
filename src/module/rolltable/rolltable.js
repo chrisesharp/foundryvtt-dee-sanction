@@ -1,3 +1,7 @@
+import { Logger } from "../logger.js";
+
+const log = new Logger();
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {RollTable}
@@ -23,7 +27,7 @@ export class DeeSanctionRollTable extends RollTable {
         try {
           updates.push({_id:t.id, data:update})
         } catch (e) {
-          console.log("failed to add update:",t.id, update);
+          log.error("failed to add update:",t.id, update);
         }
       }
     });
@@ -44,7 +48,7 @@ export class DeeSanctionRollTable extends RollTable {
           data.resultId = result.id
           return tableResult.update({_id:tableResult.id, data:data});
         } catch (e) {
-          console.log("failed to update:",result.id, data);
+          log.error("failed to update:",result.id, data);
         }
       }
     }

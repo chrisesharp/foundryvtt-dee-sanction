@@ -14,9 +14,12 @@ import { DeeCombat } from "./combat.js";
 import { addChatConsequenceButton } from "./chat.js";
 import * as party from "./party.js";
 import { DeeSanctionDice } from "./dice.js";
+import { Logger } from "./logger.js";
+
+const log = new Logger();
 
 Hooks.once('init', async function() {
-  console.log("Invoking The Dee Sanction...");
+  log.info("Invoking The Dee Sanction...");
   game.dee = {
     DeeSanctionActor,
     DeeSanctionItem,
@@ -74,7 +77,7 @@ Hooks.once("ready", async function () {
     const doAll = async (f, initialized) => {
       for (let i=0; i < stages.length; i++) {
         await f(stages[i]);
-        console.log("Processed:",stages[i]);
+        log.debug("Processed:",stages[i]);
       }
       game.settings.set("dee","initialized",initialized);
     }
