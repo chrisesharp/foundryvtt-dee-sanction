@@ -55,11 +55,11 @@
 nav.sheet-tabs.side {
   position: absolute;
   transform: rotate(90deg);
-  width: 465px;
+  width: 265px;
   top: 255px;
-  right: -240px;
+  right: -140px;
   border-top: none;
-  height: 18px;
+  height: 35px;
   z-index: -1;
   .item {
     padding: 1px 10px 0;
@@ -87,9 +87,9 @@ nav.sheet-tabs.side {
 nav.sheet-tabs.side.party {
   position: absolute;
   transform: rotate(90deg);
-  width: 275px;
-  top: 200px;
-  right: -147px;
+  width: 235px;
+  top: 180px;
+  right: -125px;
   border-top: none;
   height: 18px;
   z-index: -1;
@@ -119,11 +119,11 @@ nav.sheet-tabs.side.party {
 &.sheet nav.sheet-tabs.side.agent {
   position: absolute;
   transform: rotate(90deg);
-  width: 550px;
-  top: 296px;
-  right: -284px;
+  // width: 550px;
+  top: 340px;
+  // right: -284px;
   border-top: none;
-  height: 18px;
+  // height: 18px;
   z-index: -1;
   .item {
     padding: 1px 10px 0;
