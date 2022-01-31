@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 31/01/22
+
+### Added
+
+- V9 support
+- Debugging enablement for future
+
+### Changed
+
+- Fixed bug in hit resolution
+- Fixed problem with v9 CSS on side tab rendering
+
+### Removed
+
 ## [1.1.0] - 11/7/21
 
 ### Added
