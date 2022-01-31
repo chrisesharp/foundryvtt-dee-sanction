@@ -1,5 +1,6 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
 import { generator, randomPossessions, randomThing } from "../generator.js";
+import { findHitResolutionTable } from "./actor.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -55,27 +56,13 @@ export class DeeSanctionActorSheet extends ActorSheet {
     };
     if (data.actor.type==="enemy") {
       if (sheetData.data.hitresolution.rolltable?.id === "") {
-        const hitresolution = this._findHitResolutionTable(sheetData.data.hitresolution);
+        console.log("Missing id");
+        const hitresolution = findHitResolutionTable(sheetData.data.hitresolution);
         sheetData.data.hitresolution = hitresolution;
         await data.actor.update({data:{hitresolution: hitresolution}});
       }
     }
     return sheetData;
-  }
-
-  _findHitResolutionTable(hitresolution) {
-    let rt = (hitresolution.rolltable.name) ? game.tables.getName(hitresolution.rolltable.name) : null;
-    if (!rt) {
-      rt = game.tables.getName(CONFIG.DEE.defaultResolution);
-    }
-    return  {
-      rolltable: {
-          id: rt.id,
-          name: rt.data.name,
-          description: rt.data.description,
-          img: rt.data.img
-      }
-    };
   }
 
   /** @override */

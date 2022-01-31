@@ -66,7 +66,7 @@ export class DeeSanctionActor extends Actor {
         acc[item.type] = category;
         return acc;
       },
-      {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[]}
+      {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
     );
   }
   /**
@@ -93,6 +93,10 @@ export class DeeSanctionActor extends Actor {
     data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
     data.abilities = categories["ability"];
     data.consequences = categories["consequence"];
+    if (game.tables && data.hitresolution.rolltable?.id === "") {
+      const hitresolution = findHitResolutionTable(data.hitresolution);
+      data.hitresolution = hitresolution;
+    }
     await actorData.token.update({disposition:-1});
   }
 
@@ -208,5 +212,19 @@ export class DeeSanctionActor extends Actor {
 
   getAbilities() {
     return this.data.items.filter(i=>i.type==="ability");
+  }
+}
+
+export function findHitResolutionTable(hitresolution) {
+  let rt = (hitresolution.rolltable.name) ? game.tables.getName(hitresolution.rolltable.name) : game.tables.getName(CONFIG.DEE.defaultResolution);
+  if (rt) {
+    return  {
+      rolltable: {
+          id: rt.id ,
+          name: rt.data.name,
+          description: rt.data.description,
+          img: rt.data.img
+      }
+    };
   }
 }
