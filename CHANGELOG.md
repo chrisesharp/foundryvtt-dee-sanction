@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 28/02/22
+
+### Added
+
+### Changed
+
+- Fixed bug in filepicker upload selection
+
+### Removed
+
 ## [1.2.0] - 31/01/22
 
 ### Added
