@@ -44,11 +44,11 @@ export const registerHandlebarHelpers = async function () {
         return CONFIG.DEE.icons[`d${die}`];
     });
 
-    Handlebars.registerHelper('checked', function(isChecked) {
+    Handlebars.registerHelper('isChecked', function(isChecked) {
         return isChecked ? ' checked ' : '';
     });
 
-    Handlebars.registerHelper('selected', function(isSelected,value) {
+    Handlebars.registerHelper('isSelected', function(isSelected,value) {
         return (isSelected===value) ? ' selected ' : '';
     });
 

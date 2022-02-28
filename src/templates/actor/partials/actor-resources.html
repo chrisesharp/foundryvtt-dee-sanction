@@ -72,8 +72,8 @@
                 <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
             </div>
             <div class="hits-falters" title="{{ localize 'DEE.FalterDetail'}}">
-                <input class="first" type="checkbox" name="data.falters.first" {{checked data.falters.first }} data-dtype="Boolean"/>
-                <input class="second" type="checkbox" name="data.falters.second" {{checked data.falters.second }} data-dtype="Boolean"/>
+                <input class="first" type="checkbox" name="data.falters.first" {{isChecked data.falters.first }} data-dtype="Boolean"/>
+                <input class="second" type="checkbox" name="data.falters.second" {{isChecked data.falters.second }} data-dtype="Boolean"/>
             </div>
         </div>
     </div>

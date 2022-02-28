@@ -4,7 +4,7 @@
         <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="flexrow">
           <label class="resource-label" style="padding-top: 5px;">{{ localize 'DEE.item.esoteric'}}</label>
-          <input type="checkbox" name="data.esoteric" value="{{data.esoteric}}" {{checked data.esoteric }} data-dtype="Boolean"/>
+          <input type="checkbox" name="data.esoteric" value="{{data.esoteric}}" {{isChecked data.esoteric }} data-dtype="Boolean"/>
         </div>
       </div>
       <div class="header-fields">
