@@ -348,3 +348,9 @@ export async function randomThing(actor, type) {
         }
     }
 }
+
+export async function randomFavourOrSight(actor) {
+    const hasSight = Math.round(Math.random() * 11) + 1  >= 11;
+    return (hasSight) ? randomThing(actor,  "Sights") : randomThing(actor,  "Favours");
+
+}

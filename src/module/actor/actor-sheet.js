@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../effects.js";
-import { generator, randomPossessions, randomThing } from "../generator.js";
+import { generator, randomFavourOrSight, randomPossessions, randomThing } from "../generator.js";
 import { findHitResolutionTable } from "./actor.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -191,7 +191,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       case "association":
         return randomThing(this.actor, "Associations");
       case "favour":
-        return randomThing(this.actor, "Favours");
+        return randomFavourOrSight(this.actor);
       case "occupation":
         const occupation = await randomThing(this.actor, "Occupations");
         return this.actor.update({data:{occupation:occupation[0].name}});

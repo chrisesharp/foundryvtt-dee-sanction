@@ -1,0 +1,8 @@
+name: "Danger Sense"
+type: "favour"
+data:
+  description: "<h2>Prophecy</h2><p>Danger Sense.</p>"
+img: "/systems/dee/assets/default/icons/magic.png"
+permission:
+    default: 2
+folder: "Sights"

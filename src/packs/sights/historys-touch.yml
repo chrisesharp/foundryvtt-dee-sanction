@@ -1,0 +1,8 @@
+name: "History's Touch"
+type: "favour"
+data:
+  description: "<h2>Token Reading</h2><p>History's Touch.</p>"
+img: "/systems/dee/assets/default/icons/magic.png"
+permission:
+    default: 2
+folder: "Sights"

@@ -1,0 +1,8 @@
+name: "Things to Come"
+type: "favour"
+data:
+  description: "<h2>Prophecy</h2><p>Things to Come.</p>"
+img: "/systems/dee/assets/default/icons/magic.png"
+permission:
+    default: 2
+folder: "Sights"

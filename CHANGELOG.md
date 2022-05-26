@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 25/05/22
+
+### Added
+
+- Added support for *The Sight* as a new compendium/folder of Sights, and random generation of Favour modified to include them.
+
+### Changed
+
+### Removed
+
+
 ## [1.2.1] - 28/02/22
 
 ### Added

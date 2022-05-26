@@ -70,7 +70,7 @@ Hooks.once('init', async function() {
 Hooks.once("ready", async function () {
     // Load leaf node documents
     if (!game.user.isGM) return;
-    const stage1 = ["Abilities","Armour","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours"];
+    const stage1 = ["Abilities","Armour","Consequences","Clothing","Odds and Ends", "Printed Matter", "Tools", "Weapons","Favours", "Sights"];
     const stage2 = ["Associations","Foci","Occupations","Humours"];
     const stage3 = ["Outcomes","NPCs","Macros"];
     const stages = [stage1, stage2, stage3];

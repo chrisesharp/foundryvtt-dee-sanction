@@ -75,6 +75,13 @@
       "type": "Item"
     },
     {
+      "name": "sights",
+      "label": "Sights",
+      "package": "dee",
+      "path": "packs/sights.db",
+      "type": "Item"
+    },
+    {
       "name": "associations",
       "label": "Associations",
       "package": "dee",

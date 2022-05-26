@@ -1,0 +1,8 @@
+name: "Summoned Advisor"
+type: "favour"
+data:
+  description: "<h2>Scrying</h2><p>Summoned Advisor.</p>"
+img: "/systems/dee/assets/default/icons/magic.png"
+permission:
+    default: 2
+folder: "Sights"
