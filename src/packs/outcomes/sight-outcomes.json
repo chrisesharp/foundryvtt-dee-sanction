@@ -1,0 +1,650 @@
+{
+  "name": "Sight Outcomes",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "GM table for the outcome of a Sight Proophecy",
+  "results": [
+    {
+      "type": 0,
+      "text": "Permission/ Blockage",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "collection": null,
+      "resultId": null,
+      "rangeL": 1,
+      "rangeH": 1
+    },
+    {
+      "type": 0,
+      "text": "Unity/Tension",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 2,
+      "rangeH": 2
+    },
+    {
+      "type": 0,
+      "text": "Friendship/Isolation",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 3,
+      "rangeH": 3
+    },
+    {
+      "type": 0,
+      "text": "Awareness/ Disconnection",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 4,
+      "rangeH": 4
+    },
+    {
+      "type": 0,
+      "text": "Acceptance/Loss",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 5,
+      "rangeH": 5
+    },
+    {
+      "type": 0,
+      "text": "Family/Independence",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 6,
+      "rangeH": 6
+    },
+    {
+      "type": 0,
+      "text": "Choices/Confusion",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 7,
+      "rangeH": 7
+    },
+    {
+      "type": 0,
+      "text": "Eclipse/Avoid",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 8,
+      "rangeH": 8
+    },
+    {
+      "type": 0,
+      "text": "Satisfaction/ Displeasure",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 9,
+      "rangeH": 9
+    },
+    {
+      "type": 0,
+      "text": "Fulfilment/ Frustration",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 10,
+      "rangeH": 10
+    },
+    {
+      "type": 0,
+      "text": "Clarity/Chaos",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 11,
+      "rangeH": 11
+    },
+    {
+      "type": 0,
+      "text": "Decisiveness/ Confusion",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 12,
+      "rangeH": 12
+    },
+    {
+      "type": 0,
+      "text": "Foregiveness/ Suffering",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 13,
+      "rangeH": 13
+    },
+    {
+      "type": 0,
+      "text": "Rest/Exhaustion",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 14,
+      "rangeH": 14
+    },
+    {
+      "type": 0,
+      "text": "Ambition/ Resentment",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 15,
+      "rangeH": 15
+    },
+    {
+      "type": 0,
+      "text": "Transition/ Hesitation",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 16,
+      "rangeH": 16
+    },
+    {
+      "type": 0,
+      "text": "Honesty/Deception",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 17,
+      "rangeH": 17
+    },
+    {
+      "type": 0,
+      "text": "Freedom/Capture",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 18,
+      "rangeH": 18
+    },
+    {
+      "type": 0,
+      "text": "Hope/Despair",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 19,
+      "rangeH": 19
+    },
+    {
+      "type": 0,
+      "text": "Escape/Inevitability",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 20,
+      "rangeH": 20
+    },
+    {
+      "type": 0,
+      "text": "Opportunity/Forgo",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 21,
+      "rangeH": 21
+    },
+    {
+      "type": 0,
+      "text": "Coping/Overwhelm",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 22,
+      "rangeH": 22
+    },
+    {
+      "type": 0,
+      "text": "Teamwork/Discord",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 23,
+      "rangeH": 23
+    },
+    {
+      "type": 0,
+      "text": "Frugality/ Recklessness",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 24,
+      "rangeH": 24
+    },
+    {
+      "type": 0,
+      "text": "Security/Poverty",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 25,
+      "rangeH": 25
+    },
+    {
+      "type": 0,
+      "text": "Charity/Extortion",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 26,
+      "rangeH": 26
+    },
+    {
+      "type": 0,
+      "text": "Perseverance/ Discouragement",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 27,
+      "rangeH": 27
+    },
+    {
+      "type": 0,
+      "text": "Inspiration/ Despondency",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 28,
+      "rangeH": 28
+    },
+    {
+      "type": 0,
+      "text": "Reward/Punishment",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 29,
+      "rangeH": 29
+    },
+    {
+      "type": 0,
+      "text": "Resourceful/ Feckless",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 30,
+      "rangeH": 30
+    },
+    {
+      "type": 0,
+      "text": "Resilience/ Listlessness",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 31,
+      "rangeH": 31
+    },
+    {
+      "type": 0,
+      "text": "Planned/Unready",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 32,
+      "rangeH": 32
+    },
+    {
+      "type": 0,
+      "text": "Progress/Hindrance",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 33,
+      "rangeH": 33
+    },
+    {
+      "type": 0,
+      "text": "Community/ Disagreement",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 34,
+      "rangeH": 34
+    },
+    {
+      "type": 0,
+      "text": "Cooperation/ Competition",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 35,
+      "rangeH": 35
+    },
+    {
+      "type": 0,
+      "text": "Conquest/ Subservience",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 36,
+      "rangeH": 36
+    },
+    {
+      "type": 0,
+      "text": "Confidence/ Insecurity",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 37,
+      "rangeH": 37
+    },
+    {
+      "type": 0,
+      "text": "Further/Curtail",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 38,
+      "rangeH": 38
+    },
+    {
+      "type": 0,
+      "text": "Invigorate/Enfeeble",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 39,
+      "rangeH": 39
+    },
+    {
+      "type": 0,
+      "text": "Accomplish/Burden",
+      "collection": null,
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "rangeL": 40,
+      "rangeH": 40
+    }
+  ],
+  "formula": "((1d4 - 1) * 10) + 1d10",
+  "replacement": true,
+  "displayRoll": true
+}

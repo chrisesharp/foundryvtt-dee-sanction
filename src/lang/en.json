@@ -17,7 +17,8 @@
     "DEE.Setting.initializedHint": "untick to re-import compendia next start.",
     "DEE.Setting.effectsTab": "Reveal effect editing",
     "DEE.Setting.effectsTabHint": "For advanced users",
-
+    "DEE.Setting.useSight": "Use The Sight rules",
+    "DEE.Setting.useSightHint": "For extended favour generation",
     "DEE.RollMode": "Roll Mode",
     "DEE.SitMod": "Step Modifier",
     "DEE.Formula": "Challenge Die",

@@ -1,3 +1,7 @@
+import { Logger } from "./logger.js";
+
+const log = new Logger();
+
 const mannerisms = {
     "Phlegm": [
         "Easy going attitude",
@@ -350,7 +354,11 @@ export async function randomThing(actor, type) {
 }
 
 export async function randomFavourOrSight(actor) {
-    const hasSight = Math.round(Math.random() * 11) + 1  >= 11;
-    return (hasSight) ? randomThing(actor,  "Sights") : randomThing(actor,  "Favours");
-
+    const useSight = game.settings.get("dee", "use-sight");
+    if (useSight) {
+        log.debug('randomFavourOrSight() | Using The Sight Rules');
+        const hasSight = Math.round(Math.random() * 11) + 1  >= 11;
+        return (hasSight) ? randomThing(actor,  "Sights") : randomThing(actor,  "Favours");
+    }
+    return randomThing(actor,  "Favours"); 
 }

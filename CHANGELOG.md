@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2] - 30/05/22
+
+### Added
+
+- Added support for *The Sight - O Fickle Fortune* macro and associated roll tables.
+- Added documentation for the Sight changes.
+
+### Changed
+
+### Removed
+
 ## [1.3.1] - 25/05/22
 
 ### Added
