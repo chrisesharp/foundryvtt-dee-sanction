@@ -29,6 +29,10 @@ export class DeeSanctionItemSheet extends ItemSheet {
     super.activateEditor(target, editorOptions, initialContent);
   }
 
+  _canDragStart(selector) {
+    return true;
+  }
+
   /** @override */
   async _onDragStart(event) {
     const div = event.currentTarget;
