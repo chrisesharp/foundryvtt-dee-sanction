@@ -79,7 +79,7 @@ export class DeeSanctionActor extends Actor {
     data.abilities = categories["ability"];
     data.consequences = categories["consequence"];
     data.expertise = { foci: categories["focus"], occupations: categories["occupation"]};
-    data.affiliations = categories["association"];
+    data.associations = categories["association"];
     data.favours = categories["favour"];
     await actorData.token.update({disposition:1, actorLink:true});
   }

@@ -74,8 +74,8 @@
         {{#if (eq e.data.type 'agent')}}
         <div class="field-row flexrow">
             <div class="field-longer">
-            {{#each e.data.data.affiliations as |s i|}}
-            <span title="{{localize 'DEE.tabs.affiliations'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
+            {{#each e.data.data.associations as |s i|}}
+            <span title="{{localize 'DEE.tabs.associations'}}"><img src="{{s.img}}" width="10px">{{s.name}}</span>
             {{/each}}
             </div>
             <div class="field-longer">
