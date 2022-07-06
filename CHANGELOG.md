@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.3] - 6/07/22
+
+### Added
+
+### Changed
+
+- Fixed player dragging from item sheets
+
+### Removed
+
 ## [1.3.2] - 30/05/22
 
 ### Added
