@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.4] - 6/07/22
+
+### Added
+
+### Changed
+
+- Rename Affiliations to Associations everywhere.
+
+### Removed
+
 ## [1.3.3] - 6/07/22
 
 ### Added
