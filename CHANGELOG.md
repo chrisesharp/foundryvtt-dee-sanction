@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.5] - 26/07/22
+
+### Added
+
+### Changed
+
+- Removed "Add Consequence" button from actor sheets, as they can only be dragged on.
+
 ## [1.3.4] - 6/07/22
 
 ### Added
