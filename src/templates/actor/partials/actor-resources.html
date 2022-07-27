@@ -82,9 +82,6 @@
         <ol class="items-list">
             <li class="flexrow item-header">
                 <div class="injury-header">{{ localize 'DEE.Consequences'}}</div>
-                <div class="item-header item-controls">
-                <a class="item-control item-create" title="{{localize 'DEE.Add'}} {{localize 'DEE.Consequences'}}" data-type="consequence"><i class="fas fa-plus"></i></a>
-                </div>
             </li>
             {{#each data.consequences as |item id|}}
                 <li class="item-entry flexcol" data-item-id="{{item.id}}">
