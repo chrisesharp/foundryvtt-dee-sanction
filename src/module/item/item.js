@@ -12,61 +12,60 @@ export class DeeSanctionItem extends Item {
   async prepareData() {
     await super.prepareData();
     // Get the Item's data
-    const itemData = this.data;
-    switch (itemData.type) {
+    const itemData = this.system;
+    switch (this.type) {
       case "ability":
-        itemData.img = CONFIG.DEE.icons["ability"];
+        this.img = CONFIG.DEE.icons["ability"];
         break;
       case "consequence":
-        itemData.img = CONFIG.DEE.icons["consequence"];
+        this.img = CONFIG.DEE.icons["consequence"];
         break;
       case "association":
-        itemData.img = CONFIG.DEE.icons["conspiracy"];
+        this.img = CONFIG.DEE.icons["conspiracy"];
         break;
       case "occupation":
-        itemData.img = CONFIG.DEE.icons["access"];
+        this.img = CONFIG.DEE.icons["access"];
         break;
       case "favour":
-        itemData.img = CONFIG.DEE.icons["favour"];
+        this.img = CONFIG.DEE.icons["favour"];
         break;
       case "focus":
-          itemData.img = CONFIG.DEE.icons["vigilance"];
+        this.img = CONFIG.DEE.icons["vigilance"];
           break;
       case "item":
-        itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
+        this.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
         break;
       default:
-        itemData.img = CONST.DEFAULT_TOKEN;
+        this.img = CONST.DEFAULT_TOKEN;
         break;
     }
 
-    if (itemData.data.abilities) {
-      let abilities = this._prepContainer(itemData);
-      itemData.update({data:{abilities:abilities}});
-    }
+    // if (itemData.abilities) {
+    //   this._prepContainer(itemData);
+    // }
 
     if (itemData.effects) {
       itemData.effects.forEach(async (e) => {
         try {
-            e.data.origin = this.uuid;
+            e.origin = this.uuid;
         } catch (e) { log.error(e); }
       });
     }
   }
 
-  _prepContainer(itemData) {
-    let abilities = deepClone(itemData.data.abilities);
-    if (game.items) {
-      abilities.filter(e=>!e._id).forEach(entry => {
-        // if (!entry._id) {
-          const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
-          if (item) {
-            entry._id = item.data._id;
-            entry.img = item.img;
-          }
-        // }
-      });
-    }
-    return abilities;
-  }
+  // _prepContainer(itemData) {
+  //   let abilities = deepClone(itemData.abilities);
+  //   if (game.items) {
+  //     abilities.filter(e=>!e._id).forEach(entry => {
+  //       if (!entry._id) {
+  //         const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
+  //         if (item) {
+  //           entry._id = item._id;
+  //           entry.img = item.img;
+  //         }
+  //       }
+  //     });
+  //   }
+  //   return abilities;
+  // }
 }

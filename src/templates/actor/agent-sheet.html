@@ -1,5 +1,4 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-
     {{!-- Sheet Header --}}
     <header class="sheet-header">
       {{> "systems/dee/templates/actor/partials/actor-header.html"}}
@@ -38,7 +37,7 @@
         {{!-- Affliations Tab --}}
         <div class="tab biography" data-group="primary" data-tab="associations">
             {{> "systems/dee/templates/actor/partials/actor-affiliations.html"}}
-            {{!-- editor content=data.biography target="data.biography" button=true owner=owner editable=editable --}}
+            {{!-- editor biography target="biography" button=true owner=owner editable=editable --}}
         </div>
 
         {{!-- Esoterica Tab --}}
@@ -47,7 +46,7 @@
         </div>
         {{!-- Notes --}}
         <div class="tab editor agent-editor" data-group="primary" data-tab="editor">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor data.description target="system.description" button=true owner=owner editable=editable}}
         </div>
         {{#if config.showEffects}}
         {{!-- Effects Tab --}}

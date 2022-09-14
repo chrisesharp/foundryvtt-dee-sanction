@@ -98,7 +98,7 @@ export class DeeCombat {
         "group": color
       }
     };
-    combatant.data.update({flags: flags});
+    combatant.update({flags: flags});
   }
 
   static activateCombatant(li) {

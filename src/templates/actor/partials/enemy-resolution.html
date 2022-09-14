@@ -4,7 +4,7 @@
     <div class="hitresolution flexcol" title="{{ localize 'DEE.ResolutionDetail'}}">
         <div class="hitres-header" style="padding: 0.6em;">{{ localize 'DEE.Resolution'}}</div>
         <div class="hitres-button flexrow">
-        <a class="entity-link" data-entity="RollTable" data-id="{{data.hitresolution.rolltable.id}}">
+        <a class="content-link" data-type="RollTable" data-uuid="{{data.hitresolution.rolltable.uuid}}" data-id="{{data.hitresolution.rolltable.id}}">
             <i class="fas fa-th-list">{{data.hitresolution.rolltable.name}}</i>
         </a>
         </div>
@@ -14,6 +14,6 @@
     {{!-- Notes --}}
     <div class="notes-header">{{ localize 'DEE.Notes'}}</div>
     <div class="tab editor enemy-editor" data-tab="resolution">
-        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        {{editor data.description target="system.description" button=true owner=owner editable=editable}}
     </div>
 </div>

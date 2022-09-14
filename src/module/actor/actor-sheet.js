@@ -26,7 +26,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       return false;
     }
     if (item && item.type==="occupation") {
-      this.actor.update({data:{occupation:item.name}});
+      this.actor.update({system:{occupation:item.name}});
     }
     return super._onDrop(event);
   }
@@ -50,15 +50,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
       config: CONFIG.DEE,
       owner: data.owner,
       editable: data.editable,
-      data: data.actor.data.data,
+      data: data.actor.system,
       effects: data.effects,
       user: game.user
     };
     if (data.actor.type==="enemy") {
-      if (sheetData.data.hitresolution.rolltable?.id === "") {
+      if (sheetData.data.hitresolution.rolltable?.uuid === "") {
         const hitresolution = findHitResolutionTable(sheetData.data.hitresolution);
         sheetData.data.hitresolution = hitresolution;
-        await data.actor.update({data:{hitresolution: hitresolution}});
+        await data.actor.update({system:{hitresolution: hitresolution}});
       }
     }
     return sheetData;
@@ -131,7 +131,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
       const opt = $('#tradecraft-sel').val();
       const trade = CONFIG.DEE.tradecraft[opt]; 
       const newData = {tradecraft:trade};
-      await this.actor.update({data:newData});
+      await this.actor.update({system:newData});
     });
 
     // Active Effect management
@@ -145,11 +145,11 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @private
    */
   _updateResource(resource, delta) {
-    const resources = duplicate(this.actor.data.data.resources);
+    const resources = duplicate(this.actor.system.resources);
     const newData = {};
     resources[resource].value += delta; 
     newData["resources"] = resources;
-    return this.actor.update({id:this.actor.id, data:newData});
+    return this.actor.update({system:newData});
   }
   /* -------------------------------------------- */
 
@@ -194,7 +194,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
         return randomFavourOrSight(this.actor);
       case "occupation":
         const occupation = await randomThing(this.actor, "Occupations");
-        return this.actor.update({data:{occupation:occupation[0].name}});
+        return this.actor.update({system:{occupation:occupation[0].name}});
       case "focus":
         return randomThing(this.actor, "Foci");
     }
@@ -216,16 +216,19 @@ export class DeeSanctionActorSheet extends ActorSheet {
     // Initialize a default name.
     const name = `New ${type.capitalize()}`;
     // Prepare the item object.
-    const itemData = {
-      name: name,
-      type: type,
-      data: data
-    };
-    // // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
+    // const itemData = {
+    //   name: name,
+    //   type: type,
+    //   data: data
+    // };
+    // // // Remove the type from the dataset since it's in the itemData.type prop.
+    // delete itemData.data["type"];
+    data['type'] = type;
+    data['name'] = name;
 
     // Finally, create the item!
-    return this.actor.createEmbeddedDocuments("Item", [itemData]);
+    // return this.actor.createEmbeddedDocuments("Item", [itemData]);
+    return this.actor.createEmbeddedDocuments("Item", [data]);
   }
 
   /**
@@ -244,18 +247,18 @@ export class DeeSanctionActorSheet extends ActorSheet {
     event.preventDefault();
     const li = $(event.currentTarget).parents(".item-entry");
     const item = this.actor.items.get(li.data("item-id"));
-    const description = TextEditor.enrichHTML(item.data.data.description);
+    const description = TextEditor.enrichHTML(item.system.description, {async: false});
     const abilities = this.actor.getAbilities();
     let options = "";
     
     if (item.type === "consequence") {
-      const resource = game.i18n.localize(`DEE.resource.${item.data.data.resource}.long`);
+      const resource = game.i18n.localize(`DEE.resource.${item.system.resource}.long`);
       options += `<label>${resource} </label>`;
-      options += `<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>${Math.abs(item.data.data.potency)}`;
+      options += `<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>${Math.abs(item.system.potency)}`;
     }
 
     if (["association","focus","occupation"].includes(item.type)) {
-      item.data.data.abilities.forEach((i)=> {
+      item.system.abilities.forEach((i)=> {
         const ability = abilities.filter(e => e.name===i.name);
         const checked = (ability.length > 0) ? check : empty;
         options += `${checked}&nbsp;<label style="font-size: 0.9em;" for="${i.id}" >${i.name}</label>&nbsp;`;
@@ -316,15 +319,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const dataset = element.dataset;
     let target;
     for (let t of game.user.targets.values()) {
-      const data = t.actor.data;
+      const data = t.actor.system;
       if (data.type === "enemy") {
         target = {
           id: data._id,
           armour: data.data.resources.armour.value,
         }
-        target.potency = data.data.resistance.potency;
-        target.hitresolution = data.data.hitresolution;
-        target.consequences = data.data.consequences;
+        target.potency = data.resistance.potency;
+        target.hitresolution = data.hitresolution;
+        target.consequences = data.consequences;
       }
       if (target) break;
     }

@@ -12,7 +12,7 @@
 export const addChatConsequenceButton = function(msg, html, data) {
   // Hide blind rolls
   let blindable = html.find('.blindable');
-  if (msg.data.blind && !game.user.isGM && blindable && blindable.data('blind') === true) {
+  if (msg.blind && !game.user.isGM && blindable && blindable.data('blind') === true) {
     blindable.replaceWith("<div class='dice-roll'><div class='dice-result'><div class='dice-formula'>???</div></div></div>");
   }
   // Buttons
@@ -49,8 +49,8 @@ function _addUnravelButton(cb) {
 function _addChanceMessage(cb) {
   const actorId = cb.data('actorid');
   const actor = game.actors.get(actorId);
-  if (actor && actor.data.data.hits.value === 0) {
-    const falters = actor.data.data.falters;
+  if (actor && actor.system.hits.value === 0) {
+    const falters = actor.system.falters;
     const numFalters = (falters.first === true) + (falters.second === true);
     let label
     switch (numFalters) {

@@ -299,10 +299,10 @@ export function generator(type) {
             const humours = Object.keys(mannerisms);
             const humour = humours[Math.floor(Math.random() * humours.length)];
             const manner = mannerisms[humour][Math.floor((Math.random() * humour.length))];
-            return {data:{mannerism: {humour:humour,detail:manner}}};
+            return {system:{mannerism: {humour:humour,detail:manner}}};
         case "home-roll":
             const home = homes[Math.floor(Math.random() * homes.length)];
-            return {data:{home: home}};
+            return {system:{home: home}};
         case "name-roll":
             const sex = (Math.random()>0.5) ? "male" : "female";
             const forename = christian[sex][Math.floor(Math.random() * christian[sex].length)];
@@ -323,33 +323,24 @@ export async function randomPossessions(actor, html) {
     });
     const items = [];
     await Promise.all(types.map(async(type) => {
-        const folder = game.folders.getName(type);
-        if (folder) {
-            const rt = await RollTable.fromFolder(folder,{temporary:true,renderSheet:false});
-            const roll = await rt.roll({async:true});
-            const res = roll.results[0].data;
-            const item = game.items.getName(res.text);
-            if (item) {
-                items.push(item.toObject());
-            }
-        }
-        return Promise.resolve(true);
+        return randomThing(actor, type);
     }));
-    if (items.length) {
-        return await actor.createEmbeddedDocuments("Item",items);
-    }
 }
 
 export async function randomThing(actor, type) {
     const folder = game.folders.getName(type);
+    const items = [];
     if (folder) {
         const rt = await RollTable.fromFolder(folder,{temporary:true,renderSheet:false});
         const roll = await rt.roll({async:true});
-        const res = roll.results[0].data;
-        const item = game.items.getName(res.text);
+        const res = roll.results[0].text;
+        const item = game.items.getName(res);
         if (item) {
-            return await actor.createEmbeddedDocuments("Item",[item.toObject()]);
+            items.push(item.toObject());
         }
+    }
+    if (items.length) {
+        return await actor.createEmbeddedDocuments("Item",items);
     }
 }
 

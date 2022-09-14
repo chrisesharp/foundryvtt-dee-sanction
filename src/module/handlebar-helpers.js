@@ -100,4 +100,8 @@ export const registerHandlebarHelpers = async function () {
     Handlebars.registerHelper('contains', function(e, arr) {
         return arr.includes(e);
     });
+
+    Handlebars.registerHelper('insertLink', function (item) {
+        return TextEditor.enrichHTML(item.id, {async: false});
+    });
 }

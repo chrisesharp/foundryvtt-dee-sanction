@@ -34,7 +34,7 @@ export class DeeSanctionPartySheet extends FormApplication {
     const party = this.object.documents.filter(a=>a.getFlag("dee","party"));
     const abilities = {};
     party.forEach(e => {
-      e.data.data.abilities.forEach(a => {
+      e.system.abilities.forEach(a => {
         let abs = abilities[a.name] || [];
         abs.push(e);
         abilities[a.name] = abs;
@@ -42,12 +42,12 @@ export class DeeSanctionPartySheet extends FormApplication {
     });
     const possessions = {};
     party.forEach(e => {
-      e.data.data.possessions.mundane.forEach(a => {
+      e.system.possessions.mundane.forEach(a => {
         let abs = possessions[a.name] || [];
         abs.push(e);
         possessions[a.name] = abs;
       });
-      e.data.data.possessions.esoteric.forEach(a => {
+      e.system.possessions.esoteric.forEach(a => {
         let abs = possessions[`${a.name}*`] || [];
         abs.push(e);
         possessions[`${a.name}*`] = abs;
@@ -122,7 +122,7 @@ export class DeeSanctionPartySheet extends FormApplication {
       $('li.actor').each(async function() {
         const actorId = $(this).data('actor-id');
         if (actorId) {
-          await game.actors.get(actorId).update({data:{tradecraft:trade}});
+          await game.actors.get(actorId).update({system:{tradecraft:trade}});
         }
       } );
       this.render(true);

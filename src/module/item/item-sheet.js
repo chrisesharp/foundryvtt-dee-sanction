@@ -48,7 +48,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
         item = await pack.getEntity(idx.id);
       }
       dragData.type = "Item";
-      dragData.data = item.data;
+      dragData.data = item.system;
     }
 
     // Set data transfer
@@ -82,7 +82,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
 
   async _onDropItem(data) {
     if (!this.isEditable) return false;
-    let abilities = this.item.data.data.abilities.filter(a=>a.id != data.id);
+    let abilities = this.item.system.abilities.filter(a=>a.id != data.id);
     let ability = game.items.get(data.id);
     if (!ability) {
       const pack = game.packs.get("dee.abilities");
@@ -94,7 +94,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       const newAbilities = {
         abilities: abilities
       }
-      return this.item.update({data: newAbilities});
+      return this.item.update(newAbilities);
     } else {
       return false;
     }
@@ -116,7 +116,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/dee/templates/item";
-    return `${path}/${this.item.data.type}-sheet.html`;
+    return `${path}/${this.item.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -124,15 +124,15 @@ export class DeeSanctionItemSheet extends ItemSheet {
   /** @override */
   async getData() {
     const data = super.getData();
-    if (data.data.type === "consequence") {
-      if (!data.data.effects.length) {
+    if (data.item.type === "consequence") {
+      if (!data.item.transferredEffects.length) {
         await createConsequenceEffect("phy",-1,this.item);
       }
     }
     let sheetData = duplicate(super.getData());
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
-    sheetData.data = data.item.data.data;
+    sheetData.data = data.item.system;
     sheetData.user = game.user;
     sheetData.effects = prepareActiveEffectCategories(this.item.effects);
     return sheetData;
@@ -172,12 +172,12 @@ export class DeeSanctionItemSheet extends ItemSheet {
         let name = await e._getSourceName(); // Trigger a lookup for the source name
         if (name === this.item.name) {
           const change = duplicate(e.data.changes[0]);
-          change.key = `data.resources.${resource}.value`;
+          change.key = `resources.${resource}.value`;
           e.update({changes: [change]});
           break;
         }
       }
-      await this.item.data.update({data:newData});
+      await this.item.update(newData);
     });
 
     // Consequence potency input
@@ -220,11 +220,11 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @private
    */
   _onAbilityDelete(id) {
-    const abilities = this.item.data.data.abilities.filter((i)=>i._id != id);
+    const abilities = this.item.system.abilities.filter((i)=>i._id != id);
     const newAbilities = {
       abilities: abilities
     }
-    return this.item.update({data: newAbilities});
+    return this.item.update(newAbilities);
   }
 
   async _onPotencyChange(event) {
@@ -241,6 +241,6 @@ export class DeeSanctionItemSheet extends ItemSheet {
         break;
       }
     }
-    await this.item.data.update({data:newData});
+    await this.item.data.update(newData);
   }
 }
