@@ -1,6 +1,6 @@
 name: "Apprehend"
 type: "ability"
-data:
+system:
   description: "<p>Apprehend.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

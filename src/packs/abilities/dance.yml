@@ -1,6 +1,6 @@
 name: "Dance"
 type: "ability"
-data:
+system:
   description: "<p>Dance.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

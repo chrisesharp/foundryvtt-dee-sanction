@@ -1,6 +1,6 @@
 name: "Shiver"
 type: "favour"
-data:
+system:
   description: "<p>Shudder, Shimmy, Uneasy, Shrivel.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

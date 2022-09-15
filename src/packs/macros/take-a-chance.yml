@@ -5,7 +5,7 @@ command: |-
     game.dee.DeeSanctionDice.sendRoll({
       title: "Take a Chance",
       formula: "1d6",
-      data: {
+      system: {
         rollType:"take-a-chance",
         actor: actor,
         roll: {

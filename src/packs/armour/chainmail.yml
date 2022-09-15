@@ -1,7 +1,7 @@
 name: "Chainmail"
 type: "item"
 img: "/systems/dee/assets/default/icons/kit.png"
-data: 
+system: 
   description: "A coat of chainmail."
   resource: "armour"
   potency: -5

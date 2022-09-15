@@ -1,6 +1,6 @@
 name: "Gourmand"
 type: "ability"
-data:
+system:
   description: "<p>Gourmand.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

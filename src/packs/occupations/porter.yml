@@ -1,7 +1,7 @@
 name: "Porter"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Like Atlas with the weight of the world
 upon their shoulders, they pack and
 prepare luggage for travellers of all standings</p>"

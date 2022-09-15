@@ -1,6 +1,6 @@
 name: "Quote and Verse"
 type: "ability"
-data:
+system:
   description: "<p>Quote and Verse.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

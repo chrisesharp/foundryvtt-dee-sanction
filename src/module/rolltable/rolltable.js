@@ -19,13 +19,12 @@ export class DeeSanctionRollTable extends RollTable {
   }
 
   async _fixNestedTables() {
-    const tableData = this.data;
     let updates = [];
-    tableData.results.contents.forEach(async (t, i) => {
-      if (t.data.type==1) {
+    this.results.contents.forEach(async (t, i) => {
+      if (t.type==1) {
         let update = await this._prepTableData(t);
         try {
-          updates.push({_id:t.id, data:update})
+          updates.push({_id:t.id, update})
         } catch (e) {
           log.error("failed to add update:",t.id, update);
         }
@@ -35,18 +34,18 @@ export class DeeSanctionRollTable extends RollTable {
   }
 
   _prepTableData(tableResult) {
-    let data = foundry.utils.deepClone(tableResult.data);
-    if ((!data.resultId || data.resultId==="")) {
+    let data = foundry.utils.deepClone(tableResult);
+    if ((!data.documentId || data.documentId==="")) {
       let result;
       if (data.text.includes("Humour:")) {
-        result = game.tables.getName(tableResult.data.text);
+        result = game.tables.getName(tableResult.text);
       } else {
-        result = game.items.getName(tableResult.data.text);
+        result = game.items.getName(tableResult.text);
       }
       if (result?.id) {
         try {
-          data.resultId = result.id
-          return tableResult.update({_id:tableResult.id, data:data});
+          data.documentId = result.id
+          return tableResult.update({_id:tableResult.id, data});
         } catch (e) {
           log.error("failed to update:",result.id, data);
         }

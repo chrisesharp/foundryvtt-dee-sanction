@@ -1,7 +1,7 @@
 name: "Baffled"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "Dazed and confused."
   resource: "int"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Baffled"
+    label: "Baffled"
     transfer: true
 permission:
     default: 2

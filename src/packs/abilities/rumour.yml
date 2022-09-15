@@ -1,6 +1,6 @@
 name: "Rumour"
 type: "ability"
-data:
+system:
   description: "<p>Rumour.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

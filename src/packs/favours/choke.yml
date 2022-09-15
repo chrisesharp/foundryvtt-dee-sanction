@@ -1,6 +1,6 @@
 name: "Choke"
 type: "favour"
-data:
+system:
   description: "<p>Gasp, Clog, Stifle, Gag.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

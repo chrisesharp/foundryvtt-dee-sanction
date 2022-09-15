@@ -1,7 +1,7 @@
 name: "Broken bone"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "Broken bone. Requires a doctor to remove."
   resource: "phy"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Broken bone"
+    label: "Broken bone"
     transfer: true
 permission:
     default: 2

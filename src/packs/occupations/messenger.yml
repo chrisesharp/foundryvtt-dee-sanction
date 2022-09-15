@@ -1,7 +1,7 @@
 name: "Messenger"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Second-fiddle diplomats burdened with
 the drudgery of carrying letters, papers,
 and commodious gratuities</p>"

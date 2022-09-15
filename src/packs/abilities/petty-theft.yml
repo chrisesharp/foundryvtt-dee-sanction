@@ -1,6 +1,6 @@
 name: "Petty Theft"
 type: "ability"
-data:
+system:
   description: "<p>Petty Theft.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

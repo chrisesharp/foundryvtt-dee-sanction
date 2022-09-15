@@ -1,6 +1,6 @@
 name: "Debate"
 type: "ability"
-data:
+system:
   description: "<p>Debate.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

@@ -1,7 +1,7 @@
 name: "Pythagorean Brotherhood"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
-data: 
+system: 
   description: "<p>Believers that understanding lies in the intersection ‘tween number and form</p>"
   abilities: 
     - 

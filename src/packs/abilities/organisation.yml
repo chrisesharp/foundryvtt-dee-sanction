@@ -1,6 +1,6 @@
 name: "Organisation"
 type: "ability"
-data:
+system:
   description: "<p>Organisation.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

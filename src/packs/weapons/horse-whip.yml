@@ -1,6 +1,6 @@
 name: "Horse whip"
 type: "item"
-data:
+system:
   description: "<p>Vicious in the right hands.</p>"
   esoteric: false
   quantity: 1

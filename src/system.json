@@ -1,12 +1,19 @@
 {
-  "name": "dee",
+  "id": "dee",
   "title": "The Dee Sanction",
   "description": "The Dee Sanction system for FoundryVTT!",
-  "version": "1.3.5",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
-  "templateVersion": 2,
-  "author": "chrisesharp",
+  "version": "2.0.1",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.285"
+  },
+  "authors": [
+    {
+      "name": "Chris Sharp",
+      "url": "https://github.com/chrisesharp",
+      "discord": "ChrisSharp#3966"
+    }
+  ],
   "esmodules": ["module/dee.js"],
   "styles": ["css/dee.css"],
   "scripts": [],
@@ -144,6 +151,6 @@
   "secondaryTokenAttribute": "power",
   "url": "https://github.com/chrisesharp/foundryvtt-dee-sanction",
   "manifest": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src/system.json",
-  "download": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/package/dee-v1.3.5.zip",
+  "download": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/package/dee-v2.0.1.zip",
   "license": "LICENSE.txt"
 }

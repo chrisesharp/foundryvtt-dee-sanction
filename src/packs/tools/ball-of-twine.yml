@@ -1,6 +1,6 @@
 name: "Ball of Twine"
 type: "item"
-data:
+system:
   description: "<p>A ball of twine.</p>"
   esoteric: false
   quantity: 1

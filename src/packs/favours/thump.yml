@@ -1,6 +1,6 @@
 name: "Thump"
 type: "favour"
-data:
+system:
   description: "<p>Shock, Bruise, Slap, Pulp.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

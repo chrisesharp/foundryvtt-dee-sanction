@@ -1,6 +1,6 @@
 name: "Spark"
 type: "favour"
-data:
+system:
   description: "<p>Flash, Sudden, Spit, Stab, Pinpoint.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

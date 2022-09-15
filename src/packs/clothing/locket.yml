@@ -1,6 +1,6 @@
 name: "Locket"
 type: "item"
-data:
+system:
   description: "<p>A small locket.</p>"
   esoteric: false
   quantity: 1

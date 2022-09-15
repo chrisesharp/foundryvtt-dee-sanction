@@ -50,18 +50,18 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
    */
   async _onDropRollTable(event, data) {
     if ( !this.actor.isOwner ) return false;
-    const tableId = data.id;
-    const rt = game.tables.get(tableId);
+    const rt = await fromUuid(data.uuid);
     const newTable = {
       hitresolution: {
         rolltable: {
-            id: tableId,
-            name: rt.data.name,
-            description: rt.data.description,
-            img: rt.data.img
+          uuid: rt.uuid,
+          id: rt.id,
+          name: rt.name,
+          description: rt._source.description,
+          img: rt.img
         }
       }
     };
-    return this.actor.update({data: newTable});
+    return this.actor.update({system:newTable});
   }  
 }

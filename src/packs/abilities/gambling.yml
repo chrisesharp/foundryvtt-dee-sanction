@@ -1,6 +1,6 @@
 name: "Gambling"
 type: "ability"
-data:
+system:
   description: "<p>Gambling.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

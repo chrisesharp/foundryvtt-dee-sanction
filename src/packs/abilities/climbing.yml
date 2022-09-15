@@ -1,6 +1,6 @@
 name: "Climbing"
 type: "ability"
-data:
+system:
   description: "<p>Climbing.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

@@ -12,25 +12,48 @@ export class DeeSanctionActor extends Actor {
   prepareData() {
     super.prepareData();
 
-    const actorData = this.data;
-    const data = actorData.data;
-    const flags = actorData.flags;
-    Object.keys(actorData.data.resources).forEach(key => {
-      const res = actorData.data.resources[key];
+    const actorData = this.system;
+    const data = actorData;
+    const flags = this.flags;
+    Object.keys(actorData.resources).forEach(key => {
+      const res = actorData.resources[key];
       let upper = (key === "armour") ? 6 : 5;
       let lower = (key === "armour") ? 1 : 0;
       res.value = Math.min(Math.max(res.value, lower), upper);
     });
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    switch (actorData.type) {
+    switch (this.type) {
       case "agent":
-        this._prepareAgentData(actorData);
+        this._prepareAgentData();
         break;
       case "enemy":
-        this._prepareEnemyData(actorData);
+        this._prepareEnemyData();
         break;
     }
+  }
+
+  /** @override */
+  async _preCreate(data, options, user) {
+    await super._preCreate(data, options, user);
+    data.prototypeToken = data.prototypeToken || {};
+
+    const disposition =
+      data.type === 'agent' ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
+    // Set basic token data for newly created actors.
+
+    mergeObject(
+      data.prototypeToken,
+      {
+        displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
+        actorLink: true,
+        disposition: disposition,
+        lockRotation: true,
+      },
+      { overwrite: true },
+    );
+
+    this.updateSource(data);
   }
 
   // Armour is not cumulative in effect, so disable the weaker ones
@@ -41,10 +64,10 @@ export class DeeSanctionActor extends Actor {
     let mostEffective = 0;
     let mostEffectiveId;
     this.effects.forEach (e=> {
-      let armourChanges = e.data.changes.filter(x=>(x.key === "data.resources.armour.value"));
+      let armourChanges = e.changes.filter(x=>(x.key === "resources.armour.value"));
       if (armourChanges.length) {
         armourEffects[e.id] = e;
-        let value = parseInt(e.data.changes[0].value)
+        let value = parseInt(e.changes[0].value)
         if (value < mostEffective) {
           mostEffective = value;
           mostEffectiveId = e.id;
@@ -53,51 +76,48 @@ export class DeeSanctionActor extends Actor {
     });
 
     Object.keys(armourEffects).forEach((id) => {
-      armourEffects[id].data.disabled = (mostEffectiveId != id);
+      armourEffects[id].disabled = (mostEffectiveId != id);
     });
     super.applyActiveEffects();
   }
 
-  _categoriseItems(items) {
-    return items.reduce(
-      (acc, item) => {
-        let category = acc[item.type] || [];
-        category.push(item);
-        acc[item.type] = category;
-        return acc;
-      },
-      {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
-    );
-  }
+  // _categoriseItems(items) {
+  //   return items.reduce(
+  //     (acc, item) => {
+  //       let category = acc[item.type] || [];
+  //       category.push(item);
+  //       acc[item.type] = category;
+  //       return acc;
+  //     },
+  //     {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
+  //   );
+  // }
   /**
    * Prepare Character type specific data
    */
-  async _prepareAgentData(actorData) {
-    const data = actorData.data;
-    const categories = this._categoriseItems(actorData.items);
-    data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
-    data.abilities = categories["ability"];
-    data.consequences = categories["consequence"];
-    data.expertise = { foci: categories["focus"], occupations: categories["occupation"]};
-    data.associations = categories["association"];
-    data.favours = categories["favour"];
-    await actorData.token.update({disposition:1, actorLink:true});
+  async _prepareAgentData() {
+    const data = this.system;
+    data.possessions = { mundane: this.itemTypes["item"].filter(i => !i.system.esoteric), esoteric: this.itemTypes["item"].filter(i => i.system.esoteric)};
+    data.abilities = this.itemTypes['ability'];
+    data.consequences = this.itemTypes['consequence'];
+    data.expertise = { foci: this.itemTypes["focus"], occupations: this.itemTypes["occupation"]};
+    data.associations = this.itemTypes['association'];
+    data.favours = this.itemTypes['favour'];
   }
 
   /**
    * Prepare Character type specific data
    */
   async _prepareEnemyData(actorData) {
-    const data = actorData.data;
-    const categories = this._categoriseItems(actorData.items);
-    data.possessions = { mundane: categories["item"].filter(i => !i.data.data.esoteric), esoteric: categories["item"].filter(i => i.data.data.esoteric)};
-    data.abilities = categories["ability"];
-    data.consequences = categories["consequence"];
+    const data = this.system;
+    data.possessions = { mundane: this.itemTypes["item"].filter(i => !i.system.esoteric), esoteric: this.itemTypes["item"].filter(i => i.system.esoteric)};
+    data.abilities = this.itemTypes['ability'];
+    data.consequences = this.itemTypes['consequence'];
+    
     if (game.tables && data.hitresolution.rolltable?.id === "") {
       const hitresolution = findHitResolutionTable(data.hitresolution);
       data.hitresolution = hitresolution;
     }
-    await actorData.token.update({disposition:-1});
   }
 
   async rollChallenge(resource, step, target = {}) {
@@ -106,7 +126,7 @@ export class DeeSanctionActor extends Actor {
     if (target.id) {
       potency += parseInt(target.potency);
       let targetConsequences = target.consequences.reduce((acc, item) => { 
-        return (item.data.data.resource===resource) ? acc + item.data.data.potency: acc;
+        return (item.system.resource===resource) ? acc + item.system.potency: acc;
       }, 0);
       potency -= targetConsequences;
     }
@@ -121,7 +141,7 @@ export class DeeSanctionActor extends Actor {
     const details = (potency == 0) ?  game.i18n.format("DEE.roll.details.resource", {type: label}) : 
                                       game.i18n.format("DEE.roll.details.potency", {potency: potency});
     const data = {
-      actor: this.data,
+      actor: this.system,
       rollType: "challenge",
       roll: {
         type: "above",
@@ -151,7 +171,7 @@ export class DeeSanctionActor extends Actor {
     const rollParts = [die];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       rollType: "resistance",
       roll: {
         type: "below",
@@ -188,7 +208,7 @@ export class DeeSanctionActor extends Actor {
     const details = game.i18n.format("DEE.roll.details.resource", {type: label});
     const rollParts = [die];
     const data = {
-      actor: this.data,
+      actor: this.system,
       rollType: "unravelling",
       roll: {
         type: "above",
@@ -211,7 +231,7 @@ export class DeeSanctionActor extends Actor {
   }
 
   getAbilities() {
-    return this.data.items.filter(i=>i.type==="ability");
+    return this.system.abilities;
   }
 }
 
@@ -220,10 +240,11 @@ export function findHitResolutionTable(hitresolution) {
   if (rt) {
     return  {
       rolltable: {
-          id: rt.id ,
-          name: rt.data.name,
-          description: rt.data.description,
-          img: rt.data.img
+          id: rt.id,
+          uuid: rt.uuid,
+          name: rt.name,
+          description: rt.description,
+          img: rt.img
       }
     };
   }

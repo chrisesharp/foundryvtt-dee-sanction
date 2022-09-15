@@ -1,6 +1,6 @@
 name: "Start"
 type: "favour"
-data:
+system:
   description: "<p>Excite, Arouse, Drop.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

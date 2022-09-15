@@ -1,6 +1,6 @@
 name: "Connoisseur"
 type: "ability"
-data:
+system:
   description: "<p>Connoisseur.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

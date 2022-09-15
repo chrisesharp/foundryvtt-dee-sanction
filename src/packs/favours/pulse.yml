@@ -1,6 +1,6 @@
 name: "Pulse"
 type: "favour"
-data:
+system:
   description: "<p>Distub, Vibrate, Ripple.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

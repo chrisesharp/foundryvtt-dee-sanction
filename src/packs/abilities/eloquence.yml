@@ -1,6 +1,6 @@
 name: "Eloquence"
 type: "ability"
-data:
+system:
   description: "<p>Eloquence.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

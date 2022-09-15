@@ -1,6 +1,6 @@
 name: "Signs"
 type: "ability"
-data:
+system:
   description: "<p>Signs - You know the common marks and symbols left by others as tip-off or guidance.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

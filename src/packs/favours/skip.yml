@@ -1,6 +1,6 @@
 name: "Skip"
 type: "favour"
-data:
+system:
   description: "<p>Excited, Leaping.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

@@ -1,6 +1,6 @@
 name: "Orienteering"
 type: "ability"
-data:
+system:
   description: "<p>Capability in finding one's way.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

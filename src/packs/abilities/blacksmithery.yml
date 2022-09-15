@@ -1,6 +1,6 @@
 name: "Blacksmithery"
 type: "ability"
-data:
+system:
   description: "<p>Blacksmithery.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

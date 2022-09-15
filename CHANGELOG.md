@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 15/09/22
+
+### Added
+
+### Changed
+
+- Rebase for FoundryVTT V10
+
 ## [1.3.5] - 26/07/22
 
 ### Added

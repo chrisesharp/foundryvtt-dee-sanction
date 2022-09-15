@@ -1,6 +1,6 @@
 name: "By-Laws and Loopholes"
 type: "ability"
-data:
+system:
   description: "<p>By-Laws and Loopholes.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

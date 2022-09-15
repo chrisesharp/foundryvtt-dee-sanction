@@ -1,6 +1,6 @@
 name: "Shadow"
 type: "favour"
-data:
+system:
   description: "<p>Conceal, Lurk, Veil.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

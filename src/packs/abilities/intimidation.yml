@@ -1,6 +1,6 @@
 name: "Intimidation"
 type: "ability"
-data:
+system:
   description: "<p>Intimidation - imposing presence and threat of harm to extract cooperation.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

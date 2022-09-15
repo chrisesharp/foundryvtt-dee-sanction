@@ -1,7 +1,7 @@
 name: "Sickly"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "trembling with an unshakeable chill; pale and drawn."
   resource: "phy"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Sickly"
+    label: "Sickly"
     transfer: true
 permission:
     default: 2

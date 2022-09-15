@@ -1,6 +1,6 @@
 name: "Purification"
 type: "ability"
-data:
+system:
   description: "<p>Purification.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

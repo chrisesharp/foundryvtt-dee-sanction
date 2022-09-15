@@ -1,6 +1,6 @@
 name: "Temperament"
 type: "favour"
-data:
+system:
   description: "<h2>Aura Reading</h2><p>Temperament.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

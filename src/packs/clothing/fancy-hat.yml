@@ -1,6 +1,6 @@
 name: "Fancy Hat"
 type: "item"
-data:
+system:
   description: "<p>A very fine and impressive hat.</p>"
   esoteric: false
   quantity: 1

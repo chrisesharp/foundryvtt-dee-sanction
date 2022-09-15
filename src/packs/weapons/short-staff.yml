@@ -1,6 +1,6 @@
 name: "Short Staff"
 type: "item"
-data:
+system:
   description: "<p>A short ash staff.</p>"
   esoteric: false
   quantity: 1

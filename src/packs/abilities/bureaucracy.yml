@@ -1,6 +1,6 @@
 name: "Bureaucracy"
 type: "ability"
-data:
+system:
   description: "<p>Bureaucracy.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

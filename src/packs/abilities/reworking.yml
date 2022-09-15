@@ -1,6 +1,6 @@
 name: "Reworking"
 type: "ability"
-data:
+system:
   description: "<p>Reworking.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

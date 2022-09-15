@@ -1,7 +1,7 @@
 name: "Jack of Plate"
 type: "item"
 img: "/systems/dee/assets/default/icons/kit.png"
-data: 
+system: 
   description: "A jacket with small iron plates sewn into the lining."
   resource: "armour"
   potency: -3

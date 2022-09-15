@@ -1,6 +1,6 @@
 name: "Disquiet"
 type: "favour"
-data:
+system:
   description: "<p>Botch, Distrust, Unsettle.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

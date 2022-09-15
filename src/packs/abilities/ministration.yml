@@ -1,6 +1,6 @@
 name: "Ministration"
 type: "ability"
-data:
+system:
   description: "<p>Performs ministry to the faithful.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

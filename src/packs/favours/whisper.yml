@@ -1,6 +1,6 @@
 name: "Whisper"
 type: "favour"
-data:
+system:
   description: "<p>Confidential, Hissing, Misheard, Unheard.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

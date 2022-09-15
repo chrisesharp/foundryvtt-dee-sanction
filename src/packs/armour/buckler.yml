@@ -1,7 +1,7 @@
 name: "Buckler"
 type: "item"
 img: "/systems/dee/assets/default/icons/kit.png"
-data: 
+system: 
   description: "A small buckler shield."
   resource: "armour"
   potency: -2

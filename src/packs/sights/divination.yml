@@ -1,6 +1,6 @@
 name: "Divination"
 type: "favour"
-data:
+system:
   description: "<h2>Scrying</h2><p>Divination.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

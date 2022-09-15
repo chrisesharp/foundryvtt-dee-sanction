@@ -1,6 +1,6 @@
 name: "Street Smarts"
 type: "ability"
-data:
+system:
   description: "<p>Street Smarts.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

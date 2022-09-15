@@ -1,6 +1,6 @@
 name: "Nostalgia"
 type: "ability"
-data:
+system:
   description: "<p>Nostalgia.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

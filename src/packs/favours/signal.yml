@@ -1,6 +1,6 @@
 name: "Signal"
 type: "favour"
-data:
+system:
   description: "<p>Warn, Commune, Awaken, Flare.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

@@ -1,7 +1,7 @@
 name: "Scavenger"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>An officer of the ward responsible for
 managing the handling and removal of
 domestic waste</p>"

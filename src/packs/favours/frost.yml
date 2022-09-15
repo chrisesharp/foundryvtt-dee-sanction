@@ -1,6 +1,6 @@
 name: "Frost"
 type: "favour"
-data:
+system:
   description: "<p>Slide, Slip, Obscure.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

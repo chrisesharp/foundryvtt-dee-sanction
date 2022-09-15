@@ -1,6 +1,6 @@
 name: "Bloom"
 type: "favour"
-data:
+system:
   description: "<p>Revive, Flower, Scent, Thicken.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

@@ -1,6 +1,6 @@
 name: "Tallow Candle"
 type: "item"
-data:
+system:
   description: "<p>A tallow candle wrapped in canvas.</p>"
   esoteric: false
   quantity: 1

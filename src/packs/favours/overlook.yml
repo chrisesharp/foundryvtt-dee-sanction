@@ -1,6 +1,6 @@
 name: "Overlook"
 type: "favour"
-data:
+system:
   description: "<p>Blindside, Miscount, Omit.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

@@ -1,6 +1,6 @@
 name: "Foraging"
 type: "ability"
-data:
+system:
   description: "<p>Foraging.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

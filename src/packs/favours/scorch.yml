@@ -1,6 +1,6 @@
 name: "Scorch"
 type: "favour"
-data:
+system:
   description: "<p>Burn, Sear, Char.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

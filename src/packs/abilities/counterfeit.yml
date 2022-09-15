@@ -1,6 +1,6 @@
 name: "Counterfeit"
 type: "ability"
-data:
+system:
   description: "<p>Counterfeit.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

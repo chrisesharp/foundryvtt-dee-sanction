@@ -1,6 +1,6 @@
 name: "Chill"
 type: "favour"
-data:
+system:
   description: "<p>Shiver, Preserve, Cool, Numb.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

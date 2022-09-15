@@ -1,6 +1,6 @@
 name: "Scavenging"
 type: "ability"
-data:
+system:
   description: "<p>Scavenging.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

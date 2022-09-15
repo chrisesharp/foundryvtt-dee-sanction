@@ -1,6 +1,6 @@
 name: "Devices"
 type: "ability"
-data:
+system:
   description: "<p>Devices.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:
