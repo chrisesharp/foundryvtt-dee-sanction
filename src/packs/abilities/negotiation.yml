@@ -1,6 +1,6 @@
 name: "Negotiation"
 type: "ability"
-data:
+system:
   description: "<p>Negotiation.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

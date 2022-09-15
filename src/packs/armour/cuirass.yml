@@ -1,7 +1,7 @@
 name: "Cuirass"
 type: "item"
 img: "/systems/dee/assets/default/icons/kit.png"
-data: 
+system: 
   description: "A sturdy breastplate."
   resource: "armour"
   potency: -4

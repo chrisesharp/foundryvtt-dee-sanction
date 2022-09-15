@@ -1,6 +1,6 @@
 name: "Catch"
 type: "favour"
-data:
+system:
   description: "<p>Inflame, Kindle, Smoke.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

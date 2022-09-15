@@ -1,6 +1,6 @@
 name: "Clairsentience"
 type: "ability"
-data:
+system:
   description: "<p>Clairsentience.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

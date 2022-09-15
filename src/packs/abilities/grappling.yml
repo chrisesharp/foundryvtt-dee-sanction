@@ -1,6 +1,6 @@
 name: "Grappling"
 type: "ability"
-data:
+system:
   description: "<p>Grappling.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

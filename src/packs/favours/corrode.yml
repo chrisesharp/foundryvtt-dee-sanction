@@ -1,6 +1,6 @@
 name: "Corrode"
 type: "favour"
-data:
+system:
   description: "<p>Discolour, Dulled, Brittle.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

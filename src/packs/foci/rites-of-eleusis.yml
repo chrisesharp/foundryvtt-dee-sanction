@@ -1,6 +1,6 @@
 name: "Rites of Eleusis"
 type: "focus"
-data: 
+system: 
   description: "<p>Cryptic insights into higher wisdom scattered in fragments across many minor works, the progression through which one might achieve transcendence</p>"
   abilities: 
     - 

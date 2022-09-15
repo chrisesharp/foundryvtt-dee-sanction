@@ -1,6 +1,6 @@
 name: "Breath"
 type: "favour"
-data:
+system:
   description: "<p>Measured, Steady, Controlled, Held.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

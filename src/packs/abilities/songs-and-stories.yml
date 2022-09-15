@@ -1,6 +1,6 @@
 name: "Song and Story"
 type: "ability"
-data:
+system:
   description: "<p>Song and Story.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

@@ -1,6 +1,6 @@
 name: "Natural History"
 type: "ability"
-data:
+system:
   description: "<p>Natural History.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

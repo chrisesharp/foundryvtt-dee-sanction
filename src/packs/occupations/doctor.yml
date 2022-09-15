@@ -1,7 +1,7 @@
 name: "Doctor"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Assistant to one of the few chartered physicians
 who claim recognition for their
 depth of medical knowledge</p>"

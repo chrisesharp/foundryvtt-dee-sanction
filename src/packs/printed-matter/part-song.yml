@@ -1,6 +1,6 @@
 name: "Part-song"
 type: "item"
-data:
+system:
   description: "<p>Verse from a gloomy part-song.</p>"
   esoteric: false
   quantity: 1

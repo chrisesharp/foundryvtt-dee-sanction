@@ -1,7 +1,7 @@
 name: "Compagnonnage"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
-data: 
+system: 
   description: "<p>Frustrated upstart craftfolk intent on bringing about a new order to unseat the Guilds and wider society</p>"
   abilities: 
     - 

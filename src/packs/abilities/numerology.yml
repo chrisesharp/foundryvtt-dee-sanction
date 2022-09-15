@@ -1,6 +1,6 @@
 name: "Numerology"
 type: "ability"
-data:
+system:
   description: "<p>Numerology.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

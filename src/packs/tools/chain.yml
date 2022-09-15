@@ -1,6 +1,6 @@
 name: "Chain"
 type: "item"
-data:
+system:
   description: "<p>A short length of chain.</p>"
   esoteric: false
   quantity: 1

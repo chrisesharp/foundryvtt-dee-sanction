@@ -1,6 +1,6 @@
 name: "Poem"
 type: "item"
-data:
+system:
   description: "<p>A love ballad by a little known poet.</p>"
   esoteric: false
   quantity: 1

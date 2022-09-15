@@ -1,6 +1,6 @@
 name: "Blister"
 type: "favour"
-data:
+system:
   description: "<p>Degrade, Bubble, Scald, Irritate.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

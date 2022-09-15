@@ -1,6 +1,6 @@
 name: "Architecture"
 type: "ability"
-data:
+system:
   description: "<p>Architectural knowledge and experience.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

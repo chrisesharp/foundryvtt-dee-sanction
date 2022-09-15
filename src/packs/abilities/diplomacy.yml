@@ -1,6 +1,6 @@
 name: "Diplomacy"
 type: "ability"
-data:
+system:
   description: "<p>Diplomacy.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

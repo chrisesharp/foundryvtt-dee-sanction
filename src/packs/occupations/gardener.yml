@@ -1,7 +1,7 @@
 name: "Gardener"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Hard-working keepers of small plots, in
 town and country, for flowers, vegetables
 and simples</p>"

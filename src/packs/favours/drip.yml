@@ -1,6 +1,6 @@
 name: "Drip"
 type: "favour"
-data:
+system:
   description: "<p>Trickle, Leak, Perplex.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

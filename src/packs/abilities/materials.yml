@@ -1,6 +1,6 @@
 name: "Materials"
 type: "ability"
-data:
+system:
   description: "<p>Craft-specific materials.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

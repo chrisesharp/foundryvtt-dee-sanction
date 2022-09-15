@@ -1,6 +1,6 @@
 name: "Ciphers"
 type: "ability"
-data:
+system:
   description: "<p>Ciphers.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

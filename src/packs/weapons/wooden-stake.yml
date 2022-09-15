@@ -1,6 +1,6 @@
 name: "Wooden Stake"
 type: "item"
-data:
+system:
   description: "<p>A stake pared from green oak.</p>"
   esoteric: false
   quantity: 1

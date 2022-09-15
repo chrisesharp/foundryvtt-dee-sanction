@@ -1,6 +1,6 @@
 name: "Taint"
 type: "favour"
-data:
+system:
   description: "<p>Cloud, Toxify, Discolour.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

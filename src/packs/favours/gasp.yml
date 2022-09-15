@@ -1,6 +1,6 @@
 name: "Gasp"
 type: "favour"
-data:
+system:
   description: "<p>Desperate, Sudden, Sharp Exhalation.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

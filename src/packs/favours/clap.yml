@@ -1,6 +1,6 @@
 name: "Clap"
 type: "favour"
-data:
+system:
   description: "<p>Roar, Rumble, Crash, Distract, Flinch.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

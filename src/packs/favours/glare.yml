@@ -1,6 +1,6 @@
 name: "Glare"
 type: "favour"
-data:
+system:
   description: "<p>Blaze, Blind, Reflect.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

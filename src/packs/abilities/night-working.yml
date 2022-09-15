@@ -1,6 +1,6 @@
 name: "Night Working"
 type: "ability"
-data:
+system:
   description: "<p>Night Working.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

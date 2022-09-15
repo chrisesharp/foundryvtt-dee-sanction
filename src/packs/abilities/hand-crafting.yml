@@ -1,6 +1,6 @@
 name: "Hand Crafting"
 type: "ability"
-data:
+system:
   description: "<p>Hand Crafting.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

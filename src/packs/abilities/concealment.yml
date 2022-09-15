@@ -1,6 +1,6 @@
 name: "Concealment"
 type: "ability"
-data:
+system:
   description: "<p>Concealment - expertise in the business of hiding/finding things.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

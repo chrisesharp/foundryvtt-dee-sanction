@@ -1,7 +1,7 @@
 name: "Courtier"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Watchful and ever mindful attendant on
 the periphery of the gatherings of Court</p>"
   abilities: 

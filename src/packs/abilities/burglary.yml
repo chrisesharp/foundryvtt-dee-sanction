@@ -1,6 +1,6 @@
 name: "Burglary"
 type: "ability"
-data:
+system:
   description: "<p>Burglary.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

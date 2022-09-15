@@ -1,6 +1,6 @@
 name: "Baffle"
 type: "favour"
-data:
+system:
   description: "<p>Mystify, Annoy, Confuse, Distract.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

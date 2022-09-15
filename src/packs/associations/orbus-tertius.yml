@@ -1,7 +1,7 @@
 name: "Orbus Tertius"
 type: "association"
 img: "/systems/dee/assets/default/icons/society.png"
-data: 
+system: 
   description: "<p>Committed to gathering evidence of a hidden realm of perception that will allow transcendence to Mastery</p>"
   abilities: 
     - 

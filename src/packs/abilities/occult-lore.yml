@@ -1,6 +1,6 @@
 name: "Occult Lore"
 type: "ability"
-data:
+system:
   description: "<p>Occult Lore.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

@@ -1,6 +1,6 @@
 name: "Meditation"
 type: "ability"
-data:
+system:
   description: "<p>Meditation.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

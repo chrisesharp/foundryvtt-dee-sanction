@@ -1,6 +1,6 @@
 name: "Twilit"
 type: "favour"
-data:
+system:
   description: "<p>Gloom, Long Shadow, Vague, Dimsight.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

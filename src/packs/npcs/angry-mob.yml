@@ -1,7 +1,7 @@
 name: "Angry Mob"
 type: "enemy"
 img: "systems/dee/assets/default/tokens/26.png"
-data: 
+system: 
   hits: 
     value: 8
     min: 0
@@ -21,7 +21,7 @@ items:
     name: "Overwhelm"
     type: "ability"
     img: "/systems/dee/assets/default/icons/book.png"
-    data: 
+    system: 
       description: "<p>The mob consists of 4 x Hits people; it inflicts half its Hits (rnd up) in automatic harm per Moment. Choose random Agents equal to the potential harm and inflict 1 Hit to each.</p>"
     effects: []
 effects: []

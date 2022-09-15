@@ -1,6 +1,6 @@
 name: "Animal Welfare"
 type: "ability"
-data:
+system:
   description: "<p>Animal Welfare.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

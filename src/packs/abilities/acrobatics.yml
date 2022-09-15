@@ -1,6 +1,6 @@
 name: "Acrobatics"
 type: "ability"
-data:
+system:
   description: "<p>Acrobatics.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

@@ -1,7 +1,7 @@
 name: "Painter-Stainer"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Specialists in the decoration, colouring and
 gilding of buildings, furnishings, and other
 objects; of a Guild well known for disagreements

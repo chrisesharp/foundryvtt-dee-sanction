@@ -1,6 +1,6 @@
 name: "Theology"
 type: "ability"
-data:
+system:
   description: "<p>Theology.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

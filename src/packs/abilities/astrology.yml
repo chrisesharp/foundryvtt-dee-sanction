@@ -1,6 +1,6 @@
 name: "Astrology"
 type: "ability"
-data:
+system:
   description: "<p>Astrology.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

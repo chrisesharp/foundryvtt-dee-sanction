@@ -1,7 +1,7 @@
 name: "Waterman"
 type: "occupation"
 img: "/systems/dee/assets/default/icons/shilling.png"
-data: 
+system: 
   description: "<p>Lewd-mouthed punters upon freshwater
 courses able to chart a safe course
 through accreted silt, discarded rubbish,

@@ -1,6 +1,6 @@
 name: "Farming"
 type: "ability"
-data:
+system:
   description: "<p>Farming.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:

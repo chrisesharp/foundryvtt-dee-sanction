@@ -1,7 +1,7 @@
 name: "Morion"
 type: "item"
 img: "/systems/dee/assets/default/icons/kit.png"
-data: 
+system: 
   description: "An open helm, as favoured by the Spaniard."
   resource: "armour"
   potency: -1

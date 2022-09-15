@@ -1,6 +1,6 @@
 name: "Fortune Telling"
 type: "favour"
-data:
+system:
   description: "<h2>Prophecy</h2><p>Fortune Telling.</p>"
 img: "/systems/dee/assets/default/icons/magic.png"
 permission:

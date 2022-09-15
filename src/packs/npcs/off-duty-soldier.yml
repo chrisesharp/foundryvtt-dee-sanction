@@ -1,7 +1,7 @@
 name: "Off-Duty Soldier"
 type: "enemy"
 img: "systems/dee/assets/default/tokens/21.png"
-data: 
+system: 
   hits: 
     value: 2
     min: 0

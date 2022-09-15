@@ -1,6 +1,6 @@
 name: "Sleight-of-Hand"
 type: "ability"
-data:
+system:
   description: "<p>Sleight-of-Hand -  the art of distraction; non-magical trickery.</p>"
 img: "/systems/dee/assets/default/icons/book.png"
 permission:
