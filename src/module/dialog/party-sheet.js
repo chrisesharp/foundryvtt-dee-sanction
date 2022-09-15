@@ -69,7 +69,7 @@ export class DeeSanctionPartySheet extends FormApplication {
   /* -------------------------------------------- */
 
   async _selectActors(ev) {
-    const entities = this.object.documents.sort((a, b) => b.data.token.disposition - a.data.token.disposition);
+    const entities = this.object.documents.sort((a, b) => b.prototypeToken.disposition - a.prototypeToken.disposition);
     const template = "/systems/dee/templates/dialog/party-select.html";
     const templateData = {
       actors: entities

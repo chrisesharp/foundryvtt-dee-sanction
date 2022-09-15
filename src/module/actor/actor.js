@@ -33,6 +33,29 @@ export class DeeSanctionActor extends Actor {
     }
   }
 
+  /** @override */
+  async _preCreate(data, options, user) {
+    await super._preCreate(data, options, user);
+    data.prototypeToken = data.prototypeToken || {};
+
+    const disposition =
+      data.type === 'agent' ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
+    // Set basic token data for newly created actors.
+
+    mergeObject(
+      data.prototypeToken,
+      {
+        displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
+        actorLink: true,
+        disposition: disposition,
+        lockRotation: true,
+      },
+      { overwrite: true },
+    );
+
+    this.updateSource(data);
+  }
+
   // Armour is not cumulative in effect, so disable the weaker ones
   // Effectiveness is measured as larger negative number
   /** @override */
@@ -58,17 +81,17 @@ export class DeeSanctionActor extends Actor {
     super.applyActiveEffects();
   }
 
-  _categoriseItems(items) {
-    return items.reduce(
-      (acc, item) => {
-        let category = acc[item.type] || [];
-        category.push(item);
-        acc[item.type] = category;
-        return acc;
-      },
-      {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
-    );
-  }
+  // _categoriseItems(items) {
+  //   return items.reduce(
+  //     (acc, item) => {
+  //       let category = acc[item.type] || [];
+  //       category.push(item);
+  //       acc[item.type] = category;
+  //       return acc;
+  //     },
+  //     {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
+  //   );
+  // }
   /**
    * Prepare Character type specific data
    */
@@ -80,7 +103,6 @@ export class DeeSanctionActor extends Actor {
     data.expertise = { foci: this.itemTypes["focus"], occupations: this.itemTypes["occupation"]};
     data.associations = this.itemTypes['association'];
     data.favours = this.itemTypes['favour'];
-    await this.prototypeToken.update({disposition:1, actorLink:true});
   }
 
   /**
@@ -96,7 +118,6 @@ export class DeeSanctionActor extends Actor {
       const hitresolution = findHitResolutionTable(data.hitresolution);
       data.hitresolution = hitresolution;
     }
-    await this.prototypeToken.update({disposition:-1});
   }
 
   async rollChallenge(resource, step, target = {}) {

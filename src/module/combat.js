@@ -2,7 +2,7 @@ export class DeeCombat {
   static async rollInitiative(combat) {
     // Check groups
     let groups = {};
-    combat.data.combatants.forEach((cbt) => {
+    combat.combatants.forEach((cbt) => {
       let group = cbt.getFlag("dee","group");
       groups[group] = { present: true };
     });
@@ -23,7 +23,7 @@ export class DeeCombat {
     if (groups["grey"]) {
       groups["grey"].initiative = 1;
     }
-    combat.data.combatants.forEach((cbt) => {
+    combat.combatants.forEach((cbt) => {
       combat.setInitiative(cbt.id, groups[cbt.getFlag("dee","group")].initiative);
     });
     game.combat.setupTurns();
@@ -65,8 +65,8 @@ export class DeeCombat {
       let index = colors.indexOf(currentColor);
       index = (index + 1) % colors.length;
       const id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      const combatant = game.combat.data.combatants.get(id);
-      combatant.update({
+      const combatant = game.combat.combatants.get(id);
+      combatant.updateSource({
         id: id,
         flags: { dee: { group: colors[index] } },
       });
@@ -79,10 +79,10 @@ export class DeeCombat {
     });
   }
 
-  static addCombatant(combatant, data, options, id) {
+  static async addCombatant(combatant, data, options, id) {
     const token = canvas.tokens.get(data.tokenId);
     let color = "black";
-    switch (token.data.disposition) {
+    switch (token.document.disposition) {
       case -1:
         color = "black";
         break;
@@ -98,7 +98,7 @@ export class DeeCombat {
         "group": color
       }
     };
-    combatant.update({flags: flags});
+    combatant.updateSource({flags: flags});
   }
 
   static activateCombatant(li) {

@@ -19,7 +19,7 @@
             {{/unless}}
             </div>
             <div class="field-row" title="{{localize 'DEE.Hits'}}">
-            {{#if (eq e.data.type 'agent')}}
+            {{#if (eq e.type 'agent')}}
                 <span title="{{localize 'DEE.Fortune'}}">
                     <i class="fas fa-star" ></i>
                     {{ e.system.fortune}}
@@ -47,7 +47,7 @@
                     {{/if}}
                 </span>
             {{/if}}
-            {{#if (eq e.data.type 'enemy')}}
+            {{#if (eq e.type 'enemy')}}
                 <span title="{{localize 'DEE.Potency'}}">
                     <i class="fas fa-fist-raised"></i>
                     {{ e.system.resistance.potency}}
@@ -71,7 +71,7 @@
             {{/if}}
             </div>
         </div>
-        {{#if (eq e.data.type 'agent')}}
+        {{#if (eq e.type 'agent')}}
         <div class="field-row flexrow">
             <div class="field-longer">
             {{#each e.system.associations as |s i|}}
