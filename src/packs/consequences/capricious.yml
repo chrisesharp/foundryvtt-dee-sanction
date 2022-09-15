@@ -1,7 +1,7 @@
 name: "Capricious"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "given to sudden, unpredictable, and erratic change in focus."
   resource: "int"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Capricious"
+    label: "Capricious"
     transfer: true
 permission:
     default: 2

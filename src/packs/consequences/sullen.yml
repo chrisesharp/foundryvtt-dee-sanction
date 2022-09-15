@@ -1,7 +1,7 @@
 name: "Sullen"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "resentful silence, overcast with notes of despondency about any situation."
   resource: "int"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Sullen"
+    label: "Sullen"
     transfer: true
 permission:
     default: 2

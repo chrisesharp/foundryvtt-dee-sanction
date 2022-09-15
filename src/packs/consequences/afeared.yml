@@ -1,7 +1,7 @@
 name: "Afeared"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "prone to tip into panic and alarm at the smallest trigger."
   resource: "sup"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Afeared"
+    label: "Afeared"
     transfer: true
 permission:
     default: 2

@@ -35,7 +35,7 @@ export class DeeSanctionRollTable extends RollTable {
 
   _prepTableData(tableResult) {
     let data = foundry.utils.deepClone(tableResult);
-    if ((!data.resultId || data.resultId==="")) {
+    if ((!data.documentId || data.documentId==="")) {
       let result;
       if (data.text.includes("Humour:")) {
         result = game.tables.getName(tableResult.text);
@@ -44,7 +44,7 @@ export class DeeSanctionRollTable extends RollTable {
       }
       if (result?.id) {
         try {
-          data.resultId = result.id
+          data.documentId = result.id
           return tableResult.update({_id:tableResult.id, data});
         } catch (e) {
           log.error("failed to update:",result.id, data);

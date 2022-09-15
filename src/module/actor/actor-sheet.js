@@ -319,15 +319,15 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const dataset = element.dataset;
     let target;
     for (let t of game.user.targets.values()) {
-      const data = t.actor.system;
-      if (data.type === "enemy") {
+      const actor = t.actor;
+      if (actor.type === "enemy") {
         target = {
-          id: data._id,
-          armour: data.data.resources.armour.value,
+          id: actor._id,
+          armour: actor.system.resources.armour.value,
         }
-        target.potency = data.resistance.potency;
-        target.hitresolution = data.hitresolution;
-        target.consequences = data.consequences;
+        target.potency = actor.system.resistance.potency;
+        target.hitresolution = actor.system.hitresolution;
+        target.consequences = actor.system.consequences;
       }
       if (target) break;
     }

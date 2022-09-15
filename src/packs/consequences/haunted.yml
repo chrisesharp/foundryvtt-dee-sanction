@@ -1,7 +1,7 @@
 name: "Haunted"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "Haunted"
   resource: "sup"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Haunted"
+    label: "Haunted"
     transfer: true
 permission:
     default: 2

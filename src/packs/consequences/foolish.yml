@@ -1,7 +1,7 @@
 name: "Foolish"
 type: "consequence"
 img: "/systems/dee/assets/default/icons/bones.png"
-data: 
+system: 
   description: "recklessly courageous and bold, heedless of the potency or peril of a challenge."
   resource: "int"
   potency: -1
@@ -16,7 +16,7 @@ effects:
     duration: 
       startTime: 0
     icon: "icons/svg/aura.svg"
-    name: "Foolish"
+    label: "Foolish"
     transfer: true
 permission:
     default: 2
