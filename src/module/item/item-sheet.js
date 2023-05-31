@@ -169,7 +169,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       const resource = $('#consequence-sel').val();
       const newData = {resource:resource};
       for ( let e of this.item.effects ) {
-        let name = await e._getSourceName(); // Trigger a lookup for the source name
+        let name = await e.sourceName; // Trigger a lookup for the source name
         if (name === this.item.name) {
           const change = duplicate(e.data.changes[0]);
           change.key = `resources.${resource}.value`;
@@ -232,7 +232,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     const potency = $('#potency-sel').val();
     const newData = {potency:potency};
     for ( let e of this.item.effects ) {
-      let name = await e._getSourceName(); // Trigger a lookup for the source name
+      let name = await e.sourceName; // Trigger a lookup for the source name
       if (name === this.item.name) {
         const change = duplicate(e.data.changes[0]);
         change.value = parseInt(potency);
