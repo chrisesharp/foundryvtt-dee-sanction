@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.2] - 21/06/23
+### Changed
+
+- Update compatibility for FoundryVTT V11
+
+
 ## [3.0.1] - 6/06/23
 ### Changed
 
