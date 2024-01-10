@@ -14,3 +14,5 @@ https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src
 A big thank you to Paul Baldowski for his support and permission to use artwork from the Dee Sanction RPG.
 
 Many thanks to @neilbenson and @jwmuk for their playtesting and UI improvement suggestions.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F6T5AXX)
