@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.3] - 22/02/24
+### Changed
+
+- Fixed compendia for FoundryVTT V11
+
+
 ## [3.0.2] - 21/06/23
 ### Changed
 
