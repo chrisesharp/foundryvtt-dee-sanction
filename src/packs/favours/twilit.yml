@@ -1,8 +1,0 @@
-name: "Twilit"
-type: "favour"
-system:
-  description: "<p>Gloom, Long Shadow, Vague, Dimsight.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

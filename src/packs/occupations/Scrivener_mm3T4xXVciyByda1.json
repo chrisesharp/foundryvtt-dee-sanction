@@ -1,0 +1,46 @@
+{
+  "name": "Scrivener",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Clerk and note-taker, responsible for keeping record of the passage of events and notable deeds for all who can pay for the privilege of paperwork</p>",
+    "abilities": [
+      {
+        "name": "Papercraft",
+        "type": "ability"
+      },
+      {
+        "name": "Calligraphy",
+        "type": "ability"
+      },
+      {
+        "name": "Bureaucracy",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.ShboMW5Vzw53Yqlp"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.ShboMW5Vzw53Yqlp",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "mm3T4xXVciyByda1",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!mm3T4xXVciyByda1"
+}

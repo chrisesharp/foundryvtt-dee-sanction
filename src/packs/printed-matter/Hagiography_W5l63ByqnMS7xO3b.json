@@ -1,0 +1,35 @@
+{
+  "name": "Hagiography",
+  "type": "item",
+  "system": {
+    "description": "<p>A provocative hagiographic critique.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.printed-matter.Item.jBIWADq4YaJsDSOP"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.printed-matter.Item.jBIWADq4YaJsDSOP",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496312040,
+    "modifiedTime": 1716496312040,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "W5l63ByqnMS7xO3b",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!W5l63ByqnMS7xO3b"
+}

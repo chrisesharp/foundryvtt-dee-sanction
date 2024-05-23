@@ -1,8 +1,0 @@
-name: "Skip"
-type: "favour"
-system:
-  description: "<p>Excited, Leaping.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

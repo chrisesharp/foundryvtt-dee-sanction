@@ -1,0 +1,81 @@
+{
+  "name": "Humour:Black Bile",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Ongoing effect when an agent falters on an unravelling die.",
+  "results": [
+    {
+      "type": "document",
+      "text": "Sullen",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "n8nPYN51uGzZHVhV",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!FE7B89aaTcURyum4.n8nPYN51uGzZHVhV"
+    },
+    {
+      "type": "document",
+      "text": "Afeared",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "sXqa69LqbWMnmLWm",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!FE7B89aaTcURyum4.sXqa69LqbWMnmLWm"
+    },
+    {
+      "type": "document",
+      "text": "Sickly",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "JazAkduMyP8Wjo5g",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!FE7B89aaTcURyum4.JazAkduMyP8Wjo5g"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.humours.RollTable.bEwYHXqJS8BmX95e"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.humours.RollTable.bEwYHXqJS8BmX95e",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496373961,
+    "modifiedTime": 1716496373961,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "FE7B89aaTcURyum4",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!FE7B89aaTcURyum4"
+}

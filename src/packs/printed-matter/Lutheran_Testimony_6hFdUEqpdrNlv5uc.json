@@ -1,0 +1,35 @@
+{
+  "name": "Lutheran Testimony",
+  "type": "item",
+  "system": {
+    "description": "<p>The 8th imprint of a Lutheran testimony.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.printed-matter.Item.6tzmwntL0zl0Ld7S"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.printed-matter.Item.6tzmwntL0zl0Ld7S",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496312040,
+    "modifiedTime": 1716496312040,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "6hFdUEqpdrNlv5uc",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!6hFdUEqpdrNlv5uc"
+}

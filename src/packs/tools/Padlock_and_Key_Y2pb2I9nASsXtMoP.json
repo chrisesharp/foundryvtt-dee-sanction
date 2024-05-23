@@ -1,0 +1,35 @@
+{
+  "name": "Padlock and Key",
+  "type": "item",
+  "system": {
+    "description": "<p>A padlock and key.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.tools.Item.OIh0V2q7pVW9uOnt"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.tools.Item.OIh0V2q7pVW9uOnt",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496324658,
+    "modifiedTime": 1716496324658,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Y2pb2I9nASsXtMoP",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!Y2pb2I9nASsXtMoP"
+}

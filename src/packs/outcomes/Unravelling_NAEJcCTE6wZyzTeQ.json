@@ -1,0 +1,157 @@
+{
+  "name": "Unravelling",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Immediate effect when an agent falters on an unravelling die.",
+  "results": [
+    {
+      "type": "text",
+      "text": "Phlegm: Immediate response is dulled senses; acts of perception or problem-solving are ▼1 while in the presence of fear source.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "tnGy2nYWnrXHvKhR",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.tnGy2nYWnrXHvKhR"
+    },
+    {
+      "type": "document",
+      "text": "Humour:Phlegm",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "sKoEdyXJjpN9jBfi",
+      "documentCollection": "RollTable",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.sKoEdyXJjpN9jBfi"
+    },
+    {
+      "type": "text",
+      "text": "Black Bile: Overwhelmed by extreme emotion. Eyes fill with tears, body wracked by sobbing. Take a Chance to complete any complex action in the presence of fear source.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "alEdA9rkkMOtLvw5",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.alEdA9rkkMOtLvw5"
+    },
+    {
+      "type": "document",
+      "text": "Humour:Black Bile",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "bHnCqXsm0K4rCpAM",
+      "documentCollection": "RollTable",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.bHnCqXsm0K4rCpAM"
+    },
+    {
+      "type": "text",
+      "text": "Yellow Bile: Character fills with bitter rage toward all allies while in the presence of fear source. Take a Chance, act in a selfish way on a falter. Attitude persists in the presence of fear source.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "cfm5fA6YYFyFUUKS",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.cfm5fA6YYFyFUUKS"
+    },
+    {
+      "type": "document",
+      "text": "Humour:Yellow Bile",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "iWXqfyExh8USnb5c",
+      "documentCollection": "RollTable",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.iWXqfyExh8USnb5c"
+    },
+    {
+      "type": "text",
+      "text": "Blood: Inadvisably optimistic despite the horrors or the difficult situation faced. Blindly positive. Acts of violence or aggression are ▼1 while in the presence of fear source.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "tWW5DOm7nUjSF36Z",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.tWW5DOm7nUjSF36Z"
+    },
+    {
+      "type": "document",
+      "text": "Humour:Blood",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "kUglPFAgDEnUDk1N",
+      "documentCollection": "RollTable",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!NAEJcCTE6wZyzTeQ.kUglPFAgDEnUDk1N"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.outcomes.RollTable.hmmc1PQkc0RAcQA4"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.outcomes.RollTable.hmmc1PQkc0RAcQA4",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496379948,
+    "modifiedTime": 1716496379948,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "NAEJcCTE6wZyzTeQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!NAEJcCTE6wZyzTeQ"
+}

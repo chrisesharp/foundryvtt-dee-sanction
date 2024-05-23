@@ -1,8 +1,0 @@
-name: "Start"
-type: "favour"
-system:
-  description: "<p>Excite, Arouse, Drop.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

@@ -1,0 +1,78 @@
+{
+  "name": "Broken bone",
+  "type": "consequence",
+  "img": "/systems/dee/assets/default/icons/bones.png",
+  "system": {
+    "description": "Broken bone. Requires a doctor to remove.",
+    "resource": "phy",
+    "potency": -1
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.resources.phy.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "transfer": true,
+      "_id": "tkKyEmIi7wOSerV2",
+      "name": "Broken bone",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.324",
+        "systemId": "dee",
+        "systemVersion": "3.0.3",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!xT2KdiALm7elxNwy.tkKyEmIi7wOSerV2"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.consequences.Item.18NXbpBvx7rd7UTJ"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.consequences.Item.18NXbpBvx7rd7UTJ",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496104198,
+    "modifiedTime": 1716496266357,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "xT2KdiALm7elxNwy",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!xT2KdiALm7elxNwy"
+}

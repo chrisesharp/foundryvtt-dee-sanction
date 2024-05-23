@@ -1,8 +1,0 @@
-name: "Gasp"
-type: "favour"
-system:
-  description: "<p>Desperate, Sudden, Sharp Exhalation.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

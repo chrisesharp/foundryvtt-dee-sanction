@@ -1,0 +1,35 @@
+{
+  "name": "Shortsword",
+  "type": "item",
+  "system": {
+    "description": "<p>A highland dirk.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.weapons.Item.jCMU32qFGY9RLHqA"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.weapons.Item.jCMU32qFGY9RLHqA",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496333937,
+    "modifiedTime": 1716496333937,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "dWyZvAgWReqBlCiH",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!dWyZvAgWReqBlCiH"
+}

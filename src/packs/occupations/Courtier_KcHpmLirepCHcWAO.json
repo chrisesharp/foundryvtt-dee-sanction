@@ -1,0 +1,46 @@
+{
+  "name": "Courtier",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Watchful and ever mindful attendant on the periphery of the gatherings of Court</p>",
+    "abilities": [
+      {
+        "name": "Diplomacy",
+        "type": "ability"
+      },
+      {
+        "name": "Dance",
+        "type": "ability"
+      },
+      {
+        "name": "Connoisseur",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.WtldgPyvFaorKB7Y"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.WtldgPyvFaorKB7Y",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "KcHpmLirepCHcWAO",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!KcHpmLirepCHcWAO"
+}

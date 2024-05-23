@@ -1,0 +1,123 @@
+{
+  "name": "Out of Action Table",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Rolled when an agent has zero hits but has been stabilised.",
+  "results": [
+    {
+      "type": "text",
+      "text": "Stunned: Numb, Raving.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "UG1mkqigiTaJ6ii1",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.UG1mkqigiTaJ6ii1"
+    },
+    {
+      "type": "text",
+      "text": "Senseless: Dazed, Fat-headed.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "gdxocnU2A2Rmq1t3",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.gdxocnU2A2Rmq1t3"
+    },
+    {
+      "type": "text",
+      "text": "Fragile: Shaking, Exhausted.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ThTqRhkKtL2gjN1R",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.ThTqRhkKtL2gjN1R"
+    },
+    {
+      "type": "text",
+      "text": "Overcome: Mute, Humiliated.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "r0prug2VuLmbDIBQ",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.r0prug2VuLmbDIBQ"
+    },
+    {
+      "type": "text",
+      "text": "Wasted: Unguarded, Fearful.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "wBGpj32FC5LBBE3n",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.wBGpj32FC5LBBE3n"
+    },
+    {
+      "type": "text",
+      "text": "Blood-soaked: Gory, Oozing.",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "IsezDfFE0OpYiGoF",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!g2enPNltDGwp3Mcr.IsezDfFE0OpYiGoF"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.outcomes.RollTable.Rz0qJp8qWgpSqt5r"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.outcomes.RollTable.Rz0qJp8qWgpSqt5r",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496379948,
+    "modifiedTime": 1716496379948,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "g2enPNltDGwp3Mcr",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!g2enPNltDGwp3Mcr"
+}

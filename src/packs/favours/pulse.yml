@@ -1,8 +1,0 @@
-name: "Pulse"
-type: "favour"
-system:
-  description: "<p>Distub, Vibrate, Ripple.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"
