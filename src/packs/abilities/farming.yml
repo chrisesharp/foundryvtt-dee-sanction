@@ -1,8 +1,0 @@
-name: "Farming"
-type: "ability"
-system:
-  description: "<p>Farming.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

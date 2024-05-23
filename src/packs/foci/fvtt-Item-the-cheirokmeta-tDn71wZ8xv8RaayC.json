@@ -1,0 +1,40 @@
+{
+  "name": "The Cheirokmeta",
+  "type": "focus",
+  "system": {
+    "description": "<p>A volume in which Zosimos of Panopolis describes the means to work with and augment base matter.</p>",
+    "abilities": [
+      {
+        "name": "Alchemy",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "FPFss2PQY5L6w7WH"
+      },
+      {
+        "name": "Bluffing",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "JqZyAd78ORdDYxLO"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": "M4Ry6bV40W8UaxRy",
+  "effects": [],
+  "_stats": {
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716492980361,
+    "modifiedTime": 1716493193630,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  }
+}

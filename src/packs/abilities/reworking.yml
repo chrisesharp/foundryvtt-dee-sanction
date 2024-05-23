@@ -1,8 +1,0 @@
-name: "Reworking"
-type: "ability"
-system:
-  description: "<p>Reworking.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

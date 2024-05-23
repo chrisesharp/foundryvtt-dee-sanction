@@ -31,6 +31,7 @@
     "sass": "^1.62.0",
     "through2": "^2.0.5",
     "typescript": "^3.9.7",
-    "yargs": "^15.1.0"
+    "yargs": "^15.1.0",
+    "@foundryvtt/foundryvtt-cli": "^1.0.2"
   }
 }

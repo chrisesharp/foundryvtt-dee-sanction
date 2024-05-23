@@ -1,8 +1,0 @@
-name: "Negotiation"
-type: "ability"
-system:
-  description: "<p>Negotiation.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

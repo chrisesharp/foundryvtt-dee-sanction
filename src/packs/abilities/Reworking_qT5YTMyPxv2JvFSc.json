@@ -1,0 +1,32 @@
+{
+  "name": "Reworking",
+  "type": "ability",
+  "system": {
+    "description": "<p>Reworking.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.EslFhuVSzRwg1RHm"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.EslFhuVSzRwg1RHm",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "qT5YTMyPxv2JvFSc",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!qT5YTMyPxv2JvFSc"
+}

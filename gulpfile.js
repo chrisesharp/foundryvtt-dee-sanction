@@ -9,6 +9,7 @@ const through2 = require("through2");
 const yaml = require("js-yaml");
 const Datastore = require("nedb");
 const mergeStream = require("merge-stream");
+import { compilePack } from '@foundryvtt/foundryvtt-cli';
 
 const ts = require("gulp-typescript");
 const less = require("gulp-less");
@@ -18,6 +19,10 @@ const git = require("gulp-git");
 const argv = require("yargs").argv;
 
 sass.compiler = require("sass");
+
+const sourceDirectory = './src';
+const packsDirectory = `${sourceDirectory}/packs`;
+const distDirectory = './dist';
 
 function getConfig() {
   const configPath = path.resolve(process.cwd(), "foundryconfig.json");
@@ -220,6 +225,15 @@ async function compilePacks() {
     );
   });
   return mergeStream.call(null, packs);
+}
+
+async function buildPacks() {
+  const dirs = fs.readdirSync(packsDirectory);
+  if (dirs.length) {
+    await Promise.all(
+      dirs.map(async (dir) => await compilePack(`${packsDirectory}/${dir}`, `${distDirectory}/packs/${dir}`)),
+    );
+  }
 }
 
 /**

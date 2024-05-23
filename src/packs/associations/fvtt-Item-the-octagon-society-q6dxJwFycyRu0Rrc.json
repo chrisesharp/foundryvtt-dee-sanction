@@ -1,0 +1,43 @@
+{
+  "name": "The Octagon Society",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Splinter of the Knights Templar with a focus on attaining a balance in both mind and spirit as a route to a higher purpose or form</p>",
+    "abilities": [
+      {
+        "name": "Phrenology",
+        "type": "ability"
+      },
+      {
+        "name": "Meditation",
+        "type": "ability"
+      },
+      {
+        "name": "Sleight-of-Hand",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": "wWppvBzdwYm55xVM",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.MQYSi9keBV5y9jbq"
+    },
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dee",
+    "systemVersion": "3.0.2",
+    "coreVersion": "12.324",
+    "createdTime": 1708597729323,
+    "modifiedTime": 1708597729323,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  }
+}

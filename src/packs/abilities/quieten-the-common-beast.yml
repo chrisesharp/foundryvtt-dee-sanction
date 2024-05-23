@@ -1,8 +1,0 @@
-name: "Quieten the Common Beast"
-type: "ability"
-system:
-  description: "<p>Quieten the Common Beast.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

@@ -1,8 +1,0 @@
-name: "Carriage Handling"
-type: "ability"
-system:
-  description: "<p>Carriage Handling.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

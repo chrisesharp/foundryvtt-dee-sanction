@@ -1,0 +1,40 @@
+{
+  "name": "The Voynich Manuscript",
+  "type": "focus",
+  "system": {
+    "description": "<p>Impenetrable occult catalogue, filled with an unknown alphabet; peppered with strange imagery, understanding demands time and focus</p>",
+    "abilities": [
+      {
+        "name": "Astrology",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "DpGZrTIZvaR0pCjW"
+      },
+      {
+        "name": "Recreation",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "orbPyk6UAntDJapB"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": "M4Ry6bV40W8UaxRy",
+  "effects": [],
+  "_stats": {
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716492980361,
+    "modifiedTime": 1716493256921,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  }
+}

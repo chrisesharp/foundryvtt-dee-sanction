@@ -1,0 +1,32 @@
+{
+  "name": "Influence",
+  "type": "ability",
+  "system": {
+    "description": "<p>Influence.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.CGOJrHenc3K8QDGZ"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.CGOJrHenc3K8QDGZ",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "SxtumOcl1MhxwI0d",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!SxtumOcl1MhxwI0d"
+}

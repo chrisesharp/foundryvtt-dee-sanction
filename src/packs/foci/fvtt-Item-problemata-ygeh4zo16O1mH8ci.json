@@ -1,0 +1,40 @@
+{
+  "name": "Problemata",
+  "type": "focus",
+  "system": {
+    "description": "<p>Annotated and dissected record of the mechanisms and devices constructed (or even theorised) by the Ancient Greeks</p>",
+    "abilities": [
+      {
+        "name": "Construction",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "DBFYkDcWAMxeU6Uj"
+      },
+      {
+        "name": "Mechanics",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "XJYMA1aZejwslb2d"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": "M4Ry6bV40W8UaxRy",
+  "effects": [],
+  "_stats": {
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716492980361,
+    "modifiedTime": 1716493133940,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  }
+}

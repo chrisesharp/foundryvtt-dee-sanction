@@ -1,0 +1,43 @@
+{
+  "name": "Pythagorean Brotherhood",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Believers that understanding lies in the intersection ‘tween number and form</p>",
+    "abilities": [
+      {
+        "name": "Numerology",
+        "type": "ability"
+      },
+      {
+        "name": "Geometry",
+        "type": "ability"
+      },
+      {
+        "name": "Debate",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": "wWppvBzdwYm55xVM",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.5qnf1fSlIFsCbBbO"
+    },
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dee",
+    "systemVersion": "3.0.2",
+    "coreVersion": "12.324",
+    "createdTime": 1708597729323,
+    "modifiedTime": 1708597729323,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  }
+}

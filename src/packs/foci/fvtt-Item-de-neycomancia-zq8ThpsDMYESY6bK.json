@@ -1,0 +1,40 @@
+{
+  "name": "De Neycomancia",
+  "type": "focus",
+  "system": {
+    "description": "<p>Philosophy and practise upon the invocation of the dead and entities bound to the spirit realm.</p>",
+    "abilities": [
+      {
+        "name": "Clairsentience",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "AtVI8F8uZMwJIy92"
+      },
+      {
+        "name": "Mediumship",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "pabaTb4o3HEN30xt"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": "M4Ry6bV40W8UaxRy",
+  "effects": [],
+  "_stats": {
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716492980361,
+    "modifiedTime": 1716493050213,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  }
+}

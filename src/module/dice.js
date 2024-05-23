@@ -84,7 +84,7 @@ export class DeeSanctionDice {
           data: data,
         };
     
-        const roll = await new Roll(formula, data).evaluate({async:true});
+        const roll = await new Roll(formula, data).evaluate();
     
         // Convert the roll to a chat message and return the roll
         let rollMode = game.settings.get("core", "rollMode");

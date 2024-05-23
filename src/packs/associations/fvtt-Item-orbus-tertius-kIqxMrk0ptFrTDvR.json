@@ -1,0 +1,43 @@
+{
+  "name": "Orbus Tertius",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Committed to gathering evidence of a hidden realm of perception that will allow transcendence to Mastery</p>",
+    "abilities": [
+      {
+        "name": "Influence",
+        "type": "ability"
+      },
+      {
+        "name": "Petty Theft",
+        "type": "ability"
+      },
+      {
+        "name": "Herbology",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": "wWppvBzdwYm55xVM",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.ZA9NttNr70kM4rXg"
+    },
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dee",
+    "systemVersion": "3.0.2",
+    "coreVersion": "12.324",
+    "createdTime": 1708597729323,
+    "modifiedTime": 1708597729323,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  }
+}

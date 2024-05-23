@@ -1,0 +1,32 @@
+{
+  "name": "Hunting",
+  "type": "ability",
+  "system": {
+    "description": "<p>Hunting.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.X1mrG1wdsNGVjCMI"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.X1mrG1wdsNGVjCMI",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "s9up0oWF2VmaLVfs",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!s9up0oWF2VmaLVfs"
+}

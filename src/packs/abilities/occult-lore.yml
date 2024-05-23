@@ -1,8 +1,0 @@
-name: "Occult Lore"
-type: "ability"
-system:
-  description: "<p>Occult Lore.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

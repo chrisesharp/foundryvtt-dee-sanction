@@ -1,8 +1,0 @@
-name: "Dentistry"
-type: "ability"
-system:
-  description: "<p>Dentistry.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

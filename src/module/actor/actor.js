@@ -42,7 +42,7 @@ export class DeeSanctionActor extends Actor {
       data.type === 'agent' ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
     // Set basic token data for newly created actors.
 
-    mergeObject(
+    foundry.utils.mergeObject(
       data.prototypeToken,
       {
         displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
@@ -197,7 +197,7 @@ export class DeeSanctionActor extends Actor {
   async rollConsequence(rollTable, attacking=true) {
     const rt = game.tables.get(rollTable);
     let roll = (attacking === "true") ? new Roll("1d8"): new Roll("1d6+2");
-    return rt.draw({roll:await roll.evaluate({async:"true"})});
+    return rt.draw({roll:await roll.evaluate()});
   }
 
   async rollUnravelling(step) {

@@ -1,0 +1,32 @@
+{
+  "name": "Woolen socks",
+  "type": "item",
+  "system": {
+    "description": "<p>A pair of wool socks.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": "qnVETYa5AzKvpcVl",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.clothing.Item.9yfJrQYdb5ZEOrPA"
+    },
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dee",
+    "systemVersion": "3.0.2",
+    "coreVersion": "12.324",
+    "createdTime": 1708597729064,
+    "modifiedTime": 1708597729064,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  }
+}

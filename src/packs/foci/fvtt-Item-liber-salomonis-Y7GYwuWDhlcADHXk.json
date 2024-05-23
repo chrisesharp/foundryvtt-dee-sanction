@@ -1,0 +1,40 @@
+{
+  "name": "Liber Salomonis",
+  "type": "focus",
+  "system": {
+    "description": "<p>Ceremonial traditions incorporating the distilled wisdom of King Solomon, with particular attention to discourse with spiritkind.</p>",
+    "abilities": [
+      {
+        "name": "Purification",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "uRke5X6Gb1EH0EHS"
+      },
+      {
+        "name": "Detect Lies",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "VoZD25hCLjA48VA8"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": "M4Ry6bV40W8UaxRy",
+  "effects": [],
+  "_stats": {
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716492980361,
+    "modifiedTime": 1716493098820,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {
+    "exportSource": {
+      "world": "deetest",
+      "system": "dee",
+      "coreVersion": "12.324",
+      "systemVersion": "3.0.3"
+    }
+  }
+}
