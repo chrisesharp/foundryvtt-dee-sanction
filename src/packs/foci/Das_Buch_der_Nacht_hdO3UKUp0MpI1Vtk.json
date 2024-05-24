@@ -1,0 +1,50 @@
+{
+  "name": "Das Buch der Nacht",
+  "type": "focus",
+  "system": {
+    "description": "<p>Scrawled diaries of a Grand Wizard who purports to have discovered the Truth at the heart of the Universe</p>",
+    "abilities": [
+      {
+        "name": "Occult Lore",
+        "type": "ability"
+      },
+      {
+        "name": "Navigation",
+        "type": "ability"
+      },
+      {
+        "name": "Occult Lore",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "qkl2Amde8A9eyHsD"
+      },
+      {
+        "name": "Navigation",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "Af4WmaGHCB0YVrbh"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "hdO3UKUp0MpI1Vtk",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!hdO3UKUp0MpI1Vtk"
+}

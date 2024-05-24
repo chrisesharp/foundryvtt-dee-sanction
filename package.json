@@ -15,6 +15,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
     "archiver": "^3.1.1",
     "cb": "^0.1.0",
     "chalk": "^3.0.0",
@@ -31,7 +32,6 @@
     "sass": "^1.62.0",
     "through2": "^2.0.5",
     "typescript": "^3.9.7",
-    "yargs": "^15.1.0",
-    "@foundryvtt/foundryvtt-cli": "^1.0.2"
+    "yargs": "^15.1.0"
   }
 }

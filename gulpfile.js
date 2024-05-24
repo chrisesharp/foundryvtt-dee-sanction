@@ -9,7 +9,7 @@ const through2 = require("through2");
 const yaml = require("js-yaml");
 const Datastore = require("nedb");
 const mergeStream = require("merge-stream");
-import { compilePack } from '@foundryvtt/foundryvtt-cli';
+// import { compilePack } from '@foundryvtt/foundryvtt-cli';
 
 const ts = require("gulp-typescript");
 const less = require("gulp-less");
@@ -229,6 +229,7 @@ async function compilePacks() {
 
 async function buildPacks() {
   const dirs = fs.readdirSync(packsDirectory);
+  const { compilePack } = await import("@foundryvtt/foundryvtt-cli");
   if (dirs.length) {
     await Promise.all(
       dirs.map(async (dir) => await compilePack(`${packsDirectory}/${dir}`, `${distDirectory}/packs/${dir}`)),
@@ -548,14 +549,14 @@ function gitTag() {
 
 const execGit = gulp.series(gitAdd, gitCommit, gitTag);
 
-const execBuild = gulp.parallel(buildTS, buildLess, buildSASS, compilePacks);
+const execBuild = gulp.parallel(buildTS, buildLess, buildSASS, buildPacks);
 
 exports.build = gulp.series(clean, execBuild, copyFiles);
 exports.watch = buildWatch;
 exports.clean = clean;
 exports.link = linkUserData;
 exports.package = packageBuild;
-exports.compendia = compilePacks;
+exports.compendia = buildPacks;
 exports.publish = gulp.series(
   clean,
   updateManifest,

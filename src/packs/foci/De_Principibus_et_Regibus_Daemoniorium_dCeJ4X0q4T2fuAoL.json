@@ -1,0 +1,50 @@
+{
+  "name": "De Principibus et Regibus Daemoniorium",
+  "type": "focus",
+  "system": {
+    "description": "<p>Cryptic discourse on the theory and notional key in the identification and naming of daemons, devils and dark fae.</p>",
+    "abilities": [
+      {
+        "name": "Names",
+        "type": "ability"
+      },
+      {
+        "name": "Deception",
+        "type": "ability"
+      },
+      {
+        "name": "Names",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "W1nevm2kSv11KD1i"
+      },
+      {
+        "name": "Deception",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "DH51FEIjIw8JThBm"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "dCeJ4X0q4T2fuAoL",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!dCeJ4X0q4T2fuAoL"
+}

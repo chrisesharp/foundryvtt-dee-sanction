@@ -1,0 +1,35 @@
+{
+  "name": "Silk Scarf",
+  "type": "item",
+  "system": {
+    "description": "<p>A scarf of silk.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.clothing.Item.HdsKHhBeKcsUPJEN"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.clothing.Item.HdsKHhBeKcsUPJEN",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542442100,
+    "modifiedTime": 1716542442100,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "ZxLJWXzdRIDrFWm1",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!ZxLJWXzdRIDrFWm1"
+}

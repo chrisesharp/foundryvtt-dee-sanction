@@ -1,0 +1,50 @@
+{
+  "name": "Rites of Eleusis",
+  "type": "focus",
+  "system": {
+    "description": "<p>Cryptic insights into higher wisdom scattered in fragments across many minor works, the progression through which one might achieve transcendence</p>",
+    "abilities": [
+      {
+        "name": "Brewing",
+        "type": "ability"
+      },
+      {
+        "name": "Organisation",
+        "type": "ability"
+      },
+      {
+        "name": "Brewing",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "XtCyqrJxeb3joBcg"
+      },
+      {
+        "name": "Organisation",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "k7fVTRjIu8NNWu5Y"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "zMqceh2BY8pp6ZZQ",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!zMqceh2BY8pp6ZZQ"
+}

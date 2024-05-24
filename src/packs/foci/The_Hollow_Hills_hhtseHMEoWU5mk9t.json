@@ -1,0 +1,50 @@
+{
+  "name": "The Hollow Hills",
+  "type": "focus",
+  "system": {
+    "description": "<p>Theories and legends upon an inner world of lost people and forgotten knowledge</p>",
+    "abilities": [
+      {
+        "name": "Astronomy",
+        "type": "ability"
+      },
+      {
+        "name": "Climbing",
+        "type": "ability"
+      },
+      {
+        "name": "Astronomy",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "CNZSVkme1tZZd2p6"
+      },
+      {
+        "name": "Climbing",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "3iFA5LkWDqUlQMLP"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "hhtseHMEoWU5mk9t",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!hhtseHMEoWU5mk9t"
+}
