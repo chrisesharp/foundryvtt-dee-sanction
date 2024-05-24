@@ -9,7 +9,6 @@ const through2 = require("through2");
 const yaml = require("js-yaml");
 const Datastore = require("nedb");
 const mergeStream = require("merge-stream");
-// import { compilePack } from '@foundryvtt/foundryvtt-cli';
 
 const ts = require("gulp-typescript");
 const less = require("gulp-less");
@@ -174,58 +173,6 @@ function buildSASS() {
 /* ----------------------------------------- */
 /*  Compile Compendia
 /* ----------------------------------------- */
-
-async function compilePacks() {
-  const PACK_SRC = "src/packs";
-  const BUILD_DIR = "dist/packs";
-  // determine the source folders to process
-  const folders = fs.readdirSync(PACK_SRC).filter((file) => {
-    return fs.statSync(path.join(PACK_SRC, file)).isDirectory();
-  });
-
-  // process each folder into a compendium db
-  const packs = folders.map((folder) => {
-    const removeProp = (obj, propToDelete) => {
-      for (var property in obj) {
-         if (typeof obj[property] == "object") {
-            let objectToCheck = obj[property];
-            delete obj[property]
-            if (property !== propToDelete) {
-              let newJsonData= removeProp(objectToCheck, propToDelete);
-              obj[property]= newJsonData
-            }
-         } else {
-             if (property === propToDelete) {
-               delete obj[property];
-             }
-           }
-       }
-       return obj
-    }
-
-    let filename = path.resolve(__dirname, BUILD_DIR, `${folder}.db`);
-    if (fs.existsSync(filename)) { fs.unlinkSync(filename);}
-    const db = new Datastore({ filename: filename, autoload: true });
-    const globs = [path.join(PACK_SRC, folder, "*.json"), path.join(PACK_SRC, folder, "*.yml")];
-    return gulp.src(globs)
-    .pipe(
-      through2.obj((file, enc, cb) => {
-        let json = {};
-        if (path.extname(file.path) === ".json") {
-          let orig_json = JSON.parse(file.contents.toString());
-          json = removeProp(orig_json, "id");
-          json = removeProp(json, "sort");
-          json = removeProp(json, "flags");
-        } else {
-          json = yaml.loadAll(file.contents.toString());
-        }
-        db.insert(json);
-        cb();
-      })
-    );
-  });
-  return mergeStream.call(null, packs);
-}
 
 async function buildPacks() {
   const dirs = fs.readdirSync(packsDirectory);
