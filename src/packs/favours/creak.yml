@@ -1,8 +1,0 @@
-name: "Creak"
-type: "favour"
-system:
-  description: "<p>Scare, Distract, Worry, Detour.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

@@ -1,8 +1,0 @@
-name: "Disquiet"
-type: "favour"
-system:
-  description: "<p>Botch, Distrust, Unsettle.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

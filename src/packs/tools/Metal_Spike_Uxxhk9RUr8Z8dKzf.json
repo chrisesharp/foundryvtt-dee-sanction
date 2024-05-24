@@ -1,0 +1,35 @@
+{
+  "name": "Metal Spike",
+  "type": "item",
+  "system": {
+    "description": "<p>A metal spike.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.tools.Item.NIsgp00L0D9xujfY"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.tools.Item.NIsgp00L0D9xujfY",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496324658,
+    "modifiedTime": 1716496324658,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Uxxhk9RUr8Z8dKzf",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!Uxxhk9RUr8Z8dKzf"
+}

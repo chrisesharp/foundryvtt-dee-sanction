@@ -1,0 +1,31 @@
+{
+  "name": "O Fickle Fortune",
+  "type": "script",
+  "img": "icons/svg/coins.svg",
+  "command": "if (game.user.isGM) {\n  const rt1 = game.tables.find(t => t.name === 'Sight Outcomes');\n  const rt2 = game.tables.find(t => t.name === 'Sight Subject');\n  rt1.draw({rollMode:\"gmroll\"});\n  rt2.draw({rollMode:\"gmroll\"});\n}",
+  "folder": null,
+  "scope": "global",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.macros.Macro.WslxUl8GO5v6Cwhr"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.macros.Macro.WslxUl8GO5v6Cwhr",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496458690,
+    "modifiedTime": 1716496458690,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "author": "wIAZHHPxailNtiG9",
+  "_id": "H1Wycv6OTrBJeoZ2",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!macros!H1Wycv6OTrBJeoZ2"
+}

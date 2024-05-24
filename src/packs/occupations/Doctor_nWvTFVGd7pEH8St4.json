@@ -1,0 +1,46 @@
+{
+  "name": "Doctor",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Assistant to one of the few chartered physicians who claim recognition for their depth of medical knowledge</p>",
+    "abilities": [
+      {
+        "name": "Reassurance",
+        "type": "ability"
+      },
+      {
+        "name": "Anatomy",
+        "type": "ability"
+      },
+      {
+        "name": "Diagnosis",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.cJIOQ8jo17PQSziy"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.cJIOQ8jo17PQSziy",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "nWvTFVGd7pEH8St4",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!nWvTFVGd7pEH8St4"
+}

@@ -1,8 +1,0 @@
-name: "Frost"
-type: "favour"
-system:
-  description: "<p>Slide, Slip, Obscure.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

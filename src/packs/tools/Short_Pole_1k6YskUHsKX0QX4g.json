@@ -1,0 +1,35 @@
+{
+  "name": "Short Pole",
+  "type": "item",
+  "system": {
+    "description": "<p>A short wooden pole.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.tools.Item.rk03NmvqAbxSSSrG"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.tools.Item.rk03NmvqAbxSSSrG",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496324658,
+    "modifiedTime": 1716496324658,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "1k6YskUHsKX0QX4g",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!1k6YskUHsKX0QX4g"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Tallow Candle",
+  "type": "item",
+  "system": {
+    "description": "<p>A tallow candle wrapped in canvas.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.tools.Item.qM9XseF2FeDXKKAI"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.tools.Item.qM9XseF2FeDXKKAI",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496324658,
+    "modifiedTime": 1716496324658,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Wc5gJzqptXv0vWjS",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!Wc5gJzqptXv0vWjS"
+}

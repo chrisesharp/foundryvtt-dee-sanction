@@ -1,0 +1,46 @@
+{
+  "name": "Messenger",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Second-fiddle diplomats burdened with the drudgery of carrying letters, papers, and commodious gratuities</p>",
+    "abilities": [
+      {
+        "name": "Rumour",
+        "type": "ability"
+      },
+      {
+        "name": "Orienteering",
+        "type": "ability"
+      },
+      {
+        "name": "Traversing",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.FCoc27hzRYn5l4lp"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.FCoc27hzRYn5l4lp",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "CfgDOCLmidrJFbcO",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!CfgDOCLmidrJFbcO"
+}

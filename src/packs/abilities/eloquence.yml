@@ -1,8 +1,0 @@
-name: "Eloquence"
-type: "ability"
-system:
-  description: "<p>Eloquence.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

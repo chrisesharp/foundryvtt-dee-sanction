@@ -1,8 +1,0 @@
-name: "Mediumship"
-type: "ability"
-system:
-  description: "<p>Mediumship - you are sensitive to the presence of the lingering dead and might, on occasion, serve as a conduit for them.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

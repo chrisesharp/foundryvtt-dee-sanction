@@ -1,8 +1,0 @@
-name: "Detect Lies"
-type: "ability"
-system:
-  description: "<p>Detect Lies - you have an eye for a lie and signals that accompany them</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

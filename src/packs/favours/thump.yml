@@ -1,8 +1,0 @@
-name: "Thump"
-type: "favour"
-system:
-  description: "<p>Shock, Bruise, Slap, Pulp.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

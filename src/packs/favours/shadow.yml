@@ -1,8 +1,0 @@
-name: "Shadow"
-type: "favour"
-system:
-  description: "<p>Conceal, Lurk, Veil.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

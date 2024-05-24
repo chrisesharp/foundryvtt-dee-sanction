@@ -1,8 +1,0 @@
-name: "Decay"
-type: "favour"
-system:
-  description: "<p>Necrosis, Numbness, To Dust, Liquify.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

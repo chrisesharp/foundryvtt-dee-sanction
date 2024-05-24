@@ -145,7 +145,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @private
    */
   _updateResource(resource, delta) {
-    const resources = duplicate(this.actor.system.resources);
+    const resources = foundry.utils.duplicate(this.actor.system.resources);
     const newData = {};
     resources[resource].value += delta; 
     newData["resources"] = resources;
@@ -212,7 +212,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const data = foundry.utils.duplicate(header.dataset);
     // Initialize a default name.
     const name = `New ${type.capitalize()}`;
     // Prepare the item object.
@@ -236,7 +236,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onItemSummary(event) {
+  async _onItemSummary(event) {
     const empty = `<span class="fa-stack" style="font-size: 0.5em;">
                     <i class="far fa-square fa-stack-2x" style="vertical-align:middle;"></i>
                    </span>`;
@@ -247,7 +247,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     event.preventDefault();
     const li = $(event.currentTarget).parents(".item-entry");
     const item = this.actor.items.get(li.data("item-id"));
-    const description = TextEditor.enrichHTML(item.system.description, {async: false});
+    const description = await TextEditor.enrichHTML(item.system.description, {async: false});
     const abilities = this.actor.getAbilities();
     let options = "";
     

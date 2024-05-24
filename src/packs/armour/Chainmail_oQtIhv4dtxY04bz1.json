@@ -1,0 +1,81 @@
+{
+  "name": "Chainmail",
+  "type": "item",
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "system": {
+    "description": "A coat of chainmail.",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false,
+    "resource": "armour",
+    "potency": -5
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.resources.armour.value",
+          "mode": 2,
+          "value": "-5",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "name": "Chainmail",
+      "transfer": true,
+      "_id": "giOqZ0VHhMvGhea3",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.324",
+        "systemId": "dee",
+        "systemVersion": "3.0.3",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!oQtIhv4dtxY04bz1.giOqZ0VHhMvGhea3"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.armour.Item.FTbrJ5QLFn9b5oei"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.armour.Item.FTbrJ5QLFn9b5oei",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542423169,
+    "modifiedTime": 1716542423169,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "oQtIhv4dtxY04bz1",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!oQtIhv4dtxY04bz1"
+}

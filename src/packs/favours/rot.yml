@@ -1,8 +1,0 @@
-name: "Rot"
-type: "favour"
-system:
-  description: "<p>Spoil, Stink, Mould, Weaken.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

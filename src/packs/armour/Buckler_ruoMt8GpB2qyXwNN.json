@@ -1,0 +1,81 @@
+{
+  "name": "Buckler",
+  "type": "item",
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "system": {
+    "description": "A small buckler shield.",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false,
+    "resource": "armour",
+    "potency": -2
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.resources.armour.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "name": "Buckler",
+      "transfer": true,
+      "_id": "BZ20CdlVg4t4K1pK",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.324",
+        "systemId": "dee",
+        "systemVersion": "3.0.3",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!ruoMt8GpB2qyXwNN.BZ20CdlVg4t4K1pK"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.armour.Item.8SbVBfMIgXPLXoOO"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.armour.Item.8SbVBfMIgXPLXoOO",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542423169,
+    "modifiedTime": 1716542423169,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "ruoMt8GpB2qyXwNN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!ruoMt8GpB2qyXwNN"
+}

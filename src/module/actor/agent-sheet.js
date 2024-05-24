@@ -10,7 +10,7 @@ export class DeeSanctionAgentSheet extends DeeSanctionActorSheet {
         classes: ["dee", "sheet", "actor", "agent"],
         template: "systems/dee/templates/actor/agent-sheet.html",
         width: 450,
-        height: 585,
+        height: 665,
         resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resources" }]
         });

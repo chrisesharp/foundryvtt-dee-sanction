@@ -1,8 +1,0 @@
-name: "Flurry"
-type: "favour"
-system:
-  description: "<p>Cloak, Smother, Blind.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

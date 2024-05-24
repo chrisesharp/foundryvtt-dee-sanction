@@ -1,8 +1,0 @@
-name: "Glower"
-type: "favour"
-system:
-  description: "<p>Brood, Nightmare, Evil-eye.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

@@ -1,8 +1,0 @@
-name: "Archaeology"
-type: "ability"
-system:
-  description: "<p>Archaeology- power is all about lost treasure & shallow graves</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

@@ -1,0 +1,46 @@
+{
+  "name": "Herbalist",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Practitioners in traditional treatments and curatives garnered and prepared from both cultivated gardens or the open commons and woodlands</p>",
+    "abilities": [
+      {
+        "name": "Comfort",
+        "type": "ability"
+      },
+      {
+        "name": "Herbalism",
+        "type": "ability"
+      },
+      {
+        "name": "Brewing",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.SeU799e4xHZXmWn6"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.SeU799e4xHZXmWn6",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "dXWPec8KB0o9lYF4",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!dXWPec8KB0o9lYF4"
+}

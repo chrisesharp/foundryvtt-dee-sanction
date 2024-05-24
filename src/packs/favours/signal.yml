@@ -1,8 +1,0 @@
-name: "Signal"
-type: "favour"
-system:
-  description: "<p>Warn, Commune, Awaken, Flare.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

@@ -1,8 +1,0 @@
-name: "Catch"
-type: "favour"
-system:
-  description: "<p>Inflame, Kindle, Smoke.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

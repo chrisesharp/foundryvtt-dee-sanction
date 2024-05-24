@@ -1,8 +1,0 @@
-name: "Bureaucracy"
-type: "ability"
-system:
-  description: "<p>Bureaucracy.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

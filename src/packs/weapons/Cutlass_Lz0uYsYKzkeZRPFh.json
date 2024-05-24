@@ -1,0 +1,35 @@
+{
+  "name": "Cutlass",
+  "type": "item",
+  "system": {
+    "description": "<p>A well-notched cutlass.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.weapons.Item.E8hUhLK2OlhZjW0r"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.weapons.Item.E8hUhLK2OlhZjW0r",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496333937,
+    "modifiedTime": 1716496333937,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Lz0uYsYKzkeZRPFh",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!Lz0uYsYKzkeZRPFh"
+}

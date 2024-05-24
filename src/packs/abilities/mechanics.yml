@@ -1,8 +1,0 @@
-name: "Mechanics"
-type: "ability"
-system:
-  description: "<p>Mechanics - understand the basics of modern machinery; axles to clockwork, locks to firing mechanisms.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

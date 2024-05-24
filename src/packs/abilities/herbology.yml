@@ -1,8 +1,0 @@
-name: "Herbology"
-type: "ability"
-system:
-  description: "<p>Herbology.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

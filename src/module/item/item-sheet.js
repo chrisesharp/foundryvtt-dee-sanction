@@ -82,17 +82,18 @@ export class DeeSanctionItemSheet extends ItemSheet {
 
   async _onDropItem(data) {
     if (!this.isEditable) return false;
-    let abilities = this.item.system.abilities.filter(a=>a.id != data.id);
-    let ability = game.items.get(data.id);
+    let abilities = this.item.system.abilities.filter(a=>a.uuid != data.uuid);
+    let ability = await fromUuid(data['uuid']);
     if (!ability) {
       const pack = game.packs.get("dee.abilities");
-      const idx = pack.index.find(e => e.id === data.id );
-      ability = await pack.getEntity(idx.id);
+      ability = await pack?.getDocument(data['uuid']);
     }
     if (ability) {
-      abilities.push(ability);
-      const newAbilities = {
-        abilities: abilities
+      abilities.push({name: ability.name, type: "ability", img: ability.img, id: ability.id});
+      const newAbilities = { system:
+        {
+          abilities: abilities
+        }
       }
       return this.item.update(newAbilities);
     } else {
@@ -129,7 +130,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
         await createConsequenceEffect("phy",-1,this.item);
       }
     }
-    let sheetData = duplicate(super.getData());
+    let sheetData = foundry.utils.duplicate(super.getData());
     sheetData.item = data.item;
     sheetData.config = CONFIG.DEE;
     sheetData.data = data.item.system;
@@ -171,7 +172,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       for ( let e of this.item.effects ) {
         let name = await e.sourceName; // Trigger a lookup for the source name
         if (name === this.item.name) {
-          const change = duplicate(e.data.changes[0]);
+          const change = foundry.utils.duplicate(e.data.changes[0]);
           change.key = `resources.${resource}.value`;
           e.update({changes: [change]});
           break;
@@ -198,7 +199,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     event.preventDefault();
     const header = event.currentTarget;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const data = foundry.utils.duplicate(header.dataset);
     // Initialize a default name.
     const name = `New Ability`;
     // Prepare the item object.
@@ -219,12 +220,14 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @param {String} id   the id of the ability
    * @private
    */
-  _onAbilityDelete(id) {
-    const abilities = this.item.system.abilities.filter((i)=>i._id != id);
-    const newAbilities = {
-      abilities: abilities
+  async _onAbilityDelete(id) {
+    const abilities = this.item.system.abilities.filter((i)=>i.id != id);
+    const newAbilities = { system:
+      {
+        abilities: abilities
+      }
     }
-    return this.item.update(newAbilities);
+    return await this.item.update(newAbilities);
   }
 
   async _onPotencyChange(event) {
@@ -234,7 +237,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
     for ( let e of this.item.effects ) {
       let name = await e.sourceName; // Trigger a lookup for the source name
       if (name === this.item.name) {
-        const change = duplicate(e.data.changes[0]);
+        const change = foundry.utils.duplicate(e.data.changes[0]);
         change.value = parseInt(potency);
         change.mode =  2;
         e.update({changes: [change]});

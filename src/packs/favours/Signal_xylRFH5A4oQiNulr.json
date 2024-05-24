@@ -1,0 +1,32 @@
+{
+  "name": "Signal",
+  "type": "favour",
+  "system": {
+    "description": "<p>Warn, Commune, Awaken, Flare.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/magic.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.favours.Item.nRiVVIXZaqmDnUjE"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.favours.Item.nRiVVIXZaqmDnUjE",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716495844733,
+    "modifiedTime": 1716495844733,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "xylRFH5A4oQiNulr",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!xylRFH5A4oQiNulr"
+}

@@ -8,7 +8,7 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">{{ localize 'DEE.Focus'}}</a>
+        <a class="item" data-tab="editor">{{ localize 'DEE.Focus'}}</a>
         <a class="item" data-tab="abilities">{{ localize 'DEE.tabs.abilities'}}</a>
     </nav>
 
@@ -16,9 +16,9 @@
     <section class="sheet-body">
 
         {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
+        <div class="tab editor item-editor" data-group="primary" data-tab="editor">
+              {{editor data.description target="system.description" button=true owner=owner editable=editable}}
+          </div>
 
         {{!-- Attributes Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">

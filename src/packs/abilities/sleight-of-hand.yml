@@ -1,8 +1,0 @@
-name: "Sleight-of-Hand"
-type: "ability"
-system:
-  description: "<p>Sleight-of-Hand -  the art of distraction; non-magical trickery.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

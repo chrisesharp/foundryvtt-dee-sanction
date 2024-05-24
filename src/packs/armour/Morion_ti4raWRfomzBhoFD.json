@@ -1,0 +1,81 @@
+{
+  "name": "Morion",
+  "type": "item",
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "system": {
+    "description": "An open helm, as favoured by the Spaniard.",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false,
+    "resource": "armour",
+    "potency": -1
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.resources.armour.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "name": "Morion",
+      "transfer": true,
+      "_id": "KPfYrFkhODd4kc1z",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.324",
+        "systemId": "dee",
+        "systemVersion": "3.0.3",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!ti4raWRfomzBhoFD.KPfYrFkhODd4kc1z"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.armour.Item.4VDXDJiTR2orOJ0N"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.armour.Item.4VDXDJiTR2orOJ0N",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542423169,
+    "modifiedTime": 1716542423169,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "ti4raWRfomzBhoFD",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!ti4raWRfomzBhoFD"
+}

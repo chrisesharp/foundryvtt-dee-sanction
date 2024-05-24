@@ -1,0 +1,81 @@
+{
+  "name": "Humour:Blood",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Ongoing effect when an agent falters on an unravelling die.",
+  "results": [
+    {
+      "type": "document",
+      "text": "Foolish",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "2cCZDsK8ZaXFZ2E0",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!cTNIUzkiaqdgKeXj.2cCZDsK8ZaXFZ2E0"
+    },
+    {
+      "type": "document",
+      "text": "Gullible",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "z32YYQXAHZVtWFwh",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!cTNIUzkiaqdgKeXj.z32YYQXAHZVtWFwh"
+    },
+    {
+      "type": "document",
+      "text": "Capricious",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "hdCjJsCRXy7rykur",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!cTNIUzkiaqdgKeXj.hdCjJsCRXy7rykur"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.humours.RollTable.c1OFCbO3OwPrsnqN"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.humours.RollTable.c1OFCbO3OwPrsnqN",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496373961,
+    "modifiedTime": 1716496373961,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "cTNIUzkiaqdgKeXj",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!cTNIUzkiaqdgKeXj"
+}

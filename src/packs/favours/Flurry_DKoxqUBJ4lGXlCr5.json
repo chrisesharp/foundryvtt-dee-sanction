@@ -1,0 +1,32 @@
+{
+  "name": "Flurry",
+  "type": "favour",
+  "system": {
+    "description": "<p>Cloak, Smother, Blind.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/magic.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.favours.Item.O9A54IWgSLiOnuH3"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.favours.Item.O9A54IWgSLiOnuH3",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716495844733,
+    "modifiedTime": 1716495844733,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "DKoxqUBJ4lGXlCr5",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!DKoxqUBJ4lGXlCr5"
+}

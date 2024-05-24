@@ -1,0 +1,31 @@
+{
+  "name": "Take a Chance",
+  "type": "script",
+  "img": "icons/svg/coins.svg",
+  "command": "game.dee.DeeSanctionDice.sendRoll({\n  title: \"Take a Chance\",\n  formula: \"1d6\",\n  system: {\n    rollType:\"take-a-chance\",\n    actor: actor,\n    roll: {\n      type: \"above\",\n      target:4\n    }\n  }\n});",
+  "folder": null,
+  "scope": "global",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.macros.Macro.hhnu4Zm4cpP4IrHB"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.macros.Macro.hhnu4Zm4cpP4IrHB",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496458690,
+    "modifiedTime": 1716496458690,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "author": "wIAZHHPxailNtiG9",
+  "_id": "e3GTD075CveDKMpC",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!macros!e3GTD075CveDKMpC"
+}
