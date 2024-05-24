@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Construction",
-        "type": "ability"
-      },
-      {
-        "name": "Mechanics",
-        "type": "ability"
-      },
-      {
-        "name": "Construction",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "DBFYkDcWAMxeU6Uj"

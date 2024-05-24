@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Astronomy",
-        "type": "ability"
-      },
-      {
-        "name": "Climbing",
-        "type": "ability"
-      },
-      {
-        "name": "Astronomy",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "CNZSVkme1tZZd2p6"

@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Blacksmithery",
-        "type": "ability"
-      },
-      {
-        "name": "Theology",
-        "type": "ability"
-      },
-      {
-        "name": "Blacksmithery",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "Jr2WvtD7SziA85yp"

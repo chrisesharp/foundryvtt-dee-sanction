@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Purification",
-        "type": "ability"
-      },
-      {
-        "name": "Detect Lies",
-        "type": "ability"
-      },
-      {
-        "name": "Purification",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "uRke5X6Gb1EH0EHS"

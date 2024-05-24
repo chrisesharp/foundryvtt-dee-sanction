@@ -236,7 +236,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onItemSummary(event) {
+  async _onItemSummary(event) {
     const empty = `<span class="fa-stack" style="font-size: 0.5em;">
                     <i class="far fa-square fa-stack-2x" style="vertical-align:middle;"></i>
                    </span>`;
@@ -247,7 +247,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     event.preventDefault();
     const li = $(event.currentTarget).parents(".item-entry");
     const item = this.actor.items.get(li.data("item-id"));
-    const description = TextEditor.enrichHTML(item.system.description, {async: false});
+    const description = await TextEditor.enrichHTML(item.system.description, {async: false});
     const abilities = this.actor.getAbilities();
     let options = "";
     

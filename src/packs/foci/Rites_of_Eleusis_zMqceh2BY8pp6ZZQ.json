@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Brewing",
-        "type": "ability"
-      },
-      {
-        "name": "Organisation",
-        "type": "ability"
-      },
-      {
-        "name": "Brewing",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "XtCyqrJxeb3joBcg"

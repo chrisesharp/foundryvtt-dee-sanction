@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Alchemy",
-        "type": "ability"
-      },
-      {
-        "name": "Bluffing",
-        "type": "ability"
-      },
-      {
-        "name": "Alchemy",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "FPFss2PQY5L6w7WH"

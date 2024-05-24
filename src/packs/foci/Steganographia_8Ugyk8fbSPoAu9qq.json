@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Signs",
-        "type": "ability"
-      },
-      {
-        "name": "Ciphers",
-        "type": "ability"
-      },
-      {
-        "name": "Signs",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "NmmbmT0WiIbOH6wh"

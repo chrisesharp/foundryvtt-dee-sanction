@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Names",
-        "type": "ability"
-      },
-      {
-        "name": "Deception",
-        "type": "ability"
-      },
-      {
-        "name": "Names",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "W1nevm2kSv11KD1i"

@@ -6,14 +6,6 @@
     "abilities": [
       {
         "name": "Astrology",
-        "type": "ability"
-      },
-      {
-        "name": "Recreation",
-        "type": "ability"
-      },
-      {
-        "name": "Astrology",
         "type": "ability",
         "img": "/systems/dee/assets/default/icons/book.png",
         "id": "DpGZrTIZvaR0pCjW"
