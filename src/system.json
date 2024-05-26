@@ -3,11 +3,9 @@
   "title": "The Dee Sanction",
   "description": "The Dee Sanction system for FoundryVTT!",
   "version": "3.0.3",
-  "minimumCoreVersion": "11",
-  "compatibleCoreVersion": "11",
   "compatibility": {
     "minimum": 11,
-    "verified": "11"
+    "verified": "12"
   },
   "authors": [
     {
