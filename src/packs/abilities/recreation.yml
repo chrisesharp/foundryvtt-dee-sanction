@@ -1,8 +1,0 @@
-name: "Recreation"
-type: "ability"
-system:
-  description: "<p>Recreation.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

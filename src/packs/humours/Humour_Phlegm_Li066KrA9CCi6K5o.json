@@ -1,0 +1,81 @@
+{
+  "name": "Humour:Phlegm",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Ongoing effect when an agent falters on an unravelling die.",
+  "results": [
+    {
+      "type": "document",
+      "text": "Fat-witted",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "fxvD0aSHZUexqaDx",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!Li066KrA9CCi6K5o.fxvD0aSHZUexqaDx"
+    },
+    {
+      "type": "document",
+      "text": "Canker-sorrowed",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "IHoDDpqWySW6jWnn",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!Li066KrA9CCi6K5o.IHoDDpqWySW6jWnn"
+    },
+    {
+      "type": "document",
+      "text": "Unheedy",
+      "img": "/systems/dee/assets/default/icons/bones.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "1QFjbU7gwaBJ75ip",
+      "documentCollection": "Item",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!Li066KrA9CCi6K5o.1QFjbU7gwaBJ75ip"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.humours.RollTable.dbZQYDqaDBOfCcRE"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.humours.RollTable.dbZQYDqaDBOfCcRE",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496373961,
+    "modifiedTime": 1716496373961,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Li066KrA9CCi6K5o",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!Li066KrA9CCi6K5o"
+}

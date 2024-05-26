@@ -1,0 +1,78 @@
+{
+  "name": "Afeared",
+  "type": "consequence",
+  "img": "/systems/dee/assets/default/icons/bones.png",
+  "system": {
+    "description": "prone to tip into panic and alarm at the smallest trigger.",
+    "resource": "sup",
+    "potency": -1
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.resources.sup.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "transfer": true,
+      "_id": "2RbD86wYxyMgg0k3",
+      "name": "Afeared",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.324",
+        "systemId": "dee",
+        "systemVersion": "3.0.3",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "tint": "#ffffff",
+      "sort": 0,
+      "_key": "!items.effects!lhEReOq9a9tkxdIw.2RbD86wYxyMgg0k3"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.consequences.Item.VQOG1k3Zr7Y4n4Mj"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.consequences.Item.VQOG1k3Zr7Y4n4Mj",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496104198,
+    "modifiedTime": 1716496266357,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "lhEReOq9a9tkxdIw",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!lhEReOq9a9tkxdIw"
+}

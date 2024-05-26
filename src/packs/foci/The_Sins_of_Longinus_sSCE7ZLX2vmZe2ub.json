@@ -1,0 +1,42 @@
+{
+  "name": "The Sins of Longinus",
+  "type": "focus",
+  "system": {
+    "description": "<p>Discourse on the medieval legend around the final days of the Christ</p>",
+    "abilities": [
+      {
+        "name": "Blacksmithery",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "Jr2WvtD7SziA85yp"
+      },
+      {
+        "name": "Theology",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "3NmWqxH3UsyGURu9"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "sSCE7ZLX2vmZe2ub",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!sSCE7ZLX2vmZe2ub"
+}

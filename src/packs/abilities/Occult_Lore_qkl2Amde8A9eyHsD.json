@@ -1,0 +1,32 @@
+{
+  "name": "Occult Lore",
+  "type": "ability",
+  "system": {
+    "description": "<p>Occult Lore.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.KuFYlgzCVQvKLNWK"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.KuFYlgzCVQvKLNWK",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "qkl2Amde8A9eyHsD",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!qkl2Amde8A9eyHsD"
+}

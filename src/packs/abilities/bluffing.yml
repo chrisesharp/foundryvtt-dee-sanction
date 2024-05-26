@@ -1,8 +1,0 @@
-name: "Bluffing"
-type: "ability"
-system:
-  description: "<p>Bluffing - the capacity to mislead or divert the judgement of others.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

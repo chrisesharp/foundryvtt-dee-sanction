@@ -1,8 +1,0 @@
-name: "Shiver"
-type: "favour"
-system:
-  description: "<p>Shudder, Shimmy, Uneasy, Shrivel.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

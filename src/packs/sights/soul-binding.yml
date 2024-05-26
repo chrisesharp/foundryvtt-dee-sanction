@@ -1,8 +1,0 @@
-name: "Soul Binding"
-type: "favour"
-system:
-  description: "<h2>Token Reading</h2><p>Soul Binding.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Sights"

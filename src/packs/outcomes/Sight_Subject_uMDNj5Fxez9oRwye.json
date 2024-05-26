@@ -1,0 +1,213 @@
+{
+  "name": "Sight Subject",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "GM Table for the subject of a prophecy",
+  "formula": "((1d4 -1) * 6) + 1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "text": "The Divinant",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        1,
+        2
+      ],
+      "_id": "ieOvoqZpqQsxbzQG",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.ieOvoqZpqQsxbzQG"
+    },
+    {
+      "type": "text",
+      "text": "Romantic or Sexual Partner",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        3,
+        4
+      ],
+      "_id": "uklazuDAZi1eGEKK",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.uklazuDAZi1eGEKK"
+    },
+    {
+      "type": "text",
+      "text": "Respected Individual",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        5,
+        6
+      ],
+      "_id": "PNHp52SG8kl6U2W4",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.PNHp52SG8kl6U2W4"
+    },
+    {
+      "type": "text",
+      "text": "Rival or Aggressor",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        7,
+        8
+      ],
+      "_id": "crHOJWlSgwQDA2pg",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.crHOJWlSgwQDA2pg"
+    },
+    {
+      "type": "text",
+      "text": "Sleeper or Infiltrator",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        9,
+        10
+      ],
+      "_id": "qccvfNh88i2K2pKT",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.qccvfNh88i2K2pKT"
+    },
+    {
+      "type": "text",
+      "text": "Traitor or Saboteur",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        11,
+        12
+      ],
+      "_id": "QNKgOt2NsNGNnkbM",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.QNKgOt2NsNGNnkbM"
+    },
+    {
+      "type": "text",
+      "text": "Patron or Lord",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        13,
+        14
+      ],
+      "_id": "AKPZCoc3WLCMZw4P",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.AKPZCoc3WLCMZw4P"
+    },
+    {
+      "type": "text",
+      "text": "Peer or Colleague",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        15,
+        16
+      ],
+      "_id": "Iy3MMKNrdNJTmyIN",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.Iy3MMKNrdNJTmyIN"
+    },
+    {
+      "type": "text",
+      "text": "Servant or Minion",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        17,
+        18
+      ],
+      "_id": "Xal4r2VnlQI1pLgY",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.Xal4r2VnlQI1pLgY"
+    },
+    {
+      "type": "text",
+      "text": "Guardian or Custodian",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        19,
+        20
+      ],
+      "_id": "E5wW6LwKjhcGFyKc",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.E5wW6LwKjhcGFyKc"
+    },
+    {
+      "type": "text",
+      "text": "Admirer or Kin",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        21,
+        22
+      ],
+      "_id": "crekDu2BzJuPgbyW",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.crekDu2BzJuPgbyW"
+    },
+    {
+      "type": "text",
+      "text": "Ward or Dependent",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        23,
+        24
+      ],
+      "_id": "0t8zUhRTAS2T7A1P",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!uMDNj5Fxez9oRwye.0t8zUhRTAS2T7A1P"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.outcomes.RollTable.taUdxQBeOetBzXO3"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.outcomes.RollTable.taUdxQBeOetBzXO3",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496379948,
+    "modifiedTime": 1716496379948,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "uMDNj5Fxez9oRwye",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!uMDNj5Fxez9oRwye"
+}

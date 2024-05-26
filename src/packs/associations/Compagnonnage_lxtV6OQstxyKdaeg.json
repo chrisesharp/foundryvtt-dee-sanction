@@ -1,0 +1,46 @@
+{
+  "name": "Compagnonnage",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Frustrated upstart craftfolk intent on bringing about a new order to unseat the Guilds and wider society</p>",
+    "abilities": [
+      {
+        "name": "Hand Crafting",
+        "type": "ability"
+      },
+      {
+        "name": "Devices",
+        "type": "ability"
+      },
+      {
+        "name": "Bargaining",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.sPQYLKAIxgchwQqc"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.associations.Item.sPQYLKAIxgchwQqc",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542435216,
+    "modifiedTime": 1716542435216,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "lxtV6OQstxyKdaeg",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!lxtV6OQstxyKdaeg"
+}

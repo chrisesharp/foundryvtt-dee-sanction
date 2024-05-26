@@ -1,8 +1,0 @@
-name: "Trail"
-type: "favour"
-system:
-  description: "<p>Tracks, Muddy, Mire, Distort.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

@@ -1,0 +1,32 @@
+{
+  "name": "Infiltration",
+  "type": "ability",
+  "system": {
+    "description": "<p>Infiltration - insignifance means you can go unnoticed in the midst of a gathering.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.5xjbyq91r2FsFqOz"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.5xjbyq91r2FsFqOz",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "l0nym9uHuNIdwMYB",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!l0nym9uHuNIdwMYB"
+}

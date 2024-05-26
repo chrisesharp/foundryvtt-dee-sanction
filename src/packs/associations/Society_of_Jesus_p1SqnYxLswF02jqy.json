@@ -1,0 +1,46 @@
+{
+  "name": "Society of Jesus",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Jesuit infiltrators intent on overthrowing the Queen and the Church of England</p>",
+    "abilities": [
+      {
+        "name": "Infiltration",
+        "type": "ability"
+      },
+      {
+        "name": "Anthropology",
+        "type": "ability"
+      },
+      {
+        "name": "Dyeing",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.7lf8MrZjSlJbjObT"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.associations.Item.7lf8MrZjSlJbjObT",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542435216,
+    "modifiedTime": 1716542435216,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "p1SqnYxLswF02jqy",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!p1SqnYxLswF02jqy"
+}

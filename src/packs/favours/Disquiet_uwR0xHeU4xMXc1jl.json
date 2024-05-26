@@ -1,0 +1,32 @@
+{
+  "name": "Disquiet",
+  "type": "favour",
+  "system": {
+    "description": "<p>Botch, Distrust, Unsettle.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/magic.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.favours.Item.scQo2VzMq3ltod4Y"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.favours.Item.scQo2VzMq3ltod4Y",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716495844733,
+    "modifiedTime": 1716495844733,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "uwR0xHeU4xMXc1jl",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!uwR0xHeU4xMXc1jl"
+}

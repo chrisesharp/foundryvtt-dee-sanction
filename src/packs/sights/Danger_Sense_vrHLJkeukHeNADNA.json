@@ -1,0 +1,32 @@
+{
+  "name": "Danger Sense",
+  "type": "favour",
+  "system": {
+    "description": "<h2>Prophecy</h2><p>Danger Sense.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/magic.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.sights.Item.MKN3yrvbwmcGxuZB"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.sights.Item.MKN3yrvbwmcGxuZB",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496318984,
+    "modifiedTime": 1716496318984,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "vrHLJkeukHeNADNA",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!vrHLJkeukHeNADNA"
+}

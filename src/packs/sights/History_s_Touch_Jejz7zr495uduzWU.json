@@ -1,0 +1,32 @@
+{
+  "name": "History's Touch",
+  "type": "favour",
+  "system": {
+    "description": "<h2>Token Reading</h2><p>History's Touch.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/magic.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.sights.Item.m45tvfIgxLbqL2nY"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.sights.Item.m45tvfIgxLbqL2nY",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496318984,
+    "modifiedTime": 1716496318984,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "Jejz7zr495uduzWU",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!Jejz7zr495uduzWU"
+}

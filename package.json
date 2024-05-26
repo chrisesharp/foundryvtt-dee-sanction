@@ -1,6 +1,6 @@
 {
   "name": "dee",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "description": "CSS compiler for the The Dee Sanction system",
   "scripts": {
     "package": "gulp package",
@@ -15,6 +15,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
     "archiver": "^3.1.1",
     "cb": "^0.1.0",
     "chalk": "^3.0.0",

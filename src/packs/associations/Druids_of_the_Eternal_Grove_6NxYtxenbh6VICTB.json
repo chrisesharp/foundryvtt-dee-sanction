@@ -1,0 +1,46 @@
+{
+  "name": "Druids of the Eternal Grove",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Ancient order seeking to revive the Druidic faith of Celtic legend and restore balance to the world</p>",
+    "abilities": [
+      {
+        "name": "Natural History",
+        "type": "ability"
+      },
+      {
+        "name": "Folklore",
+        "type": "ability"
+      },
+      {
+        "name": "Quieten the Common Beast",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.t027bOTUdCN7DUrm"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.associations.Item.t027bOTUdCN7DUrm",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542435216,
+    "modifiedTime": 1716542435216,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "6NxYtxenbh6VICTB",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!6NxYtxenbh6VICTB"
+}

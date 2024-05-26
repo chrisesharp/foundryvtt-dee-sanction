@@ -1,8 +1,0 @@
-name: "Scent"
-type: "favour"
-system:
-  description: "<p>Curious, Unexpected, Confusing, Freshen.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

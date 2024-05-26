@@ -1,0 +1,32 @@
+{
+  "name": "Signs",
+  "type": "ability",
+  "system": {
+    "description": "<p>Signs - You know the common marks and symbols left by others as tip-off or guidance.</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.iqI6xlMpiv46juWO"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.iqI6xlMpiv46juWO",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "NmmbmT0WiIbOH6wh",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!NmmbmT0WiIbOH6wh"
+}

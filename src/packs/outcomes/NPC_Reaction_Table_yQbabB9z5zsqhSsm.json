@@ -1,0 +1,168 @@
+{
+  "name": "NPC Reaction Table",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Rolled when an agent has zero hits but has been stabilised.",
+  "results": [
+    {
+      "type": "text",
+      "text": "Flee: shy, scared, circumspect.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "c0Raklhfvl1YvIfb",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.c0Raklhfvl1YvIfb"
+    },
+    {
+      "type": "text",
+      "text": "Avoid: guilty, demoralised.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "eKq2INbQEUOwgj8D",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.eKq2INbQEUOwgj8D"
+    },
+    {
+      "type": "text",
+      "text": "Testing: wary, questioning.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "aSpXaZWqPxvSsSOS",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.aSpXaZWqPxvSsSOS"
+    },
+    {
+      "type": "text",
+      "text": "Quid Pro Quo: trade, gossip.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "RLfPMDyFVt4Bg5PI",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.RLfPMDyFVt4Bg5PI"
+    },
+    {
+      "type": "text",
+      "text": "Neutral: indifferent, undecided.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "dMVb6h2RBi40mKiw",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.dMVb6h2RBi40mKiw"
+    },
+    {
+      "type": "text",
+      "text": "Convert: subvert, persuade.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "OuS4HRog3FBoDHdq",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.OuS4HRog3FBoDHdq"
+    },
+    {
+      "type": "text",
+      "text": "Mischief: mislead, ill will.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "KFS0XMXTnGbpCRTz",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.KFS0XMXTnGbpCRTz"
+    },
+    {
+      "type": "text",
+      "text": "Rob: deprive, subdue, hinder.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "h1IFBTajK5BD1ItT",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.h1IFBTajK5BD1ItT"
+    },
+    {
+      "type": "text",
+      "text": "Hate: kill, destroy, sacrifice.",
+      "img": "/systems/dee/assets/default/icons/access.png",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "9yKT6XeGCCH8ncAi",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!yQbabB9z5zsqhSsm.9yKT6XeGCCH8ncAi"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.outcomes.RollTable.BsE0iyImjSyWeXBR"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.outcomes.RollTable.BsE0iyImjSyWeXBR",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496379948,
+    "modifiedTime": 1716496379948,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "yQbabB9z5zsqhSsm",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!yQbabB9z5zsqhSsm"
+}

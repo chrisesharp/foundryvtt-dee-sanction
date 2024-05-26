@@ -1,8 +1,0 @@
-name: "Comfort"
-type: "ability"
-system:
-  description: "<p>Comfort.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

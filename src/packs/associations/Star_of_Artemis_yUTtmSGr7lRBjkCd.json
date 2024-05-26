@@ -1,0 +1,46 @@
+{
+  "name": "Star of Artemis",
+  "type": "association",
+  "img": "/systems/dee/assets/default/icons/society.png",
+  "system": {
+    "description": "<p>Religion stems from layers of deceit; true faith has been mired in ancient propaganda</p>",
+    "abilities": [
+      {
+        "name": "Mythology",
+        "type": "ability"
+      },
+      {
+        "name": "Archaeology",
+        "type": "ability"
+      },
+      {
+        "name": "Flattery",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.associations.Item.7YiLwzFA1yHricAX"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.associations.Item.7YiLwzFA1yHricAX",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542435216,
+    "modifiedTime": 1716542435216,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "yUTtmSGr7lRBjkCd",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!yUTtmSGr7lRBjkCd"
+}

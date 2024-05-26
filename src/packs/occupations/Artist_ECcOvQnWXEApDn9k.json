@@ -1,0 +1,46 @@
+{
+  "name": "Artist",
+  "type": "occupation",
+  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "system": {
+    "description": "<p>Creator of emotive miniatures and decorative illuminations for varied patrons, ideally with deep pockets</p>",
+    "abilities": [
+      {
+        "name": "Drawing",
+        "type": "ability"
+      },
+      {
+        "name": "Counterfeit",
+        "type": "ability"
+      },
+      {
+        "name": "Nostalgia",
+        "type": "ability"
+      }
+    ]
+  },
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.occupations.Item.wMR6QoOdQ5UGrlJS"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.occupations.Item.wMR6QoOdQ5UGrlJS",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496074027,
+    "modifiedTime": 1716496295925,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "ECcOvQnWXEApDn9k",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!ECcOvQnWXEApDn9k"
+}

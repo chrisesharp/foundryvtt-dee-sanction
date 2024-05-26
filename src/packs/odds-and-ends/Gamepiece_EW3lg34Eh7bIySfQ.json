@@ -1,0 +1,35 @@
+{
+  "name": "Gamepiece",
+  "type": "item",
+  "system": {
+    "description": "<p>A gamepiece.</p>",
+    "quantity": 1,
+    "weight": 0,
+    "esoteric": false
+  },
+  "img": "/systems/dee/assets/default/icons/kit.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.odds-and-ends.Item.uah1DAg1VW9ujX1G"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.odds-and-ends.Item.uah1DAg1VW9ujX1G",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496304495,
+    "modifiedTime": 1716496304495,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "EW3lg34Eh7bIySfQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!EW3lg34Eh7bIySfQ"
+}

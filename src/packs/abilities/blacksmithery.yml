@@ -1,8 +1,0 @@
-name: "Blacksmithery"
-type: "ability"
-system:
-  description: "<p>Blacksmithery.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

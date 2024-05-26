@@ -1,8 +1,0 @@
-name: "Glimmer"
-type: "favour"
-system:
-  description: "<p>Attract, Distract, Scintillate.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

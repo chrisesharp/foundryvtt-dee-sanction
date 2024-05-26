@@ -1,8 +1,0 @@
-name: "Boating"
-type: "ability"
-system:
-  description: "<p>Boating.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

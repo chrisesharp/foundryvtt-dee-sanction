@@ -1,8 +1,0 @@
-name: "Drip"
-type: "favour"
-system:
-  description: "<p>Trickle, Leak, Perplex.</p>"
-img: "/systems/dee/assets/default/icons/magic.png"
-permission:
-    default: 2
-folder: "Favours"

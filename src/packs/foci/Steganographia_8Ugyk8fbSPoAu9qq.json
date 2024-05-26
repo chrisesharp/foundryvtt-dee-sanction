@@ -1,0 +1,42 @@
+{
+  "name": "Steganographia",
+  "type": "focus",
+  "system": {
+    "description": "<p>Cryptographic guide hidden within a text on symbolic and ancient languages used for discourse with spirits and demons</p>",
+    "abilities": [
+      {
+        "name": "Signs",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "NmmbmT0WiIbOH6wh"
+      },
+      {
+        "name": "Ciphers",
+        "type": "ability",
+        "img": "/systems/dee/assets/default/icons/book.png",
+        "id": "UupmrsDZBe59Q0jN"
+      }
+    ]
+  },
+  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "folder": null,
+  "_id": "8Ugyk8fbSPoAu9qq",
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716542452575,
+    "modifiedTime": 1716542452575,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!8Ugyk8fbSPoAu9qq"
+}

@@ -1,8 +1,0 @@
-name: "Goading"
-type: "ability"
-system:
-  description: "<p>Goading.</p>"
-img: "/systems/dee/assets/default/icons/book.png"
-permission:
-    default: 2
-folder: "Abilities"

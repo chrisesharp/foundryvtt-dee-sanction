@@ -1,0 +1,32 @@
+{
+  "name": "Detect Lies",
+  "type": "ability",
+  "system": {
+    "description": "<p>Detect Lies - you have an eye for a lie and signals that accompany them</p>"
+  },
+  "img": "/systems/dee/assets/default/icons/book.png",
+  "folder": null,
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.abilities.Item.kdIY1Mc3uqbyG2Jv"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.abilities.Item.kdIY1Mc3uqbyG2Jv",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716494111521,
+    "modifiedTime": 1716494111521,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "VoZD25hCLjA48VA8",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!items!VoZD25hCLjA48VA8"
+}

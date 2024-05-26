@@ -1,0 +1,633 @@
+{
+  "name": "Sight Outcomes",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "GM table for the outcome of a Sight Proophecy",
+  "formula": "((1d4 - 1) * 10) + 1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "text": "Permission/ Blockage",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        1,
+        1
+      ],
+      "_id": "wlnz7J3Zo1Vuwf2n",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.wlnz7J3Zo1Vuwf2n"
+    },
+    {
+      "type": "text",
+      "text": "Unity/Tension",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        2,
+        2
+      ],
+      "_id": "3DS3bZvKE2b1I6nG",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.3DS3bZvKE2b1I6nG"
+    },
+    {
+      "type": "text",
+      "text": "Friendship/Isolation",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        3,
+        3
+      ],
+      "_id": "eIma9kjf5bFcEEYR",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.eIma9kjf5bFcEEYR"
+    },
+    {
+      "type": "text",
+      "text": "Awareness/ Disconnection",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        4,
+        4
+      ],
+      "_id": "J5gh6D4DWjxvkLRH",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.J5gh6D4DWjxvkLRH"
+    },
+    {
+      "type": "text",
+      "text": "Acceptance/Loss",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        5,
+        5
+      ],
+      "_id": "GPi748yAQJqo2tWL",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.GPi748yAQJqo2tWL"
+    },
+    {
+      "type": "text",
+      "text": "Family/Independence",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        6,
+        6
+      ],
+      "_id": "1SYkWRftR6lLmOyt",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.1SYkWRftR6lLmOyt"
+    },
+    {
+      "type": "text",
+      "text": "Choices/Confusion",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        7,
+        7
+      ],
+      "_id": "wFlz7cY936g79C0X",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.wFlz7cY936g79C0X"
+    },
+    {
+      "type": "text",
+      "text": "Eclipse/Avoid",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        8,
+        8
+      ],
+      "_id": "WuZ2z0XLxCQYG58s",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.WuZ2z0XLxCQYG58s"
+    },
+    {
+      "type": "text",
+      "text": "Satisfaction/ Displeasure",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        9,
+        9
+      ],
+      "_id": "VC2dXgcEfeunw5c2",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.VC2dXgcEfeunw5c2"
+    },
+    {
+      "type": "text",
+      "text": "Fulfilment/ Frustration",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        10,
+        10
+      ],
+      "_id": "bp6EgUUqMdscm7qk",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.bp6EgUUqMdscm7qk"
+    },
+    {
+      "type": "text",
+      "text": "Clarity/Chaos",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        11,
+        11
+      ],
+      "_id": "BpYfStGi5lOnEEHK",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.BpYfStGi5lOnEEHK"
+    },
+    {
+      "type": "text",
+      "text": "Decisiveness/ Confusion",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        12,
+        12
+      ],
+      "_id": "fwwxPQqzok72WO3R",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.fwwxPQqzok72WO3R"
+    },
+    {
+      "type": "text",
+      "text": "Foregiveness/ Suffering",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        13,
+        13
+      ],
+      "_id": "3vLLtvEmBTUBQSx9",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.3vLLtvEmBTUBQSx9"
+    },
+    {
+      "type": "text",
+      "text": "Rest/Exhaustion",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        14,
+        14
+      ],
+      "_id": "a37g0Vn2A6uvsFLy",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.a37g0Vn2A6uvsFLy"
+    },
+    {
+      "type": "text",
+      "text": "Ambition/ Resentment",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        15,
+        15
+      ],
+      "_id": "6mkfP9J5aW3IVMoZ",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.6mkfP9J5aW3IVMoZ"
+    },
+    {
+      "type": "text",
+      "text": "Transition/ Hesitation",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        16,
+        16
+      ],
+      "_id": "AT23TgRS8c8jHK4d",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.AT23TgRS8c8jHK4d"
+    },
+    {
+      "type": "text",
+      "text": "Honesty/Deception",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        17,
+        17
+      ],
+      "_id": "ELyTBHLgZjbvlHbZ",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.ELyTBHLgZjbvlHbZ"
+    },
+    {
+      "type": "text",
+      "text": "Freedom/Capture",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        18,
+        18
+      ],
+      "_id": "CXkskp8EnS9tYk1n",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.CXkskp8EnS9tYk1n"
+    },
+    {
+      "type": "text",
+      "text": "Hope/Despair",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        19,
+        19
+      ],
+      "_id": "m4KuIFLHph8Ch9Mj",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.m4KuIFLHph8Ch9Mj"
+    },
+    {
+      "type": "text",
+      "text": "Escape/Inevitability",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        20,
+        20
+      ],
+      "_id": "qT37oTn6xfsatVhr",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.qT37oTn6xfsatVhr"
+    },
+    {
+      "type": "text",
+      "text": "Opportunity/Forgo",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        21,
+        21
+      ],
+      "_id": "l1QHUFgLHgkuA15K",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.l1QHUFgLHgkuA15K"
+    },
+    {
+      "type": "text",
+      "text": "Coping/Overwhelm",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        22,
+        22
+      ],
+      "_id": "icRcPxhG4rIhASKw",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.icRcPxhG4rIhASKw"
+    },
+    {
+      "type": "text",
+      "text": "Teamwork/Discord",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        23,
+        23
+      ],
+      "_id": "XmzhMGpyACc3zRmD",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.XmzhMGpyACc3zRmD"
+    },
+    {
+      "type": "text",
+      "text": "Frugality/ Recklessness",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        24,
+        24
+      ],
+      "_id": "hi8ZZUdOI3hHmG8R",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.hi8ZZUdOI3hHmG8R"
+    },
+    {
+      "type": "text",
+      "text": "Security/Poverty",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        25,
+        25
+      ],
+      "_id": "XtA66objpZ9oa7a4",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.XtA66objpZ9oa7a4"
+    },
+    {
+      "type": "text",
+      "text": "Charity/Extortion",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        26,
+        26
+      ],
+      "_id": "VHcUky51cIWeqaay",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.VHcUky51cIWeqaay"
+    },
+    {
+      "type": "text",
+      "text": "Perseverance/ Discouragement",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        27,
+        27
+      ],
+      "_id": "QBSVwf2Ofl2M6mNd",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.QBSVwf2Ofl2M6mNd"
+    },
+    {
+      "type": "text",
+      "text": "Inspiration/ Despondency",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        28,
+        28
+      ],
+      "_id": "MiCMrwKdVnClSwDe",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.MiCMrwKdVnClSwDe"
+    },
+    {
+      "type": "text",
+      "text": "Reward/Punishment",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        29,
+        29
+      ],
+      "_id": "kW6QoO31IO9vJLPa",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.kW6QoO31IO9vJLPa"
+    },
+    {
+      "type": "text",
+      "text": "Resourceful/ Feckless",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        30,
+        30
+      ],
+      "_id": "G62kOLoS7rYj46O7",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.G62kOLoS7rYj46O7"
+    },
+    {
+      "type": "text",
+      "text": "Resilience/ Listlessness",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        31,
+        31
+      ],
+      "_id": "LF2lAL9bRA4PDYTA",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.LF2lAL9bRA4PDYTA"
+    },
+    {
+      "type": "text",
+      "text": "Planned/Unready",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        32,
+        32
+      ],
+      "_id": "hf2sYdCPESeC8j20",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.hf2sYdCPESeC8j20"
+    },
+    {
+      "type": "text",
+      "text": "Progress/Hindrance",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        33,
+        33
+      ],
+      "_id": "RVn3uc53EIt28zTj",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.RVn3uc53EIt28zTj"
+    },
+    {
+      "type": "text",
+      "text": "Community/ Disagreement",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        34,
+        34
+      ],
+      "_id": "vH8acLVpaaD1yJhd",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.vH8acLVpaaD1yJhd"
+    },
+    {
+      "type": "text",
+      "text": "Cooperation/ Competition",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        35,
+        35
+      ],
+      "_id": "DEW1HDzqGxMjc1r0",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.DEW1HDzqGxMjc1r0"
+    },
+    {
+      "type": "text",
+      "text": "Conquest/ Subservience",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        36,
+        36
+      ],
+      "_id": "ihNK92uIozzVtfnc",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.ihNK92uIozzVtfnc"
+    },
+    {
+      "type": "text",
+      "text": "Confidence/ Insecurity",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        37,
+        37
+      ],
+      "_id": "ATjzY73ZOlMLuN78",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.ATjzY73ZOlMLuN78"
+    },
+    {
+      "type": "text",
+      "text": "Further/Curtail",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        38,
+        38
+      ],
+      "_id": "siOGGZlIJIRqf3AO",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.siOGGZlIJIRqf3AO"
+    },
+    {
+      "type": "text",
+      "text": "Invigorate/Enfeeble",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        39,
+        39
+      ],
+      "_id": "eXgvguBw08mXqawF",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.eXgvguBw08mXqawF"
+    },
+    {
+      "type": "text",
+      "text": "Accomplish/Burden",
+      "weight": 1,
+      "drawn": false,
+      "img": "icons/svg/d20-black.svg",
+      "range": [
+        40,
+        40
+      ],
+      "_id": "Mxah08bu1OnNL1OR",
+      "documentId": null,
+      "flags": {},
+      "_key": "!tables.results!VXLBxixFYYr0HDiV.Mxah08bu1OnNL1OR"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dee.outcomes.RollTable.vZyZQ6hpXJZAJu9C"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dee.outcomes.RollTable.vZyZQ6hpXJZAJu9C",
+    "duplicateSource": null,
+    "coreVersion": "12.324",
+    "systemId": "dee",
+    "systemVersion": "3.0.3",
+    "createdTime": 1716496379948,
+    "modifiedTime": 1716496379948,
+    "lastModifiedBy": "wIAZHHPxailNtiG9"
+  },
+  "_id": "VXLBxixFYYr0HDiV",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIAZHHPxailNtiG9": 3
+  },
+  "_key": "!tables!VXLBxixFYYr0HDiV"
+}
