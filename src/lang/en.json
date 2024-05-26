@@ -101,5 +101,12 @@
     "DEE.dialog.selecttradecraft": "Select Tradecraft for the Adventure",
 
     "TYPES.Actor.agent": "Agent",
-    "TYPES.Actor.enemy": "Enemy"
+    "TYPES.Actor.enemy": "Enemy",
+    "TYPES.Item.item": "Item",
+    "TYPES.Item.ability": "Ability",
+    "TYPES.Item.consequence": "Consequence",
+    "TYPES.Item.association": "Association",
+    "TYPES.Item.favour": "Favour",
+    "TYPES.Item.focus": "Focus",
+    "TYPES.Item.occupation": "Occupation"
 }
