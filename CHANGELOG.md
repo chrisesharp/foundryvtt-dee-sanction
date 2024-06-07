@@ -2,9 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.3] - 7/06/24
+
+### Changed
+
+- V12 fixes
 
 ## [4.0.2] - 26/05/24
-### Changed
+
+### Added
 
 - Update for FoundryVTT V12
 

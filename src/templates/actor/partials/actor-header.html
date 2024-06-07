@@ -39,13 +39,13 @@
             <h3 class="occupation">{{data.occupation}}</h3>
         </div>
         <div class="actor-home" style="display: inline-flex;">
-            <h3 class="home" style="display: contents;"><input name="data.home" type="text" value="{{data.home}}" placeholder="Home town" data-dtype="String"/></h3>
+            <h3 class="home" style="display: contents;"><input name="system.home" type="text" value="{{data.home}}" placeholder="Home town" data-dtype="String"/></h3>
             {{#if (unlocked actor) }}
             <i id="home-roll" class="fas fa-dice generate" style="padding-top: 4px;"></i>
             {{/if}}
         </div>
         <div class="actor-manner" style="display: inline-flex;">
-           <h3 class="manner" style="display: contents;"><input name="data.mannerism.detail" type="text" value="{{data.mannerism.detail}}" data-dtype="String" placeholder="Mannerism"/></h3>
+           <h3 class="manner" style="display: contents;"><input name="system.mannerism.detail" type="text" value="{{data.mannerism.detail}}" data-dtype="String" placeholder="Mannerism"/></h3>
            {{#if (unlocked actor) }}
            <i id="manner-roll" class="fas fa-dice generate" style="padding-top: 4px;"></i>
            {{/if}}

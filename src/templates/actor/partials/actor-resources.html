@@ -69,11 +69,11 @@
             <img class="hits-bg" src="/systems/dee/assets/default/hits.png">
             <label for="data.hits.value" class="resource-label">&nbsp;{{ localize 'DEE.Hits'}}</label>
             <div class="hits-val flexrow flex-center">
-                <input type="text" name="data.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
+                <input type="text" name="system.hits.value" value="{{data.hits.value}}" data-dtype="Number" placeholder="3" maxlength="1"/>
             </div>
             <div class="hits-falters" title="{{ localize 'DEE.FalterDetail'}}">
-                <input class="first" type="checkbox" name="data.falters.first" {{isChecked data.falters.first }} data-dtype="Boolean"/>
-                <input class="second" type="checkbox" name="data.falters.second" {{isChecked data.falters.second }} data-dtype="Boolean"/>
+                <input class="first" type="checkbox" name="system.falters.first" {{isChecked data.falters.first }} data-dtype="Boolean"/>
+                <input class="second" type="checkbox" name="system.falters.second" {{isChecked data.falters.second }} data-dtype="Boolean"/>
             </div>
         </div>
     </div>
