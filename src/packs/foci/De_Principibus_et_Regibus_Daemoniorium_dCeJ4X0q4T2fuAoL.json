@@ -7,18 +7,18 @@
       {
         "name": "Names",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "W1nevm2kSv11KD1i"
       },
       {
         "name": "Deception",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "DH51FEIjIw8JThBm"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "dCeJ4X0q4T2fuAoL",
   "effects": [],

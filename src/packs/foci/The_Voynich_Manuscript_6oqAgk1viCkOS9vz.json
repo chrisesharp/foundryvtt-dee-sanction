@@ -7,18 +7,18 @@
       {
         "name": "Astrology",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "DpGZrTIZvaR0pCjW"
       },
       {
         "name": "Recreation",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "orbPyk6UAntDJapB"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "6oqAgk1viCkOS9vz",
   "effects": [],

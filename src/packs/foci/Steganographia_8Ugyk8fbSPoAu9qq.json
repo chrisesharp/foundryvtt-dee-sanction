@@ -7,18 +7,18 @@
       {
         "name": "Signs",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "NmmbmT0WiIbOH6wh"
       },
       {
         "name": "Ciphers",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "UupmrsDZBe59Q0jN"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "8Ugyk8fbSPoAu9qq",
   "effects": [],

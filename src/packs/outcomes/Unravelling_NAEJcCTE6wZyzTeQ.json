@@ -6,7 +6,7 @@
     {
       "type": "text",
       "text": "Phlegm: Immediate response is dulled senses; acts of perception or problem-solving are ▼1 while in the presence of fear source.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         1,
@@ -21,7 +21,7 @@
     {
       "type": "document",
       "text": "Humour:Phlegm",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         1,
@@ -37,7 +37,7 @@
     {
       "type": "text",
       "text": "Black Bile: Overwhelmed by extreme emotion. Eyes fill with tears, body wracked by sobbing. Take a Chance to complete any complex action in the presence of fear source.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         3,
@@ -52,7 +52,7 @@
     {
       "type": "document",
       "text": "Humour:Black Bile",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         3,
@@ -68,7 +68,7 @@
     {
       "type": "text",
       "text": "Yellow Bile: Character fills with bitter rage toward all allies while in the presence of fear source. Take a Chance, act in a selfish way on a falter. Attitude persists in the presence of fear source.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         5,
@@ -83,7 +83,7 @@
     {
       "type": "document",
       "text": "Humour:Yellow Bile",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         5,
@@ -99,7 +99,7 @@
     {
       "type": "text",
       "text": "Blood: Inadvisably optimistic despite the horrors or the difficult situation faced. Blindly positive. Acts of violence or aggression are ▼1 while in the presence of fear source.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         7,
@@ -114,7 +114,7 @@
     {
       "type": "document",
       "text": "Humour:Blood",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         7,

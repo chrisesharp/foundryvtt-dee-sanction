@@ -4,7 +4,7 @@
   "system": {
     "description": "<h2>Prophecy</h2><p>Fortune Telling.</p>"
   },
-  "img": "/systems/dee/assets/default/icons/magic.png",
+  "img": "systems/dee/assets/default/icons/magic.png",
   "folder": null,
   "effects": [],
   "flags": {

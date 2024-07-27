@@ -7,18 +7,18 @@
       {
         "name": "Clairsentience",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "AtVI8F8uZMwJIy92"
       },
       {
         "name": "Mediumship",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "pabaTb4o3HEN30xt"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "zq8ThpsDMYESY6bK",
   "effects": [],

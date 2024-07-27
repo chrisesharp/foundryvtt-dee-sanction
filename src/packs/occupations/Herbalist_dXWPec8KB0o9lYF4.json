@@ -1,7 +1,7 @@
 {
   "name": "Herbalist",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Practitioners in traditional treatments and curatives garnered and prepared from both cultivated gardens or the open commons and woodlands</p>",
     "abilities": [

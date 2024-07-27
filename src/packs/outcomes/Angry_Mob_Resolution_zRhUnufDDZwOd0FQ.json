@@ -12,7 +12,7 @@
         2
       ],
       "drawn": false,
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "_id": "W6Ztu2bbH3T21Mkv",
       "documentId": null,
       "flags": {},
@@ -27,7 +27,7 @@
         4
       ],
       "drawn": false,
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "_id": "MmG9AzvJqmwhulph",
       "documentId": null,
       "flags": {},
@@ -42,7 +42,7 @@
         6
       ],
       "drawn": false,
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "_id": "XVFX2FmK528TGZeb",
       "documentId": null,
       "flags": {},
@@ -58,7 +58,7 @@
       ],
       "drawn": false,
       "flags": {},
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "_id": "ZghY4pQmkSjwlLu7",
       "documentId": null,
       "_key": "!tables.results!zRhUnufDDZwOd0FQ.ZghY4pQmkSjwlLu7"

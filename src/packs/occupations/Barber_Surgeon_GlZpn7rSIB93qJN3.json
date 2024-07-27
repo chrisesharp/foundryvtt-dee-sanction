@@ -1,7 +1,7 @@
 {
   "name": "Barber Surgeon",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>No lesser in knowledge than learned doctors, practitioners of skills far and above a simple cut and shave</p>",
     "abilities": [

@@ -1,7 +1,7 @@
 {
   "name": "Despiteful",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "unforgiving and driven to seek redress for any slight or wrong",
     "resource": "int",

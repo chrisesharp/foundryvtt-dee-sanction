@@ -6,7 +6,7 @@
     {
       "type": "text",
       "text": "Flee: shy, scared, circumspect.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         1,
@@ -21,7 +21,7 @@
     {
       "type": "text",
       "text": "Avoid: guilty, demoralised.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         2,
@@ -36,7 +36,7 @@
     {
       "type": "text",
       "text": "Testing: wary, questioning.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         3,
@@ -51,7 +51,7 @@
     {
       "type": "text",
       "text": "Quid Pro Quo: trade, gossip.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         4,
@@ -66,7 +66,7 @@
     {
       "type": "text",
       "text": "Neutral: indifferent, undecided.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         5,
@@ -81,7 +81,7 @@
     {
       "type": "text",
       "text": "Convert: subvert, persuade.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         7,
@@ -96,7 +96,7 @@
     {
       "type": "text",
       "text": "Mischief: mislead, ill will.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         8,
@@ -111,7 +111,7 @@
     {
       "type": "text",
       "text": "Rob: deprive, subdue, hinder.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         9,
@@ -126,7 +126,7 @@
     {
       "type": "text",
       "text": "Hate: kill, destroy, sacrifice.",
-      "img": "/systems/dee/assets/default/icons/access.png",
+      "img": "systems/dee/assets/default/icons/access.png",
       "weight": 1,
       "range": [
         10,

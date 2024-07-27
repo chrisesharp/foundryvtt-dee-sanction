@@ -1,7 +1,7 @@
 {
   "name": "Baffled",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "Dazed and confused.",
     "resource": "int",

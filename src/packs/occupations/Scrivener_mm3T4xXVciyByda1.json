@@ -1,7 +1,7 @@
 {
   "name": "Scrivener",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Clerk and note-taker, responsible for keeping record of the passage of events and notable deeds for all who can pay for the privilege of paperwork</p>",
     "abilities": [

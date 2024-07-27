@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Passage and Path - navigating the lesser known routes; knowing who else uses them; finding ways.</p>"
   },
-  "img": "/systems/dee/assets/default/icons/book.png",
+  "img": "systems/dee/assets/default/icons/book.png",
   "folder": null,
   "effects": [],
   "flags": {

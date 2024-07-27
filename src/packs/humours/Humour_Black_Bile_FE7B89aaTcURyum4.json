@@ -6,7 +6,7 @@
     {
       "type": "document",
       "text": "Sullen",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         1,
@@ -22,7 +22,7 @@
     {
       "type": "document",
       "text": "Afeared",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         3,
@@ -38,7 +38,7 @@
     {
       "type": "document",
       "text": "Sickly",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         5,

@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Bluffing - the capacity to mislead or divert the judgement of others.</p>"
   },
-  "img": "/systems/dee/assets/default/icons/book.png",
+  "img": "systems/dee/assets/default/icons/book.png",
   "folder": null,
   "effects": [],
   "flags": {

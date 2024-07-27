@@ -1,7 +1,7 @@
 {
   "name": "Chainmail",
   "type": "item",
-  "img": "/systems/dee/assets/default/icons/kit.png",
+  "img": "systems/dee/assets/default/icons/kit.png",
   "system": {
     "description": "A coat of chainmail.",
     "quantity": 1,

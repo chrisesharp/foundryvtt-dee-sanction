@@ -7,18 +7,18 @@
       {
         "name": "Alchemy",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "FPFss2PQY5L6w7WH"
       },
       {
         "name": "Bluffing",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "JqZyAd78ORdDYxLO"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "tDn71wZ8xv8RaayC",
   "effects": [],

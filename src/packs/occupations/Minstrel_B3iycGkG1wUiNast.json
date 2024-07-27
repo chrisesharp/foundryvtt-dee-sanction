@@ -1,7 +1,7 @@
 {
   "name": "Minstrel",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Welcome provider of entertainment, in forms many and varied, in court and drinking holes alike</p>",
     "abilities": [

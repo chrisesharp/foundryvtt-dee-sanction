@@ -1,7 +1,7 @@
 {
   "name": "Canker-sorrowed",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "afflicted with a sense of grief, struggling to see worth in self.",
     "resource": "int",

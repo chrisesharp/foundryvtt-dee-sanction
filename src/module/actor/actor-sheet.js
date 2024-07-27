@@ -164,7 +164,7 @@ export class DeeSanctionActorSheet extends ActorSheet {
     const targetType = $(target).data('type');
     switch (targetType) {
       case "item":
-        const template = "/systems/dee/templates/dialog/possessions-dialog.html";
+        const template = "systems/dee/templates/dialog/possessions-dialog.html";
         const content = await renderTemplate(template);
     
         //show welcome dialog and set initialized to true

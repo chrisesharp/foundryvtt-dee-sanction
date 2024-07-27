@@ -1,7 +1,7 @@
 {
   "name": "Unperson",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Dweller of the streets, alleyways, lanes, and back roads, surviving hardship through a wealth of wit and wile</p>",
     "abilities": [

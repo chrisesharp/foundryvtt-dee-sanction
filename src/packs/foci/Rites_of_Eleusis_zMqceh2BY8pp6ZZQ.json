@@ -7,18 +7,18 @@
       {
         "name": "Brewing",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "XtCyqrJxeb3joBcg"
       },
       {
         "name": "Organisation",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "k7fVTRjIu8NNWu5Y"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "zMqceh2BY8pp6ZZQ",
   "effects": [],

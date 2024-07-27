@@ -1,7 +1,7 @@
 {
   "name": "Crabbed",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "prone to sharp changes in emotional state; short-tempered, sharp, and loud",
     "resource": "int",

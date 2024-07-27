@@ -82,7 +82,7 @@ Hooks.once("ready", async function () {
       game.settings.set("dee","initialized",initialized);
     }
 
-    const template = "/systems/dee/templates/dialog/welcome.html";
+    const template = "systems/dee/templates/dialog/welcome.html";
     const content = await renderTemplate(template);
     //show welcome dialog and set initialized to true
     let d = new Dialog({
@@ -141,7 +141,7 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     // User guide
     let docs = html.find("button[data-action='docs']");
     const styling = "border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px";
-    $(`<button data-action="userguide"><img src='/systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`).insertAfter(docs);
+    $(`<button data-action="userguide"><img src='systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`).insertAfter(docs);
     html.find('button[data-action="userguide"]').click(ev => {
       new FrameViewer('https://chrisesharp.github.io/foundryvtt-dee-sanction', {resizable: true}).render(true);
     });

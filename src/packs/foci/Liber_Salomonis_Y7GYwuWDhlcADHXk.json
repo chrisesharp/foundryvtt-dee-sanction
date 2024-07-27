@@ -7,18 +7,18 @@
       {
         "name": "Purification",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "uRke5X6Gb1EH0EHS"
       },
       {
         "name": "Detect Lies",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "VoZD25hCLjA48VA8"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "Y7GYwuWDhlcADHXk",
   "effects": [],

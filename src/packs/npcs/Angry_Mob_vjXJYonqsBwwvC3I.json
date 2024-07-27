@@ -44,7 +44,7 @@
     {
       "name": "Overwhelm",
       "type": "ability",
-      "img": "/systems/dee/assets/default/icons/book.png",
+      "img": "systems/dee/assets/default/icons/book.png",
       "system": {
         "description": "<p>The mob consists of 4 x Hits people; it inflicts half its Hits (rnd up) in automatic harm per Moment. Choose random Agents equal to the potential harm and inflict 1 Hit to each.</p>"
       },

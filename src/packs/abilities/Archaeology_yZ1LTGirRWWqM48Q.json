@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Archaeology- power is all about lost treasure & shallow graves</p>"
   },
-  "img": "/systems/dee/assets/default/icons/book.png",
+  "img": "systems/dee/assets/default/icons/book.png",
   "folder": null,
   "effects": [],
   "flags": {

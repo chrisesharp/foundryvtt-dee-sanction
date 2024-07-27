@@ -1,7 +1,7 @@
 {
   "name": "Friar",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>One of the scattered mendicants of a broken order, seeking support and goodwill from the generous and those seeking beneficence</p>",
     "abilities": [

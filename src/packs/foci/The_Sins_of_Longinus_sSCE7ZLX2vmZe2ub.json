@@ -7,18 +7,18 @@
       {
         "name": "Blacksmithery",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "Jr2WvtD7SziA85yp"
       },
       {
         "name": "Theology",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "3NmWqxH3UsyGURu9"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "sSCE7ZLX2vmZe2ub",
   "effects": [],

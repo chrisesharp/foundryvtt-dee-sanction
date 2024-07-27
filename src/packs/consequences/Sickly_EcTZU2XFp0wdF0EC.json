@@ -1,7 +1,7 @@
 {
   "name": "Sickly",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "trembling with an unshakeable chill; pale and drawn.",
     "resource": "phy",

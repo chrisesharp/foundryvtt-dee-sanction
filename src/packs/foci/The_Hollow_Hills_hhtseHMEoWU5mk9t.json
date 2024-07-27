@@ -7,18 +7,18 @@
       {
         "name": "Astronomy",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "CNZSVkme1tZZd2p6"
       },
       {
         "name": "Climbing",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "3iFA5LkWDqUlQMLP"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "hhtseHMEoWU5mk9t",
   "effects": [],

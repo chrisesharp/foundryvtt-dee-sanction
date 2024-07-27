@@ -1,7 +1,7 @@
 {
   "name": "Brothers of the Rose",
   "type": "association",
-  "img": "/systems/dee/assets/default/icons/society.png",
+  "img": "systems/dee/assets/default/icons/society.png",
   "system": {
     "description": "<p>Believers in esoteric truths of the past, seeking insight into nature, the universe and the spiritual realms</p>",
     "abilities": [

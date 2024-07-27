@@ -1,7 +1,7 @@
 {
   "name": "Chevaliers des Trois Imposteurs",
   "type": "association",
-  "img": "/systems/dee/assets/default/icons/society.png",
+  "img": "systems/dee/assets/default/icons/society.png",
   "system": {
     "description": "<p>Fractious movement intent on bringing about Enlightenment in an Age of False Religions</p>",
     "abilities": [

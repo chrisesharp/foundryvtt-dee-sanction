@@ -62,7 +62,7 @@ function _addChanceMessage(cb) {
         break;
       case 2:
         label = game.i18n.format('DEE.chance.dead',{actor: actor.name});
-        cb.append($(`<img src="/systems/dee/assets/default/icons/bones.png" width="40" height="40" style="border:0px;" >`));
+        cb.append($(`<img src="systems/dee/assets/default/icons/bones.png" width="40" height="40" style="border:0px;" >`));
         break;
     }
     cb.append($(`<h2 style="font-size: 1.2em">${label}</h2>`));

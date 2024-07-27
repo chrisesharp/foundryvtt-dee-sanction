@@ -6,7 +6,7 @@
     {
       "type": "text",
       "text": "Stunned: Numb, Raving.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         1,
@@ -21,7 +21,7 @@
     {
       "type": "text",
       "text": "Senseless: Dazed, Fat-headed.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         2,
@@ -36,7 +36,7 @@
     {
       "type": "text",
       "text": "Fragile: Shaking, Exhausted.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         3,
@@ -51,7 +51,7 @@
     {
       "type": "text",
       "text": "Overcome: Mute, Humiliated.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         4,
@@ -66,7 +66,7 @@
     {
       "type": "text",
       "text": "Wasted: Unguarded, Fearful.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         5,
@@ -81,7 +81,7 @@
     {
       "type": "text",
       "text": "Blood-soaked: Gory, Oozing.",
-      "img": "/systems/dee/assets/default/icons/bones.png",
+      "img": "systems/dee/assets/default/icons/bones.png",
       "weight": 1,
       "range": [
         6,

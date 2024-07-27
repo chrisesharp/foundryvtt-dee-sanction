@@ -1,7 +1,7 @@
 {
   "name": "Afeared",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "prone to tip into panic and alarm at the smallest trigger.",
     "resource": "sup",

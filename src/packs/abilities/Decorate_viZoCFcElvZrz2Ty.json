@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Decorate.</p>"
   },
-  "img": "/systems/dee/assets/default/icons/book.png",
+  "img": "systems/dee/assets/default/icons/book.png",
   "folder": null,
   "effects": [],
   "flags": {

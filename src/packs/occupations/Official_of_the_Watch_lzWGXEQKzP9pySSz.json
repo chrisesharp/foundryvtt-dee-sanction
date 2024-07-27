@@ -1,7 +1,7 @@
 {
   "name": "Official of the Watch",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Thankless volunteer keepers of order tasked with bringing the wretched and the immoral to justice</p>",
     "abilities": [

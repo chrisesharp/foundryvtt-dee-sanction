@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Carousing - taverns are your natural territory; unguarded words flow in the presence of strong spirits</p>"
   },
-  "img": "/systems/dee/assets/default/icons/book.png",
+  "img": "systems/dee/assets/default/icons/book.png",
   "folder": null,
   "effects": [],
   "flags": {

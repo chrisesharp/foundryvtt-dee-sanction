@@ -7,18 +7,18 @@
       {
         "name": "Construction",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "DBFYkDcWAMxeU6Uj"
       },
       {
         "name": "Mechanics",
         "type": "ability",
-        "img": "/systems/dee/assets/default/icons/book.png",
+        "img": "systems/dee/assets/default/icons/book.png",
         "id": "XJYMA1aZejwslb2d"
       }
     ]
   },
-  "img": "/systems/dee/assets/default/icons/vigilance.png",
+  "img": "systems/dee/assets/default/icons/vigilance.png",
   "folder": null,
   "_id": "ygeh4zo16O1mH8ci",
   "effects": [],

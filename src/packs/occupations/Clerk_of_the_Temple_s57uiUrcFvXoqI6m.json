@@ -1,7 +1,7 @@
 {
   "name": "Clerk of the Temple",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Close associate of those who practice the law, serving with a willing ear, a strong stomach and a tenacious head lock</p>",
     "abilities": [

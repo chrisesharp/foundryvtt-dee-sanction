@@ -1,7 +1,7 @@
 {
   "name": "Fat-witted",
   "type": "consequence",
-  "img": "/systems/dee/assets/default/icons/bones.png",
+  "img": "systems/dee/assets/default/icons/bones.png",
   "system": {
     "description": "acts carelessly, lacking in reason when making decisions.",
     "resource": "int",

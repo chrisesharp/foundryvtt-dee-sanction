@@ -1,7 +1,7 @@
 {
   "name": "Caretaker",
   "type": "occupation",
-  "img": "/systems/dee/assets/default/icons/shilling.png",
+  "img": "systems/dee/assets/default/icons/shilling.png",
   "system": {
     "description": "<p>Trusted keeper of buildings and wider properties, notably in the absence of the master of the house</p>",
     "abilities": [
