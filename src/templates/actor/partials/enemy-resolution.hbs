@@ -1,4 +1,8 @@
-{{!-- resources --}}
+<section
+  class='sheet-body tab resolution {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='resolution'
+>
 <div class="resources flexcol">
     {{!-- hit resolution --}}        
     <div class="hitresolution flexcol" title="{{ localize 'DEE.ResolutionDetail'}}">
@@ -13,7 +17,11 @@
     <hr>
     {{!-- Notes --}}
     <div class="notes-header">{{ localize 'DEE.Notes'}}</div>
-    <div class="tab editor enemy-editor" data-tab="resolution">
-        {{editor data.description target="system.description" button=true owner=owner editable=editable}}
-    </div>
+  {{#if editable}} 
+    <prose-mirror name="system.description" data-document-u-u-i-d="{{actor.uuid}}" value="{{data.description}}" collaborate="true" toggled="true">
+      {{{enrichedDescription}}}
+    </prose-mirror>
+  {{else}} {{{enrichedDescription}}}
+  {{/if}}
 </div>
+</section>

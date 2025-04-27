@@ -78,15 +78,17 @@ function _addConsequenceButtons(cb) {
   label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
   action = "defending";
   cb.innerHTML+=`<div class="consequence-button"><button id="defend" type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`;
-  cb.querySelector('button[data-action="consequence"]').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    const chosen = ev.currentTarget;
-    const attacking = chosen.dataset.attack;
-    const otherId = (attacking==="true") ? "defend" : "attack";
-    const otherButton = $(chosen).closest('.consequence-roll').querySelector(`#${otherId}`);
-    otherButton.remove();
-    chosen.disabled=true;
-    applyChatConsequenceRoll(id, attacking);
+  cb.querySelectorAll('button[data-action="consequence"]').forEach((e) => {
+    e.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const chosen = ev.currentTarget;
+      const attacking = chosen.dataset.attack;
+      const otherId = (attacking==="true") ? "defend" : "attack";
+      const otherButton = chosen.closest('.consequence-roll').querySelector(`#${otherId}`);
+      otherButton.remove();
+      chosen.disabled=true;
+      applyChatConsequenceRoll(id, attacking);
+    });
   });
 }
 

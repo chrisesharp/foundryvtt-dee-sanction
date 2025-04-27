@@ -138,6 +138,7 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
 
   async _preparePartContext(partId, context) {
     switch (partId) {
+      case 'resolution':
       case 'notes':
         context.tab = context.tabs[partId];
         context.enrichedDescription = await TextEditor.enrichHTML(this.actor.system.description, {

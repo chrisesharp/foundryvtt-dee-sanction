@@ -1,7 +1,16 @@
-.sheet.actor.enemy {
+&.sheet.actor.enemy {
     min-width: 440px;
     max-width: 450px;
     min-height: 400px;
+    overflow: visible;
+
+    .window-content {
+        overflow: visible;
+          background-image: url("../assets/default/paper.png");
+          img {
+            border:none;
+          }
+        }
 
     img {
         border: 0px;
@@ -23,7 +32,7 @@
             input[type=checkbox]:checked::after {
                 content: "\f00d";
                 font-family: 'Font Awesome 6 Pro';
-                color: black;
+                color: red;
                 opacity: 1;
             }
             

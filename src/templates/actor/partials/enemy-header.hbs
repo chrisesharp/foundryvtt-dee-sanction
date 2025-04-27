@@ -1,3 +1,4 @@
+<section class="sheet-header">
 <div class="header-fields">
     <div class="sheet-header-enemy-table">
         <div class="sheet-logo">
@@ -25,10 +26,11 @@
             </div>
         </div>
         <div class="actor-portrait">
-            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+            <img class="profile-img" data-edit="img" data-action="onEditImage" src="{{actor.img}}" title="{{actor.name}}"/>
         </div>
         <div class="actor-name">
             <h3 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h3>
         </div>
     </div>
 </div>
+</section>
