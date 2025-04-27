@@ -1,7 +1,20 @@
-@at-root .dee.sheet.actor.agent {
+
+@import "./utils/variables.scss";
+
+&.sheet.actor.agent {
     min-width: 400px;
     max-width: 450px;
     min-height: 575px;
+    font-family: $font-primary;
+    overflow: visible;
+
+    .window-content {
+    overflow: visible;
+      background-image: url("../assets/default/paper.png");
+      img {
+        border:none;
+      }
+    }
     
     .step-up {
         font-size: x-large;
@@ -19,23 +32,26 @@
         input {
             border: 0px;
         }
+    }
+    .trade {
+        .tradecraft {
+            height: 30px;
+            width: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
 
-        .trade {
-            .tradecraft {
-                height: 30px;
-                width: 40px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                .hide{
-                    width: 50px;
-                    border: 0px;
-                    // top: 8px;
-                }
-                .hide:hover + .show{
-                    display: block;
-                    // top: 10px;
-                }
+            .hide {
+                width: 70px;
+                border: 0px;
+                display: none;
             }
+
+            &:hover .hide {
+                width: 70px;
+                font-size: x-small;
+                display: block;
+            }
+
         }
     }
 
@@ -98,6 +114,7 @@
                         font-size:2.5em;
                         border: 0px;
                         background-color:transparent;
+                        color: $c-black;
                     }
                 }
     
@@ -133,6 +150,7 @@
                     font-size:1.7em;
                     border: 0px;
                     background-color:transparent;
+                    color: $c-black;
                 }
             }
 
@@ -150,7 +168,15 @@
                 input[type=checkbox] {
                     opacity: 0;
                 }
+
                 input[type=checkbox]:checked {
+                    opacity: 1;
+                }
+
+                input[type=checkbox]:checked::after {
+                    content: "\f00d";
+                    font-family: 'Font Awesome 6 Pro';
+                    color: black;
                     opacity: 1;
                 }
 
@@ -243,7 +269,7 @@
     }
 }
 
-@at-root .dee.roll-dialog {
+.roll-dialog {
     .step-up {
         font-size: x-large;
     }

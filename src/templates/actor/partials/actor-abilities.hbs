@@ -1,4 +1,9 @@
 {{!-- expertise and abilities --}}
+<section
+  class='sheet-body tab abilities {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='abilities'
+>
 <div class="abilities">
     <ol class="items-list">
         <li class="flexrow item-header">
@@ -9,12 +14,12 @@
         </li>
     {{#each data.abilities as |item id|}}
         <li class="item-entry flexcol" data-item-id="{{item.id}}">
-            <div class="item flexrow">
+            <div class="item flexrow" data-item-id="{{item.id}}">
                 <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
-                <h4 class="item-name">{{item.name}}</h4>
-                <div class="item-controls">
-                    <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.abilities'}}"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.abilities'}}"><i class="fas fa-trash"></i></a>
+                <a data-action="itemSummary"><h4 class="item-name">{{item.name}}</h4></a>
+                <div class="item-controls" data-item-id="{{item.id}}">
+                    <a class="item-control" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.abilities'}}"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                    <a class="item-control" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.abilities'}}"><i data-action="itemDelete" class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>
@@ -37,17 +42,17 @@
                 <div class="fortune-header" title="{{ localize 'DEE.FocusDetail'}}">{{ localize 'DEE.Focus'}}</div>
                 {{#if (unlocked actor) }}
                 <div class="item-controls">
-                    <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="focus"><i class="fas fa-dice"></i></a>
+                    <a class="item-control item-rnd" data-action="itemRand" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="focus"><i class="fas fa-dice"></i></a>
                 </div>
                 {{/if}}
             </li>
             {{#each data.expertise.foci as |focus id|}}
             <li class="item-entry flexcol" data-item-id="{{focus.id}}">
-                <div class="item flexrow">
-                    <h3 class="item-name">{{focus.name}}</h3>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <div class="item flexrow" data-item-id="{{focus.id}}">
+                    <a data-action="itemSummary"><h3 class="item-name">{{focus.name}}</h3></a>
+                    <div class="item-controls" data-item-id="{{focus.id}}">
+                        <a class="item-control" title="Edit Item"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                        <a class="item-control" title="Delete Item"><i data-action="itemDelete" class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>
@@ -61,17 +66,17 @@
                 <div class="fortune-header" title="{{ localize 'DEE.OccupationsDetail'}}">{{ localize 'DEE.Occupations'}}</div>
                 {{#if (unlocked actor) }}
                 <div class="item-controls">
-                    <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="occupation"><i class="fas fa-dice"></i></a>
+                    <a class="item-control item-rnd" data-action="itemRand" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="occupation"><i class="fas fa-dice"></i></a>
                 </div>
                 {{/if}}
             </li>
             {{#each data.expertise.occupations as |occupation id|}}
             <li class="item-entry flexcol" data-item-id="{{occupation.id}}">
-                <div class="item flexrow">
-                    <h3 class="item-name">{{occupation.name}}</h3>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <div class="item flexrow data-item-id="{{occupation.id}}"">
+                    <a data-action="itemSummary"><h3 class="item-name">{{occupation.name}}</h3></a>
+                    <div class="item-controls" data-item-id="{{occupation.id}}">
+                        <a class="item-control" title="Edit Item"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                        <a class="item-control" title="Delete Item"><i data-action="itemDelete" class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>
@@ -79,3 +84,4 @@
         </ol>
     </div>
 </div>
+</section>

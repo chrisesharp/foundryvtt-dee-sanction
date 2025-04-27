@@ -1,4 +1,9 @@
 {{!-- Owned Items Tab --}}
+<section
+  class='sheet-body tab possessions flexcol {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='possessions'
+>
 <div class="sheet-expertise-table">
     <div class="armour">
         <div class="fortune-header" style="padding: 0.6em;">{{ localize 'DEE.resource.armour.long'}}</div>
@@ -8,7 +13,7 @@
                 <div class="flexcol" data-resource="armour">
                 </div>
                 {{#if (hasArmour data.resources.armour.value)}}
-                <img src="{{die data.resources.armour.value}}" width="64" height="64" class="rollable" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
+                <img src="{{die data.resources.armour.value}}" width="64" height="64" class="rollable" data-action="roll" data-roll="{{data.resources.armour.value}}" data-label="Armour" data-resource="armour">
                 {{/if}}
             </div>
         </div>
@@ -19,18 +24,18 @@
                 <div class="possessions-header" style="padding-top: 4px;">{{ localize 'DEE.MundanePossessions'}}</div>
                 {{#if (unlocked actor) }}
                 <div class="item-controls">
-                <a class="item-control item-rnd" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="item"><i class="fas fa-dice"></i></a>
+                <a class="item-control item-rnd" data-action="itemRand" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.possessions'}}" data-type="item"><i class="fas fa-dice"></i></a>
                 </div>
                 {{/if}}
             </li>
         {{#each data.possessions.mundane as |item id|}}
             <li class="item-entry flexcol" data-item-id="{{item.id}}">
-                <div class="item flexrow">
+                <div class="item flexrow" data-item-id="{{item.id}}">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4 class="item-name">{{item.name}}</h4>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.possessions'}}"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.possessions'}}"><i class="fas fa-trash"></i></a>
+                    <a data-action="itemSummary"><h4 class="item-name">{{item.name}}</h4></a>
+                    <div class="item-controls" data-item-id="{{item.id}}">
+                        <a class="item-control" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.possessions'}}"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                        <a class="item-control" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.possessions'}}"><i data-action="itemDelete" class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>
@@ -38,3 +43,4 @@
         </ol>
     </div>
 </div>
+</section>

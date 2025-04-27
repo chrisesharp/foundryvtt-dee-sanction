@@ -1,4 +1,5 @@
 import { DiceDialog } from "./dialog/dice-dialog.js";
+const { renderTemplate } = foundry.applications.handlebars;
 
 export class DeeSanctionDice {
     static async Roll({

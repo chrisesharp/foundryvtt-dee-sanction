@@ -1,0 +1,13 @@
+<nav class="sheet-tabs tabs side agent" data-group="primary">
+        <a class="item {{tabs.resources.cssClass}}" data-action="tab" data-group="primary" data-tab="resources">{{ localize 'DEE.tabs.resources'}}</a>
+        <a class="item {{tabs.abilities.cssClass}}" data-action="tab" data-group="primary" data-tab="abilities">{{ localize 'DEE.tabs.abilities'}}</a>
+        <a class="item {{tabs.possessions.cssClass}}" data-action="tab" data-group="primary" data-tab="possessions">{{ localize 'DEE.tabs.possessions'}}</a>
+        <a class="item {{tabs.associations.cssClass}}" data-action="tab" data-group="primary" data-tab="associations">{{ localize 'DEE.tabs.associations'}}</a>
+        <a class="item {{tabs.esoterica.cssClass}}" data-action="tab" data-group="primary" data-tab="esoterica">{{ localize 'DEE.tabs.esoterica'}}</a>
+        {{#if config.showEffects }}
+            {{#if user.isGM }}
+            <a class="item {{tabs.effects.cssClass}}" data-action="tab" data-group="primary" data-tab="effects">{{ localize 'DEE.tabs.effects'}}</a>
+            {{/if}}
+        {{/if}}
+        <a class="item" data-action="tab" data-group="primary" data-tab="notes">{{ localize 'DEE.tabs.notes'}}</a>
+</nav>

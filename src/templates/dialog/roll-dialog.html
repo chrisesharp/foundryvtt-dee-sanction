@@ -7,9 +7,9 @@
     <div class="dice flexrow">
         <div class="challenge">
             <div class="challenge-die flexrow flex-center">
-                <div class="flexcol" data-type="{{ data.roll.type }}" data-val="{{ data.roll.step}}">
-                    <a class="step-up"><i class="fas fa-caret-up"></i></a>
-                    <a class="step-down"><i class="fas fa-caret-down"></i></a>
+                <div class="flexcol">
+                    <a class="step-up" data-type="{{ data.roll.type }}" data-val="{{ data.roll.step}}"><i class="fas fa-caret-up" data-action="stepUp"></i></a>
+                    <a class="step-down" data-type="{{ data.roll.type }}" data-val="{{ data.roll.step}}"><i class="fas fa-caret-down" data-action="stepDown"></i></a>
                 </div>
                 <img class="die-icon" width="64" height="64" src="{{die data.roll.step}}">
                 <input class="formula" type="hidden" name="formula" value="{{formula}}" disabled />

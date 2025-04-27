@@ -331,9 +331,9 @@ export async function randomThing(actor, type) {
     const folder = game.folders.getName(type);
     const items = [];
     if (folder) {
-        const rt = await RollTable.fromFolder(folder,{temporary:true,renderSheet:false});
+        const rt = await RollTable.fromFolder(folder,{renderSheet:false});
         const roll = await rt.roll({async:true});
-        const res = roll.results[0].text;
+        const res = roll.results[0].name;
         const item = game.items.getName(res);
         if (item) {
             items.push(item.toObject());

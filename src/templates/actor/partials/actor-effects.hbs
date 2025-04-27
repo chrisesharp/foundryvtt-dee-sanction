@@ -1,4 +1,9 @@
 {{!-- expertise and abilities --}}
+<section
+  class='sheet-body tab effects {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='effects'
+>
 <ol class="items-list effects-list">
     {{#each effects as |section sid|}}
         <li class="items-header flexrow" data-effect-type="{{section.type}}">
@@ -37,3 +42,4 @@
     </ol>
     {{/each}}
 </ol>
+</section>

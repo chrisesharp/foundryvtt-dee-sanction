@@ -1,0 +1,31 @@
+<section
+  class='sheet-body tab associations {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='associations'
+>
+<div class="associations">
+    <ol class="items-list">
+        <li class="flexrow item-header">
+            <div class="fortune-header" title="{{ localize 'DEE.AssociationsDetail'}}">{{ localize 'DEE.Associations'}}</div>
+            {{#if (unlocked actor) }}
+            <div class="item-controls">
+            <a class="item-control item-rnd" data-action="itemRand" title="{{localize 'DEE.Add'}} {{localize 'DEE.tabs.associations'}}" data-type="association"><i class="fas fa-dice"></i></a>
+            </div>
+            {{/if}}
+        </li>
+
+    {{#each data.associations as |item id|}}
+        <li class="item-entry flexcol" data-item-id="{{item.id}}">
+            <div class="item flexrow" data-item-id="{{item.id}}">
+                <div class="item-image"><img src="{{item.img}}" width="24" height="24"/></div>
+                <a data-action="itemSummary"><h4 class="item-name">{{item.name}}</h4></a>
+                <div class="item-controls" data-item-id="{{item.id}}">
+                    <a class="item-control" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.associations'}}"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                    <a class="item-control" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.associations'}}"><i data-action="itemDelete" class="fas fa-trash"></i></a>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+    </ol>
+</div>
+</section>

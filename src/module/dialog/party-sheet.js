@@ -1,4 +1,7 @@
-export class DeeSanctionPartySheet extends FormApplication {
+const { ApplicationV2 } = foundry.applications.api;
+const { renderTemplate } = foundry.applications.handlebars;
+
+export class DeeSanctionPartySheet extends ApplicationV2 {
   
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {

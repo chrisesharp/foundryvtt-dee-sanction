@@ -1,4 +1,4 @@
-@at-root .dee.sheet.actor.enemy {
+.sheet.actor.enemy {
     min-width: 440px;
     max-width: 450px;
     min-height: 400px;
@@ -19,6 +19,14 @@
             input[type=checkbox]:checked {
                 opacity: 1;
             }
+
+            input[type=checkbox]:checked::after {
+                content: "\f00d";
+                font-family: 'Font Awesome 6 Pro';
+                color: black;
+                opacity: 1;
+            }
+            
             div.A {
                 background: url("../assets/default/icons/access.png") no-repeat;
                 background-size: contain;
@@ -146,6 +154,7 @@
                     font-size:1.7em;
                     border: 0px;
                     background-color:transparent;
+                    color: $c-black;
                 }
             }
 

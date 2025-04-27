@@ -3,6 +3,23 @@
 $font-primary: 'IM Fell English', serif;
 $font-secondary: 'IM Fell English', serif;
 
-h2, h3 {
+.application.dee .window-content,
+.app.dee .window-content,
+.dee.sheet .window-content {
+  &,
+  & h1,
+  & h2,
+  & h3,
+  & h4 {
+    font-family: $font-primary;
     font-style: italic;
+    // font-size: revert;
+    color: $c-black;
+    text-shadow: none;
+    margin: 0px;
+  }
+
+  & h2 {
+    padding-top: 2%;
+  }
 }
