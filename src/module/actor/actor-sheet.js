@@ -291,28 +291,30 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
     const targetType = target.dataset.type;
     switch (targetType) {
       case "item":
-        const template = "systems/dee/templates/dialog/possessions-dialog.html";
+        const template = "systems/dee/templates/dialog/possessions-dialog.hbs";
         const content = await renderTemplate(template);
     
-        //show welcome dialog and set initialized to true
-        let d = new Dialog({
-          title: "Randomly choose possessions",
-          content: content,
-          buttons: {
-            one: {
-              icon: '<i class="fas fa-check"></i>',
-              label: "Randomly Roll for Possessions",
-              callback: (html) => { 
-                randomPossessions(this.actor, html); 
-              }
-            },
-          },
-          default: "one"
-        }, {
-          width: 550,
-          height: 180,
-          resizable: false,
-        });
+        let d = new DialogV2({
+              classes: ['dee'],
+              window: {
+                title: "Randomly choose possessions",
+                resizable: false,
+                width: 550,
+                height: 180,
+              },
+              content: content,
+              buttons: [
+                {
+                  action: 'one',
+                  icon: 'fas fa-check',
+                  label: "Randomly Roll for Possessions",
+                  callback: (html) => { 
+                    randomPossessions(this.actor, html); 
+                  }
+                }
+              ],
+              default: "one"
+            });
         d.render(true);
         return;
       case "association":
