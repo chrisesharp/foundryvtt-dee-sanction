@@ -327,11 +327,30 @@ export async function randomPossessions(actor, html) {
     }));
 }
 
+async function RollTablefromFolder(folder, options={}) {
+    const results = folder.contents.map((doc, i) => ({
+      name: doc.name,
+      type: "document",
+      documentUuid: doc.uuid,
+      img: doc.thumbnail || doc.img,
+      weight: 1,
+      range: [i+1, i+1],
+      drawn: false
+    }));
+    options.renderSheet = options.renderSheet ?? true;
+    return new RollTable({
+      name: folder.name,
+      description: `A random table created from the contents of the ${folder.name} Folder.`,
+      results: results,
+      formula: `1d${results.length}`
+    }, options);
+  }
+
 export async function randomThing(actor, type) {
     const folder = game.folders.getName(type);
     const items = [];
     if (folder) {
-        const rt = await RollTable.fromFolder(folder,{renderSheet:false});
+        const rt = await RollTablefromFolder(folder,{temporary: true, renderSheet:false});
         const roll = await rt.roll({async:true});
         const res = roll.results[0].name;
         const item = game.items.getName(res);
