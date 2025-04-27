@@ -1,9 +1,8 @@
 @import "./utils/colors.scss";
-
-.chat-message {
+&.chat-message {
   background: url("../assets/default/paper.png");
 }
-.dee.chat-block {
+&.chat-block {
     margin: 0;
     font-family: $font-primary;
     .chat-header {
@@ -167,10 +166,12 @@
   }
 }
 
-&.dee.welcome {
-  display: flex;
-  overflow: hidden;
-  .welcome-content {
+&.application.dialog .window-content {
+    display: flex;
+    overflow: hidden;
+    background: url("../assets/default/paper.png");
+    color: $c-olive;
+
     div {
       font-size: large;
       img.glyph {
@@ -180,7 +181,6 @@
         border: 0px;
       }
     }
-  }
 }
 
 &.dee.dialog.party-select {

@@ -90,6 +90,7 @@ Hooks.once("ready", async function () {
     const content = await renderTemplate(template);
     //show welcome dialog and set initialized to true
     let d = new DialogV2({
+      classes: ['dee'],
       window: {
         title: "Welcome to the Dee Sanction",
         width: 550,

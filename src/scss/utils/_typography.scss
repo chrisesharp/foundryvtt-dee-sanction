@@ -3,7 +3,9 @@
 $font-primary: 'IM Fell English', serif;
 $font-secondary: 'IM Fell English', serif;
 
-.application.dee .window-content,
+.message-content,
+.welcome-content,
+.dee.application .window-content,
 .app.dee .window-content,
 .dee.sheet .window-content {
   &,
