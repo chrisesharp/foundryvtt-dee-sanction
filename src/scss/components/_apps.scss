@@ -6,9 +6,7 @@
     margin: 0;
     font-family: $font-primary;
     .chat-header {
-      height: 46px;
       margin: 4px 0;
-    //   background: $darkBackground;
       border: 1px solid black;
       border-radius: 3px;
       color: rgb(36, 35, 35);
@@ -16,14 +14,13 @@
       box-shadow: 0 0 2px #fff inset;
       .chat-title {
         margin: 4px 0;
-        height: 30px;
-        overflow: hidden;
+        overflow: visible;
+        display: contents;
         h2 {
           border: none;
           line-height: 34px;
           margin: 0;
           text-indent: 10px;
-          font-size: 16px;
           word-break: break-all;
         }
       }

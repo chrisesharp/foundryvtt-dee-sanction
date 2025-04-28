@@ -150,7 +150,7 @@ Hooks.on("renderSettings", async (object, html) => {
   const docs = html.querySelector("button[data-app='support']");
   const site = 'https://chrisesharp.github.io/foundryvtt-dee-sanction';
   const styling = 'border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px';
-  const button = `<button data-action="userguide"><img src='systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>WWII:OWB Guide</button>`;
+  const button = `<button data-action="userguide"><img src='systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`;
   docs.parentNode.innerHTML += button;
   html.querySelector('button[data-action="userguide"]').addEventListener('click', () => {
     const fv = new FrameView({ url: site });

@@ -1,25 +1,27 @@
-export class DiceDialog extends Dialog {
-    constructor(data) {
-        super(data);
+const { DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class DiceDialog extends DialogV2 {
+    constructor(options) {
+        super(options);
+    }
+    static DEFAULT_OPTIONS = {
+        classes: ['dee', 'sheet', 'dice'],
+        actions: {
+            stepUp: this.stepUp,
+            stepDown: this.stepDown,
+        },
+    };
+
+    static async stepUp(event, target) {
+        event.preventDefault();
+        const el = target.parentElement;
+        return this._updateDieElement(el, 1);
     }
 
-    /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
-
-        // Step up die.
-        html.find('a.step-up').click(async (event) => {
-            event.preventDefault();
-            const el = event.currentTarget.parentElement;
-            return this._updateDieElement(el, 1);
-        });
-
-        // Step down die.
-        html.find('a.step-down').click(async (event) => {
-            event.preventDefault();
-            const el = event.currentTarget.parentElement;
-            return this._updateDieElement(el, -1);
-        });
+    static async stepDown(event, target) {
+        event.preventDefault();
+        const el = target.parentElement;
+        return this._updateDieElement(el, -1);
     }
     /**
      * Handle updating an actor's resource
@@ -35,7 +37,8 @@ export class DiceDialog extends Dialog {
         const formula = `d${die}`;
         const icon = CONFIG.DEE.icons[formula];
         el.dataset.val = dieStep;
-        $(el).siblings("input.formula").val(formula);
-        $(el).siblings("img").attr("src",icon);
+        const root = el.parentElement.parentElement.parentElement;
+        root.querySelector("input.formula").value = formula;
+        root.querySelector("img").setAttribute("src",icon);
     }
 }
