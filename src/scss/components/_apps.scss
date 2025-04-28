@@ -165,12 +165,12 @@
 
 &.application.dialog .window-content {
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     background: url("../assets/default/paper.png");
-    color: $c-olive;
 
     div {
       font-size: large;
+      color: $c-olive;
       img.glyph {
         padding: 15px;
         flex: 0 60px;
@@ -180,7 +180,7 @@
     }
 }
 
-&.dee.dialog.party-select {
+&.dialog.party-select {
   .actor-list {
     padding: 0 4px 0;
     max-height: 250px;
@@ -188,6 +188,7 @@
     .actor {
       label {
         height: 28px;
+        color: $c-olive;
         overflow: hidden;
       }
       .form-fields {
@@ -203,15 +204,22 @@
   }
 }
 
-&.dee.dialog.party-sheet {
+&.dialog.party-sheet {
   min-width: 450px;
   min-height: 350px;
+  overflow: visible;
   .window-content {
     padding: 0;
+    .sheet-body table {
+      width:auto;
+      background:none;
+      tbody tr:nth-child(even) {
+        background-color: #92470640;
+      }
+    }
   }
   .header {
     color: $c-white;
-    background: $c-olive;
     padding: 4px 0;
     line-height: 20px;
     text-align: left;
@@ -233,21 +241,25 @@
           width: 40px;
           background-size: contain;
           background-repeat: no-repeat;
-          .hide{
-              width: 50px;
+
+          .hide {
+              width: 70px;
               border: 0px;
-              // top: 8px;
+              display: none;
           }
-          .hide:hover + .show{
+
+          &:hover .hide {
+              width: 70px;
+              font-size: x-small;
               display: block;
-              // top: 10px;
           }
+
       }
-  }
+    }
   }
   .actor-list {
     margin: 0;
-    overflow: auto;
+    overflow: visible;
     list-style: none;
     padding: 0;
     .actor {

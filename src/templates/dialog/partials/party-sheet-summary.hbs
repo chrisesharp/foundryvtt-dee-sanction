@@ -1,10 +1,14 @@
-<ol class="actor-list">
+<section
+  class='sheet-body tab summary {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='summary'>
+  <ol class="actor-list">
     {{#each party as |e|}}
     <li class="actor flexrow" data-actor-id="{{e.id}}">
         <div class="field-img">
         <img src="{{e.img}}" class="profile actor-profile"/>
         <div class="img-btns flexrow">
-            <button type="button" data-action="open-sheet"><i class="fas fa-user"></i></button>
+            <button type="button" data-action="showActor"><i class="fas fa-user"></i></button>
         </div>
         </div>
         <div class="fields">
@@ -103,4 +107,5 @@
         </div>
     </li>
     {{/each}}
-</ol>
+  </ol>
+</section>

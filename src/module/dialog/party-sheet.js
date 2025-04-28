@@ -1,50 +1,148 @@
-const { ApplicationV2 } = foundry.applications.api;
+const { ApplicationV2, DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const { renderTemplate } = foundry.applications.handlebars;
 
-export class DeeSanctionPartySheet extends ApplicationV2 {
-  
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dee", "dialog", "party-sheet"],
-      template: "systems/dee/templates/dialog/party-sheet.html",
-      width: 630,
+export class DeeSanctionPartySheet extends HandlebarsApplicationMixin(ApplicationV2) {
+  #party;
+
+  constructor (options) {
+    super(options);
+    options.window.resizable = true;
+  }
+  static DEFAULT_OPTIONS = {
+    id: 'party-sheet',
+    classes: ['dee', 'dialog', 'party-sheet'],
+    position: {
+      width: 500,
       height: 350,
+    },
+    actions: {
+      selectActors: DeeSanctionPartySheet._selectActors,
+      selectTradecraft: DeeSanctionPartySheet._selectTradecraft,
+      showActor: DeeSanctionPartySheet._showActor,
+    },
+    window: {
+      title: 'DEE.dialog.partysheet',
       resizable: true,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "summary" }]
-    });
+      contentClasses: ['standard-form', 'dee', 'dialog', 'party-sheet'],
+    },
+    form: {
+      closeOnSubmit: true,
+    },
+  };
+
+  /** @override */
+  static PARTS = {
+    header: {
+      template: 'systems/dee/templates/dialog/partials/party-sheet-header.hbs',
+    },
+    tabs: {
+      template: 'systems/dee/templates/dialog/partials/party-sheet-nav.hbs',
+    },
+    summary: {
+      template: 'systems/dee/templates/dialog/partials/party-sheet-summary.hbs',
+    },
+    abilities: {
+      template: 'systems/dee/templates/dialog/partials/party-sheet-abilities.hbs',
+    },
+    possessions: {
+      template: 'systems/dee/templates/dialog/partials/party-sheet-possessions.hbs',
+    },
+  };
+
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
   }
-  /* -------------------------------------------- */
 
-  /**
-   * Add the Entity name into the window title
-   * @type {String}
-   */
-  get title() {
-    return game.i18n.localize("DEE.dialog.partysheet");
+  _getTabs(parts) {
+    // If you have sub-tabs this is necessary to change
+    const tabGroup = 'primary';
+    // Default tab for first time it's rendered this session
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'summary';
+    return parts.reduce((tabs, partId) => {
+      const tab = {
+        cssClass: '',
+        group: tabGroup,
+        // Matches tab property to
+        id: '',
+        // FontAwesome Icon, if you so choose
+        icon: '',
+        // Run through localization
+        label: 'DEE.tabs.',
+      };
+      switch (partId) {
+        case 'header':
+        case 'tabs':
+          return tabs;
+        default:
+          tab.id = partId;
+          tab.label += partId;
+          break;
+      }
+      if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
+      tabs[partId] = tab;
+      return tabs;
+    }, {});
   }
 
-  /* -------------------------------------------- */
-
-  /**
-   * Construct and return the data object used to render the HTML template for this form application.
-   * @return {Object}
-   */
-  getData() {
-    let partyTradecraft = game.user.getFlag("dee","tradecraft");
+  async _prepareContext(options) {
+    this.#party = this._preparePartyData();
+    const partyTradecraft = game.user.getFlag("dee","tradecraft");
     if (!partyTradecraft) {
       game.user.setFlag("dee","tradecraft","");
     }
-    const party = this.object.documents.filter(a=>a.getFlag("dee","party"));
+    const data = {
+      party: this.#party,
+      // abilities: this._prepareAbilities(),
+      // possessions: this._preparePossessions(),
+      config: CONFIG.DEE,
+      user: game.user,
+      settings: settings,
+      tradecraft: partyTradecraft,
+      tabs: this._getTabs(options.parts),
+    };
+    return data;
+  }
+
+  async _preparePartContext(partId, context) {
+    switch (partId) {
+      case 'abilities':
+        context.tab = context.tabs[partId];
+        context.abilities = this._prepareAbilities();
+        break;
+      case 'possessions':
+        context.tab = context.tabs[partId];
+        context.possessions = this._preparePossessions();
+        break;
+      default:
+        context.tab = context.tabs[partId];
+        break;
+    }
+    return context;
+  }
+
+  _preparePartyData() {
+    const actors = game.actors?.filter((a) => { 
+      const isMember = a.getFlag('dee', 'party');
+      return isMember === true;
+    }) ?? [];
+    return actors;
+  }
+
+  _prepareAbilities() {
     const abilities = {};
-    party.forEach(e => {
+    this.#party.forEach(e => {
       e.system.abilities.forEach(a => {
         let abs = abilities[a.name] || [];
         abs.push(e);
         abilities[a.name] = abs;
       });
     });
+    return abilities;
+  }
+
+  _preparePossessions() {
     const possessions = {};
-    party.forEach(e => {
+    this.#party.forEach(e => {
       e.system.possessions.mundane.forEach(a => {
         let abs = possessions[a.name] || [];
         abs.push(e);
@@ -56,79 +154,64 @@ export class DeeSanctionPartySheet extends ApplicationV2 {
         possessions[`${a.name}*`] = abs;
       });
     });
-    const data = {
-      data: this.object,
-      party: party,
-      abilities: abilities,
-      possessions: possessions,
-      config: CONFIG.DEE,
-      user: game.user,
-      settings: settings,
-      tradecraft: partyTradecraft
-    };
-    return data;
+    return possessions;
   }
 
   /* -------------------------------------------- */
 
-  async _selectActors(ev) {
-    const entities = this.object.documents.sort((a, b) => b.prototypeToken.disposition - a.prototypeToken.disposition);
-    const template = "systems/dee/templates/dialog/party-select.html";
+  static async _selectActors(ev) {
+    const actors = game.actors.filter((e)=> e).sort((a, b) => b.prototypeToken.disposition - a.prototypeToken.disposition);
+    const template = "systems/dee/templates/dialog/party-select.hbs";
     const templateData = {
-      actors: entities
+      actors: actors
     }
     const content = await renderTemplate(template, templateData);
-    new Dialog({
-      title: game.i18n.localize("DEE.dialog.selectagents"),
+    await DialogV2.wait({
+      classes: ["dee","dialog","party-select"],
+      window: {
+        title: 'DEE.dialog.selectagents',
+        width: 260,
+      },
+      
       content: content,
-      buttons: {
-        set: {
-          icon: '<i class="fas fa-save"></i>',
-          label: game.i18n.localize("DEE.Update"),
+      buttons: [
+        {
+          action: 'set',
+          icon: 'fas fa-save',
+          label: 'DEE.Update',
           callback: async (html) => {
-            let checks = html.find("input[data-action='select-actor']");
-            await Promise.all(checks.map(async (_, c) => {
-              let key = c.getAttribute('name');
-              await this.object.documents[key].setFlag('dee', 'party', c.checked);
+            const checks = Array.from(html.currentTarget.querySelectorAll("input[data-action='select-actor']"));
+            await Promise.all(checks.map(async (c) => {
+              const actorId = c.dataset.actorId;
+              const actor = game.actors.get(actorId);
+              const isChecked = c.checked;
+              await actor.setFlag('dee', 'party', isChecked );
             }));
-            this.render(true);
           },
         },
-      },
-    }, {
-      height: "auto", 
-      width: 260,
-      classes: ["dee","dialog","party-select"]
-    })
-    .render(true);
+      ],
+    });
+    this.render(true);
   }
 
-  /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find(".item-controls .item-control .select-actors")
-        .click(this._selectActors.bind(this));
+  static async _selectTradecraft(event, target) {
+    event.preventDefault();
+    const opt = target.value;
+    const trade = CONFIG.DEE.tradecraft[opt]; 
+    await game.user.setFlag("dee","tradecraft",trade);
+    const sheet = target.closest('#party-sheet');
+    const actors = Array.from(sheet.querySelectorAll('li.actor'));
     
-    html.find("a.resync").click(() => this.render(true));
+    await Promise.all(actors.map(async (a) => {
+      const actorId = a.dataset.actorId;
+      if (actorId) {
+        await game.actors.get(actorId).update({system:{tradecraft:trade}});
+      }
+    }));
+  }
 
-    html.find(".field-img button[data-action='open-sheet']").click((ev) => {
-      let actorId = ev.currentTarget.parentElement.parentElement.parentElement.dataset.actorId;
-      game.actors.get(actorId).sheet.render(true);
-    })
-
-    // Tradecraft select
-    html.find('#tradecraft-sel').change(async (event)=> {
-      event.preventDefault();
-      const opt = $('#tradecraft-sel').val();
-      const trade = CONFIG.DEE.tradecraft[opt]; 
-      await game.user.setFlag("dee","tradecraft",trade);
-      $('li.actor').each(async function() {
-        const actorId = $(this).data('actor-id');
-        if (actorId) {
-          await game.actors.get(actorId).update({system:{tradecraft:trade}});
-        }
-      } );
-      this.render(true);
-    });
+  static async _showActor(_event, target) {
+    const actorId = target.parentElement.parentElement.parentElement.dataset.actorId;
+    game.actors.get(actorId).sheet.render(true);
   }
 }

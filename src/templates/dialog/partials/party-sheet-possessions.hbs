@@ -1,3 +1,7 @@
+<section
+  class='sheet-body tab possessions {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='possessions'>
 <table>
     <tr class="actor-list">
         <th width="100"><img src="systems/dee/assets/default/icons/kit.png" width="15px">&nbsp;<em>Possession</em></th>
@@ -6,7 +10,7 @@
             <div class="field-img">
                 <img src="{{e.img}}" class="profile actor-profile" title="{{e.name}}"/>
                 <div class="img-btns flexrow">
-                    <button type="button" data-action="open-sheet"><i class="fas fa-user"></i></button>
+                    <button type="button" data-action="showActor"><i class="fas fa-user"></i></button>
                 </div>
             </div>
         </th>
@@ -27,3 +31,4 @@
     </tr>
     {{/each}}
 </table>
+</section>

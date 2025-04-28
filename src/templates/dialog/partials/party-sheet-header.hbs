@@ -1,13 +1,10 @@
 <div class="actor header flexrow" style="flex-wrap: nowrap;">
-    <div>
-        <a class="item-control resync"><i class="fas fa-sync"></i></a>
-    </div>
     {{#if user.isGM}}
     <div class="item-controls flexrow" style="flex-grow: 3;" >
         <h3 style="flex-grow: 3;">Tradecraft for this adventure</h3>
         <div class="trade">
         <div class="tradecraft show" style="background-image: url('{{ trade tradecraft}}');background-color:'white';" title="{{ localize 'DEE.TradecraftSelect'}}">
-            <select class="hide" id="tradecraft-sel">
+            <select class="hide" id="tradecraft-sel" data-action="selectTradecraft">
                 <option selected value="0">-</option>
                 <option value="A">Access</option>
                 <option value="C">Conspiracy</option>
@@ -19,7 +16,7 @@
         </div>
         </div>
         <div class="item-control">
-        <button type="button" class="select-actors" title="{{localize 'DEE.dialog.selectagents'}}"><i class="fas fa-users"></i></button>
+        <button type="button" class="select-actors" data-action="selectActors" title="{{localize 'DEE.dialog.selectagents'}}"><i class="fas fa-users"></i></button>
         </div>
     </div>
     {{/if}}

@@ -1,4 +1,4 @@
-const { DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
+const { DialogV2 } = foundry.applications.api;
 
 export class DiceDialog extends DialogV2 {
     constructor(options) {
@@ -15,13 +15,13 @@ export class DiceDialog extends DialogV2 {
     static async stepUp(event, target) {
         event.preventDefault();
         const el = target.parentElement;
-        return this._updateDieElement(el, 1);
+        return DiceDialog._updateDieElement(el, 1);
     }
 
     static async stepDown(event, target) {
         event.preventDefault();
         const el = target.parentElement;
-        return this._updateDieElement(el, -1);
+        return DiceDialog._updateDieElement(el, -1);
     }
     /**
      * Handle updating an actor's resource
@@ -29,7 +29,7 @@ export class DiceDialog extends DialogV2 {
      * @param {Number} delta  The amount (positive or negative) to adjust the resource by
      * @private
      */
-    _updateDieElement(el, delta) {
+    static _updateDieElement(el, delta) {
         delta = parseInt(delta);
         let dieStep = parseInt(el.dataset.val);
         dieStep = (delta > 0) ? Math.min(dieStep + delta, 5) : Math.max(dieStep + delta, 0);

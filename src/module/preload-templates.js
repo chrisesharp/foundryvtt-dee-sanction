@@ -19,10 +19,11 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/dee/templates/item/partials/item-abilities-list.html',
         'systems/dee/templates/item/partials/item-effects.html',
         // Dialog Partials
-        'systems/dee/templates/dialog/partials/party-sheet-header.html',
-        'systems/dee/templates/dialog/partials/party-sheet-summary.html',
-        'systems/dee/templates/dialog/partials/party-sheet-abilities.html',
-        'systems/dee/templates/dialog/partials/party-sheet-possessions.html'
+        'systems/dee/templates/dialog/partials/party-sheet-header.hbs',
+        'systems/dee/templates/dialog/partials/party-sheet-nav.hbs',
+        'systems/dee/templates/dialog/partials/party-sheet-summary.hbs',
+        'systems/dee/templates/dialog/partials/party-sheet-abilities.hbs',
+        'systems/dee/templates/dialog/partials/party-sheet-possessions.hbs'
     ];
     return loadTemplates(templatePaths);
 };
