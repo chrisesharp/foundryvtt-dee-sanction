@@ -205,11 +205,12 @@
 }
 
 &.dialog.party-sheet {
-  min-width: 450px;
+  min-width: 550px;
   min-height: 350px;
   overflow: visible;
   .window-content {
     padding: 0;
+    font-size: medium;
     .sheet-body table {
       width:auto;
       background:none;
