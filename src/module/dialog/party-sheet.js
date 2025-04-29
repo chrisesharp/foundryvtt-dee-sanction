@@ -6,8 +6,8 @@ export class DeeSanctionPartySheet extends HandlebarsApplicationMixin(Applicatio
 
   constructor (options) {
     super(options);
-    options.window.resizable = true;
   }
+
   static DEFAULT_OPTIONS = {
     id: 'party-sheet',
     classes: ['dee', 'dialog', 'party-sheet'],
