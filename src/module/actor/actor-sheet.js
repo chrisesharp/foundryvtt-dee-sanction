@@ -6,6 +6,7 @@ const { DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const { DragDrop, TextEditor } = foundry.applications.ux;
 import { slideToggle } from '../utils/slide.js';
 const { renderTemplate } = foundry.applications.handlebars;
+const { FilePicker } = foundry.applications.apps;
 
 
 export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {

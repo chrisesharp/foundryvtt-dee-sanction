@@ -5,19 +5,17 @@
         <div class="flexrow">
             <div class="resource flexcol" style="align-items: flex-start;">
               <label class="resource-label">{{localize "DEE.consequence.resource"}}</label>
-                <select class="" id="consequence-sel" data-action="selectConsequence">
-                    <option {{isSelected data.resource "" }} value="">?</option>
-                    <option {{isSelected data.resource "phy" }} value="phy">{{localize "DEE.resource.phy.long"}}</option>
-                    <option {{isSelected data.resource "int" }} value="int">{{localize "DEE.resource.int.long"}}</option>
-                    <option {{isSelected data.resource "sup" }} value="sup">{{localize "DEE.resource.sup.long"}}</option>
+              {{ log .}}
+                <select name="system.resource">
+                    {{selectOptions resources selected=data.resource }}
                 </select> 
             </div>
-            <div class="resource flexcol" style="align-items: normal;">
+            <div class="resource flexcol" style="text-align: center;">
                 <label class="resource-label">{{localize "DEE.Potency"}}</label>
                 <div>
                     {{#if (gt data.potency 0)}}<i class="fas fa-caret-up" style="font-size: small;text-align: right;"></i>{{/if}}
                     {{#if (lt data.potency 0)}}<i class="fas fa-caret-down" style="font-size: small;text-align: right;"></i>{{/if}}
-                    <input id="potency-sel" data-action="selectPotency" type="text" style="width: 25%" name="system.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
+                    <input id="potency-sel" type="text" style="width: 25%" name="system.potency" value="{{data.potency}}" data-dtype="Number" size="2" maxlength="2" />    
                 </div>
             </div>
           </div>

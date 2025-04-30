@@ -53,6 +53,30 @@ export class DeeSanctionItem extends Item {
     }
   }
 
+  /* @override */
+  async update(data, operation) {
+    if (this.type === 'consequence' && (data.system?.resource || data.system?.potency) ) {
+      const resource = data.system?.resource;
+      const potency = data.system?.potency;
+      for ( let e of this.effects ) {
+        let name = await e.sourceName; // Trigger a lookup for the source name
+        if (name === this.name) {
+          const change = foundry.utils.duplicate(e.changes[0]);
+          if (resource) {
+            change.key = `resources.${resource}.value`;
+          }
+          if (potency) {
+            change.value = parseInt(potency);
+            change.mode =  2;
+          }
+          await e.update({changes: [change]});
+          break;
+        }
+      }
+    }
+    return super.update(data, operation);
+  }
+
   _prepContainer(itemData) {
     const abilities = foundry.utils.deepClone(itemData.abilities);
     if (game.items) {

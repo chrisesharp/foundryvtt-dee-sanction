@@ -93,7 +93,7 @@ nav.sheet-tabs {
 
 nav.sheet-tabs.side {
   display: flow;
-  width: auto;
+  width: -webkit-fill-available;
   position: absolute;
   transform: rotate(90deg);
   top: 255px;
@@ -159,15 +159,15 @@ nav.sheet-tabs.side.party {
   }
 }
 
+&.sheet nav.sheet-tabs.side.enemy {
+  top: 540px;
+  right: -450px;
+}
+
 &.sheet nav.sheet-tabs.side.agent {
-  position: absolute;
-  transform: rotate(90deg);
-  // width: 550px;
-  top: 330px;
-  right: -230px;
-  // right: -284px;
+  top: 540px;
+  right: -450px;
   border-top: none;
-  // height: 18px;
   z-index: -1;
   .item {
     padding: 6px 15px 0;

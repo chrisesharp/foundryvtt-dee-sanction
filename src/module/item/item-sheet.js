@@ -1,6 +1,7 @@
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { DragDrop, TextEditor } = foundry.applications.ux;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+const { FilePicker } = foundry.applications.apps;
 import { prepareActiveEffectCategories, createConsequenceEffect} from "../effects.js";
 
 export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
@@ -43,8 +44,6 @@ export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2
       toggleEffect: this._effectToggle,
       editEffect: this._effectEdit,
       deleteEffect: this._effectDelete,
-      selectConsequence: this._selectConsequence,
-      selectPotency: this._onPotencyChange,
     },
     window: {
       resizable: false,
@@ -235,6 +234,11 @@ export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2
       }
     }
     data.item = this.item;
+    data.resources = {
+      phy: game.i18n.localize('DEE.resource.phy.long'),
+      int: game.i18n.localize('DEE.resource.int.long'),
+      sup: game.i18n.localize('DEE.resource.sup.long'),
+    }
     data.config = CONFIG.DEE;
     data.data = this.item.system;
     data.user = game.user;
@@ -269,23 +273,6 @@ export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2
     const li = element.parentNode.parentNode;
     const item = game.items.get(li.dataset.itemId);
     item?.sheet?.render(true);
-  }
-
-  static async _selectConsequence(event, target) {
-      event.preventDefault();
-      // const resource = $('#consequence-sel').val();
-      const resource = target.value;
-      const newData = {resource:resource};
-      for ( let e of this.item.effects ) {
-        let name = await e.sourceName; // Trigger a lookup for the source name
-        if (name === this.item.name) {
-          const change = foundry.utils.duplicate(e.data.changes[0]);
-          change.key = `resources.${resource}.value`;
-          e.update({changes: [change]});
-          break;
-        }
-      }
-      await this.item.update(newData);
   }
 
   static async _createDoc(event, target) {
@@ -329,22 +316,22 @@ export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2
     return await this.item.update(newAbilities);
   }
 
-  static async _onPotencyChange(event, target) {
-    event.preventDefault();
-    const potency = target.value;
-    const newData = {potency:potency};
-    for ( let e of this.item.effects ) {
-      let name = await e.name; // Trigger a lookup for the source name
-      if (name === this.item.name) {
-        const change = foundry.utils.duplicate(e.changes[0]);
-        change.value = parseInt(potency);
-        change.mode =  2;
-        e.update({changes: [change]});
-        break;
-      }
-    }
-    await this.item.update(newData);
-  }
+  // static async _onPotencyChange(event, target) {
+  //   event.preventDefault();
+  //   const potency = target.value;
+  //   const newData = {potency:potency};
+  //   for ( let e of this.item.effects ) {
+  //     let name = await e.name; // Trigger a lookup for the source name
+  //     if (name === this.item.name) {
+  //       const change = foundry.utils.duplicate(e.changes[0]);
+  //       change.value = parseInt(potency);
+  //       change.mode =  2;
+  //       e.update({changes: [change]});
+  //       break;
+  //     }
+  //   }
+  //   await this.item.update(newData);
+  // }
 
   _getEffect(target) {
     const li = target.closest('.effect');
