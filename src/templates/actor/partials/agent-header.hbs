@@ -14,14 +14,8 @@
             <div class="tradecraft show" data-action="tradecraft" style="background-image: url('{{ trade data.tradecraft}}');" title="{{ localize 'DEE.TradecraftSelect'}}">
                 {{#if (unlocked actor)}}
                 {{#unless (inParty actor)}}
-                <select class="hide" id="tradecraft-sel">
-                    <option selected value="0">-</option>
-                    <option value="A">Access</option>
-                    <option value="C">Conspiracy</option>
-                    <option value="K">Kit</option>
-                    <option value="M">Magic</option>
-                    <option value="S">System</option>
-                    <option value="V">Vigilance</option>
+                <select class="hide" name="system.tradecraft" id="tradecraft-sel">
+                    {{ selectOptions config.tradecraft selected=data.tradecraft }}
                 </select>
                 {{/unless}}
                 {{/if}}

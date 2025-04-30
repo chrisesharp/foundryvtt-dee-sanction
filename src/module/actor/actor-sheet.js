@@ -47,7 +47,6 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
       padlock: this._onToggleLock,
       generate: this._onGenerate,
       itemRand: this._onRandomPossession,
-      tradecraft: this._onTradecraft,
       stepUp: this.stepUp,
       stepDown: this.stepDown,
     },
@@ -258,15 +257,6 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
     await this.updateResource(resource, -1);
   }
 
-  static async _onTradecraft(event, target) {
-    event.preventDefault();
-    const opt = target.querySelector('#tradecraft-sel').value;
-    if (opt !== '0') {
-      const trade = CONFIG.DEE.tradecraft[opt]; 
-      const newData = {tradecraft:trade};
-      await this.actor.update({system:newData});
-    }
-  }
   /**
    * Handle updating an actor's resource
    * @param {String} resource   The name of the resource

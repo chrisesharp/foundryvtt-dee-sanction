@@ -92,8 +92,6 @@ export class DeeSanctionPartySheet extends HandlebarsApplicationMixin(Applicatio
     }
     const data = {
       party: this.#party,
-      // abilities: this._prepareAbilities(),
-      // possessions: this._preparePossessions(),
       config: CONFIG.DEE,
       user: game.user,
       settings: settings,
@@ -195,14 +193,42 @@ export class DeeSanctionPartySheet extends HandlebarsApplicationMixin(Applicatio
   }
 
   static async _selectTradecraft(event, target) {
-    event.preventDefault();
-    const opt = target.value;
-    const trade = CONFIG.DEE.tradecraft[opt]; 
+    const template = "systems/dee/templates/dialog/partials/party-sheet-trade-select.hbs";
+    const trade = await game.user.getFlag("dee","tradecraft");
+    const templateData = {
+      tradecraft: trade,
+      config: CONFIG.DEE,
+    }
+    const content = await renderTemplate(template, templateData);
+    const result = await DialogV2.wait({
+      classes: ["dee","dialog","party-select"],
+      window: {
+        title: 'DEE.TradecraftSelect',
+        width: 150,
+      },
+      
+      content: content,
+      buttons: [
+        {
+          action: 'set',
+          icon: 'fas fa-save',
+          label: 'DEE.Update',
+          callback: (event) => {
+            return event.currentTarget.querySelector('#tradecraft-sel').value;
+          }
+        },
+      ],
+    });
+    if (result != trade) {
+      await DeeSanctionPartySheet._updateTradecraft(result, target.closest('#party-sheet'));
+      this.render(true);
+    }
+  }
+
+  static async _updateTradecraft(trade, sheet) {
     await game.user.setFlag("dee","tradecraft",trade);
-    const sheet = target.closest('#party-sheet');
     const actors = Array.from(sheet.querySelectorAll('li.actor'));
-    
-    await Promise.all(actors.map(async (a) => {
+    return Promise.all(actors.map(async (a) => {
       const actorId = a.dataset.actorId;
       if (actorId) {
         await game.actors.get(actorId).update({system:{tradecraft:trade}});

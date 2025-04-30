@@ -23,7 +23,8 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/dee/templates/dialog/partials/party-sheet-nav.hbs',
         'systems/dee/templates/dialog/partials/party-sheet-summary.hbs',
         'systems/dee/templates/dialog/partials/party-sheet-abilities.hbs',
-        'systems/dee/templates/dialog/partials/party-sheet-possessions.hbs'
+        'systems/dee/templates/dialog/partials/party-sheet-possessions.hbs',
+        'systems/dee/templates/dialog/partials/party-sheet-trade-select.hbs'
     ];
     return loadTemplates(templatePaths);
 };
