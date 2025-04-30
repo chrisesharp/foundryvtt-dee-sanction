@@ -29,53 +29,52 @@ export class DeeCombat {
     game.combat.setupTurns();
   }
 
-  static format(object, html, user) {
-    html.find('.combat-control[data-control="rollNPC"]').remove();
-    html.find('.combat-control[data-control="rollAll"]').remove();
-    let trash = html.find(
-      '.encounters .combat-control[data-control="endCombat"]'
-    );
-    $(
-      '<a class="combat-control" data-control="reroll"><i class="fas fa-dice"></i></a>'
-    ).insertBefore(trash);
+  static format(object, html) {
+    html.querySelector('.combat-control[data-action="rollNPC"]')?.remove();
+    html.querySelector('.combat-control[data-action="rollAll"]')?.remove();
+    const gear = html.querySelector('button[data-action="trackerSettings"]');
+    if (gear) {
+      gear.previousElementSibling.insertAdjacentHTML('afterend', '<button type="button" class="inline-control roll icon fas fa-dice" data-action="reroll" data-tooltip aria-label="roll initiative"></button>');
+    }
 
-    html.find(".combatant").each((_, ct) => {
+    html.querySelectorAll(".combatant").forEach((ct) => {
       // Can't roll individual inits
-      $(ct).find(".roll").remove();
-
+      ct.querySelector(".roll")?.remove();
       const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
+      const colors = ["black","grey","white"];
       const color = cmbtant.getFlag("dee","group");
       // Append colored flag
-      let controls = $(ct).find(".combatant-controls");
-      controls.prepend(
-        `<a class='combatant-control flag' style='color:${color}' title="${color}"><i class='fas fa-flag'></i></a>`
-      );
+      const controls = ct.querySelector(".combatant-controls");
+      if (controls) controls.innerHTML = `<a class='combatant-control flag' style='color:${color}' title="${colors[color]}"><i class='fas fa-flag'></i></a>` + controls.innerHTML;
     });
     DeeCombat.addListeners(html);
   }
 
   static addListeners(html) {
     // Cycle through colors
-    html.find(".combatant-control.flag").click((ev) => {
-      if (!game.user.isGM) {
-        return;
-      }
-      const currentColor = ev.currentTarget.style.color;
-      const colors = ["black","grey","white"];
-      let index = colors.indexOf(currentColor);
-      index = (index + 1) % colors.length;
-      const id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      const combatant = game.combat.combatants.get(id);
-      combatant.updateSource({
-        id: id,
-        flags: { dee: { group: colors[index] } },
+    html.querySelectorAll(".combatant-control.flag").forEach((el) => {
+      el.addEventListener('click', (ev) => {
+        if (!game.user.isGM) {
+          return;
+        }
+        const currentColor = ev.currentTarget.style.color;
+        const colors = ["black","grey","white"];
+        const index = (colors.indexOf(currentColor) + 1) % colors.length;
+        const id = ev.currentTarget.closest(".combatant").dataset.combatantId;
+        const cbnt = game.combat.combatants.get(id);
+        cbnt.update({
+          id: id,
+          flags: { dee: { group: colors[index] } },
+        });
       });
     });
 
-    html.find('.combat-control[data-control="reroll"]').click(async (ev) => {
-      if (game.combat) {
-        await DeeCombat.rollInitiative(game.combat);
-      }
+    html.querySelectorAll('.combat-control[data-action="reroll"]').forEach((el) => {
+      el.addEventListener('click', async () => {
+        if (!game.combat) return;
+        const data = {};
+        await DeeCombat.rollInitiative(game.combat, data);
+      });
     });
   }
 
@@ -102,7 +101,7 @@ export class DeeCombat {
   }
 
   static activateCombatant(li) {
-    const turn = game.combat.turns.findIndex(turn => turn.id === li.data('combatant-id'));
+    const turn = game.combat.turns.findIndex(turn => turn.id === li.dataset.combatantId);
     game.combat.update({turn: turn})
   }
 
@@ -110,7 +109,7 @@ export class DeeCombat {
     options.unshift({
       name: "Set Active",
       icon: '<i class="fas fa-star-of-life"></i>',
-      callback: DeeCombat.activateCombatant
+      callback: OWBCombat.activateCombatant
     });
     const idx = options.findIndex(e => e.name === "COMBAT.CombatantReroll");
     options.splice(idx, 1);

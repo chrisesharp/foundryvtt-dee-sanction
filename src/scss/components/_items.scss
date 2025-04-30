@@ -1,5 +1,22 @@
 @import "../utils/_variables.scss";
 
+
+&.sheet.item {
+  min-width: 400px;
+  max-width: 450px;
+  min-height: 350px;
+  font-family: $font-primary;
+  overflow: visible;
+
+  .window-content {
+  overflow: visible;
+    background-image: url("../assets/default/paper.png");
+    img {
+      border:none;
+    }
+  }
+}
+
 .items-list {
   list-style: none;
   margin: 7px 0;

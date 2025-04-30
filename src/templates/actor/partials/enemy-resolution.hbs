@@ -1,0 +1,27 @@
+<section
+  class='sheet-body tab resolution {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='resolution'
+>
+<div class="resources flexcol">
+    {{!-- hit resolution --}}        
+    <div class="hitresolution flexcol" title="{{ localize 'DEE.ResolutionDetail'}}">
+        <div class="hitres-header" style="padding: 0.6em;">{{ localize 'DEE.Resolution'}}</div>
+        <div class="hitres-button flexrow">
+        <a class="content-link" data-type="RollTable" data-uuid="{{data.hitresolution.rolltable.uuid}}" data-id="{{data.hitresolution.rolltable.id}}">
+            <i class="fas fa-th-list">{{data.hitresolution.rolltable.name}}</i>
+        </a>
+        </div>
+    </div>
+    <hr>
+    <hr>
+    {{!-- Notes --}}
+    <div class="notes-header">{{ localize 'DEE.Notes'}}</div>
+  {{#if editable}} 
+    <prose-mirror name="system.description" data-document-u-u-i-d="{{actor.uuid}}" value="{{data.description}}" collaborate="true" toggled="true">
+      {{{enrichedDescription}}}
+    </prose-mirror>
+  {{else}} {{{enrichedDescription}}}
+  {{/if}}
+</div>
+</section>

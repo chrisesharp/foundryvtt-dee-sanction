@@ -4,16 +4,61 @@ import {DeeSanctionActorSheet} from "./actor-sheet.js";
  * @extends {DeeSanctionActorSheet}
  */
 export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
-  /** @override */
-  static get defaultOptions() {
-      return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dee", "sheet", "actor", "enemy"],
-      template: "systems/dee/templates/actor/enemy-sheet.html",
+  static DEFAULT_OPTIONS = {
+    classes: ['dee', 'sheet', 'actor', 'enemy'],
+    position: {
       width: 400,
       height: 500,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "resistance" }]
-      });
+    },
+  }
+
+  static PARTS = {
+    header: {
+      template: 'systems/dee/templates/actor/partials/enemy-header.hbs',
+    },
+    tabs: {
+      template: 'systems/dee/templates/actor/partials/enemy-nav.hbs',
+    },
+    resistance: {
+      template: 'systems/dee/templates/actor/partials/enemy-resistance.hbs',
+    },
+    abilities: {
+      template: 'systems/dee/templates/actor/partials/enemy-abilities.hbs',
+    },
+    resolution: {
+      template: 'systems/dee/templates/actor/partials/enemy-resolution.hbs',
+    }
+  };
+
+  _getTabs(parts) {
+    // If you have sub-tabs this is necessary to change
+    const tabGroup = 'primary';
+    // Default tab for first time it's rendered this session
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'resistance';
+    return parts.reduce((tabs, partId) => {
+      const tab = {
+        cssClass: '',
+        group: tabGroup,
+        // Matches tab property to
+        id: '',
+        // FontAwesome Icon, if you so choose
+        icon: '',
+        // Run through localization
+        label: 'DEE.tabs.',
+      };
+      switch (partId) {
+        case 'header':
+        case 'tabs':
+          return tabs;
+        default:
+          tab.id = partId;
+          tab.label += partId;
+          break;
+      }
+      if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
+      tabs[partId] = tab;
+      return tabs;
+    }, {});
   }
 
   /** @override */
@@ -57,7 +102,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
           uuid: rt.uuid,
           id: rt.id,
           name: rt.name,
-          description: rt._source.description,
+          description: rt.description,
           img: rt.img
         }
       }

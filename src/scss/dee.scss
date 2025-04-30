@@ -1,6 +1,6 @@
 // Import utilities.
-@import 'utils/typography';
 @import 'utils/colors';
+@import 'utils/typography';
 @import 'utils/mixins';
 @import 'utils/variables';
 
@@ -12,8 +12,8 @@
 /* Styles limited to dee sheets */
 .dee {
   @import 'agent';
-  @import 'enemy';
-  @import 'apps';
+  @import 'components/enemy';
+  @import 'components/apps';
   @import 'components/table';
   @import 'components/forms';
   @import 'components/resource';

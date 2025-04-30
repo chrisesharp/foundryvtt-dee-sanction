@@ -3,6 +3,7 @@ export function createConsequenceEffect(resource, value, owner) {
     const effectData =  {
         icon: "icons/svg/aura.svg",
         origin: owner.uuid,
+        name: owner.name,
         duration: {
           combat: undefined,
           rounds: undefined,

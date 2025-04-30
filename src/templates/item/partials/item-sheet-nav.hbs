@@ -1,0 +1,11 @@
+<nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item {{tabs.notes.cssClass}}" data-action="tab" data-group="primary" data-tab="notes">{{ localize 'DEE.tabs.notes'}}</a>
+    {{#if hasAbilities }}
+    <a class="item {{tabs.abilities.cssClass}}" data-action="tab" data-group="primary" data-tab="abilities">{{ localize 'DEE.tabs.abilities' }}</a>
+    {{/if}}
+    {{#if config.showEffects }}
+        {{#if user.isGM }}
+        <a class="item {{tabs.effects.cssClass}}" data-action="tab" data-group="primary" data-tab="effects">{{ localize 'DEE.tabs.effects'}}</a>
+        {{/if}}
+    {{/if}}
+</nav>

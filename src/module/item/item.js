@@ -15,34 +15,34 @@ export class DeeSanctionItem extends Item {
     const itemData = this.system;
     switch (this.type) {
       case "ability":
-        this.img = CONFIG.DEE.icons["ability"];
+        itemData.img = CONFIG.DEE.icons["ability"];
         break;
       case "consequence":
-        this.img = CONFIG.DEE.icons["consequence"];
+        itemData.img = CONFIG.DEE.icons["consequence"];
         break;
       case "association":
-        this.img = CONFIG.DEE.icons["conspiracy"];
+        itemData.img = CONFIG.DEE.icons["conspiracy"];
         break;
       case "occupation":
-        this.img = CONFIG.DEE.icons["access"];
+        itemData.img = CONFIG.DEE.icons["access"];
         break;
       case "favour":
-        this.img = CONFIG.DEE.icons["favour"];
+        itemData.img = CONFIG.DEE.icons["favour"];
         break;
       case "focus":
-        this.img = CONFIG.DEE.icons["vigilance"];
+        itemData.img = CONFIG.DEE.icons["vigilance"];
           break;
       case "item":
-        this.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
+        itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
         break;
       default:
-        this.img = CONST.DEFAULT_TOKEN;
+        itemData.img = CONST.DEFAULT_TOKEN;
         break;
     }
 
-    // if (itemData.abilities) {
-    //   this._prepContainer(itemData);
-    // }
+    if (itemData.abilities) {
+      itemData.abilities = this._prepContainer(itemData);
+    }
 
     if (itemData.effects) {
       itemData.effects.forEach(async (e) => {
@@ -53,19 +53,43 @@ export class DeeSanctionItem extends Item {
     }
   }
 
-  // _prepContainer(itemData) {
-  //   let abilities = deepClone(itemData.abilities);
-  //   if (game.items) {
-  //     abilities.filter(e=>!e._id).forEach(entry => {
-  //       if (!entry._id) {
-  //         const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
-  //         if (item) {
-  //           entry._id = item._id;
-  //           entry.img = item.img;
-  //         }
-  //       }
-  //     });
-  //   }
-  //   return abilities;
-  // }
+  /* @override */
+  async update(data, operation) {
+    if (this.type === 'consequence' && (data.system?.resource || data.system?.potency) ) {
+      const resource = data.system?.resource;
+      const potency = data.system?.potency;
+      for ( let e of this.effects ) {
+        let name = await e.sourceName; // Trigger a lookup for the source name
+        if (name === this.name) {
+          const change = foundry.utils.duplicate(e.changes[0]);
+          if (resource) {
+            change.key = `resources.${resource}.value`;
+          }
+          if (potency) {
+            change.value = parseInt(potency);
+            change.mode =  2;
+          }
+          await e.update({changes: [change]});
+          break;
+        }
+      }
+    }
+    return super.update(data, operation);
+  }
+
+  _prepContainer(itemData) {
+    const abilities = foundry.utils.deepClone(itemData.abilities);
+    if (game.items) {
+      abilities.filter(e=>!e.id).forEach(entry => {
+        if (!entry.id) {
+          const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
+          if (item) {
+            entry.id = item.id;
+            entry.img = item.img;
+          }
+        }
+      });
+    }
+    return abilities;
+  }
 }

@@ -1,4 +1,5 @@
 import { DiceDialog } from "./dialog/dice-dialog.js";
+const { renderTemplate } = foundry.applications.handlebars;
 
 export class DeeSanctionDice {
     static async Roll({
@@ -10,7 +11,7 @@ export class DeeSanctionDice {
         chatMessage = true
       } = {}) {
         let rolled = false;
-        const template = "systems/dee/templates/dialog/roll-dialog.html";
+        const template = "systems/dee/templates/dialog/roll-dialog.hbs";
         let dialogData = {
           formula: parts.join(" "),
           data: data,
@@ -27,23 +28,25 @@ export class DeeSanctionDice {
           chatMessage: chatMessage
         };
     
-        let buttons = {
-          ok: {
-            label: game.i18n.localize("DEE.Roll"),
-            icon: '<i class="fas fa-dice-d20"></i>',
-            callback: (html) => {
+        let buttons = [
+          {
+            action: 'ok',
+            label: 'DEE.Roll',
+            icon: 'fas fa-dice-d20',
+            callback: (ev) => {
               rolled = true;
-              rollData.form = html[0].querySelector("form");
-              rollData.formula = $(rollData.form).find("input.formula").val();
+              rollData.form = ev.currentTarget.querySelector("form");
+              rollData.formula = rollData.form.querySelector("input.formula").value;
               return DeeSanctionDice.sendRoll(rollData);
             },
           },
-          cancel: {
-            icon: '<i class="fas fa-times"></i>',
-            label: game.i18n.localize("DEE.Cancel"),
+          {
+            action: 'cancel',
+            icon: 'fas fa-times',
+            label: 'DEE.Cancel',
             callback: (html) => { },
           },
-        };
+        ];
     
         const html = await renderTemplate(template, dialogData);
         let roll;
@@ -51,7 +54,9 @@ export class DeeSanctionDice {
         //Create Dialog window
         return new Promise((resolve) => {
           new DiceDialog({
-            title: title,
+            window: {
+              title: title
+            },
             content: html,
             buttons: buttons,
             default: "ok",

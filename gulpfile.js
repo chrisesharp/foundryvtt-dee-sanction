@@ -174,9 +174,22 @@ function buildSASS() {
 /*  Compile Compendia
 /* ----------------------------------------- */
 
+// async function buildPacks() {
+//   const dirs = fs.readdirSync(packsDirectory);
+//   const { compilePack } = await import("@foundryvtt/foundryvtt-cli");
+//   if (dirs.length) {
+//     await Promise.all(
+//       dirs.map(async (dir) => await compilePack(`${packsDirectory}/${dir}`, `${distDirectory}/packs/${dir}`)),
+//     );
+//   }
+// }
+
 async function buildPacks() {
-  const dirs = fs.readdirSync(packsDirectory);
   const { compilePack } = await import("@foundryvtt/foundryvtt-cli");
+  const dirs = fs
+    .readdirSync(packsDirectory, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
   if (dirs.length) {
     await Promise.all(
       dirs.map(async (dir) => await compilePack(`${packsDirectory}/${dir}`, `${distDirectory}/packs/${dir}`)),

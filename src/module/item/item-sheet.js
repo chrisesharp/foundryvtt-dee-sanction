@@ -1,86 +1,199 @@
-import {onManageActiveEffect, prepareActiveEffectCategories, createConsequenceEffect} from "../effects.js";
-/**
- * Extend the basic ItemSheet with some very simple modifications
- * @extends {ItemSheet}
- */
-export class DeeSanctionItemSheet extends ItemSheet {
+const { ItemSheetV2 } = foundry.applications.sheets;
+const { DragDrop, TextEditor } = foundry.applications.ux;
+const { HandlebarsApplicationMixin } = foundry.applications.api;
+const { FilePicker } = foundry.applications.apps;
+import { prepareActiveEffectCategories, createConsequenceEffect} from "../effects.js";
 
-  /** @override */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dee", "sheet", "item"],
-      width: 350,
-      height: 375,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
-      dragDrop: [{
-        dragSelector: ".item",
-        dropSelector: null
-      }]
+export class DeeSanctionItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
+  constructor(options = {}) {
+    super(options);
+    this.#dragDrop = this.#createDragDropHandlers();
+  }
+
+  // This is marked as private because there's no real need
+  // for subclasses or external hooks to mess with it directly
+  #dragDrop;
+
+  #createDragDropHandlers() {
+    return this.options.dragDrop.map((d) => {
+      d.permissions = {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      };
+      d.callbacks = {
+        dragstart: this._onDragStart.bind(this),
+        dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this),
+      };
+      return new DragDrop(d);
     });
   }
 
-  /** @override */
-  activateEditor(target, editorOptions, initialContent) {
-    // remove some controls to the editor as the space is lacking
-    if (target == "data.description") {
-      editorOptions.toolbar = "styleselect bullist hr table removeFormat save";
-    }
-    super.activateEditor(target, editorOptions, initialContent);
+
+  static DEFAULT_OPTIONS = {
+    classes: ['dee', 'sheet', 'item'],
+    position: {
+      width: 350,
+      height: 375,
+    },
+    actions: {
+      onEditImage: this._onEditImage,
+      itemEdit: this._itemEdit,
+      itemDelete: this._onAbilityDelete,
+      createDoc: this._createDoc,
+      toggleEffect: this._effectToggle,
+      editEffect: this._effectEdit,
+      deleteEffect: this._effectDelete,
+    },
+    window: {
+      resizable: false,
+    },
+    dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
+    form: {
+      submitOnChange: true,
+    },
   }
 
-  _canDragStart(selector) {
-    return true;
+  static PARTS = {
+    header: {
+      template: 'systems/dee/templates/item/partials/item-sheet-header.hbs',
+    },
+    tabs: {
+      template: 'systems/dee/templates/item/partials/item-sheet-nav.hbs',
+    },
+    notes: {
+      template: 'systems/dee/templates/item/partials/item-sheet-notes.hbs',
+    },
+    effects: {
+      template: 'systems/dee/templates/item/partials/item-sheet-effects.hbs',
+    },
+  };
+
+  _getTabs(parts) {
+    const tabGroup = 'primary';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'notes';
+    return parts.reduce((tabs, partId) => {
+      const tab = {
+        cssClass: '',
+        group: tabGroup,
+        // Matches tab property to
+        id: '',
+        // FontAwesome Icon, if you so choose
+        icon: '',
+        // Run through localization
+        label: 'DEE.tabs.',
+      };
+      switch (partId) {
+        case 'header':
+        case 'tabs':
+          return tabs;
+        default:
+          tab.id = partId;
+          tab.label += partId;
+          break;
+      }
+      if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
+      tabs[partId] = tab;
+      return tabs;
+    }, {});
   }
+
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+    options.parts = ['header', 'tabs', 'notes'];
+    if (this.document.limited) return;
+    if (game.settings?.get('dee', 'effects-tab') && game.user.isGM) {
+      options.parts.push('effects');
+    }
+  }
+
+  static async _onEditImage(_event, target) {
+    const attr = target.dataset.edit;
+    const current = foundry.utils.getProperty(this.document, attr);
+    const { img } = this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ?? {};
+    const fp = new FilePicker({
+      current,
+      type: 'image',
+      redirectToRoot: img ? [img] : [],
+      callback: (path) => {
+        this.document.update({ [attr]: path });
+      },
+      top: this.position.top + 40,
+      left: this.position.left + 10,
+    });
+    return fp.browse();
+  }
+
+  _canDragStart(_selector) {
+    // game.user fetches the current user
+    return this.isEditable;
+  }
+
+  /**
+   * Define whether a user is able to conclude a drag-and-drop workflow for a given drop selector
+   * @param {string} selector       The candidate HTML selector for the drop target
+   * @returns {boolean}             Can the current user drop on this selector?
+   * @protected
+   */
+  _canDragDrop(_selector) {
+    // game.user fetches the current user
+    return this.isEditable;
+  }
+
+  /**
+   * Callback actions which occur when a dragged element is over a drop target.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragOver(_event) {}
 
   /** @override */
   async _onDragStart(event) {
     const div = event.currentTarget;
     // Create drag data
-    const dragData = { };
-    const itemId = div.dataset.entityId;
+    const dragData = {};
+    const itemId = div.dataset.itemId;
     // Owned Items
-    if ( itemId ) {
-      let item = game.items.get(itemId);
+    if (itemId) {
+      let item = game.items?.get(itemId);
       if (!item) {
-        const pack = game.packs.get("dee.abilities");
-        const idx = pack.index.find(e => e.id === itemId );
-        item = await pack.getEntity(idx.id);
+        const pack = game.packs.get('dee.abilities');
+        item = ((await pack?.getDocument(itemId))) ?? undefined;
       }
-      dragData.type = "Item";
-      dragData.data = item.system;
+      dragData['type'] = 'Item';
+      dragData['data'] = item?.data;
     }
-
+    if (Object.keys(dragData).length === 0) return;
     // Set data transfer
-    event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+    event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
   }
 
-  /** @override */
+  onDropAllow(_actor, data) {
+    return data.type === 'Item';
+  }
+
   async _onDrop(event) {
-    // Try to extract the data
-    let data;
-    try {
-      data = JSON.parse(event.dataTransfer.getData('text/plain'));
-    } catch (err) {
-      return false;
-    }
-    const actor = this.actor;
-    
-    // Handle the drop with a Hooked function
-    const allowed = Hooks.call("dropItemSheetData", actor, this, data);
-    if ( allowed === false ) {
-      return;
-    }
+    const data = TextEditor.getDragEventData(event);
+    const item = this.item;
+    const allowed = Hooks.call('dropItemSheetData', item, this, data);
+    if (!allowed) return;
+
     // Handle different data types
-    switch ( data.type ) {
-      case "Item":
-        return this._onDropItem(data);
+    switch (data.type) {
+      case 'Item':
+        return this._onDropItem(event, data);
       case "ActiveEffect": 
         return this._onDropActiveEffect(data);
+      default:
+        return;
     }
   }
 
-  async _onDropItem(data) {
+  get dragDrop() {
+    return this.#dragDrop;
+  }
+
+  async _onDropItem(event, data) {
     if (!this.isEditable) return false;
     let abilities = this.item.system.abilities.filter(a=>a.uuid != data.uuid);
     let ability = await fromUuid(data['uuid']);
@@ -100,13 +213,7 @@ export class DeeSanctionItemSheet extends ItemSheet {
       return false;
     }
   }
-
-  /**
-   * Handle the dropping of ActiveEffect data onto an Item Sheet
-   * @param {Object} data         The data transfer extracted from the event
-   * @return {Promise<Object>}    A data object which describes the result of the drop
-   * @private
-   */
+  
   async _onDropActiveEffect(data) {
     if (!this.isEditable) return false;
     const item = this.item;
@@ -114,105 +221,83 @@ export class DeeSanctionItemSheet extends ItemSheet {
     return ActiveEffect.create(data.data, {parent: item})
   }
 
-  /** @override */
-  get template() {
-    const path = "systems/dee/templates/item";
-    return `${path}/${this.item.type}-sheet.html`;
+  _onRender(_context, _options) {
+    this.#dragDrop.forEach((d) => d.bind(this.element));
   }
 
-  /* -------------------------------------------- */
-
   /** @override */
-  async getData() {
-    const data = super.getData();
-    if (data.item.type === "consequence") {
-      if (!data.item.transferredEffects.length) {
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
+    if (this.item.type === "consequence") {
+      if (!this.item.transferredEffects.length) {
         await createConsequenceEffect("phy",-1,this.item);
       }
     }
-    let sheetData = foundry.utils.duplicate(super.getData());
-    sheetData.item = data.item;
-    sheetData.config = CONFIG.DEE;
-    sheetData.data = data.item.system;
-    sheetData.user = game.user;
-    sheetData.effects = prepareActiveEffectCategories(this.item.effects);
-    return sheetData;
+    data.item = this.item;
+    data.resources = {
+      phy: game.i18n.localize('DEE.resource.phy.long'),
+      int: game.i18n.localize('DEE.resource.int.long'),
+      sup: game.i18n.localize('DEE.resource.sup.long'),
+    }
+    data.config = CONFIG.DEE;
+    data.data = this.item.system;
+    data.user = game.user;
+    data.effects = prepareActiveEffectCategories(this.item.effects);
+    data.tabs = this._getTabs(options.parts);
+    return data;
   }
 
   /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-
-    // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
-
-    // Roll handlers, click handlers, etc. would go here.
-    // Add ability
-    html.find('.item-create').click(this._onAbilityCreate.bind(this));
-
-    // Update ability Item
-    html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item-entry");
-      const item = game.items.get(li.data("itemId"));
-      item.sheet.render(true);
-    });
-
-    // Delete ability Item
-    html.find('.item-delete').click(ev => {
-      const li = $(ev.currentTarget).parents(".item-entry");
-      this._onAbilityDelete(li.data("itemId"));
-      li.slideUp(200, () => this.render(false));
-    });
-
-    // Consequence resource select
-    html.find('#consequence-sel').change(async (event)=> {
-      event.preventDefault();
-      const resource = $('#consequence-sel').val();
-      const newData = {resource:resource};
-      for ( let e of this.item.effects ) {
-        let name = await e.sourceName; // Trigger a lookup for the source name
-        if (name === this.item.name) {
-          const change = foundry.utils.duplicate(e.data.changes[0]);
-          change.key = `resources.${resource}.value`;
-          e.update({changes: [change]});
-          break;
-        }
-      }
-      await this.item.update(newData);
-    });
-
-    // Consequence potency input
-    html.find("#potency-sel")
-        .click((ev) => ev.target.select())
-        .change(this._onPotencyChange.bind(this));
-
-    // Active Effect management
-    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
+  async _preparePartContext(partId, context) {
+    switch (partId) {
+      case 'notes':
+        context.tab = context.tabs[partId];
+        context.enrichedDescription = await TextEditor.enrichHTML(this.item.system.description, {
+          secrets: this.document.isOwner,
+          rollData: this.item.getRollData(),
+          // Relative UUID resolution
+          relativeTo: this.item,
+        });
+        break;
+      case 'effects':
+        context.tab = context.tabs[partId];
+        break;
+      default:
+        context.tab = context.tabs[partId];
+        break;
+    }
+    return context;
   }
 
-  /**
-   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
-   * @param {Event} event   The originating click event
-   * @private
-   */
-  _onAbilityCreate(event) {
-    event.preventDefault();
-    const header = event.currentTarget;
-    // Grab any data associated with this control.
-    const data = foundry.utils.duplicate(header.dataset);
-    // Initialize a default name.
-    const name = `New Ability`;
-    // Prepare the item object.
-    const itemData = {
-      name: name,
-      type: "ability",
-      data: data
+  static _itemEdit(_event, element) {
+    const li = element.parentNode.parentNode;
+    const item = game.items.get(li.dataset.itemId);
+    item?.sheet?.render(true);
+  }
+
+  static async _createDoc(event, target) {
+    // Retrieve the configured document class for Item or ActiveEffect
+    const docCls = getDocumentClass(target.dataset.documentClass);
+    // Prepare the document creation data by initializing it a default name.
+    const docData = {
+      name: docCls.defaultName({
+        // defaultName handles an undefined type gracefully
+        type: target.dataset.type,
+        parent: this.actor,
+      }),
     };
-    // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
-    // Finally, create the item!
-    // TODO use the 8.x createEmbeddedDocuments() api
-    // return this.item.createEmbeddedDocuments("DeeSanctionItem", [itemData]);
+    // Loop through the dataset and add it to our docData
+    for (const [dataKey, value] of Object.entries(target.dataset)) {
+      // These data attributes are reserved for the action handling
+      if (['action', 'documentClass'].includes(dataKey)) continue;
+      // Nested properties require dot notation in the HTML, e.g. anything with `system`
+      // An example exists in spells.hbs, with `data-system.spell-level`
+      // which turns into the dataKey 'system.spellLevel'
+      foundry.utils.setProperty(docData, dataKey, value);
+    }
+
+    // Finally, create the embedded document!
+    await docCls.create(docData, { parent: this.actor });
   }
 
   /**
@@ -220,7 +305,8 @@ export class DeeSanctionItemSheet extends ItemSheet {
    * @param {String} id   the id of the ability
    * @private
    */
-  async _onAbilityDelete(id) {
+  static async _onAbilityDelete(_event, target) {
+    const id = target.closest('.item-controls').dataset.itemId;
     const abilities = this.item.system.abilities.filter((i)=>i.id != id);
     const newAbilities = { system:
       {
@@ -230,20 +316,40 @@ export class DeeSanctionItemSheet extends ItemSheet {
     return await this.item.update(newAbilities);
   }
 
-  async _onPotencyChange(event) {
-    event.preventDefault();
-    const potency = $('#potency-sel').val();
-    const newData = {potency:potency};
-    for ( let e of this.item.effects ) {
-      let name = await e.sourceName; // Trigger a lookup for the source name
-      if (name === this.item.name) {
-        const change = foundry.utils.duplicate(e.data.changes[0]);
-        change.value = parseInt(potency);
-        change.mode =  2;
-        e.update({changes: [change]});
-        break;
-      }
-    }
-    await this.item.data.update(newData);
+  // static async _onPotencyChange(event, target) {
+  //   event.preventDefault();
+  //   const potency = target.value;
+  //   const newData = {potency:potency};
+  //   for ( let e of this.item.effects ) {
+  //     let name = await e.name; // Trigger a lookup for the source name
+  //     if (name === this.item.name) {
+  //       const change = foundry.utils.duplicate(e.changes[0]);
+  //       change.value = parseInt(potency);
+  //       change.mode =  2;
+  //       e.update({changes: [change]});
+  //       break;
+  //     }
+  //   }
+  //   await this.item.update(newData);
+  // }
+
+  _getEffect(target) {
+    const li = target.closest('.effect');
+    return this.item.effects.get(li?.dataset?.effectId);
+  }
+
+  static async _effectToggle(_event, target) {
+    const effect = this._getEffect(target);
+    await effect.update({ disabled: !effect.disabled });
+  }
+
+  static async _effectEdit(_event, target) {
+    const effect = this._getEffect(target);
+    await effect?.sheet.render(true);
+  }
+
+  static async _effectDelete(_event, target) {
+    const effect = this._getEffect(target);
+    await effect.delete();
   }
 }

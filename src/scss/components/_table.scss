@@ -11,10 +11,10 @@
 .sheet-header-table {
   display: grid;
   grid-template-areas:
-    'logo pic name name'
-    'logo pic occupation occupation'
-    'logo pic home home'
-    'trade manner manner manner';
+    'logo pic name'
+    'logo pic occupation'
+    'logo pic home'
+    'trade manner manner';
   grid-gap: 1px;
   padding: 1px;
 }
@@ -22,9 +22,9 @@
 .sheet-header-enemy-table {
   display: grid;
   grid-template-areas:
-    'logo pic name name'
-    'logo pic trade trade'
-    'logo pic trade trade';
+    'logo pic name'
+    'logo pic trade'
+    'logo pic trade';
   grid-gap: 1px;
   padding: 1px;
 }
@@ -37,6 +37,7 @@
 }
 
 .tradecraft-table {
+  font-size: xx-small;
   display: grid;
   grid-template-areas: 
       'S K V'

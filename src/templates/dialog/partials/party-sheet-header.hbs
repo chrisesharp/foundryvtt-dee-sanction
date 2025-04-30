@@ -1,0 +1,14 @@
+<div class="actor header flexrow" style="flex-wrap: nowrap;">
+    {{#if user.isGM}}
+    <div class="item-controls flexrow" style="flex-grow: 3;" >
+        <h3 style="flex-grow: 3;">Tradecraft for this adventure</h3>
+        <div class="trade">
+        <div class="tradecraft show" style="background-image: url('{{ trade tradecraft}}');" data-action="selectTradecraft" title="{{ localize 'DEE.TradecraftSelect'}}">
+        </div>
+        </div>
+        <div class="item-control">
+        <button type="button" class="select-actors" data-action="selectActors" title="{{localize 'DEE.dialog.selectagents'}}"><i class="fas fa-users"></i></button>
+        </div>
+    </div>
+    {{/if}}
+</div>

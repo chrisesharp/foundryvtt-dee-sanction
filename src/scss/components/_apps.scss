@@ -1,0 +1,341 @@
+@import "./utils/colors.scss";
+&.chat-message {
+  background: url("../assets/default/paper.png");
+}
+&.chat-block {
+    margin: 0;
+    font-family: $font-primary;
+    .chat-header {
+      margin: 4px 0;
+      border: 1px solid black;
+      border-radius: 3px;
+      color: rgb(36, 35, 35);
+      padding: 2px;
+      box-shadow: 0 0 2px #fff inset;
+      .chat-title {
+        margin: 4px 0;
+        overflow: visible;
+        display: contents;
+        h2 {
+          border: none;
+          line-height: 34px;
+          margin: 0;
+          text-indent: 10px;
+          word-break: break-all;
+        }
+      }
+      .chat-img {
+        flex: 0 0 42px;
+        background-size: cover;
+      }
+    }
+    .chat-target {
+      text-align: right;
+      font-style: normal;
+      padding: 2px;
+    }
+    .chat-details {
+      padding: 4px;
+      font-size: 13px;
+    }
+    .roll-result {
+      font-size: 13px;
+      text-align: center;
+      &.roll-success {
+        color: #18520b;
+      }
+      &.roll-fail {
+        color: #aa0200;
+      }
+    }
+    .consequence-roll {
+      flex-direction: column;
+      .consequence-button {
+        flex-direction: row;
+        line-height: 24px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        box-shadow: 0 0 2px #fff inset;
+        bottom: 1px;
+        right: 10px;
+        button {
+          display: contents;
+          align-content:stretch;
+          padding: 2px 5px;
+          width: 22px;
+          line-height: 14px;
+          height: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+
+  
+  .dee.chat-card {
+    font-style: normal;
+    font-size: 12px;
+  
+    .card-header {
+      padding: 3px 0;
+      border-top: 2px groove #fff;
+      border-bottom: 2px groove #fff;
+  
+      img {
+        flex: 0 0 36px;
+        margin-right: 5px;
+        border: none;
+      }
+  
+      h3 {
+        flex: 1;
+        margin: 0;
+        line-height: 36px;
+        color: $c-olive;
+        &:hover {
+          color: #111;
+        }
+      }
+    }
+  
+    .card-content {
+      margin: 5px 0;
+      h3 {
+        font-size: 12px;
+        margin: 0;
+        font-weight: bold;
+      }
+  
+      > * {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+    }
+  
+    .card-buttons {
+      margin: 5px 0;
+  
+      span {
+        display: block;
+        line-height: 28px;
+        text-align: center;
+        border: 1px solid $c-olive;
+      }
+  
+      button {
+        font-size: 12px;
+        height: 24px;
+        line-height: 20px;
+        margin: 2px 0;
+      }
+    }
+  
+    .card-footer {
+      padding: 3px 0 0;
+      border-top: 2px groove #fff;
+  
+      span {
+        border-right: 2px groove #fff;
+        padding: 0 5px 0 0;
+        font-size: 10px;
+  
+        &:last-child {
+          border-right: none;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  
+  .dice-roll .dice-total {
+    &.success {
+      color: inherit;
+      background: #c7d0c0;
+      border: 1px solid #006c00;
+    }
+    &.failure {
+      color: inherit;
+      background: #ffdddd;
+      border: 1px solid #6e0000;
+    }
+  }
+}
+
+&.application.dialog .window-content {
+    display: flex;
+    overflow: visible;
+    background: url("../assets/default/paper.png");
+
+    div {
+      font-size: large;
+      color: $c-olive;
+      img.glyph {
+        padding: 15px;
+        flex: 0 60px;
+        width: 60px;
+        border: 0px;
+      }
+    }
+}
+
+&.dialog.party-select {
+  .actor-list {
+    padding: 0 4px 0;
+    max-height: 250px;
+    overflow: auto;
+    .actor {
+      label {
+        height: 28px;
+        color: $c-olive;
+        overflow: hidden;
+      }
+      .form-fields {
+        flex: 0 20px;
+      }
+      &.disposition-1 label {
+        font-weight: 600;
+      }
+      &.disposition--1 label {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+&.dialog.party-sheet {
+  min-width: 550px;
+  min-height: 350px;
+  overflow: visible;
+  .window-content {
+    padding: 0;
+    font-size: medium;
+    .sheet-body table {
+      width:auto;
+      background:none;
+      tbody tr:nth-child(even) {
+        background-color: #92470640;
+      }
+    }
+  }
+  .header {
+    color: $c-white;
+    padding: 4px 0;
+    line-height: 20px;
+    text-align: left;
+    padding: 2px 10px;
+    .item-controls {
+      .item-control {
+        padding: 0 2px;
+        button {
+          line-height: 15px;
+          margin: 0 1px;
+          background: rgba(255, 255, 240, 0.8);
+          border: 1px solid #b5b3a4;
+        }
+      }
+    }
+    .trade {
+      .tradecraft {
+          height: 30px;
+          width: 40px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-color: rgba(0, 0, 0, 0.1);
+
+          .hide {
+              width: 70px;
+              border: 0px;
+              display: none;
+          }
+
+          &:hover .hide {
+              width: 70px;
+              font-size: x-small;
+              display: block;
+          }
+
+      }
+    }
+  }
+  .actor-list {
+    margin: 0;
+    overflow: visible;
+    list-style: none;
+    padding: 0;
+    .actor {
+      border-bottom: 1px solid $c-olive;
+      border-top: 1px solid $c-olive;
+      .fas {
+        padding: 0 2px;
+        font-size: 10px;
+      }
+      margin-bottom: 2px;
+      font-size: 12px;
+      text-align: center;
+      .fields .field-row {
+        white-space: nowrap;
+        &:nth-child(odd) {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+      .field-img {
+        flex: 0 0 42px;
+        background-size: cover;
+        position: relative;
+
+        img {
+          flex: 0 0 45px;
+          height: 45px;
+          width: 45px;
+          border: none;
+          object-fit: cover;
+          object-position: 50% 0;
+        }
+        &:hover {
+          .img-btns button {
+            display: block;
+          }
+        }
+        .img-btns {
+          position: absolute;
+          bottom: 6px;
+          width: 40px;
+          height: 12px;
+          button {
+            display: none;
+            cursor: pointer;
+            font-size: 10px;
+            height: 18px;
+            width: 14px;
+            line-height: 13px;
+            margin: 0 1px;
+            border: 1px solid $c-olive;
+            padding: 2px;
+            background: $c-white;
+            box-shadow: inset 0 0px 3px $c-olive;
+          }
+        }
+      }
+    }
+  }
+  .field-name {
+    overflow: hidden;
+    font-weight: 600;
+    text-align: left;
+    text-indent: 5px;
+  }
+}
+
+
+#sidebar #actors .directory-header .header-search {
+  .dee-party-sheet {
+    width: 32px;
+    text-align: center;
+    line-height: 20px;
+  }
+  input {
+    width: calc(100% - 45px);
+  }
+}

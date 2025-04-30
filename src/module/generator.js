@@ -6,11 +6,11 @@ const mannerisms = {
     "Phlegm": [
         "Easy going attitude",
         "Quietly stubborn",
-        "Doesn’t want to be any trouble",
+        "Doesn't want to be any trouble",
         "Avoid conflict",
         "Open to all the options",
         "Passive listener (I am listening!)",
-        "Can’t we all just get along?",
+        "Can't we all just get along?",
         "Unevenly apportions work",
         "Watches others",
         "Avoids making decisions",
@@ -20,7 +20,7 @@ const mannerisms = {
     "Black Bile": [
         "Reserved",
         "Generally looks sad or upset",
-        "It’s safer not to go alone",
+        "It's safer not to go alone",
         "Schedule orientated",
         "Hears negatives",
         "Avoids criticism",
@@ -28,7 +28,7 @@ const mannerisms = {
         "Difficult to please",
         "Suspicious",
         "Always with a flourish",
-        "It’s always better to music",
+        "It's always better to music",
         "Thrifty"
     ],
     "Yellow Bile": [
@@ -50,7 +50,7 @@ const mannerisms = {
         "Short attention span",
         "Wealthy in my friends",
         "Sudden emotional pendulum",
-        "Credit where credit’s due",
+        "Credit where credit's due",
         "Wants to please",
         "Unintentionally forgetful",
         "Open to being led astray",
@@ -312,14 +312,18 @@ export function generator(type) {
 }
 
 export async function randomPossessions(actor, html) {
-    const checks = $(html).find('input[name="possessions"]:checked');
+    const checks = html.currentTarget.querySelectorAll('input[name="possessions"]:checked');
     if (checks.length > 3) {
         ui.notifications.warn("You must choose three or less!");
         return false;
     }
     const types = [];
-    checks.map(function() {
-        types.push($(this).val());
+    // checks.map(function() {
+    //     types.push($(this).val());
+    // });
+    checks.forEach((c) => {
+        const value = c.value;
+        types.push(value);
     });
     const items = [];
     await Promise.all(types.map(async(type) => {
@@ -327,13 +331,32 @@ export async function randomPossessions(actor, html) {
     }));
 }
 
+async function RollTablefromFolder(folder, options={}) {
+    const results = folder.contents.map((doc, i) => ({
+      name: doc.name,
+      type: "document",
+      documentUuid: doc.uuid,
+      img: doc.thumbnail || doc.img,
+      weight: 1,
+      range: [i+1, i+1],
+      drawn: false
+    }));
+    options.renderSheet = options.renderSheet ?? true;
+    return new RollTable({
+      name: folder.name,
+      description: `A random table created from the contents of the ${folder.name} Folder.`,
+      results: results,
+      formula: `1d${results.length}`
+    }, options);
+  }
+
 export async function randomThing(actor, type) {
     const folder = game.folders.getName(type);
     const items = [];
     if (folder) {
-        const rt = await RollTable.fromFolder(folder,{temporary:true,renderSheet:false});
+        const rt = await RollTablefromFolder(folder,{temporary: true, renderSheet:false});
         const roll = await rt.roll({async:true});
-        const res = roll.results[0].text;
+        const res = roll.results[0].name;
         const item = game.items.getName(res);
         if (item) {
             items.push(item.toObject());

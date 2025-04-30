@@ -5,6 +5,12 @@ import { DeeSanctionAgentSheet } from "./actor/agent-sheet.js";
 import { DeeSanctionEnemySheet } from "./actor/enemy-sheet.js";
 import { DeeSanctionItem } from "./item/item.js";
 import { DeeSanctionItemSheet } from "./item/item-sheet.js";
+import { DeeSanctionAbilityItemSheet } from "./item/ability-sheet.js";
+import { DeeSanctionAssociationItemSheet } from "./item/association-sheet.js";
+import { DeeSanctionConsequenceItemSheet } from "./item/consequence-sheet.js";
+import { DeeSanctionFavourItemSheet } from "./item/favour-sheet.js";
+import { DeeSanctionFocusItemSheet } from "./item/focus-sheet.js";
+import { DeeSanctionOccupationItemSheet } from "./item/occupation-sheet.js";
 import { preloadHandlebarsTemplates } from "./preload-templates.js";
 import { registerHandlebarHelpers } from "./handlebar-helpers.js";
 import { DEE } from "./config.js";
@@ -15,6 +21,11 @@ import { addChatConsequenceButton } from "./chat.js";
 import * as party from "./party.js";
 import { DeeSanctionDice } from "./dice.js";
 import { Logger } from "./logger.js";
+import { FrameView } from './utils/frameview.js';
+const { Actors, Items } = foundry.documents.collections;
+const { renderTemplate } = foundry.applications.handlebars;
+const { DialogV2 } = foundry.applications.api;
+const { ActorSheet, ItemSheet } = foundry.appv1.sheets;
 
 const log = new Logger();
 
@@ -50,8 +61,15 @@ Hooks.once('init', async function() {
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("dee", DeeSanctionAgentSheet, { types: ["agent"], makeDefault: true });
   Actors.registerSheet("dee", DeeSanctionEnemySheet, { types: ["enemy"], makeDefault: true });
+
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dee", DeeSanctionItemSheet, { makeDefault: true });
+  Items.registerSheet("dee", DeeSanctionItemSheet, { types: ["item"] });
+  Items.registerSheet("dee", DeeSanctionAbilityItemSheet, { types: ["ability"] });
+  Items.registerSheet("dee", DeeSanctionAssociationItemSheet, { types: ["association"] });
+  Items.registerSheet("dee", DeeSanctionConsequenceItemSheet, { types: ["consequence"] });
+  Items.registerSheet("dee", DeeSanctionFavourItemSheet, { types: ["favour"] });
+  Items.registerSheet("dee", DeeSanctionFocusItemSheet, { types: ["focus"] });
+  Items.registerSheet("dee", DeeSanctionOccupationItemSheet, { types: ["occupation"] });
 
   // Register custom handlebar helpers
   registerHandlebarHelpers();
@@ -85,31 +103,36 @@ Hooks.once("ready", async function () {
     const template = "systems/dee/templates/dialog/welcome.html";
     const content = await renderTemplate(template);
     //show welcome dialog and set initialized to true
-    let d = new Dialog({
-      title: "Welcome to the Dee Sanction",
+    let d = new DialogV2({
+      classes: ['dee'],
+      window: {
+        title: "Welcome to the Dee Sanction",
+        width: 550,
+        height: 230,
+        resizable: false,
+      },
       content: content,
-      buttons: {
-        one: {
+      buttons: [
+        {
+          action: 'one',
           icon: '<i class="fas fa-check"></i>',
           label: "Import Now",
           callback: () => doAll(loadCompendia, true)
         },
-        two: {
+        {
+          action: 'two',
           icon: '<i class="fas fa-trash"></i>',
           label: "Delete All",
           callback: () => doAll(unloadCompendia, false)
         },
-        three: {
+        {
+          action: 'three',
           icon: '<i class="fas fa-times"></i>',
           label: "Don't show this again",
           callback: () => game.settings.set("dee","initialized",true)
         }
-      },
+      ],
       default: "one"
-    }, {
-      width: 550,
-      height: 230,
-      resizable: false,
     });
 
     if (!game.settings.get("dee","initialized")) {
@@ -118,7 +141,7 @@ Hooks.once("ready", async function () {
 
 });
 
-Hooks.on("renderChatMessage", addChatConsequenceButton);
+Hooks.on("renderChatMessageHTML", addChatConsequenceButton);
 Hooks.on("renderCombatTracker", DeeCombat.format);
 Hooks.on("preCreateCombatant", (combatant, data, options, id) => {
     DeeCombat.addCombatant(combatant, data, options, id);
@@ -126,24 +149,26 @@ Hooks.on("preCreateCombatant", (combatant, data, options, id) => {
 Hooks.on("getCombatTrackerEntryContext", DeeCombat.addContextEntry);
 
 // License and KOFI infos
-Hooks.on("renderSidebarTab", async (object, html) => {
-  if (object instanceof ActorDirectory) {
-    party.addControl(object, html);
-  }
+Hooks.on("renderActorDirectory", async (object, html) => {
+  party.addControl(object, html);
+});
 
-  if (object instanceof Settings) {
-    let gamesystem = html.find("#game-details");
-    // License text
-    const template = "systems/dee/templates/chat/license.html";
-    const rendered = await renderTemplate(template);
-    gamesystem.find(".system").append(rendered);
-    
-    // User guide
-    let docs = html.find("button[data-action='docs']");
-    const styling = "border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px";
-    $(`<button data-action="userguide"><img src='systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`).insertAfter(docs);
-    html.find('button[data-action="userguide"]').click(ev => {
-      new FrameViewer('https://chrisesharp.github.io/foundryvtt-dee-sanction', {resizable: true}).render(true);
-    });
-  }
+Hooks.on("renderSettings", async (object, html) => {
+  const gamesystem = html.querySelector('.info');
+  // License text
+  const template = "systems/dee/templates/chat/license.html";
+  const rendered = await renderTemplate(template);
+  gamesystem.querySelector('.system').innerHTML += rendered;
+  
+  // User guide
+  const docs = html.querySelector("button[data-app='support']");
+  const site = 'https://chrisesharp.github.io/foundryvtt-dee-sanction';
+  const styling = 'border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px';
+  const button = `<button data-action="userguide"><img src='systems/dee/assets/default/icons/magic.png' width='16' height='16' style='${styling}'/>Dee Sanction Guide</button>`;
+  docs.parentNode.innerHTML += button;
+  html.querySelector('button[data-action="userguide"]').addEventListener('click', () => {
+    const fv = new FrameView({ url: site });
+    fv.url = site;
+    fv.render(true);
+  });
 });

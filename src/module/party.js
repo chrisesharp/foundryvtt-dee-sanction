@@ -2,8 +2,8 @@ import { DeeSanctionPartySheet } from "./dialog/party-sheet.js";
 
 export const addControl = (object, html) => {
     let control = `<button class='dee-party-sheet' type="button" title='${game.i18n.localize('DEE.dialog.partysheet')}'><i class='fas fa-users'></i></button>`;
-    html.find(".fas.fa-search").replaceWith($(control))
-    html.find('.dee-party-sheet').click(ev => {
+    html.querySelector('.directory-header').innerHTML += control;
+    html.querySelector('.dee-party-sheet').addEventListener('click', (ev) => {
         showPartySheet(object);
     })
 }

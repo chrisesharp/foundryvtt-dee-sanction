@@ -33,9 +33,22 @@
 
   .header-fields {
     flex: 1;
+    input {
+      background:none;
+      color: $c-black;
+    }
   }
 
-  h1.charname {
+  .actor-name,
+  .actor-occupation,
+  .actor-manner,
+  .actor-home {
+    h3,
+    input {
+      text-align: center;
+    }
+  }
+  .charname {
     height: 50px;
     padding: 0px;
     margin: 5px 0;
@@ -48,16 +61,43 @@
   }
 }
 
-.sheet-tabs {
-  flex: 0;
+nav.sheet-tabs {
+  display: flow;
+  width: auto;
+  border-top: none;
+  height: 35px;
+  .item {
+    padding: 6px 15px 0;
+    margin-left: -5px;
+    text-indent: 4px;
+    line-height: 16px;
+    background: url("../assets/default/paper.png");
+    border-top-right-radius: 4px;
+    border-top-left-radius: 80px;
+    border-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow:inset 0 -1px 6px 0px $c-black;
+    font-size: 14px;
+    color: $c-black;
+    filter: brightness(0.9);
+    &.active {
+      filter: none;
+      z-index: 1;
+      font-weight: bold;
+      text-shadow: none;
+      box-shadow: none;
+      margin-bottom: -1px;
+    }
+  }
 }
 
 nav.sheet-tabs.side {
+  display: flow;
+  width: -webkit-fill-available;
   position: absolute;
   transform: rotate(90deg);
-  width: 265px;
   top: 255px;
-  right: -140px;
+  right: -124px;
   border-top: none;
   height: 35px;
   z-index: -1;
@@ -71,14 +111,16 @@ nav.sheet-tabs.side {
     border-top-left-radius: 80px;
     border-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 6px 1px $c-black;
+    box-shadow:inset 0 -1px 6px 0px $c-black;
     font-size: 14px;
+    color: $c-black;
     filter: brightness(0.9);
     &.active {
       filter: none;
       z-index: 1;
       font-weight: bold;
       text-shadow: none;
+      box-shadow: none;
       margin-bottom: -1px;
     }
   }
@@ -89,7 +131,7 @@ nav.sheet-tabs.side.party {
   transform: rotate(90deg);
   width: 235px;
   top: 180px;
-  right: -125px;
+  right: -135px;
   border-top: none;
   height: 18px;
   z-index: -1;
@@ -103,7 +145,7 @@ nav.sheet-tabs.side.party {
     border-top-left-radius: 80px;
     border-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 6px 1px $c-black;
+    box-shadow:inset 0 -1px 6px 0px $c-black;
     font-size: 14px;
     filter: brightness(0.9);
     &.active {
@@ -111,19 +153,21 @@ nav.sheet-tabs.side.party {
       z-index: 1;
       font-weight: bold;
       text-shadow: none;
+      box-shadow: none;
       margin-bottom: -1px;
     }
   }
 }
 
+&.sheet nav.sheet-tabs.side.enemy {
+  top: 540px;
+  right: -450px;
+}
+
 &.sheet nav.sheet-tabs.side.agent {
-  position: absolute;
-  transform: rotate(90deg);
-  // width: 550px;
-  top: 265px;
-  // right: -284px;
+  top: 540px;
+  right: -450px;
   border-top: none;
-  // height: 18px;
   z-index: -1;
   .item {
     padding: 6px 15px 0;
@@ -135,7 +179,7 @@ nav.sheet-tabs.side.party {
     border-top-left-radius: 80px;
     border-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 6px 1px $c-black;
+    box-shadow: inset 0 -1px 6px 0px $c-black;
     font-size: 14px;
     filter: brightness(0.9);
     &.active {
@@ -143,23 +187,8 @@ nav.sheet-tabs.side.party {
       z-index: 1;
       font-weight: bold;
       text-shadow: none;
+      box-shadow: none;
       margin-bottom: -1px;
     }
-  }
-}
-
-.sheet-body,
-.sheet-body .tab,
-.sheet-body .tab .editor {
-  height: 150px;
-}
-
-.tox {
-  .tox-editor-container {
-    background: $c-white;
-  }
-
-  .tox-edit-area {
-    padding: 0 8px;
   }
 }

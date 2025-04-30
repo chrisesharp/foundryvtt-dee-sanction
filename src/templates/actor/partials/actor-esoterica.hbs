@@ -1,0 +1,58 @@
+{{!-- Owned Items Tab --}}
+<section
+  class='sheet-body tab esoterica flexcol {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='esoterica'
+>
+<div class="sheet-expertise-table">
+    <div class="unravel">
+        <div class="unravelling-header" style="padding-top: 0.4em;">{{ localize 'DEE.resource.unravel.long'}}</div>
+        <div class="resource">
+            <img class="resource-bg" src="systems/dee/assets/default/fortune.png">
+            <div class="unravel-die flexrow flex-center" title="{{ localize 'DEE.resource.roll.unravel'}}">
+                <div class="flexcol" >
+                    <a class="step-up" data-resource="unravel"><i class="fas fa-caret-up" data-action="stepUp"></i></a>
+                    <a class="step-down" data-resource="unravel"><i class="fas fa-caret-down" data-action="stepDown"></i></a>
+                </div>
+                <img src="{{die data.resources.unravel.value}}" width="64" height="64" class="rollable" data-action="roll" data-roll="{{data.resources.unravel.value}}" data-label="Unravelling" data-resource="unravel">
+            </div>
+        </div>
+    </div>
+    <div class="esoterica" title="{{ localize 'DEE.FavoursDetail'}}">
+        <ol class="items-list">
+            <li class="flexrow item-header">
+                <div class="possessions-header">{{ localize 'DEE.Favours'}}</div>
+                {{#if (unlocked actor) }}
+                <div class="item-controls">
+                <a class="item-control item-rnd" data-action="itemRand" title="{{localize 'DEE.Add'}} {{localize 'DEE.Favour'}}" data-type="favour"><i class="fas fa-dice"></i></a>
+                </div>
+                {{/if}}
+            </li>
+        {{#each data.favours as |item id|}}
+            <li class="item-entry flexcol" data-item-id="{{item.id}}">
+                <div class="item flexrow" data-item-id="{{item.id}}">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <a data-action="itemSummary"><h4 class="item-name">{{item.name}}</h4></a>
+                    <div class="item-controls">
+                        <a class="item-control" title="{{localize 'DEE.Edit'}} {{localize 'DEE.Favour'}}"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                        <a class="item-control" title="{{localize 'DEE.Delete'}} {{localize 'DEE.Favour'}}"><i data-action="itemDelete" class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+        {{#each data.possessions.esoteric as |item id|}}
+            <li class="item-entry flexcol" data-item-id="{{item.id}}">
+                <div class="item flexrow" data-item-id="{{item.id}}">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <a data-action="itemSummary"><h4 class="item-name">{{item.name}}</h4></a>
+                    <div class="item-controls" data-item-id="{{item.id}}">
+                        <a class="item-control" title="{{localize 'DEE.Edit'}} {{localize 'DEE.tabs.esoterica'}}"><i data-action="itemEdit" class="fas fa-edit"></i></a>
+                        <a class="item-control" title="{{localize 'DEE.Delete'}} {{localize 'DEE.tabs.esoterica'}}"><i data-action="itemDelete" class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+        </ol>
+    </div>
+</div>
+</section>

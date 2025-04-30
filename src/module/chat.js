@@ -11,14 +11,14 @@
 
 export const addChatConsequenceButton = function(msg, html, data) {
   // Hide blind rolls
-  let blindable = html.find('.blindable');
-  if (msg.blind && !game.user.isGM && blindable && blindable.data('blind') === true) {
+  let blindable = html.querySelector('.blindable');
+  if (msg.blind && !game.user.isGM && blindable && blindable.dataset.blind === true) {
     blindable.replaceWith("<div class='dice-roll'><div class='dice-result'><div class='dice-formula'>???</div></div></div>");
   }
   // Buttons
-  const cb = html.find('.consequence-roll');
-  if (cb.data('id')) {
-    switch (cb.data('id')) {
+  const cb = html.querySelector('.consequence-roll');
+  if (cb?.dataset.id) {
+    switch (cb.dataset.id) {
       case "unravel":
         _addUnravelButton(cb);
         break;
@@ -33,21 +33,21 @@ export const addChatConsequenceButton = function(msg, html, data) {
 }
 
 function _addUnravelButton(cb) {
-  const actorId = cb.data('actorid');
+  const actorId = cb.dataset.actorId;
   const label = game.i18n.format('DEE.roll.consequences');
-  cb.append($(`<h4>${label}</h4>`));
+  cb.innerHTML+=`<h4>${label}</h4>`;
   const action = "unravelling";
-  cb.append($(`<div class="consequence-button"><button type="button" data-action="unravel" data-actor="${actorId}"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
-  cb.find('button[data-action="unravel"]').click((ev) => {
+  cb.innerHTML+=`<div class="consequence-button"><button type="button" data-action="unravel" data-actor="${actorId}"><i class="fas fa-dice-d6"></i>${action}</button></div>`;
+  cb.querySelector('button[data-action="unravel"]').addEventListener('click', (ev) => {
     ev.preventDefault();
     const actor = ev.currentTarget.dataset.actor;
-    $(ev.currentTarget).prop('disabled',true);
+    ev.currentTarget.disabled=true;
     applyChatUnravelRoll(actor);
   });
 }
 
 function _addChanceMessage(cb) {
-  const actorId = cb.data('actorid');
+  const actorId = cb.dataset.actorId;
   const actor = game.actors.get(actorId);
   if (actor && actor.system.hits.value === 0) {
     const falters = actor.system.falters;
@@ -62,31 +62,33 @@ function _addChanceMessage(cb) {
         break;
       case 2:
         label = game.i18n.format('DEE.chance.dead',{actor: actor.name});
-        cb.append($(`<img src="systems/dee/assets/default/icons/bones.png" width="40" height="40" style="border:0px;" >`));
+        cb.innerHTML+=`<img src="systems/dee/assets/default/icons/bones.png" width="40" height="40" style="border:0px;" >`;
         break;
     }
-    cb.append($(`<h2 style="font-size: 1.2em">${label}</h2>`));
+    cb.innerHTML+=`<h2 style="font-size: 1.2em">${label}</h2>`;
   }
 }
 
 function _addConsequenceButtons(cb) {
-  const id = cb.data('id');
+  const id = cb.dataset.id;
   let label = game.i18n.format('DEE.roll.consequences');
-  cb.append($(`<h4>${label}</h4>`));
+  cb.innerHTML+=`<h4>${label}</h4>`;
   let action = "attacking";
-  cb.append($(`<div class="consequence-button"><button id="attack" type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
+  cb.innerHTML+=`<div class="consequence-button"><button id="attack" type="button" data-action="consequence" data-attack="true"><i class="fas fa-dice-d6"></i>${action}</button></div>`;
   label = game.i18n.format('DEE.roll.consequences',{action: "defending"});
   action = "defending";
-  cb.append($(`<div class="consequence-button"><button id="defend" type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`));
-  cb.find('button[data-action="consequence"]').click((ev) => {
-    ev.preventDefault();
-    const chosen = ev.currentTarget;
-    const attacking = chosen.dataset.attack;
-    const otherId = (attacking==="true") ? "defend" : "attack";
-    const otherButton = $(chosen).closest('.consequence-roll').find(`#${otherId}`);
-    otherButton.remove();
-    $(chosen).prop('disabled',true);
-    applyChatConsequenceRoll(id, attacking);
+  cb.innerHTML+=`<div class="consequence-button"><button id="defend" type="button" data-action="consequence" data-attack="false"><i class="fas fa-dice-d6"></i>${action}</button></div>`;
+  cb.querySelectorAll('button[data-action="consequence"]').forEach((e) => {
+    e.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const chosen = ev.currentTarget;
+      const attacking = chosen.dataset.attack;
+      const otherId = (attacking==="true") ? "defend" : "attack";
+      const otherButton = chosen.closest('.consequence-roll').querySelector(`#${otherId}`);
+      otherButton.remove();
+      chosen.disabled=true;
+      applyChatConsequenceRoll(id, attacking);
+    });
   });
 }
 

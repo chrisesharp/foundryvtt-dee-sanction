@@ -81,17 +81,6 @@ export class DeeSanctionActor extends Actor {
     super.applyActiveEffects();
   }
 
-  // _categoriseItems(items) {
-  //   return items.reduce(
-  //     (acc, item) => {
-  //       let category = acc[item.type] || [];
-  //       category.push(item);
-  //       acc[item.type] = category;
-  //       return acc;
-  //     },
-  //     {"item":[],"ability":[],"consequence":[],"association":[],"favour":[],"focus":[],"occupation":[],"hitresolution":[]}
-  //   );
-  // }
   /**
    * Prepare Character type specific data
    */
