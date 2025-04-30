@@ -177,7 +177,7 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
    */
   async _prepareItems(data) {
     if (data.actor.type==="enemy") {
-      if (data.data.hitresolution.rolltable?.uuid === "") {
+      if (data.data.hitresolution?.rolltable?.uuid === "") {
         const hitresolution = findHitResolutionTable(data.data.hitresolution);
         data.data.hitresolution = hitresolution;
         await data.actor.update({system:{hitresolution: hitresolution}});

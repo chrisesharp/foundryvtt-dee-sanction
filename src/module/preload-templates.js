@@ -16,8 +16,8 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/dee/templates/actor/partials/enemy-resolution.hbs',
         'systems/dee/templates/actor/partials/actor-effects.hbs',
         // Item Partials
-        'systems/dee/templates/item/partials/item-abilities-list.html',
-        'systems/dee/templates/item/partials/item-effects.html',
+        'systems/dee/templates/item/partials/item-sheet-generic-header.hbs',
+        'systems/dee/templates/item/partials/item-sheet-effects.hbs',
         // Dialog Partials
         'systems/dee/templates/dialog/partials/party-sheet-header.hbs',
         'systems/dee/templates/dialog/partials/party-sheet-nav.hbs',

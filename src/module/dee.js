@@ -5,6 +5,12 @@ import { DeeSanctionAgentSheet } from "./actor/agent-sheet.js";
 import { DeeSanctionEnemySheet } from "./actor/enemy-sheet.js";
 import { DeeSanctionItem } from "./item/item.js";
 import { DeeSanctionItemSheet } from "./item/item-sheet.js";
+import { DeeSanctionAbilityItemSheet } from "./item/ability-sheet.js";
+import { DeeSanctionAssociationItemSheet } from "./item/association-sheet.js";
+import { DeeSanctionConsequenceItemSheet } from "./item/consequence-sheet.js";
+import { DeeSanctionFavourItemSheet } from "./item/favour-sheet.js";
+import { DeeSanctionFocusItemSheet } from "./item/focus-sheet.js";
+import { DeeSanctionOccupationItemSheet } from "./item/occupation-sheet.js";
 import { preloadHandlebarsTemplates } from "./preload-templates.js";
 import { registerHandlebarHelpers } from "./handlebar-helpers.js";
 import { DEE } from "./config.js";
@@ -19,6 +25,7 @@ import { FrameView } from './utils/frameview.js';
 const { Actors, Items } = foundry.documents.collections;
 const { renderTemplate } = foundry.applications.handlebars;
 const { DialogV2 } = foundry.applications.api;
+const { ActorSheet, ItemSheet } = foundry.appv1.sheets;
 
 const log = new Logger();
 
@@ -51,11 +58,18 @@ Hooks.once('init', async function() {
   CONFIG.RollTable.documentClass = DeeSanctionRollTable;
 
   // Register sheet application classes
-  // Actors.unregisterSheet("core", ActorSheet);
+  Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("dee", DeeSanctionAgentSheet, { types: ["agent"], makeDefault: true });
   Actors.registerSheet("dee", DeeSanctionEnemySheet, { types: ["enemy"], makeDefault: true });
-  // Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dee", DeeSanctionItemSheet, { makeDefault: true });
+
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("dee", DeeSanctionItemSheet, { types: ["item"] });
+  Items.registerSheet("dee", DeeSanctionAbilityItemSheet, { types: ["ability"] });
+  Items.registerSheet("dee", DeeSanctionAssociationItemSheet, { types: ["association"] });
+  Items.registerSheet("dee", DeeSanctionConsequenceItemSheet, { types: ["consequence"] });
+  Items.registerSheet("dee", DeeSanctionFavourItemSheet, { types: ["favour"] });
+  Items.registerSheet("dee", DeeSanctionFocusItemSheet, { types: ["focus"] });
+  Items.registerSheet("dee", DeeSanctionOccupationItemSheet, { types: ["occupation"] });
 
   // Register custom handlebar helpers
   registerHandlebarHelpers();

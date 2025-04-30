@@ -40,9 +40,9 @@ export class DeeSanctionItem extends Item {
         break;
     }
 
-    // if (itemData.abilities) {
-    //   this._prepContainer(itemData);
-    // }
+    if (itemData.abilities) {
+      itemData.abilities = this._prepContainer(itemData);
+    }
 
     if (itemData.effects) {
       itemData.effects.forEach(async (e) => {
@@ -53,19 +53,19 @@ export class DeeSanctionItem extends Item {
     }
   }
 
-  // _prepContainer(itemData) {
-  //   let abilities = deepClone(itemData.abilities);
-  //   if (game.items) {
-  //     abilities.filter(e=>!e._id).forEach(entry => {
-  //       if (!entry._id) {
-  //         const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
-  //         if (item) {
-  //           entry._id = item._id;
-  //           entry.img = item.img;
-  //         }
-  //       }
-  //     });
-  //   }
-  //   return abilities;
-  // }
+  _prepContainer(itemData) {
+    const abilities = foundry.utils.deepClone(itemData.abilities);
+    if (game.items) {
+      abilities.filter(e=>!e.id).forEach(entry => {
+        if (!entry.id) {
+          const item = game.items.find(i => i.type==="ability" && i.name===entry.name);
+          if (item) {
+            entry.id = item.id;
+            entry.img = item.img;
+          }
+        }
+      });
+    }
+    return abilities;
+  }
 }
