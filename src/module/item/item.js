@@ -15,28 +15,28 @@ export class DeeSanctionItem extends Item {
     const itemData = this.system;
     switch (this.type) {
       case "ability":
-        this.img = CONFIG.DEE.icons["ability"];
+        itemData.img = CONFIG.DEE.icons["ability"];
         break;
       case "consequence":
-        this.img = CONFIG.DEE.icons["consequence"];
+        itemData.img = CONFIG.DEE.icons["consequence"];
         break;
       case "association":
-        this.img = CONFIG.DEE.icons["conspiracy"];
+        itemData.img = CONFIG.DEE.icons["conspiracy"];
         break;
       case "occupation":
-        this.img = CONFIG.DEE.icons["access"];
+        itemData.img = CONFIG.DEE.icons["access"];
         break;
       case "favour":
-        this.img = CONFIG.DEE.icons["favour"];
+        itemData.img = CONFIG.DEE.icons["favour"];
         break;
       case "focus":
-        this.img = CONFIG.DEE.icons["vigilance"];
+        itemData.img = CONFIG.DEE.icons["vigilance"];
           break;
       case "item":
-        this.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
+        itemData.img = (itemData.esoteric) ? CONFIG.DEE.icons["magic"] : CONFIG.DEE.icons["kit"];
         break;
       default:
-        this.img = CONST.DEFAULT_TOKEN;
+        itemData.img = CONST.DEFAULT_TOKEN;
         break;
     }
 
