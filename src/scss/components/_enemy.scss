@@ -6,10 +6,14 @@
 
     .window-content {
         overflow: visible;
-          background-image: url("../assets/default/paper.png");
-          img {
-            border:none;
-          }
+        background-image: url("../assets/default/paper.png");
+            img {
+                border:none;
+            }
+
+            input {
+                box-shadow: none;
+            }
         }
 
     img {
