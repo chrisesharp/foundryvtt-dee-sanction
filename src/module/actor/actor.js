@@ -9,8 +9,8 @@ export class DeeSanctionActor extends Actor {
    * Augment the basic actor data with additional dynamic data.
    */
   /** @override */
-  prepareData() {
-    super.prepareData();
+  prepareBaseData() {
+    super.prepareBaseData();
 
     const actorData = this.system;
     const data = actorData;
@@ -34,36 +34,38 @@ export class DeeSanctionActor extends Actor {
   }
 
   /** @override */
-  async _preCreate(data, options, user) {
-    await super._preCreate(data, options, user);
-    data.prototypeToken = data.prototypeToken || {};
+  _initializeSource(source, options = {}) {
+    // Apply defaults BEFORE calling super
+    if (options.creation) {
+      const disposition = source.type === 'agent' ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
 
-    const disposition =
-      data.type === 'agent' ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
-    // Set basic token data for newly created actors.
+      // Set prototypeToken defaults
+      if (!source.prototypeToken) {
+        source.prototypeToken = {};
+      }
 
-    foundry.utils.mergeObject(
-      data.prototypeToken,
-      {
-        displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
-        actorLink: true,
-        disposition: disposition,
-        lockRotation: true,
-      },
-      { overwrite: true },
-    );
+      const pt = source.prototypeToken;
+      if (!pt.displayName) pt.displayName = CONST.TOKEN_DISPLAY_MODES.HOVER;
+      if (pt.actorLink === undefined) pt.actorLink = true;
+      if (!pt.disposition) pt.disposition = disposition;
+      if (pt.lockRotation === undefined) pt.lockRotation = true;
 
-    this.updateSource(data);
+      if (!pt.texture) pt.texture = {};
+      if (!pt.texture.src) pt.texture.src = defaultToken;
+    }
+
+    // NOW call super - it will see your defaults are already set
+    return super._initializeSource(source, options);
   }
 
   // Armour is not cumulative in effect, so disable the weaker ones
   // Effectiveness is measured as larger negative number
   /** @override */
-  applyActiveEffects() {
+  applyActiveEffects(phase) {
     const armourEffects = {};
     let mostEffective = 0;
     let mostEffectiveId;
-    this.effects.forEach (e=> {
+    for (const e of this.effects) {
       let armourChanges = e.changes.filter(x=>(x.key === "resources.armour.value"));
       if (armourChanges.length) {
         armourEffects[e.id] = e;
@@ -73,12 +75,12 @@ export class DeeSanctionActor extends Actor {
           mostEffectiveId = e.id;
         }
       }
-    });
+    }
 
-    Object.keys(armourEffects).forEach((id) => {
+    for (const e of Object.keys(armourEffects)) {
       armourEffects[id].disabled = (mostEffectiveId != id);
-    });
-    super.applyActiveEffects();
+    }
+    super.applyActiveEffects(phase);
   }
 
   /**
