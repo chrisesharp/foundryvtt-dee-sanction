@@ -4,9 +4,7 @@
   "img": "systems/dee/assets/default/tokens/26.png",
   "system": {
     "hits": {
-      "value": 8,
-      "min": 0,
-      "max": 3
+      "value": 8
     },
     "falters": {
       "first": false,
@@ -15,9 +13,7 @@
     "description": "<p>The mob is a bustling, frantic gathering of enemies. Half the time it&rsquo;s milling around considering whether to run away or not. The rest of the time it&rsquo;s poking with pitchforks, jostling and shoving. Overwhelm means the Mob can cause damage even if the Agents don&rsquo;t miss a beat. An average Agent would struggle to handle a Mob without assistance or good fortune.</p>",
     "resources": {
       "armour": {
-        "value": 6,
-        "min": 0,
-        "max": 6
+        "value": 6
       }
     },
     "resistance": {

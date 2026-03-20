@@ -4,9 +4,7 @@
   "img": "systems/dee/assets/default/tokens/21.png",
   "system": {
     "hits": {
-      "value": 2,
-      "min": 0,
-      "max": 3
+      "value": 2
     },
     "falters": {
       "first": false,
@@ -15,9 +13,7 @@
     "description": "",
     "resources": {
       "armour": {
-        "value": 6,
-        "min": 0,
-        "max": 6
+        "value": 6
       }
     },
     "resistance": {
