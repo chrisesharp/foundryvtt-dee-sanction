@@ -149,8 +149,22 @@
     "distance": 5,
     "units": "ft"
   },
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "documentTypes": {
+    "Actor": {
+      "agent": {},
+      "enemy": {}
+    },
+    "Item": {
+      "item": {},
+      "ability": {},
+      "consequence": {},
+      "favour": {},
+      "association": {},
+      "focus": {},
+      "occupation": {}
+    }
+  },
+  "primaryTokenAttribute": "hits",
   "url": "https://github.com/chrisesharp/foundryvtt-dee-sanction",
   "manifest": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src/system.json",
   "download": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/package/dee-v5.0.2.zip",

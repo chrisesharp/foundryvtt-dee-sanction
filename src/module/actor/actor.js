@@ -51,7 +51,7 @@ export class DeeSanctionActor extends Actor {
       if (pt.lockRotation === undefined) pt.lockRotation = true;
 
       if (!pt.texture) pt.texture = {};
-      if (!pt.texture.src) pt.texture.src = defaultToken;
+      if (!pt.texture.src) pt.texture.src = "systems/dee/assets/default/tokens/1.png";
     }
 
     // NOW call super - it will see your defaults are already set
