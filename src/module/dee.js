@@ -22,6 +22,22 @@ import * as party from "./party.js";
 import { DeeSanctionDice } from "./dice.js";
 import { Logger } from "./logger.js";
 import { FrameView } from './utils/frameview.js';
+
+// Import Actor DataModels
+import { ActorDataModel } from "./actor/actor-data.js";
+import { AgentDataModel } from "./actor/agent-data.js";
+import { EnemyDataModel } from "./actor/enemy-data.js";
+
+// Import Item DataModels
+import { BaseItemDataModel } from "./item/base-data.js";
+import { ItemDataModel } from "./item/item-data.js";
+import { AbilityDataModel } from "./item/ability-data.js";
+import { ConsequenceDataModel } from "./item/consequence-data.js";
+import { FavourDataModel } from "./item/favour-data.js";
+import { ContainerDataModel } from "./item/container-data.js";
+import { AssociationDataModel } from "./item/association-data.js";
+import { FocusDataModel } from "./item/focus-data.js";
+import { OccupationDataModel } from "./item/occupation-data.js";
 const { Actors, Items } = foundry.documents.collections;
 const { renderTemplate } = foundry.applications.handlebars;
 const { DialogV2 } = foundry.applications.api;
@@ -52,7 +68,24 @@ Hooks.once('init', async function() {
   // Enable hook debug
   // CONFIG.debug.hooks = true;
 
-  // Define custom Entity classes
+  // Register Actor DataModels BEFORE document classes
+  CONFIG.Actor.dataModels = {
+    agent: AgentDataModel,
+    enemy: EnemyDataModel
+  };
+
+  // Register Item DataModels BEFORE document classes
+  CONFIG.Item.dataModels = {
+    item: ItemDataModel,
+    ability: AbilityDataModel,
+    consequence: ConsequenceDataModel,
+    association: AssociationDataModel,
+    favour: FavourDataModel,
+    focus: FocusDataModel,
+    occupation: OccupationDataModel
+  };
+
+  // Define custom Entity classes AFTER DataModels
   CONFIG.Actor.documentClass = DeeSanctionActor;
   CONFIG.Item.documentClass = DeeSanctionItem;
   CONFIG.RollTable.documentClass = DeeSanctionRollTable;
