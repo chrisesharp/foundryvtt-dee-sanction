@@ -1,4 +1,6 @@
-@import "./utils/colors.scss";
+@use "../utils/colors" as *;
+@use "../utils/variables" as *;
+
 &.chat-message {
   background: url("../assets/default/paper.png");
 }
@@ -267,13 +269,13 @@
     .actor {
       border-bottom: 1px solid $c-olive;
       border-top: 1px solid $c-olive;
+      margin-bottom: 2px;
+      font-size: 12px;
+      text-align: center;
       .fas {
         padding: 0 2px;
         font-size: 10px;
       }
-      margin-bottom: 2px;
-      font-size: 12px;
-      text-align: center;
       .fields .field-row {
         white-space: nowrap;
         &:nth-child(odd) {

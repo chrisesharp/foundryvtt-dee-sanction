@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+@use "colors" as *;
+@use "variables" as *;
 
-$font-primary: 'IM Fell English', serif;
-$font-secondary: 'IM Fell English', serif;
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
 .message-content,
 .welcome-content,

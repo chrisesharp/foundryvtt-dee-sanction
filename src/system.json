@@ -165,8 +165,8 @@
     }
   },
   "primaryTokenAttribute": "hits",
-  "url": "https://github.com/chrisesharp/foundryvtt-dee-sanction",
-  "manifest": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/src/system.json",
-  "download": "https://raw.githubusercontent.com/chrisesharp/foundryvtt-dee-sanction/master/package/dee-v6.0.3.zip",
+  "url": "This is auto replaced",
+  "manifest": "This is auto replaced",
+  "download": "This is auto replaced",
   "license": "LICENSE.txt"
 }

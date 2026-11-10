@@ -1,3 +1,5 @@
+@use "../utils/colors" as *;
+
 &.sheet.actor.enemy {
     min-width: 440px;
     max-width: 450px;

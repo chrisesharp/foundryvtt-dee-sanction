@@ -1,5 +1,5 @@
-
-@import "./utils/variables.scss";
+@use "utils/colors" as *;
+@use "utils/variables" as *;
 
 &.sheet.actor.agent {
     min-width: 400px;
@@ -213,7 +213,21 @@
             .unravel-die {
                 position: absolute;
                 height: 64px;
-                top: 45px;
+                top: 52px;
+                left: 9px;
+                width: 92px;
+                justify-content: center;
+
+                // Foundry v13 gives every .flexrow child "flex: 1 1 0%", which
+                // pushed the die off-centre; take the arrows out of the flow.
+                > .flexcol {
+                    position: absolute;
+                    left: 0;
+                    flex: none;
+                }
+                > img {
+                    flex: none;
+                }
             }
         }
 
@@ -256,7 +270,22 @@
                     position: absolute;
                     height: 64px;
                     bottom: 35px;
-                    left: 13px;
+                    left: 0;
+                    // Match the width of .resource-bg (190px high, 100x163 source)
+                    // so the die is centred in the circle.
+                    width: 116.5px;
+                    justify-content: center;
+
+                    // Foundry v13 gives every .flexrow child "flex: 1 1 0%", so keep
+                    // the step arrows out of the flow and let the die size itself.
+                    > .flexcol {
+                        position: absolute;
+                        left: 0;
+                        flex: none;
+                    }
+                    > img {
+                        flex: none;
+                    }
                 }
 
                 .resource-label {

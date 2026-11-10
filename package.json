@@ -1,6 +1,7 @@
 {
   "name": "dee",
   "version": "6.0.3",
+  "type": "module",
   "description": "CSS compiler for the The Dee Sanction system",
   "scripts": {
     "package": "gulp package",
@@ -14,24 +15,21 @@
   "author": "Chris Sharp",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
-    "@foundryvtt/foundryvtt-cli": "^1.0.2",
-    "archiver": "^3.1.1",
-    "cb": "^0.1.0",
-    "chalk": "^3.0.0",
-    "fs-extra": "^8.1.0",
-    "gulp": "^4.0.2",
-    "gulp-git": "^2.10.0",
-    "gulp-less": "^4.0.1",
-    "gulp-sass": "^5.0.1",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "js-yaml": "^4.0.0",
-    "json-stringify-pretty-compact": "^2.0.0",
-    "merge-stream": "^2.0.0",
-    "nedb": "^1.8.0",
-    "sass": "^1.62.0",
-    "through2": "^2.0.5",
-    "typescript": "^3.9.7",
-    "yargs": "^15.1.0"
-  }
+	"devDependencies": {
+		"@foundryvtt/foundryvtt-cli": "^1.0.2",
+		"@rollup/plugin-commonjs": "^29.0.3",
+		"@rollup/plugin-node-resolve": "^16.0.3",
+		"@rollup/plugin-replace": "^6.0.3",
+		"@rollup/stream": "^3.0.1",
+		"fs-extra": "^11.4.1",
+		"gulp-autoprefixer": "^10.0.0",
+		"gulp-sass": "^6.0.1",
+		"gulp-sourcemaps": "^3.0.0",
+		"sass": "^1.105.1",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"dependencies": {
+		"gulp": "^5.0.1"
+	}
 }

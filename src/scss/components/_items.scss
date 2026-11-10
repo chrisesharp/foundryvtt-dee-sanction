@@ -1,5 +1,4 @@
-@import "../utils/_variables.scss";
-
+@use "../utils/variables" as *;
 
 &.sheet.item {
   min-width: 400px;

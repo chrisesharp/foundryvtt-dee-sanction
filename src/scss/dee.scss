@@ -1,24 +1,26 @@
+@use 'sass:meta';
+
 // Import utilities.
-@import 'utils/colors';
-@import 'utils/typography';
-@import 'utils/mixins';
-@import 'utils/variables';
+@use 'utils/colors';
+@use 'utils/typography';
+@use 'utils/mixins';
+@use 'utils/variables';
 
 /* Global styles */
-@import 'global/window';
-@import 'global/grid';
-@import 'global/flex';
+@use 'global/window';
+@use 'global/grid';
+@use 'global/flex';
 
 /* Styles limited to dee sheets */
 .dee {
-  @import 'agent';
-  @import 'components/enemy';
-  @import 'components/apps';
-  @import 'components/table';
-  @import 'components/forms';
-  @import 'components/resource';
-  @import 'components/tabs';
-  @import 'components/items';
+  @include meta.load-css('agent');
+  @include meta.load-css('components/enemy');
+  @include meta.load-css('components/apps');
+  @include meta.load-css('components/table');
+  @include meta.load-css('components/forms');
+  @include meta.load-css('components/resource');
+  @include meta.load-css('components/tabs');
+  @include meta.load-css('components/items');
   
   .effects .item .effect-source,
   .effects .item .effect-duration,
