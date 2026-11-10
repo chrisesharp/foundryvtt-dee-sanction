@@ -16,7 +16,6 @@
     "test": "echo \"Error: no tests specified\" && exit 0",
     "test:ci": "echo \"Error: no tests specified\" && exit 0",
     "cypress:open": "cypress open",
-    "postinstall": "husky install",
     "createSymlinks": "node ./tools/create-symlinks.mjs"
   },
   "browserslist": [
