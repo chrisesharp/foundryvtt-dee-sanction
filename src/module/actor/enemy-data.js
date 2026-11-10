@@ -24,9 +24,11 @@ export class EnemyDataModel extends ActorDataModel {
 
         schema.hitresolution = new fields.SchemaField({
             rolltable: new fields.SchemaField({
-                id: new fields.StringField({ initial: "", required: true }),
-                name: new fields.StringField({ initial: "", required: true }),
-                img: new fields.StringField({ initial: "", required: true }),
+                id: new fields.StringField({ initial: "", required: false }),
+                uuid: new fields.StringField({ initial: "", required: false }),
+                name: new fields.StringField({ initial: "", required: false }),
+                img: new fields.StringField({ initial: "", required: false }),
+                description: new fields.StringField({ initial: "", required: false }),
             }),
         });
         return schema;

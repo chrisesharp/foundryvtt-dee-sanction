@@ -63,13 +63,7 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
 
   /** @override */
   async _onDrop(event) {
-    // Try to extract the data
-    let data;
-    try {
-      data = JSON.parse(event.dataTransfer.getData('text/plain'));
-    } catch (err) {
-      return false;
-    }
+    const data = TextEditor.getDragEventData(event);
     const actor = this.actor;
     // Handle the drop with a Hooked function
     const allowed = Hooks.call("dropActorSheetData", actor, this, data);
@@ -96,17 +90,18 @@ export class DeeSanctionEnemySheet extends DeeSanctionActorSheet {
   async _onDropRollTable(event, data) {
     if ( !this.actor.isOwner ) return false;
     const rt = await fromUuid(data.uuid);
+    if ( !rt ) return false;
     const newTable = {
       hitresolution: {
         rolltable: {
           uuid: rt.uuid,
           id: rt.id,
           name: rt.name,
-          description: rt.description,
+          description: rt.description ?? "",
           img: rt.img
         }
       }
     };
     return this.actor.update({system:newTable});
-  }  
+  }
 }

@@ -155,6 +155,41 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
     return context;
   }
 
+  _canDragStart(_selector) {
+    return this.isEditable;
+  }
+
+  _canDragDrop(_selector) {
+    return this.isEditable;
+  }
+
+  _onDragOver(_event) {}
+
+  async _onDragStart(event) {
+    const div = event.currentTarget;
+    const itemId = div.dataset.itemId;
+    if (itemId) {
+      const item = this.actor.items.get(itemId);
+      if (item) {
+        event.dataTransfer.setData("text/plain", JSON.stringify(item.toDragData()));
+      }
+    }
+  }
+
+  async _onDrop(event) {
+    const data = TextEditor.getDragEventData(event);
+    const actor = this.actor;
+    const allowed = Hooks.call("dropActorSheetData", actor, this, data);
+    if ( allowed === false ) return;
+
+    switch ( data.type ) {
+      case "Item":
+        return this._onDropItem(event, data);
+      case "ActiveEffect":
+        return this._onDropActiveEffect(event, data);
+    }
+  }
+
   async _onDropItem(event, data) {
     if (!this.actor.isOwner) return false;
     const item = await Item.implementation.fromDropData(data);
@@ -177,10 +212,12 @@ export class DeeSanctionActorSheet extends HandlebarsApplicationMixin(ActorSheet
    */
   async _prepareItems(data) {
     if (data.actor.type==="enemy") {
-      if (data.data.hitresolution?.rolltable?.uuid === "") {
+      if (data.data.hitresolution?.rolltable && (!data.data.hitresolution.rolltable.uuid || !data.data.hitresolution.rolltable.id)) {
         const hitresolution = findHitResolutionTable(data.data.hitresolution);
-        data.data.hitresolution = hitresolution;
-        await data.actor.update({system:{hitresolution: hitresolution}});
+        if (hitresolution) {
+          data.data.hitresolution = hitresolution;
+          await data.actor.update({system:{hitresolution: hitresolution}});
+        }
       }
     }
     return data;

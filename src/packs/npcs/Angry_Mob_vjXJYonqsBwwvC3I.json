@@ -29,7 +29,8 @@
     },
     "hitresolution": {
       "rolltable": {
-        "id": "",
+        "id": "zRhUnufDDZwOd0FQ",
+        "uuid": "Compendium.dee.outcomes.RollTable.zRhUnufDDZwOd0FQ",
         "name": "Angry Mob Resolution",
         "img": "icons/svg/d20-grey.svg",
         "description": "Angry Mob resolution table"

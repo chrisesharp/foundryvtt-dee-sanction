@@ -29,7 +29,8 @@
     },
     "hitresolution": {
       "rolltable": {
-        "id": "",
+        "id": "QDwsgvwBx51JMLf2",
+        "uuid": "Compendium.dee.outcomes.RollTable.QDwsgvwBx51JMLf2",
         "name": "Default Resolution Table",
         "img": "icons/svg/d20-grey.svg",
         "description": "Rolled when an agent falters in a challenge to attack or defend."

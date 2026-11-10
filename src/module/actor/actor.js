@@ -105,9 +105,11 @@ export class DeeSanctionActor extends Actor {
     data.abilities = this.itemTypes['ability'];
     data.consequences = this.itemTypes['consequence'];
     
-    if (game.tables && data.hitresolution.rolltable?.id === "") {
+    if (data.hitresolution?.rolltable && (!data.hitresolution.rolltable.id || !data.hitresolution.rolltable.uuid)) {
       const hitresolution = findHitResolutionTable(data.hitresolution);
-      data.hitresolution = hitresolution;
+      if (hitresolution) {
+        data.hitresolution = hitresolution;
+      }
     }
   }
 
@@ -186,8 +188,16 @@ export class DeeSanctionActor extends Actor {
   }
 
   async rollConsequence(rollTable, attacking=true) {
-    const rt = game.tables.get(rollTable);
-    let roll = (attacking === "true") ? new Roll("1d8"): new Roll("1d6+2");
+    let rt = game.tables?.get(rollTable);
+    if (!rt) {
+      rt = await fromUuid(rollTable);
+    }
+    if (!rt) {
+      const pack = game.packs?.get("dee.outcomes");
+      if (pack) rt = await pack.getDocument(rollTable);
+    }
+    if (!rt) return;
+    let roll = (attacking === "true" || attacking === true) ? new Roll("1d8"): new Roll("1d6+2");
     return rt.draw({roll:await roll.evaluate()});
   }
 
@@ -227,16 +237,33 @@ export class DeeSanctionActor extends Actor {
 }
 
 export function findHitResolutionTable(hitresolution) {
-  let rt = (hitresolution.rolltable.name) ? game.tables.getName(hitresolution.rolltable.name) : game.tables.getName(CONFIG.DEE.defaultResolution);
+  const tableName = hitresolution?.rolltable?.name || CONFIG.DEE.defaultResolution;
+  let rt = game.tables?.getName(tableName);
   if (rt) {
-    return  {
+    return {
       rolltable: {
-          id: rt.id,
-          uuid: rt.uuid,
-          name: rt.name,
-          description: rt.description,
-          img: rt.img
+        id: rt.id,
+        uuid: rt.uuid,
+        name: rt.name,
+        description: rt.description ?? "",
+        img: rt.img ?? "icons/svg/d20-grey.svg"
       }
     };
   }
+  const pack = game.packs?.get("dee.outcomes");
+  if (pack) {
+    const entry = pack.index?.find(e => e.name === tableName);
+    if (entry) {
+      return {
+        rolltable: {
+          id: entry._id,
+          uuid: entry.uuid,
+          name: entry.name,
+          description: entry.description ?? "",
+          img: entry.img ?? "icons/svg/d20-grey.svg"
+        }
+      };
+    }
+  }
+  return null;
 }
