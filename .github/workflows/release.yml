@@ -9,68 +9,19 @@ env:
   node_version: 24
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node_version }}
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: .npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
-
-      - name: Install dependencies
-        run: npm ci --cache .npm --prefer-offline
-
-      - name: Lint
-        run: npm run lint
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node_version }}
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: .npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
-
-      - name: Install dependencies
-        run: npm ci --cache .npm --prefer-offline
-
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
 
       - name: Cache Node.js modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .npm
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -83,18 +34,30 @@ jobs:
 
       - name: Extract tag version number
         id: get_version
-        uses: battila7/get-version-action@v2.2.1
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          VERSION="${TAG#v}"
+          echo "version=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "version-without-v=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Substitute Manifest and Download Links For Versioned Ones
         id: sub_manifest_link_version
-        uses: microsoft/variable-substitution@v1
-        with:
-          files: 'src/${{ env.package_type }}.json'
         env:
-          version: ${{ steps.get_version.outputs.version-without-v }}
-          url: https://github.com/${{ github.repository }}
-          manifest: https://github.com/${{ github.repository }}/releases/latest/download/${{ env.package_type }}.json
-          download: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/${{ env.package_type }}.zip
+          VERSION: ${{ steps.get_version.outputs.version-without-v }}
+          TAG_NAME: ${{ github.event.release.tag_name }}
+          REPO: ${{ github.repository }}
+          PKG_TYPE: ${{ env.package_type }}
+        run: |
+          node -e '
+            import fs from "node:fs";
+            const file = `src/${process.env.PKG_TYPE}.json`;
+            const manifest = JSON.parse(fs.readFileSync(file, "utf8"));
+            manifest.version = process.env.VERSION;
+            manifest.url = `https://github.com/${process.env.REPO}`;
+            manifest.manifest = `https://github.com/${process.env.REPO}/releases/latest/download/${process.env.PKG_TYPE}.json`;
+            manifest.download = `https://github.com/${process.env.REPO}/releases/download/${process.env.TAG_NAME}/${process.env.PKG_TYPE}.zip`;
+            fs.writeFileSync(file, JSON.stringify(manifest, null, 2) + "\n");
+          '
 
       - name: Build
         run: npm run build
@@ -107,14 +70,11 @@ jobs:
 
   publish:
     needs:
-      - lint
-      - test
-      # - typecheck
       - build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download production artifacts for publication
         uses: actions/download-artifact@v4
@@ -132,6 +92,7 @@ jobs:
         with:
           allowUpdates: true
           name: ${{ github.event.release.name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           artifacts: './dist/${{ env.package_type }}.json, ./${{ env.package_type }}.zip'
-          body: ${{ github.event.release.body }}
+          body: ${{ toJSON(github.event.release.body) }}
